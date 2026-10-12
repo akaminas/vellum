@@ -28,6 +28,9 @@ FRAME = (LON0, LON1, _Y0, _Y1)                   # x0, x1, y0, y1 in map units
 LAT0 = float(merc_lat(_Y0))
 BBOX = (round(LAT0 - 0.15, 2), round(LON0 - 0.15, 2), round(LAT1 + 0.15, 2), round(LON1 + 0.15, 2))   # south, west, north, east for downloads
 
+# the elevation grid is stored as 16-bit PNG: metres = value / ELEV_SCALE - ELEV_OFFSET; 0 marks the sea
+ELEV_SCALE, ELEV_OFFSET = 10.0, 100.0
+
 # the elevation grid, on the map's own Mercator grid: cell size in map units and the grid shape
 GRID_STEP = 0.002
 GRID = dict(x0=LON0, y1=_Y1, step=GRID_STEP, nx=int(round((LON1 - LON0) / GRID_STEP)),

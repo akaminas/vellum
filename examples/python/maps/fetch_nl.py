@@ -31,13 +31,13 @@ sys.path.insert(0, HERE)
 from nl_geo import FRAME, BBOX, merc_y, merc_lat, GRID   # noqa: E402  (the map frame, shared with the drawing script)
 
 UA = {"User-Agent": "vellum-figure-style/1.0 (https://github.com/akaminas/vellum; one-off map download)"}
-OVERPASS = ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter"]
+OVERPASS = os.environ.get("VELLUM_OVERPASS", "https://overpass-api.de/api/interpreter,https://maps.mail.ru/osm/tools/overpass/api/interpreter").split(",")
 S, W, N, E = BBOX
 QUERIES = {   # {B} is the bounding box; the heavy queries run in TILES x TILES pieces, merged by element id
     "coastline": 'way["natural"="coastline"]{B};out geom;',
     "rivers": 'way["waterway"="river"]{B};out tags geom;',
     "canals": 'way["waterway"="canal"]{B};out tags geom;',
-    "water_rel": 'rel["natural"="water"]{B};out tags geom;',
+    "water_rel": 'rel["natural"="water"]{B};out geom;',
     "water_way": 'way["natural"="water"]["water"~"^(lake|river|reservoir|lagoon|oxbow|canal|basin)$"]{B};out tags geom;',
     "water_way_named": 'way["natural"="water"][!"water"]["name"]{B};out tags geom;',
     "borders": 'way["boundary"="administrative"]["admin_level"="2"]{B};out tags geom;',
@@ -77,7 +77,7 @@ def overpass_one(q, path, label):
         ep = OVERPASS[k % len(OVERPASS)]
         print(f"overpass {label} via {ep}", flush=True)
         try:
-            raw = curl_post(ep, q)
+            raw = curl_post(ep, q, timeout=330)
             js = json.loads(raw)
             if "remark" in js and "error" in js["remark"].lower():
                 raise RuntimeError(js["remark"])

@@ -6,7 +6,7 @@ Called by fetch_nl.py. Writes
   nl_rivers.geojson    rivers and main canals as merged, simplified lines with name, kind, rank and country
   nl_borders.geojson   the land borders of the Netherlands and its neighbours (OSM admin_level 2, maritime parts dropped)
   nl_places.json       cities and towns with population
-  nl_elevation.png     ground height on the map's Mercator grid, 16 bit: metres = value / 50 - 100
+  nl_elevation.png     ground height on the map's Mercator grid, 16 bit: metres = value / 10 - 100, 0 = sea
   nl_stats.json        the numbers the map quotes, computed here
   nl_inset.geojson     Natural Earth rivers, lakes and countries for the Rhine-Meuse inset
 """
@@ -23,7 +23,7 @@ from shapely.ops import linemerge, polygonize, unary_union
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import fetch_nl as F                                          # noqa: E402
-from nl_geo import FRAME, BBOX, GRID, grid_lonlat, merc_y      # noqa: E402
+from nl_geo import FRAME, BBOX, GRID, grid_lonlat, merc_y, ELEV_SCALE, ELEV_OFFSET   # noqa: E402
 
 OUT = F.OUT
 S, W, N, E = BBOX
@@ -163,13 +163,17 @@ MAJOR = {  # the big branches of the Rhine-Meuse-Scheldt delta and their German 
     "Rijn", "Rhein", "Bovenrijn", "Waal", "Nederrijn", "Lek", "IJssel", "Gelderse IJssel", "Maas", "Meuse", "Bergsche Maas",
     "Amer", "Nieuwe Merwede", "Boven Merwede", "Beneden Merwede", "Noord", "Oude Maas", "Nieuwe Maas", "Nieuwe Waterweg",
     "Pannerdensch Kanaal", "Dordtsche Kil", "Spui", "Hollandsch Diep", "Haringvliet", "Scheur", "Schelde", "Escaut",
-    "Zeeschelde", "Ems", "Eems", "Afgedamde Maas", "Lippe", "Ruhr",
+    "Zeeschelde", "Ems", "Eems", "Afgedamde Maas", "Boven-Rijn", "Boven-Merwede", "Beneden-Merwede",
 }
 
 
 def rivers(nl):
+    """Each river or canal is written as up to two features, its part in the Netherlands (part "nl", the country
+    widened by about 250 m so that border rivers such as the Maas in Limburg count as Dutch) and its part abroad."""
+    nl = nl.buffer(0.003)
     feats = []
     groups = defaultdict(list)
+    local = {}                                       # the Dutch name keys the line; the local name labels it abroad
     for name in ("rivers", "canals"):
         for el in F.overpass(name)["elements"]:
             if el["type"] != "way": continue
@@ -179,6 +183,8 @@ def rivers(nl):
             l = l.intersection(CLIP)
             if l.is_empty: continue
             nm = t.get("name:nl") or t.get("name") or ""
+            if nm and t.get("name"):
+                local.setdefault(nm, t["name"])
             kind = t.get("waterway")
             cemt = t.get("CEMT", t.get("cemt", ""))
             if kind == "canal" and not (cemt or nm.lower().endswith(("kanaal", "kanal", "canal")) or "kanaal" in nm.lower()
@@ -187,6 +193,10 @@ def rivers(nl):
             groups[(kind, nm, cemt if kind == "canal" else "")].append(l)
     for (kind, nm, cemt), ls in groups.items():
         merged = linemerge(unary_union(ls)) if len(ls) > 1 else ls[0]
+        if not nm:                                   # unnamed water: keep only continuous stretches of 5 km or more
+            keep = [g for g in getattr(merged, "geoms", [merged]) if km(g) >= 5]
+            if not keep: continue
+            merged = MultiLineString(keep) if len(keep) > 1 else keep[0]
         L = km(merged)
         major = nm in MAJOR
         if kind == "river" and not nm and L < 3: continue
@@ -194,9 +204,15 @@ def rivers(nl):
         if kind == "canal" and L < (3 if cemt else 8): continue
         merged = merged.simplify(0.00008, preserve_topology=False)
         inside = merged.intersection(nl)
+        outside = merged.difference(nl)
         frac = km(inside) / max(L, 1e-9)
-        rank = 1 if major else (2 if (kind == "river" and L >= 25) or (kind == "canal" and cemt and cemt >= "IV") else 3)
-        feats.append((merged, dict(name=nm, kind=kind, cemt=cemt, rank=rank, km=round(L, 1), nl=round(frac, 2))))
+        big_canal = kind == "canal" and cemt in ("IV", "Va", "Vb", "VIa", "VIb", "VIc", "VII")
+        rank = 1 if major else (2 if nm and ((kind == "river" and L >= 25) or big_canal) else 3)
+        props = dict(name=nm, local=local.get(nm, nm), kind=kind, cemt=cemt, rank=rank, km=round(L, 1), nl=round(frac, 2))
+        for part, g in (("nl", inside), ("abroad", outside)):
+            g = linemerge(g) if g.geom_type == "MultiLineString" else g
+            if not g.is_empty and g.length > 0:
+                feats.append((g, dict(props, part=part)))
     return feats
 
 
@@ -258,7 +274,7 @@ def fill_gaps(z, sigma=3, rounds=6):
     return z
 
 
-def elevation(nl_land, water):
+def elevation(nl_land, water, land):
     ahn = F.ahn()                                     # 100 m point samples, RD New, row 0 north
     ny, nx = ahn.shape
     x0, y1, res = F.AHN_X[0], F.AHN_Y[1], F.AHN_RES
@@ -308,7 +324,9 @@ def elevation(nl_land, water):
     nl_mask = rasterize(nl_land.buffer(0.01), lon.shape, to_grid) > 0.5
     wgt = ndimage.gaussian_filter((nl_mask & inside).astype(np.float32), 5) * inside
     z = wgt * za + (1 - wgt) * zt
-    q = np.clip(np.round((z + 100) * 50), 0, 65535).astype(np.uint16)
+    land_g = rasterize(land.buffer(0.01), lon.shape, to_grid) > 0.5       # the sea carries no height on this map
+    q = np.clip(np.round((z + ELEV_OFFSET) * ELEV_SCALE), 1, 65535).astype(np.uint16)
+    q[~land_g] = 0
     Image.fromarray(q).save(os.path.join(OUT, "nl_elevation.png"), optimize=True)
     print(f"  nl_elevation.png {q.shape}, {os.path.getsize(os.path.join(OUT, 'nl_elevation.png')) / 1e6:.2f} MB")
     return stats
@@ -370,7 +388,7 @@ def run():
     json.dump(pl, open(os.path.join(OUT, "nl_places.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     print("elevation")
     wat = unary_union([g for g, p in water])
-    stats = elevation(nl_land, wat)
+    stats = elevation(nl_land, wat, land)
     stats["water_names"] = named
     print("inset")
     write_fc("nl_inset.geojson", inset())

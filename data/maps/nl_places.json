@@ -1,0 +1,7874 @@
+[
+{
+"name": "Keulen",
+"local": "Köln",
+"place": "city",
+"pop": 1069200,
+"lon": 6.95997,
+"lat": 50.93836
+},
+{
+"name": "Amsterdam",
+"local": "Amsterdam",
+"place": "city",
+"pop": 881933,
+"lon": 4.89245,
+"lat": 52.37308
+},
+{
+"name": "Düsseldorf",
+"local": "Düsseldorf",
+"place": "city",
+"pop": 653253,
+"lon": 6.77631,
+"lat": 51.2254
+},
+{
+"name": "Dortmund",
+"local": "Dortmund",
+"place": "city",
+"pop": 600933,
+"lon": 7.46528,
+"lat": 51.51423
+},
+{
+"name": "Rotterdam",
+"local": "Rotterdam",
+"place": "city",
+"pop": 572392,
+"lon": 4.47775,
+"lat": 51.92444
+},
+{
+"name": "Essen",
+"local": "Essen",
+"place": "city",
+"pop": 569884,
+"lon": 7.01582,
+"lat": 51.45822
+},
+{
+"name": "Den Haag",
+"local": "Den Haag",
+"place": "city",
+"pop": 525745,
+"lon": 4.31135,
+"lat": 52.07998
+},
+{
+"name": "Antwerpen",
+"local": "Antwerpen",
+"place": "city",
+"pop": 506922,
+"lon": 4.39971,
+"lat": 51.22111
+},
+{
+"name": "Duisburg",
+"local": "Duisburg",
+"place": "city",
+"pop": 486855,
+"lon": 6.75956,
+"lat": 51.435
+},
+{
+"name": "Bochum",
+"local": "Bochum",
+"place": "city",
+"pop": 371075,
+"lon": 7.21966,
+"lat": 51.48181
+},
+{
+"name": "Wuppertal",
+"local": "Wuppertal",
+"place": "city",
+"pop": 361077,
+"lon": 7.17804,
+"lat": 51.26402
+},
+{
+"name": "Bonn",
+"local": "Bonn",
+"place": "city",
+"pop": 335913,
+"lon": 7.10246,
+"lat": 50.73526
+},
+{
+"name": "Utrecht",
+"local": "Utrecht",
+"place": "city",
+"pop": 295591,
+"lon": 5.12156,
+"lat": 52.0907
+},
+{
+"name": "Gent",
+"local": "Gent",
+"place": "city",
+"pop": 272657,
+"lon": 3.72501,
+"lat": 51.05383
+},
+{
+"name": "Gelsenkirchen",
+"local": "Gelsenkirchen",
+"place": "city",
+"pop": 260368,
+"lon": 7.09601,
+"lat": 51.51103
+},
+{
+"name": "Mönchengladbach",
+"local": "Mönchengladbach",
+"place": "city",
+"pop": 255430,
+"lon": 6.43538,
+"lat": 51.19471
+},
+{
+"name": "Aken",
+"local": "Aachen",
+"place": "city",
+"pop": 241683,
+"lon": 6.08386,
+"lat": 50.77635
+},
+{
+"name": "Rijsel",
+"local": "Lille",
+"place": "city",
+"pop": 236710,
+"lon": 3.06353,
+"lat": 50.63657
+},
+{
+"name": "Eindhoven",
+"local": "Eindhoven",
+"place": "city",
+"pop": 235923,
+"lon": 5.47863,
+"lat": 51.43926
+},
+{
+"name": "Krefeld",
+"local": "Krefeld",
+"place": "city",
+"pop": 222058,
+"lon": 6.56233,
+"lat": 51.33312
+},
+{
+"name": "Oberhausen",
+"local": "Oberhausen",
+"place": "city",
+"pop": 209292,
+"lon": 6.85144,
+"lat": 51.46961
+},
+{
+"name": "Almere",
+"local": "Almere",
+"place": "city",
+"pop": 207904,
+"lon": 5.21859,
+"lat": 52.3705
+},
+{
+"name": "Charleroi",
+"local": "Charleroi",
+"place": "city",
+"pop": 202730,
+"lon": 4.44453,
+"lat": 50.41162
+},
+{
+"name": "Groningen",
+"local": "Groningen",
+"place": "city",
+"pop": 201242,
+"lon": 6.56801,
+"lat": 53.21907
+},
+{
+"name": "Tilburg",
+"local": "Tilburg",
+"place": "city",
+"pop": 199128,
+"lon": 5.0886,
+"lat": 51.55624
+},
+{
+"name": "Luik",
+"local": "Liège",
+"place": "city",
+"pop": 197013,
+"lon": 5.57361,
+"lat": 50.64509
+},
+{
+"name": "Brussel",
+"local": "Bruxelles - Brussel",
+"place": "city",
+"pop": 194291,
+"lon": 4.35249,
+"lat": 50.84674
+},
+{
+"name": "Hagen",
+"local": "Hagen",
+"place": "city",
+"pop": 186000,
+"lon": 7.4733,
+"lat": 51.35829
+},
+{
+"name": "Nijmegen",
+"local": "Nijmegen",
+"place": "city",
+"pop": 176731,
+"lon": 5.86378,
+"lat": 51.84749
+},
+{
+"name": "Mülheim an der Ruhr",
+"local": "Mülheim an der Ruhr",
+"place": "city",
+"pop": 167108,
+"lon": 6.88292,
+"lat": 51.42729
+},
+{
+"name": "Solingen",
+"local": "Solingen",
+"place": "city",
+"pop": 164205,
+"lon": 7.08459,
+"lat": 51.17216
+},
+{
+"name": "Leverkusen",
+"local": "Leverkusen",
+"place": "city",
+"pop": 160819,
+"lon": 6.98812,
+"lat": 51.03247
+},
+{
+"name": "Neuss",
+"local": "Neuss",
+"place": "city",
+"pop": 159122,
+"lon": 6.69165,
+"lat": 51.19818
+},
+{
+"name": "Haarlem",
+"local": "Haarlem",
+"place": "city",
+"pop": 158593,
+"lon": 4.6388,
+"lat": 52.38853
+},
+{
+"name": "Herne",
+"local": "Herne",
+"place": "city",
+"pop": 156449,
+"lon": 7.21999,
+"lat": 51.53804
+},
+{
+"name": "Arnhem",
+"local": "Arnhem",
+"place": "city",
+"pop": 155694,
+"lon": 5.91086,
+"lat": 51.98426
+},
+{
+"name": "Enschede",
+"local": "Enschede",
+"place": "city",
+"pop": 151041,
+"lon": 6.89405,
+"lat": 52.22099
+},
+{
+"name": "Breda",
+"local": "Breda",
+"place": "city",
+"pop": 150008,
+"lon": 4.77602,
+"lat": 51.58878
+},
+{
+"name": "Amersfoort",
+"local": "Amersfoort",
+"place": "city",
+"pop": 145699,
+"lon": 5.38969,
+"lat": 52.15625
+},
+{
+"name": "Apeldoorn",
+"local": "Apeldoorn",
+"place": "city",
+"pop": 141107,
+"lon": 5.96395,
+"lat": 52.21565
+},
+{
+"name": "Zoetermeer",
+"local": "Zoetermeer",
+"place": "city",
+"pop": 124780,
+"lon": 4.49012,
+"lat": 52.06225
+},
+{
+"name": "Zwolle",
+"local": "Zwolle",
+"place": "city",
+"pop": 124505,
+"lon": 6.09438,
+"lat": 52.50898
+},
+{
+"name": "Leiden",
+"local": "Leiden",
+"place": "city",
+"pop": 123753,
+"lon": 4.49088,
+"lat": 52.15947
+},
+{
+"name": "Ede",
+"local": "Ede",
+"place": "city",
+"pop": 123550,
+"lon": 5.6702,
+"lat": 52.04583
+},
+{
+"name": "Dordrecht",
+"local": "Dordrecht",
+"place": "city",
+"pop": 122070,
+"lon": 4.66924,
+"lat": 51.81443
+},
+{
+"name": "Maastricht",
+"local": "Maastricht",
+"place": "city",
+"pop": 120105,
+"lon": 5.69098,
+"lat": 50.85124
+},
+{
+"name": "Brugge",
+"local": "Brugge",
+"place": "city",
+"pop": 117639,
+"lon": 3.22677,
+"lat": 51.20855
+},
+{
+"name": "Remscheid",
+"local": "Remscheid",
+"place": "city",
+"pop": 116827,
+"lon": 7.19435,
+"lat": 51.17987
+},
+{
+"name": "Bottrop",
+"local": "Bottrop",
+"place": "city",
+"pop": 116055,
+"lon": 6.9292,
+"lat": 51.52158
+},
+{
+"name": "'s-Hertogenbosch",
+"local": "'s-Hertogenbosch",
+"place": "city",
+"pop": 115903,
+"lon": 5.30312,
+"lat": 51.68894
+},
+{
+"name": "Recklinghausen",
+"local": "Recklinghausen",
+"place": "city",
+"pop": 115320,
+"lon": 7.19785,
+"lat": 51.61438
+},
+{
+"name": "Namen",
+"local": "Namur",
+"place": "city",
+"pop": 113174,
+"lon": 4.86619,
+"lat": 50.46653
+},
+{
+"name": "Koblenz",
+"local": "Koblenz",
+"place": "city",
+"pop": 110643,
+"lon": 7.5944,
+"lat": 50.35333
+},
+{
+"name": "Bergisch Gladbach",
+"local": "Bergisch Gladbach",
+"place": "city",
+"pop": 109425,
+"lon": 7.12774,
+"lat": 50.99293
+},
+{
+"name": "Meurs",
+"local": "Moers",
+"place": "city",
+"pop": 105102,
+"lon": 6.62843,
+"lat": 51.45128
+},
+{
+"name": "Leuven",
+"local": "Leuven",
+"place": "city",
+"pop": 102275,
+"lon": 4.70117,
+"lat": 50.8792
+},
+{
+"name": "Delft",
+"local": "Delft",
+"place": "city",
+"pop": 101386,
+"lon": 4.35839,
+"lat": 52.0114
+},
+{
+"name": "Toerkonje",
+"local": "Tourcoing",
+"place": "town",
+"pop": 99011,
+"lon": 3.16057,
+"lat": 50.7235
+},
+{
+"name": "Roubaix",
+"local": "Roubaix",
+"place": "town",
+"pop": 98892,
+"lon": 3.17417,
+"lat": 50.69159
+},
+{
+"name": "Witten",
+"local": "Witten",
+"place": "town",
+"pop": 97986,
+"lon": 7.33512,
+"lat": 51.43702
+},
+{
+"name": "Alkmaar",
+"local": "Alkmaar",
+"place": "city",
+"pop": 96460,
+"lon": 4.75038,
+"lat": 52.63126
+},
+{
+"name": "Purmerend",
+"local": "Purmerend",
+"place": "city",
+"pop": 95912,
+"lon": 4.96148,
+"lat": 52.50248
+},
+{
+"name": "Oss",
+"local": "Oss",
+"place": "town",
+"pop": 95239,
+"lon": 5.52539,
+"lat": 51.76964
+},
+{
+"name": "Hilversum",
+"local": "Hilversum",
+"place": "city",
+"pop": 93345,
+"lon": 5.17194,
+"lat": 52.22414
+},
+{
+"name": "Ratingen",
+"local": "Ratingen",
+"place": "town",
+"pop": 93099,
+"lon": 6.84935,
+"lat": 51.29733
+},
+{
+"name": "Bergen",
+"local": "Mons",
+"place": "city",
+"pop": 92721,
+"lon": 3.95196,
+"lat": 50.45496
+},
+{
+"name": "Leeuwarden",
+"local": "Leeuwarden",
+"place": "city",
+"pop": 91992,
+"lon": 5.79185,
+"lat": 53.20059
+},
+{
+"name": "Lünen",
+"local": "Lünen",
+"place": "town",
+"pop": 90800,
+"lon": 7.52281,
+"lat": 51.61425
+},
+{
+"name": "Helmond",
+"local": "Helmond",
+"place": "city",
+"pop": 90609,
+"lon": 5.65577,
+"lat": 51.4791
+},
+{
+"name": "Amstelveen",
+"local": "Amstelveen",
+"place": "town",
+"pop": 89321,
+"lon": 4.85968,
+"lat": 52.30282
+},
+{
+"name": "Düren",
+"local": "Düren",
+"place": "town",
+"pop": 88953,
+"lon": 6.48208,
+"lat": 50.80317
+},
+{
+"name": "Deurne",
+"local": "Deurne",
+"place": "town",
+"pop": 86297,
+"lon": 4.47193,
+"lat": 51.20849
+},
+{
+"name": "Deventer",
+"local": "Deventer",
+"place": "city",
+"pop": 86060,
+"lon": 6.15847,
+"lat": 52.25323
+},
+{
+"name": "Velbert",
+"local": "Velbert",
+"place": "town",
+"pop": 84579,
+"lon": 7.04399,
+"lat": 51.34067
+},
+{
+"name": "Marl",
+"local": "Marl",
+"place": "town",
+"pop": 83634,
+"lon": 7.08291,
+"lat": 51.64858
+},
+{
+"name": "Hengelo",
+"local": "Hengelo",
+"place": "town",
+"pop": 79798,
+"lon": 6.7924,
+"lat": 52.26587
+},
+{
+"name": "La Louvière",
+"local": "La Louvière",
+"place": "town",
+"pop": 79486,
+"lon": 4.18563,
+"lat": 50.47936
+},
+{
+"name": "Troisdorf",
+"local": "Troisdorf",
+"place": "town",
+"pop": 79026,
+"lon": 7.15933,
+"lat": 50.81531
+},
+{
+"name": "Schiedam",
+"local": "Schiedam",
+"place": "town",
+"pop": 77890,
+"lon": 4.40191,
+"lat": 51.91718
+},
+{
+"name": "Gouda",
+"local": "Gouda",
+"place": "town",
+"pop": 77818,
+"lon": 4.71061,
+"lat": 52.01149
+},
+{
+"name": "Dorsten",
+"local": "Dorsten",
+"place": "town",
+"pop": 77294,
+"lon": 6.96474,
+"lat": 51.66041
+},
+{
+"name": "Kortrijk",
+"local": "Kortrijk",
+"place": "city",
+"pop": 77109,
+"lon": 3.26599,
+"lat": 50.82764
+},
+{
+"name": "Lelystad",
+"local": "Lelystad",
+"place": "city",
+"pop": 76969,
+"lon": 5.47689,
+"lat": 52.51509
+},
+{
+"name": "Zaandam",
+"local": "Zaandam",
+"place": "town",
+"pop": 76804,
+"lon": 4.82986,
+"lat": 52.44249
+},
+{
+"name": "Hoofddorp",
+"local": "Hoofddorp",
+"place": "town",
+"pop": 76638,
+"lon": 4.69266,
+"lat": 52.30555
+},
+{
+"name": "Viersen",
+"local": "Viersen",
+"place": "town",
+"pop": 74941,
+"lon": 6.39055,
+"lat": 51.25621
+},
+{
+"name": "Gladbeck",
+"local": "Gladbeck",
+"place": "town",
+"pop": 74011,
+"lon": 6.98773,
+"lat": 51.57187
+},
+{
+"name": "Castrop-Rauxel",
+"local": "Castrop-Rauxel",
+"place": "town",
+"pop": 73751,
+"lon": 7.31062,
+"lat": 51.56462
+},
+{
+"name": "Rheine",
+"local": "Rheine",
+"place": "town",
+"pop": 73484,
+"lon": 7.43736,
+"lat": 52.27977
+},
+{
+"name": "Hoorn",
+"local": "Hoorn",
+"place": "town",
+"pop": 72493,
+"lon": 5.07358,
+"lat": 52.65327
+},
+{
+"name": "Vlaardingen",
+"local": "Vlaardingen",
+"place": "town",
+"pop": 71991,
+"lon": 4.34026,
+"lat": 51.90975
+},
+{
+"name": "Spijkenisse",
+"local": "Spijkenisse",
+"place": "town",
+"pop": 71647,
+"lon": 4.32877,
+"lat": 51.84649
+},
+{
+"name": "Oostende",
+"local": "Oostende",
+"place": "city",
+"pop": 71647,
+"lon": 2.9195,
+"lat": 51.22586
+},
+{
+"name": "Alphen aan den Rijn",
+"local": "Alphen aan den Rijn",
+"place": "town",
+"pop": 71428,
+"lon": 4.65614,
+"lat": 52.13434
+},
+{
+"name": "Bocholt",
+"local": "Bocholt",
+"place": "town",
+"pop": 70856,
+"lon": 6.61487,
+"lat": 51.83827
+},
+{
+"name": "Assen",
+"local": "Assen",
+"place": "city",
+"pop": 70392,
+"lon": 6.5605,
+"lat": 52.99523
+},
+{
+"name": "Almelo",
+"local": "Almelo",
+"place": "town",
+"pop": 69174,
+"lon": 6.66362,
+"lat": 52.35636
+},
+{
+"name": "Doornik",
+"local": "Tournai",
+"place": "city",
+"pop": 69066,
+"lon": 3.38782,
+"lat": 50.60565
+},
+{
+"name": "Heerlen",
+"local": "Heerlen",
+"place": "city",
+"pop": 67943,
+"lon": 5.97733,
+"lat": 50.88767
+},
+{
+"name": "Roosendaal",
+"local": "Roosendaal",
+"place": "town",
+"pop": 67390,
+"lon": 4.45613,
+"lat": 51.53315
+},
+{
+"name": "Dinslaken",
+"local": "Dinslaken",
+"place": "town",
+"pop": 67190,
+"lon": 6.73451,
+"lat": 51.56236
+},
+{
+"name": "Neuwied",
+"local": "Neuwied",
+"place": "town",
+"pop": 66455,
+"lon": 7.4663,
+"lat": 50.43024
+},
+{
+"name": "Capelle aan den IJssel",
+"local": "Capelle aan den IJssel",
+"place": "town",
+"pop": 66421,
+"lon": 4.58836,
+"lat": 51.93126
+},
+{
+"name": "Grevenbroich",
+"local": "Grevenbroich",
+"place": "town",
+"pop": 66314,
+"lon": 6.58354,
+"lat": 51.09058
+},
+{
+"name": "Zeist",
+"local": "Zeist",
+"place": "town",
+"pop": 65987,
+"lon": 5.22763,
+"lat": 52.08928
+},
+{
+"name": "Genk",
+"local": "Genk",
+"place": "town",
+"pop": 65000,
+"lon": 5.50015,
+"lat": 50.96549
+},
+{
+"name": "Seraing",
+"local": "Seraing",
+"place": "town",
+"pop": 64609,
+"lon": 5.50894,
+"lat": 50.61524
+},
+{
+"name": "Venlo",
+"local": "Venlo",
+"place": "city",
+"pop": 64339,
+"lon": 6.1689,
+"lat": 51.37021
+},
+{
+"name": "Veenendaal",
+"local": "Veenendaal",
+"place": "town",
+"pop": 64277,
+"lon": 5.55392,
+"lat": 52.02598
+},
+{
+"name": "Kerpen",
+"local": "Kerpen",
+"place": "town",
+"pop": 63784,
+"lon": 6.69473,
+"lat": 50.86963
+},
+{
+"name": "Bergheim",
+"local": "Bergheim",
+"place": "town",
+"pop": 62454,
+"lon": 6.641,
+"lat": 50.95405
+},
+{
+"name": "Dormagen",
+"local": "Dormagen",
+"place": "town",
+"pop": 62312,
+"lon": 6.84162,
+"lat": 51.09344
+},
+{
+"name": "Villeneuve-d'Ascq",
+"local": "Villeneuve-d'Ascq",
+"place": "town",
+"pop": 62067,
+"lon": 3.1314,
+"lat": 50.61932
+},
+{
+"name": "Nieuwegein",
+"local": "Nieuwegein",
+"place": "town",
+"pop": 61869,
+"lon": 5.08361,
+"lat": 52.03672
+},
+{
+"name": "Herten",
+"local": "Herten",
+"place": "town",
+"pop": 60582,
+"lon": 7.13681,
+"lat": 51.5942
+},
+{
+"name": "Wesel",
+"local": "Wesel",
+"place": "town",
+"pop": 60070,
+"lon": 6.61709,
+"lat": 51.65769
+},
+{
+"name": "Hürth",
+"local": "Hürth",
+"place": "town",
+"pop": 59496,
+"lon": 6.87657,
+"lat": 50.88074
+},
+{
+"name": "Sankt Augustin",
+"local": "Sankt Augustin",
+"place": "town",
+"pop": 59450,
+"lon": 7.18955,
+"lat": 50.77528
+},
+{
+"name": "Euskirchen",
+"local": "Euskirchen",
+"place": "town",
+"pop": 58435,
+"lon": 6.78717,
+"lat": 50.66129
+},
+{
+"name": "Stolberg",
+"local": "Stolberg",
+"place": "town",
+"pop": 57755,
+"lon": 6.22955,
+"lat": 50.77029
+},
+{
+"name": "Eschweiler",
+"local": "Eschweiler",
+"place": "town",
+"pop": 57534,
+"lon": 6.26309,
+"lat": 50.8175
+},
+{
+"name": "Langenfeld",
+"local": "Langenfeld",
+"place": "town",
+"pop": 56982,
+"lon": 6.94594,
+"lat": 51.1009
+},
+{
+"name": "Moeskroen",
+"local": "Mouscron - Moeskroen",
+"place": "town",
+"pop": 56626,
+"lon": 3.21427,
+"lat": 50.74367
+},
+{
+"name": "Hattingen",
+"local": "Hattingen",
+"place": "town",
+"pop": 56263,
+"lon": 7.18625,
+"lat": 51.40072
+},
+{
+"name": "Verviers",
+"local": "Verviers",
+"place": "town",
+"pop": 56127,
+"lon": 5.86783,
+"lat": 50.59324
+},
+{
+"name": "Emmen",
+"local": "Emmen",
+"place": "city",
+"pop": 56113,
+"lon": 6.8939,
+"lat": 52.78894
+},
+{
+"name": "Heerhugowaard",
+"local": "Heerhugowaard",
+"place": "town",
+"pop": 54950,
+"lon": 4.83267,
+"lat": 52.66315
+},
+{
+"name": "Hilden",
+"local": "Hilden",
+"place": "town",
+"pop": 54737,
+"lon": 6.93073,
+"lat": 51.16744
+},
+{
+"name": "Meerbusch",
+"local": "Meerbusch",
+"place": "town",
+"pop": 54318,
+"lon": 6.6761,
+"lat": 51.26522
+},
+{
+"name": "Pulheim",
+"local": "Pulheim",
+"place": "town",
+"pop": 54200,
+"lon": 6.80254,
+"lat": 50.99799
+},
+{
+"name": "Nordhorn",
+"local": "Nordhorn",
+"place": "town",
+"pop": 53285,
+"lon": 7.07077,
+"lat": 52.43597
+},
+{
+"name": "Gummersbach",
+"local": "Gummersbach",
+"place": "town",
+"pop": 53183,
+"lon": 7.56305,
+"lat": 51.02777
+},
+{
+"name": "Lingen (Ems)",
+"local": "Lingen (Ems)",
+"place": "town",
+"pop": 52158,
+"lon": 7.31658,
+"lat": 52.52247
+},
+{
+"name": "Willich",
+"local": "Willich",
+"place": "town",
+"pop": 51846,
+"lon": 6.5447,
+"lat": 51.26414
+},
+{
+"name": "Bergen op Zoom",
+"local": "Bergen op Zoom",
+"place": "town",
+"pop": 51834,
+"lon": 4.28715,
+"lat": 51.49448
+},
+{
+"name": "Frechen",
+"local": "Frechen",
+"place": "town",
+"pop": 51080,
+"lon": 6.80819,
+"lat": 50.90962
+},
+{
+"name": "Rijswijk",
+"local": "Rijswijk",
+"place": "town",
+"pop": 51027,
+"lon": 4.31882,
+"lat": 52.04463
+},
+{
+"name": "Emden",
+"local": "Emden",
+"place": "town",
+"pop": 50535,
+"lon": 7.20583,
+"lat": 53.36705
+},
+{
+"name": "Lokeren",
+"local": "Lokeren",
+"place": "town",
+"pop": 50312,
+"lon": 3.98987,
+"lat": 51.10445
+},
+{
+"name": "Oosterhout",
+"local": "Oosterhout",
+"place": "town",
+"pop": 49483,
+"lon": 4.86099,
+"lat": 51.64475
+},
+{
+"name": "Hennef",
+"local": "Hennef",
+"place": "town",
+"pop": 49217,
+"lon": 7.28479,
+"lat": 50.77544
+},
+{
+"name": "Bornheim",
+"local": "Bornheim",
+"place": "town",
+"pop": 49121,
+"lon": 6.98905,
+"lat": 50.76279
+},
+{
+"name": "Harderwijk",
+"local": "Harderwijk",
+"place": "town",
+"pop": 48726,
+"lon": 5.61893,
+"lat": 52.34907
+},
+{
+"name": "Barendrecht",
+"local": "Barendrecht",
+"place": "town",
+"pop": 48344,
+"lon": 4.53686,
+"lat": 51.85667
+},
+{
+"name": "Merksem",
+"local": "Merksem",
+"place": "town",
+"pop": 48104,
+"lon": 4.43972,
+"lat": 51.24389
+},
+{
+"name": "'s-Hertogenrade",
+"local": "Herzogenrath",
+"place": "town",
+"pop": 47054,
+"lon": 6.09505,
+"lat": 50.86845
+},
+{
+"name": "Schwerte",
+"local": "Schwerte",
+"place": "town",
+"pop": 46763,
+"lon": 7.56747,
+"lat": 51.44553
+},
+{
+"name": "Dülmen",
+"local": "Dülmen",
+"place": "town",
+"pop": 46071,
+"lon": 7.27914,
+"lat": 51.82837
+},
+{
+"name": "Houten",
+"local": "Houten",
+"place": "town",
+"pop": 46050,
+"lon": 5.16206,
+"lat": 52.02714
+},
+{
+"name": "Gronau",
+"local": "Gronau",
+"place": "town",
+"pop": 45998,
+"lon": 7.02644,
+"lat": 52.20857
+},
+{
+"name": "Voorburg",
+"local": "Voorburg",
+"place": "town",
+"pop": 45945,
+"lon": 4.35586,
+"lat": 52.07032
+},
+{
+"name": "Alsdorf",
+"local": "Alsdorf",
+"place": "town",
+"pop": 45721,
+"lon": 6.16208,
+"lat": 50.87715
+},
+{
+"name": "Kerkrade",
+"local": "Kerkrade",
+"place": "town",
+"pop": 45643,
+"lon": 6.0632,
+"lat": 50.86549
+},
+{
+"name": "Drachten",
+"local": "Drachten",
+"place": "town",
+"pop": 45186,
+"lon": 6.09481,
+"lat": 53.10911
+},
+{
+"name": "Veldhoven",
+"local": "Veldhoven",
+"place": "town",
+"pop": 44724,
+"lon": 5.40456,
+"lat": 51.41907
+},
+{
+"name": "Doetinchem",
+"local": "Doetinchem",
+"place": "town",
+"pop": 44600,
+"lon": 6.28911,
+"lat": 51.96552
+},
+{
+"name": "Brühl",
+"local": "Brühl",
+"place": "town",
+"pop": 44029,
+"lon": 6.90371,
+"lat": 50.82913
+},
+{
+"name": "Beringen",
+"local": "Beringen",
+"place": "town",
+"pop": 43975,
+"lon": 5.22669,
+"lat": 51.04896
+},
+{
+"name": "Erkrath",
+"local": "Erkrath",
+"place": "town",
+"pop": 43639,
+"lon": 6.90561,
+"lat": 51.22099
+},
+{
+"name": "Borken",
+"local": "Borken",
+"place": "town",
+"pop": 43367,
+"lon": 6.85833,
+"lat": 51.84448
+},
+{
+"name": "Siegburg",
+"local": "Siegburg",
+"place": "town",
+"pop": 43333,
+"lon": 7.20708,
+"lat": 50.79283
+},
+{
+"name": "Etten-Leur",
+"local": "Etten-Leur",
+"place": "town",
+"pop": 43027,
+"lon": 4.63571,
+"lat": 51.56959
+},
+{
+"name": "Katwijk",
+"local": "Katwijk",
+"place": "town",
+"pop": 43012,
+"lon": 4.41464,
+"lat": 52.20051
+},
+{
+"name": "Valencijn",
+"local": "Valenciennes",
+"place": "city",
+"pop": 42991,
+"lon": 3.52348,
+"lat": 50.35793
+},
+{
+"name": "Aurich",
+"local": "Aurich",
+"place": "town",
+"pop": 42970,
+"lon": 7.48238,
+"lat": 53.46956
+},
+{
+"name": "Erkelens",
+"local": "Erkelenz",
+"place": "town",
+"pop": 42792,
+"lon": 6.31607,
+"lat": 51.08099
+},
+{
+"name": "Atrecht",
+"local": "Arras",
+"place": "city",
+"pop": 42600,
+"lon": 2.77722,
+"lat": 50.29105
+},
+{
+"name": "Den Helder",
+"local": "Den Helder",
+"place": "town",
+"pop": 42556,
+"lon": 4.76028,
+"lat": 52.95798
+},
+{
+"name": "Turnhout",
+"local": "Turnhout",
+"place": "town",
+"pop": 42008,
+"lon": 4.94846,
+"lat": 51.32338
+},
+{
+"name": "Kaarst",
+"local": "Kaarst",
+"place": "town",
+"pop": 42001,
+"lon": 6.61939,
+"lat": 51.22668
+},
+{
+"name": "Huizen",
+"local": "Huizen",
+"place": "town",
+"pop": 41401,
+"lon": 5.25672,
+"lat": 52.29581
+},
+{
+"name": "Roermond",
+"local": "Roermond",
+"place": "city",
+"pop": 41225,
+"lon": 5.98826,
+"lat": 51.19339
+},
+{
+"name": "Heinsberg",
+"local": "Heinsberg",
+"place": "town",
+"pop": 40908,
+"lon": 6.09845,
+"lat": 51.06543
+},
+{
+"name": "Wattrelos",
+"local": "Wattrelos",
+"place": "town",
+"pop": 40836,
+"lon": 3.21539,
+"lat": 50.7016
+},
+{
+"name": "Herstal",
+"local": "Herstal",
+"place": "town",
+"pop": 40834,
+"lon": 5.62998,
+"lat": 50.66504
+},
+{
+"name": "Zwijndrecht",
+"local": "Zwijndrecht",
+"place": "town",
+"pop": 40635,
+"lon": 4.64052,
+"lat": 51.81622
+},
+{
+"name": "Zutphen",
+"local": "Zutphen",
+"place": "town",
+"pop": 40624,
+"lon": 6.19477,
+"lat": 52.13969
+},
+{
+"name": "Weert",
+"local": "Weert",
+"place": "town",
+"pop": 40534,
+"lon": 5.70657,
+"lat": 51.25384
+},
+{
+"name": "Niederkassel",
+"local": "Niederkassel",
+"place": "town",
+"pop": 40506,
+"lon": 7.03519,
+"lat": 50.81371
+},
+{
+"name": "Sint-Truiden",
+"local": "Sint-Truiden",
+"place": "town",
+"pop": 40357,
+"lon": 5.18589,
+"lat": 50.81528
+},
+{
+"name": "Middelburg",
+"local": "Middelburg",
+"place": "city",
+"pop": 40345,
+"lon": 3.61374,
+"lat": 51.49968
+},
+{
+"name": "Monheim am Rhein",
+"local": "Monheim am Rhein",
+"place": "town",
+"pop": 40098,
+"lon": 6.88124,
+"lat": 51.09095
+},
+{
+"name": "Hoogeveen",
+"local": "Hoogeveen",
+"place": "town",
+"pop": 39995,
+"lon": 6.47593,
+"lat": 52.72024
+},
+{
+"name": "Königswinter",
+"local": "Königswinter",
+"place": "town",
+"pop": 39976,
+"lon": 7.1931,
+"lat": 50.67397
+},
+{
+"name": "Dowaai",
+"local": "Douai",
+"place": "city",
+"pop": 39648,
+"lon": 3.08046,
+"lat": 50.36757
+},
+{
+"name": "Tiel",
+"local": "Tiel",
+"place": "town",
+"pop": 39545,
+"lon": 5.43727,
+"lat": 51.88743
+},
+{
+"name": "Soest",
+"local": "Soest",
+"place": "town",
+"pop": 39395,
+"lon": 5.29097,
+"lat": 52.17459
+},
+{
+"name": "Marcq-en-Barœul",
+"local": "Marcq-en-Barœul",
+"place": "town",
+"pop": 39356,
+"lon": 3.1043,
+"lat": 50.6767
+},
+{
+"name": "Heemskerk",
+"local": "Heemskerk",
+"place": "town",
+"pop": 39171,
+"lon": 4.67225,
+"lat": 52.51033
+},
+{
+"name": "Hellevoetsluis",
+"local": "Hellevoetsluis",
+"place": "town",
+"pop": 38722,
+"lon": 4.14367,
+"lat": 51.83392
+},
+{
+"name": "Hückelhoven",
+"local": "Hückelhoven",
+"place": "town",
+"pop": 38709,
+"lon": 6.22473,
+"lat": 51.05524
+},
+{
+"name": "Haltern am See",
+"local": "Haltern am See",
+"place": "town",
+"pop": 38686,
+"lon": 7.18722,
+"lat": 51.74305
+},
+{
+"name": "Maarssen",
+"local": "Maarssen",
+"place": "town",
+"pop": 38560,
+"lon": 5.04008,
+"lat": 52.13848
+},
+{
+"name": "Beverwijk",
+"local": "Beverwijk",
+"place": "town",
+"pop": 38535,
+"lon": 4.65786,
+"lat": 52.48576
+},
+{
+"name": "Wageningen",
+"local": "Wageningen",
+"place": "town",
+"pop": 38458,
+"lon": 5.66628,
+"lat": 51.9663
+},
+{
+"name": "Ahaus",
+"local": "Ahaus",
+"place": "town",
+"pop": 38262,
+"lon": 7.00488,
+"lat": 52.07615
+},
+{
+"name": "Mettmann",
+"local": "Mettmann",
+"place": "town",
+"pop": 37867,
+"lon": 6.97778,
+"lat": 51.25278
+},
+{
+"name": "Würselen",
+"local": "Würselen",
+"place": "town",
+"pop": 37654,
+"lon": 6.13411,
+"lat": 50.81787
+},
+{
+"name": "Sittard",
+"local": "Sittard",
+"place": "town",
+"pop": 37534,
+"lon": 5.86666,
+"lat": 50.99742
+},
+{
+"name": "Landgraaf",
+"local": "Landgraaf",
+"place": "town",
+"pop": 37456,
+"lon": 6.02646,
+"lat": 50.90808
+},
+{
+"name": "Woerden",
+"local": "Woerden",
+"place": "town",
+"pop": 37195,
+"lon": 4.88329,
+"lat": 52.08593
+},
+{
+"name": "Gorinchem",
+"local": "Gorinchem",
+"place": "town",
+"pop": 37022,
+"lon": 4.97387,
+"lat": 51.82961
+},
+{
+"name": "Mol",
+"local": "Mol",
+"place": "town",
+"pop": 37021,
+"lon": 5.11553,
+"lat": 51.18404
+},
+{
+"name": "Kamp-Lintfort",
+"local": "Kamp-Lintfort",
+"place": "town",
+"pop": 36973,
+"lon": 6.54792,
+"lat": 51.5018
+},
+{
+"name": "Ninove",
+"local": "Ninove",
+"place": "town",
+"pop": 36500,
+"lon": 4.02424,
+"lat": 50.83536
+},
+{
+"name": "Châtelet",
+"local": "Châtelet",
+"place": "town",
+"pop": 36390,
+"lon": 4.52435,
+"lat": 50.40461
+},
+{
+"name": "Coesfeld",
+"local": "Coesfeld",
+"place": "town",
+"pop": 36382,
+"lon": 7.16911,
+"lat": 51.94589
+},
+{
+"name": "Uden",
+"local": "Uden",
+"place": "town",
+"pop": 36315,
+"lon": 5.61486,
+"lat": 51.65909
+},
+{
+"name": "Voerde",
+"local": "Voerde",
+"place": "town",
+"pop": 36282,
+"lon": 6.6812,
+"lat": 51.59752
+},
+{
+"name": "Kampen",
+"local": "Kampen",
+"place": "town",
+"pop": 36050,
+"lon": 5.90333,
+"lat": 52.55595
+},
+{
+"name": "Meppen",
+"local": "Meppen",
+"place": "town",
+"pop": 35935,
+"lon": 7.29098,
+"lat": 52.69475
+},
+{
+"name": "Wesseling",
+"local": "Wesseling",
+"place": "town",
+"pop": 35859,
+"lon": 6.98109,
+"lat": 50.82472
+},
+{
+"name": "Emsdetten",
+"local": "Emsdetten",
+"place": "town",
+"pop": 35447,
+"lon": 7.53018,
+"lat": 52.17469
+},
+{
+"name": "Steinfurt",
+"local": "Steinfurt",
+"place": "town",
+"pop": 34822,
+"lon": 7.35814,
+"lat": 52.13775
+},
+{
+"name": "Kempen",
+"local": "Kempen",
+"place": "town",
+"pop": 34618,
+"lon": 6.4195,
+"lat": 51.36421
+},
+{
+"name": "Hoogvliet",
+"local": "Hoogvliet",
+"place": "town",
+"pop": 34502,
+"lon": 4.36411,
+"lat": 51.86529
+},
+{
+"name": "Wermelskirchen",
+"local": "Wermelskirchen",
+"place": "town",
+"pop": 34472,
+"lon": 7.21569,
+"lat": 51.14065
+},
+{
+"name": "Papenburg",
+"local": "Papenburg",
+"place": "town",
+"pop": 34440,
+"lon": 7.41105,
+"lat": 53.07733
+},
+{
+"name": "Lier",
+"local": "Lier",
+"place": "town",
+"pop": 34368,
+"lon": 4.56965,
+"lat": 51.13107
+},
+{
+"name": "Datteln",
+"local": "Datteln",
+"place": "town",
+"pop": 34332,
+"lon": 7.33859,
+"lat": 51.65147
+},
+{
+"name": "IJsselstein",
+"local": "IJsselstein",
+"place": "town",
+"pop": 34208,
+"lon": 5.04588,
+"lat": 52.02464
+},
+{
+"name": "Knokke-Heist",
+"local": "Knokke-Heist",
+"place": "town",
+"pop": 34034,
+"lon": 3.28847,
+"lat": 51.34339
+},
+{
+"name": "Leer",
+"local": "Leer (Ostfriesland)",
+"place": "town",
+"pop": 34025,
+"lon": 7.45676,
+"lat": 53.23322
+},
+{
+"name": "Jülich",
+"local": "Jülich",
+"place": "town",
+"pop": 33948,
+"lon": 6.3611,
+"lat": 50.92209
+},
+{
+"name": "Wijchen",
+"local": "Wijchen",
+"place": "town",
+"pop": 33800,
+"lon": 5.72617,
+"lat": 51.80717
+},
+{
+"name": "Lommel",
+"local": "Lommel",
+"place": "town",
+"pop": 33744,
+"lon": 5.30769,
+"lat": 51.23057
+},
+{
+"name": "Vlissingen",
+"local": "Vlissingen",
+"place": "town",
+"pop": 33625,
+"lon": 3.5698,
+"lat": 51.44809
+},
+{
+"name": "Waver",
+"local": "Wavre",
+"place": "town",
+"pop": 33498,
+"lon": 4.61042,
+"lat": 50.71697
+},
+{
+"name": "Bing",
+"local": "Binche",
+"place": "town",
+"pop": 33470,
+"lon": 4.16516,
+"lat": 50.4103
+},
+{
+"name": "Bussum",
+"local": "Bussum",
+"place": "town",
+"pop": 33220,
+"lon": 5.16306,
+"lat": 52.27737
+},
+{
+"name": "Barneveld",
+"local": "Barneveld",
+"place": "town",
+"pop": 33215,
+"lon": 5.58696,
+"lat": 52.1397
+},
+{
+"name": "Geraardsbergen",
+"local": "Geraardsbergen",
+"place": "town",
+"pop": 33204,
+"lon": 3.88273,
+"lat": 50.77158
+},
+{
+"name": "Korschenbroich",
+"local": "Korschenbroich",
+"place": "town",
+"pop": 33078,
+"lon": 6.51435,
+"lat": 51.19027
+},
+{
+"name": "Gelderen",
+"local": "Geldern",
+"place": "town",
+"pop": 33064,
+"lon": 6.32282,
+"lat": 51.51697
+},
+{
+"name": "Goch",
+"local": "Goch",
+"place": "town",
+"pop": 33063,
+"lon": 6.1593,
+"lat": 51.67558
+},
+{
+"name": "Sneek",
+"local": "Sneek",
+"place": "town",
+"pop": 32865,
+"lon": 5.6611,
+"lat": 53.03355
+},
+{
+"name": "Lens",
+"local": "Lens",
+"place": "city",
+"pop": 32618,
+"lon": 2.83198,
+"lat": 50.42917
+},
+{
+"name": "Maassluis",
+"local": "Maassluis",
+"place": "town",
+"pop": 32484,
+"lon": 4.25412,
+"lat": 51.92199
+},
+{
+"name": "Papendrecht",
+"local": "Papendrecht",
+"place": "town",
+"pop": 32295,
+"lon": 4.69373,
+"lat": 51.83487
+},
+{
+"name": "Waddinxveen",
+"local": "Waddinxveen",
+"place": "town",
+"pop": 32015,
+"lon": 4.65585,
+"lat": 52.04433
+},
+{
+"name": "Oldenzaal",
+"local": "Oldenzaal",
+"place": "town",
+"pop": 32006,
+"lon": 6.92416,
+"lat": 52.31166
+},
+{
+"name": "Tienen",
+"local": "Tienen",
+"place": "town",
+"pop": 32000,
+"lon": 4.93718,
+"lat": 50.80748
+},
+{
+"name": "Geleen",
+"local": "Geleen",
+"place": "town",
+"pop": 31970,
+"lon": 5.8267,
+"lat": 50.97
+},
+{
+"name": "Ottignies-Louvain-la-Neuve",
+"local": "Ottignies-Louvain-la-Neuve",
+"place": "town",
+"pop": 31526,
+"lon": 4.56741,
+"lat": 50.66542
+},
+{
+"name": "Nieuw-Vennep",
+"local": "Nieuw-Vennep",
+"place": "town",
+"pop": 31514,
+"lon": 4.63403,
+"lat": 52.26462
+},
+{
+"name": "Kamerijk",
+"local": "Cambrai",
+"place": "city",
+"pop": 31425,
+"lon": 3.23461,
+"lat": 50.17575
+},
+{
+"name": "IJmuiden",
+"local": "IJmuiden",
+"place": "town",
+"pop": 31307,
+"lon": 4.61162,
+"lat": 52.45741
+},
+{
+"name": "Gevelsberg",
+"local": "Gevelsberg",
+"place": "town",
+"pop": 30949,
+"lon": 7.34048,
+"lat": 51.32074
+},
+{
+"name": "Tongeren",
+"local": "Tongeren",
+"place": "town",
+"pop": 30650,
+"lon": 5.46392,
+"lat": 50.78063
+},
+{
+"name": "Rheinberg",
+"local": "Rheinberg",
+"place": "town",
+"pop": 30610,
+"lon": 6.60141,
+"lat": 51.5459
+},
+{
+"name": "Oer-Erkenschwick",
+"local": "Oer-Erkenschwick",
+"place": "town",
+"pop": 30550,
+"lon": 7.2606,
+"lat": 51.63984
+},
+{
+"name": "Liévin",
+"local": "Liévin",
+"place": "town",
+"pop": 30149,
+"lon": 2.7738,
+"lat": 50.4245
+},
+{
+"name": "Emmerik",
+"local": "Emmerich am Rhein",
+"place": "town",
+"pop": 30105,
+"lon": 6.24283,
+"lat": 51.83221
+},
+{
+"name": "Berkel en Rodenrijs",
+"local": "Berkel en Rodenrijs",
+"place": "town",
+"pop": 30048,
+"lon": 4.47391,
+"lat": 51.99144
+},
+{
+"name": "Courcelles",
+"local": "Courcelles",
+"place": "town",
+"pop": 30000,
+"lon": 4.37601,
+"lat": 50.45747
+},
+{
+"name": "Haan",
+"local": "Haan",
+"place": "town",
+"pop": 29985,
+"lon": 7.00853,
+"lat": 51.1955
+},
+{
+"name": "Rosmalen",
+"local": "Rosmalen",
+"place": "town",
+"pop": 29978,
+"lon": 5.36292,
+"lat": 51.71866
+},
+{
+"name": "Ennepetal",
+"local": "Ennepetal",
+"place": "town",
+"pop": 29825,
+"lon": 7.36933,
+"lat": 51.29672
+},
+{
+"name": "Heerenveen",
+"local": "Heerenveen",
+"place": "town",
+"pop": 29799,
+"lon": 5.92701,
+"lat": 52.95682
+},
+{
+"name": "Hendrik-Ido-Ambacht",
+"local": "Hendrik-Ido-Ambacht",
+"place": "town",
+"pop": 29730,
+"lon": 4.63565,
+"lat": 51.84389
+},
+{
+"name": "Lohmar",
+"local": "Lohmar",
+"place": "town",
+"pop": 29679,
+"lon": 7.21273,
+"lat": 50.84022
+},
+{
+"name": "Waterloo",
+"local": "Waterloo",
+"place": "town",
+"pop": 29649,
+"lon": 4.39776,
+"lat": 50.71754
+},
+{
+"name": "Ekeren",
+"local": "Ekeren",
+"place": "town",
+"pop": 29487,
+"lon": 4.42099,
+"lat": 51.2782
+},
+{
+"name": "Andernach",
+"local": "Andernach",
+"place": "town",
+"pop": 29416,
+"lon": 7.40231,
+"lat": 50.43919
+},
+{
+"name": "Waalwijk",
+"local": "Waalwijk",
+"place": "town",
+"pop": 29385,
+"lon": 5.07051,
+"lat": 51.68525
+},
+{
+"name": "Best",
+"local": "Best",
+"place": "town",
+"pop": 29180,
+"lon": 5.39387,
+"lat": 51.50337
+},
+{
+"name": "Krimpen aan den IJssel",
+"local": "Krimpen aan den IJssel",
+"place": "town",
+"pop": 29123,
+"lon": 4.58879,
+"lat": 51.9144
+},
+{
+"name": "Mabuse",
+"local": "Maubeuge",
+"place": "city",
+"pop": 29066,
+"lon": 3.97431,
+"lat": 50.27857
+},
+{
+"name": "Meppel",
+"local": "Meppel",
+"place": "town",
+"pop": 28955,
+"lon": 6.19777,
+"lat": 52.69382
+},
+{
+"name": "Waltrop",
+"local": "Waltrop",
+"place": "town",
+"pop": 28885,
+"lon": 7.40096,
+"lat": 51.62375
+},
+{
+"name": "Nijkerk",
+"local": "Nijkerk",
+"place": "town",
+"pop": 28870,
+"lon": 5.48249,
+"lat": 52.22195
+},
+{
+"name": "Rijssen",
+"local": "Rijssen",
+"place": "town",
+"pop": 28848,
+"lon": 6.5213,
+"lat": 52.30803
+},
+{
+"name": "Geldrop",
+"local": "Geldrop",
+"place": "town",
+"pop": 28767,
+"lon": 5.56075,
+"lat": 51.42267
+},
+{
+"name": "Baesweiler",
+"local": "Baesweiler",
+"place": "town",
+"pop": 28718,
+"lon": 6.18263,
+"lat": 50.90746
+},
+{
+"name": "Schwelm",
+"local": "Schwelm",
+"place": "town",
+"pop": 28537,
+"lon": 7.29247,
+"lat": 51.28412
+},
+{
+"name": "Aat",
+"local": "Ath",
+"place": "town",
+"pop": 28523,
+"lon": 3.77695,
+"lat": 50.63113
+},
+{
+"name": "Venray",
+"local": "Venray",
+"place": "town",
+"pop": 28415,
+"lon": 5.97536,
+"lat": 51.52703
+},
+{
+"name": "Brunssum",
+"local": "Brunssum",
+"place": "town",
+"pop": 28358,
+"lon": 5.97057,
+"lat": 50.94311
+},
+{
+"name": "Dronten",
+"local": "Dronten",
+"place": "town",
+"pop": 28086,
+"lon": 5.71604,
+"lat": 52.52366
+},
+{
+"name": "Culemborg",
+"local": "Culemborg",
+"place": "town",
+"pop": 27864,
+"lon": 5.2253,
+"lat": 51.95735
+},
+{
+"name": "Ans",
+"local": "Ans",
+"place": "town",
+"pop": 27813,
+"lon": 5.54061,
+"lat": 50.65287
+},
+{
+"name": "Rösrath",
+"local": "Rösrath",
+"place": "town",
+"pop": 27792,
+"lon": 7.18254,
+"lat": 50.89638
+},
+{
+"name": "Wegberg",
+"local": "Wegberg",
+"place": "town",
+"pop": 27713,
+"lon": 6.27769,
+"lat": 51.14236
+},
+{
+"name": "Leichlingen",
+"local": "Leichlingen",
+"place": "town",
+"pop": 27646,
+"lon": 7.01403,
+"lat": 51.10596
+},
+{
+"name": "Kevelaar",
+"local": "Kevelaer",
+"place": "town",
+"pop": 27635,
+"lon": 6.24563,
+"lat": 51.5803
+},
+{
+"name": "Bad Neuenahr-Ahrweiler",
+"local": "Bad Neuenahr-Ahrweiler",
+"place": "town",
+"pop": 27628,
+"lon": 7.11867,
+"lat": 50.54446
+},
+{
+"name": "Zinnik",
+"local": "Soignies",
+"place": "town",
+"pop": 27603,
+"lon": 4.06856,
+"lat": 50.5792
+},
+{
+"name": "Wetter (Ruhr)",
+"local": "Wetter (Ruhr)",
+"place": "town",
+"pop": 27596,
+"lon": 7.39516,
+"lat": 51.38795
+},
+{
+"name": "Goes",
+"local": "Goes",
+"place": "town",
+"pop": 27495,
+"lon": 3.88976,
+"lat": 51.5031
+},
+{
+"name": "Nijvel",
+"local": "Nivelles",
+"place": "town",
+"pop": 27488,
+"lon": 4.32359,
+"lat": 50.59769
+},
+{
+"name": "Diemen",
+"local": "Diemen",
+"place": "town",
+"pop": 27272,
+"lon": 4.96082,
+"lat": 52.34215
+},
+{
+"name": "Brecht",
+"local": "Brecht",
+"place": "town",
+"pop": 27169,
+"lon": 4.63987,
+"lat": 51.34848
+},
+{
+"name": "Leiderdorp",
+"local": "Leiderdorp",
+"place": "town",
+"pop": 27128,
+"lon": 4.53409,
+"lat": 52.1618
+},
+{
+"name": "Lambersart",
+"local": "Lambersart",
+"place": "town",
+"pop": 27121,
+"lon": 3.02236,
+"lat": 50.64779
+},
+{
+"name": "Veghel",
+"local": "Veghel",
+"place": "town",
+"pop": 27065,
+"lon": 5.54469,
+"lat": 51.61345
+},
+{
+"name": "Overath",
+"local": "Overath",
+"place": "town",
+"pop": 27022,
+"lon": 7.2839,
+"lat": 50.932
+},
+{
+"name": "Heemstede",
+"local": "Heemstede",
+"place": "town",
+"pop": 26936,
+"lon": 4.62173,
+"lat": 52.35284
+},
+{
+"name": "Neukirchen-Vluyn",
+"local": "Neukirchen-Vluyn",
+"place": "town",
+"pop": 26846,
+"lon": 6.54676,
+"lat": 51.44137
+},
+{
+"name": "Harelbeke",
+"local": "Harelbeke",
+"place": "town",
+"pop": 26819,
+"lon": 3.31137,
+"lat": 50.85751
+},
+{
+"name": "Rheinbach",
+"local": "Rheinbach",
+"place": "town",
+"pop": 26790,
+"lon": 6.94914,
+"lat": 50.62568
+},
+{
+"name": "Mechernich",
+"local": "Mechernich",
+"place": "town",
+"pop": 26763,
+"lon": 6.65255,
+"lat": 50.591
+},
+{
+"name": "Leusden",
+"local": "Leusden",
+"place": "town",
+"pop": 26755,
+"lon": 5.4287,
+"lat": 52.13036
+},
+{
+"name": "Wetteren",
+"local": "Wetteren",
+"place": "town",
+"pop": 26748,
+"lon": 3.88555,
+"lat": 51.00688
+},
+{
+"name": "Geilenkirchen",
+"local": "Geilenkirchen",
+"place": "town",
+"pop": 26626,
+"lon": 6.11998,
+"lat": 50.96361
+},
+{
+"name": "Ermelo",
+"local": "Ermelo",
+"place": "town",
+"pop": 26590,
+"lon": 5.62313,
+"lat": 52.30009
+},
+{
+"name": "Lomme",
+"local": "Lomme",
+"place": "town",
+"pop": 26500,
+"lon": 2.98709,
+"lat": 50.6457
+},
+{
+"name": "Hamminkeln",
+"local": "Hamminkeln",
+"place": "town",
+"pop": 26369,
+"lon": 6.59086,
+"lat": 51.73069
+},
+{
+"name": "Leidschendam",
+"local": "Leidschendam",
+"place": "town",
+"pop": 26335,
+"lon": 4.39468,
+"lat": 52.08617
+},
+{
+"name": "Kapellen",
+"local": "Kapellen",
+"place": "town",
+"pop": 26242,
+"lon": 4.42954,
+"lat": 51.31495
+},
+{
+"name": "Wassenaar",
+"local": "Wassenaar",
+"place": "town",
+"pop": 26055,
+"lon": 4.40109,
+"lat": 52.14284
+},
+{
+"name": "Hénin-Beaumont",
+"local": "Hénin-Beaumont",
+"place": "town",
+"pop": 26035,
+"lon": 2.94693,
+"lat": 50.41917
+},
+{
+"name": "Ronse",
+"local": "Ronse - Renaix",
+"place": "town",
+"pop": 26000,
+"lon": 3.60209,
+"lat": 50.74755
+},
+{
+"name": "Noordwijk",
+"local": "Noordwijk",
+"place": "town",
+"pop": 25867,
+"lon": 4.4462,
+"lat": 52.24109
+},
+{
+"name": "Andenne",
+"local": "Andenne",
+"place": "town",
+"pop": 25795,
+"lon": 5.09655,
+"lat": 50.4894
+},
+{
+"name": "Emmeloord",
+"local": "Emmeloord",
+"place": "town",
+"pop": 25700,
+"lon": 5.74664,
+"lat": 52.70874
+},
+{
+"name": "Vleuten",
+"local": "Vleuten",
+"place": "town",
+"pop": 25695,
+"lon": 5.01352,
+"lat": 52.10736
+},
+{
+"name": "Flémalle",
+"local": "Flémalle",
+"place": "town",
+"pop": 25612,
+"lon": 5.46996,
+"lat": 50.59945
+},
+{
+"name": "Armentiers",
+"local": "Armentières",
+"place": "town",
+"pop": 25581,
+"lon": 2.88217,
+"lat": 50.68673
+},
+{
+"name": "Selm",
+"local": "Selm",
+"place": "town",
+"pop": 25553,
+"lon": 7.46861,
+"lat": 51.70055
+},
+{
+"name": "Heiligenhaus",
+"local": "Heiligenhaus",
+"place": "town",
+"pop": 25419,
+"lon": 6.97104,
+"lat": 51.32658
+},
+{
+"name": "Vught",
+"local": "Vught",
+"place": "town",
+"pop": 25355,
+"lon": 5.28933,
+"lat": 51.65682
+},
+{
+"name": "Voorschoten",
+"local": "Voorschoten",
+"place": "town",
+"pop": 25315,
+"lon": 4.44657,
+"lat": 52.12752
+},
+{
+"name": "Ridderkerk",
+"local": "Ridderkerk",
+"place": "town",
+"pop": 25285,
+"lon": 4.59998,
+"lat": 51.87148
+},
+{
+"name": "Terneuzen",
+"local": "Terneuzen",
+"place": "town",
+"pop": 25280,
+"lon": 3.84031,
+"lat": 51.32547
+},
+{
+"name": "Zevenaar",
+"local": "Zevenaar",
+"place": "town",
+"pop": 25219,
+"lon": 6.07894,
+"lat": 51.93573
+},
+{
+"name": "Wiehl",
+"local": "Wiehl",
+"place": "town",
+"pop": 25047,
+"lon": 7.55301,
+"lat": 50.94785
+},
+{
+"name": "Sliedrecht",
+"local": "Sliedrecht",
+"place": "town",
+"pop": 25010,
+"lon": 4.77417,
+"lat": 51.82509
+},
+{
+"name": "Lanaken",
+"local": "Lanaken",
+"place": "town",
+"pop": 25000,
+"lon": 5.65132,
+"lat": 50.88928
+},
+{
+"name": "Betun",
+"local": "Béthune",
+"place": "city",
+"pop": 24992,
+"lon": 2.63891,
+"lat": 50.53094
+},
+{
+"name": "Sprockhövel",
+"local": "Sprockhövel",
+"place": "town",
+"pop": 24989,
+"lon": 7.24859,
+"lat": 51.36666
+},
+{
+"name": "Norden",
+"local": "Norden",
+"place": "town",
+"pop": 24887,
+"lon": 7.20674,
+"lat": 53.5942
+},
+{
+"name": "Maaseik",
+"local": "Maaseik",
+"place": "town",
+"pop": 24865,
+"lon": 5.79173,
+"lat": 51.09472
+},
+{
+"name": "Bad Honnef",
+"local": "Bad Honnef",
+"place": "town",
+"pop": 24845,
+"lon": 7.22725,
+"lat": 50.64486
+},
+{
+"name": "Uithoorn",
+"local": "Uithoorn",
+"place": "town",
+"pop": 24835,
+"lon": 4.82511,
+"lat": 52.24114
+},
+{
+"name": "Nijverdal",
+"local": "Nijverdal",
+"place": "town",
+"pop": 24821,
+"lon": 6.46541,
+"lat": 52.3592
+},
+{
+"name": "Deurne",
+"local": "Deurne",
+"place": "town",
+"pop": 24690,
+"lon": 5.79463,
+"lat": 51.46385
+},
+{
+"name": "Boxtel",
+"local": "Boxtel",
+"place": "town",
+"pop": 24610,
+"lon": 5.32478,
+"lat": 51.58831
+},
+{
+"name": "Saint-Nicolas",
+"local": "Saint-Nicolas",
+"place": "town",
+"pop": 24517,
+"lon": 5.53763,
+"lat": 50.63167
+},
+{
+"name": "Putten",
+"local": "Putten",
+"place": "town",
+"pop": 24428,
+"lon": 5.61016,
+"lat": 52.26086
+},
+{
+"name": "Lüdinghausen",
+"local": "Lüdinghausen",
+"place": "town",
+"pop": 24263,
+"lon": 7.44464,
+"lat": 51.77178
+},
+{
+"name": "Pijnacker",
+"local": "Pijnacker",
+"place": "town",
+"pop": 24260,
+"lon": 4.43419,
+"lat": 52.02006
+},
+{
+"name": "Baarn",
+"local": "Baarn",
+"place": "town",
+"pop": 24235,
+"lon": 5.29318,
+"lat": 52.21112
+},
+{
+"name": "Overijse",
+"local": "Overijse",
+"place": "town",
+"pop": 24200,
+"lon": 4.53518,
+"lat": 50.77016
+},
+{
+"name": "Oud-Beijerland",
+"local": "Oud-Beijerland",
+"place": "town",
+"pop": 24015,
+"lon": 4.41647,
+"lat": 51.82144
+},
+{
+"name": "Übach-Palenberg",
+"local": "Übach-Palenberg",
+"place": "town",
+"pop": 23948,
+"lon": 6.11287,
+"lat": 50.92138
+},
+{
+"name": "Meckenheim",
+"local": "Meckenheim",
+"place": "town",
+"pop": 23628,
+"lon": 7.02156,
+"lat": 50.62566
+},
+{
+"name": "Oegstgeest",
+"local": "Oegstgeest",
+"place": "town",
+"pop": 23608,
+"lon": 4.47389,
+"lat": 52.18543
+},
+{
+"name": "Winterswijk",
+"local": "Winterswijk",
+"place": "town",
+"pop": 23593,
+"lon": 6.72242,
+"lat": 51.97464
+},
+{
+"name": "Dongen",
+"local": "Dongen",
+"place": "town",
+"pop": 23175,
+"lon": 4.93688,
+"lat": 51.62475
+},
+{
+"name": "Heiloo",
+"local": "Heiloo",
+"place": "town",
+"pop": 23104,
+"lon": 4.71251,
+"lat": 52.605
+},
+{
+"name": "Haren (Ems)",
+"local": "Haren (Ems)",
+"place": "town",
+"pop": 23090,
+"lon": 7.24003,
+"lat": 52.79056
+},
+{
+"name": "Loos",
+"local": "Loos",
+"place": "town",
+"pop": 23013,
+"lon": 3.01625,
+"lat": 50.60921
+},
+{
+"name": "Gembloers",
+"local": "Gembloux",
+"place": "town",
+"pop": 23000,
+"lon": 4.69431,
+"lat": 50.55973
+},
+{
+"name": "Saint-Ghislain",
+"local": "Saint-Ghislain",
+"place": "town",
+"pop": 22969,
+"lon": 3.81952,
+"lat": 50.44775
+},
+{
+"name": "Bedburg",
+"local": "Bedburg",
+"place": "town",
+"pop": 22846,
+"lon": 6.57676,
+"lat": 50.99722
+},
+{
+"name": "Vreden",
+"local": "Vreden",
+"place": "town",
+"pop": 22758,
+"lon": 6.82365,
+"lat": 52.03586
+},
+{
+"name": "Lisse",
+"local": "Lisse",
+"place": "town",
+"pop": 22717,
+"lon": 4.56303,
+"lat": 52.25761
+},
+{
+"name": "Kleef",
+"local": "Kleve",
+"place": "town",
+"pop": 22643,
+"lon": 6.1376,
+"lat": 51.78956
+},
+{
+"name": "Herdecke",
+"local": "Herdecke",
+"place": "town",
+"pop": 22572,
+"lon": 7.43301,
+"lat": 51.40011
+},
+{
+"name": "Jüchen",
+"local": "Jüchen",
+"place": "town",
+"pop": 22556,
+"lon": 6.50369,
+"lat": 51.10171
+},
+{
+"name": "La Madeleine",
+"local": "La Madeleine",
+"place": "town",
+"pop": 22488,
+"lon": 3.07333,
+"lat": 50.6544
+},
+{
+"name": "Elst",
+"local": "Elst",
+"place": "town",
+"pop": 22460,
+"lon": 5.84526,
+"lat": 51.91879
+},
+{
+"name": "Zeewolde",
+"local": "Zeewolde",
+"place": "town",
+"pop": 22457,
+"lon": 5.54303,
+"lat": 52.33111
+},
+{
+"name": "Bilthoven",
+"local": "Bilthoven",
+"place": "town",
+"pop": 22440,
+"lon": 5.20461,
+"lat": 52.12897
+},
+{
+"name": "Maldegem",
+"local": "Maldegem",
+"place": "town",
+"pop": 22397,
+"lon": 3.44522,
+"lat": 51.20889
+},
+{
+"name": "Duiven",
+"local": "Duiven",
+"place": "town",
+"pop": 22335,
+"lon": 6.02459,
+"lat": 51.94959
+},
+{
+"name": "Grâce-Hollogne",
+"local": "Grâce-Hollogne",
+"place": "town",
+"pop": 22297,
+"lon": 5.47684,
+"lat": 50.6323
+},
+{
+"name": "Schijndel",
+"local": "Schijndel",
+"place": "town",
+"pop": 22255,
+"lon": 5.43625,
+"lat": 51.6177
+},
+{
+"name": "Volendam",
+"local": "Volendam",
+"place": "town",
+"pop": 22215,
+"lon": 5.06827,
+"lat": 52.49638
+},
+{
+"name": "Aalsmeer",
+"local": "Aalsmeer",
+"place": "town",
+"pop": 22168,
+"lon": 4.74934,
+"lat": 52.26694
+},
+{
+"name": "Hoogezand",
+"local": "Hoogezand",
+"place": "town",
+"pop": 22080,
+"lon": 6.75569,
+"lat": 53.16382
+},
+{
+"name": "Radevormwald",
+"local": "Radevormwald",
+"place": "town",
+"pop": 22025,
+"lon": 7.35714,
+"lat": 51.20292
+},
+{
+"name": "Tubeke",
+"local": "Tubize",
+"place": "town",
+"pop": 22000,
+"lon": 4.2047,
+"lat": 50.69302
+},
+{
+"name": "Fleurus",
+"local": "Fleurus",
+"place": "town",
+"pop": 22000,
+"lon": 4.5497,
+"lat": 50.48294
+},
+{
+"name": "St. Tönis",
+"local": "St. Tönis",
+"place": "town",
+"pop": 22000,
+"lon": 6.49255,
+"lat": 51.32106
+},
+{
+"name": "Rees",
+"local": "Rees",
+"place": "town",
+"pop": 21892,
+"lon": 6.39566,
+"lat": 51.75812
+},
+{
+"name": "Bruay-la-Buissière",
+"local": "Bruay-la-Buissière",
+"place": "town",
+"pop": 21827,
+"lon": 2.54619,
+"lat": 50.4822
+},
+{
+"name": "Haaksbergen",
+"local": "Haaksbergen",
+"place": "town",
+"pop": 21605,
+"lon": 6.74024,
+"lat": 52.15646
+},
+{
+"name": "Nieuwerkerk aan den IJssel",
+"local": "Nieuwerkerk aan den IJssel",
+"place": "town",
+"pop": 21595,
+"lon": 4.61168,
+"lat": 51.96753
+},
+{
+"name": "Hazebroek",
+"local": "Hazebrouck",
+"place": "town",
+"pop": 21498,
+"lon": 2.53603,
+"lat": 50.72261
+},
+{
+"name": "Wipperfürth",
+"local": "Wipperfürth",
+"place": "town",
+"pop": 21481,
+"lon": 7.38791,
+"lat": 51.11552
+},
+{
+"name": "Mons-en-Barœul",
+"local": "Mons-en-Barœul",
+"place": "town",
+"pop": 21467,
+"lon": 3.10935,
+"lat": 50.64285
+},
+{
+"name": "Hoei",
+"local": "Huy",
+"place": "town",
+"pop": 21354,
+"lon": 5.24081,
+"lat": 50.51809
+},
+{
+"name": "Hillegom",
+"local": "Hillegom",
+"place": "town",
+"pop": 21316,
+"lon": 4.58346,
+"lat": 52.29228
+},
+{
+"name": "De Meern",
+"local": "De Meern",
+"place": "town",
+"pop": 21316,
+"lon": 5.03636,
+"lat": 52.08118
+},
+{
+"name": "Frameries",
+"local": "Frameries",
+"place": "town",
+"pop": 21296,
+"lon": 3.8933,
+"lat": 50.40965
+},
+{
+"name": "Sint-Katelijne-Waver",
+"local": "Sint-Katelijne-Waver",
+"place": "town",
+"pop": 21197,
+"lon": 4.53224,
+"lat": 51.06995
+},
+{
+"name": "Xanten",
+"local": "Xanten",
+"place": "town",
+"pop": 21186,
+"lon": 6.45432,
+"lat": 51.66152
+},
+{
+"name": "Zonhoven",
+"local": "Zonhoven",
+"place": "town",
+"pop": 21139,
+"lon": 5.36777,
+"lat": 50.99098
+},
+{
+"name": "'s-Gravenzande",
+"local": "'s-Gravenzande",
+"place": "town",
+"pop": 21130,
+"lon": 4.16038,
+"lat": 52.00283
+},
+{
+"name": "Lindlar",
+"local": "Lindlar",
+"place": "town",
+"pop": 21038,
+"lon": 7.37799,
+"lat": 51.01862
+},
+{
+"name": "Chaudfontaine",
+"local": "Chaudfontaine",
+"place": "town",
+"pop": 21003,
+"lon": 5.64697,
+"lat": 50.58479
+},
+{
+"name": "Heverlee",
+"local": "Heverlee",
+"place": "town",
+"pop": 21000,
+"lon": 4.69377,
+"lat": 50.86459
+},
+{
+"name": "Rixensart",
+"local": "Rixensart",
+"place": "town",
+"pop": 21000,
+"lon": 4.52162,
+"lat": 50.71226
+},
+{
+"name": "Wülfrath",
+"local": "Wülfrath",
+"place": "town",
+"pop": 20946,
+"lon": 7.03281,
+"lat": 51.28186
+},
+{
+"name": "Borne",
+"local": "Borne",
+"place": "town",
+"pop": 20930,
+"lon": 6.75024,
+"lat": 52.30183
+},
+{
+"name": "Wasquehal",
+"local": "Wasquehal",
+"place": "town",
+"pop": 20836,
+"lon": 3.13124,
+"lat": 50.66916
+},
+{
+"name": "Halewijn",
+"local": "Halluin",
+"place": "town",
+"pop": 20829,
+"lon": 3.12492,
+"lat": 50.78267
+},
+{
+"name": "Tervuren",
+"local": "Tervuren",
+"place": "town",
+"pop": 20816,
+"lon": 4.51388,
+"lat": 50.82419
+},
+{
+"name": "Goirle",
+"local": "Goirle",
+"place": "town",
+"pop": 20795,
+"lon": 5.06603,
+"lat": 51.52318
+},
+{
+"name": "Croix",
+"local": "Croix",
+"place": "town",
+"pop": 20778,
+"lon": 3.15644,
+"lat": 50.68021
+},
+{
+"name": "Lochristi",
+"local": "Lochristi",
+"place": "town",
+"pop": 20734,
+"lon": 3.8356,
+"lat": 51.09689
+},
+{
+"name": "Eeklo",
+"local": "Eeklo",
+"place": "town",
+"pop": 20708,
+"lon": 3.5666,
+"lat": 51.18448
+},
+{
+"name": "Denain",
+"local": "Denain",
+"place": "town",
+"pop": 20640,
+"lon": 3.39437,
+"lat": 50.32709
+},
+{
+"name": "Zele",
+"local": "Zele",
+"place": "town",
+"pop": 20550,
+"lon": 4.03859,
+"lat": 51.06836
+},
+{
+"name": "Colfontaine",
+"local": "Colfontaine",
+"place": "town",
+"pop": 20446,
+"lon": 3.8514,
+"lat": 50.40566
+},
+{
+"name": "Kirchhellen",
+"local": "Kirchhellen",
+"place": "town",
+"pop": 20398,
+"lon": 6.92005,
+"lat": 51.60375
+},
+{
+"name": "Torhout",
+"local": "Torhout",
+"place": "town",
+"pop": 20395,
+"lon": 3.10164,
+"lat": 51.06478
+},
+{
+"name": "Valkenswaard",
+"local": "Valkenswaard",
+"place": "town",
+"pop": 20342,
+"lon": 5.45945,
+"lat": 51.35069
+},
+{
+"name": "Naaldwijk",
+"local": "Naaldwijk",
+"place": "town",
+"pop": 20295,
+"lon": 4.20742,
+"lat": 51.993
+},
+{
+"name": "Kontich",
+"local": "Kontich",
+"place": "town",
+"pop": 20290,
+"lon": 4.44548,
+"lat": 51.13533
+},
+{
+"name": "Ochtrup",
+"local": "Ochtrup",
+"place": "town",
+"pop": 20267,
+"lon": 7.18881,
+"lat": 52.21023
+},
+{
+"name": "Urk",
+"local": "Urk",
+"place": "town",
+"pop": 20220,
+"lon": 5.59879,
+"lat": 52.66545
+},
+{
+"name": "Kürten",
+"local": "Kürten",
+"place": "town",
+"pop": 20116,
+"lon": 7.26128,
+"lat": 51.05402
+},
+{
+"name": "Stadtlohn",
+"local": "Stadtlohn",
+"place": "town",
+"pop": 20005,
+"lon": 6.91731,
+"lat": 51.99283
+},
+{
+"name": "Senden",
+"local": "Senden",
+"place": "town",
+"pop": 20000,
+"lon": 7.4883,
+"lat": 51.85496
+},
+{
+"name": "Zülpich",
+"local": "Zülpich",
+"place": "town",
+"pop": 20000,
+"lon": 6.64727,
+"lat": 50.69225
+},
+{
+"name": "Boussu",
+"local": "Boussu",
+"place": "town",
+"pop": 19942,
+"lon": 3.79609,
+"lat": 50.43313
+},
+{
+"name": "Nuenen",
+"local": "Nuenen",
+"place": "town",
+"pop": 19930,
+"lon": 5.54904,
+"lat": 51.4743
+},
+{
+"name": "Veendam",
+"local": "Veendam",
+"place": "town",
+"pop": 19920,
+"lon": 6.86949,
+"lat": 53.10284
+},
+{
+"name": "Poperinge",
+"local": "Poperinge",
+"place": "town",
+"pop": 19893,
+"lon": 2.7265,
+"lat": 50.85566
+},
+{
+"name": "Rhenen",
+"local": "Rhenen",
+"place": "town",
+"pop": 19871,
+"lon": 5.57222,
+"lat": 51.96088
+},
+{
+"name": "Oisterwijk",
+"local": "Oisterwijk",
+"place": "town",
+"pop": 19870,
+"lon": 5.19381,
+"lat": 51.57787
+},
+{
+"name": "Castricum",
+"local": "Castricum",
+"place": "town",
+"pop": 19726,
+"lon": 4.66962,
+"lat": 52.54967
+},
+{
+"name": "Nunspeet",
+"local": "Nunspeet",
+"place": "town",
+"pop": 19688,
+"lon": 5.78089,
+"lat": 52.37857
+},
+{
+"name": "Neunkirchen-Seelscheid",
+"local": "Neunkirchen-Seelscheid",
+"place": "town",
+"pop": 19546,
+"lon": 7.3295,
+"lat": 50.85451
+},
+{
+"name": "Schilde",
+"local": "Schilde",
+"place": "town",
+"pop": 19516,
+"lon": 4.58149,
+"lat": 51.23887
+},
+{
+"name": "Hörstel",
+"local": "Hörstel",
+"place": "town",
+"pop": 19491,
+"lon": 7.58625,
+"lat": 52.29737
+},
+{
+"name": "Ronchin",
+"local": "Ronchin",
+"place": "town",
+"pop": 19437,
+"lon": 3.07788,
+"lat": 50.60567
+},
+{
+"name": "Nottuln",
+"local": "Nottuln",
+"place": "town",
+"pop": 19436,
+"lon": 7.35327,
+"lat": 51.92967
+},
+{
+"name": "Stadskanaal",
+"local": "Stadskanaal",
+"place": "town",
+"pop": 19404,
+"lon": 6.96245,
+"lat": 52.99256
+},
+{
+"name": "Hardenberg",
+"local": "Hardenberg",
+"place": "town",
+"pop": 19280,
+"lon": 6.61882,
+"lat": 52.57547
+},
+{
+"name": "Eupen",
+"local": "Eupen",
+"place": "town",
+"pop": 19254,
+"lon": 6.03127,
+"lat": 50.63057
+},
+{
+"name": "Engelskirchen",
+"local": "Engelskirchen",
+"place": "town",
+"pop": 19211,
+"lon": 7.40842,
+"lat": 50.9873
+},
+{
+"name": "Raalte",
+"local": "Raalte",
+"place": "town",
+"pop": 19178,
+"lon": 6.27178,
+"lat": 52.38567
+},
+{
+"name": "Nootdorp",
+"local": "Nootdorp",
+"place": "town",
+"pop": 19160,
+"lon": 4.39313,
+"lat": 52.04262
+},
+{
+"name": "Rhede",
+"local": "Rhede",
+"place": "town",
+"pop": 19051,
+"lon": 6.69609,
+"lat": 51.83631
+},
+{
+"name": "Aalter",
+"local": "Aalter",
+"place": "town",
+"pop": 19028,
+"lon": 3.44852,
+"lat": 51.08389
+},
+{
+"name": "Huissen",
+"local": "Huissen",
+"place": "town",
+"pop": 18947,
+"lon": 5.93938,
+"lat": 51.93835
+},
+{
+"name": "Steenwijk",
+"local": "Steenwijk",
+"place": "town",
+"pop": 18930,
+"lon": 6.12105,
+"lat": 52.78955
+},
+{
+"name": "Quaregnon",
+"local": "Quaregnon",
+"place": "town",
+"pop": 18868,
+"lon": 3.86373,
+"lat": 50.44216
+},
+{
+"name": "Wuustwezel",
+"local": "Wuustwezel",
+"place": "town",
+"pop": 18837,
+"lon": 4.59909,
+"lat": 51.39202
+},
+{
+"name": "Mayen",
+"local": "Mayen",
+"place": "town",
+"pop": 18818,
+"lon": 7.22151,
+"lat": 50.32835
+},
+{
+"name": "Morlanwelz",
+"local": "Morlanwelz",
+"place": "town",
+"pop": 18800,
+"lon": 4.24254,
+"lat": 50.45507
+},
+{
+"name": "Weesp",
+"local": "Weesp",
+"place": "town",
+"pop": 18751,
+"lon": 5.04208,
+"lat": 52.30726
+},
+{
+"name": "Schagen",
+"local": "Schagen",
+"place": "town",
+"pop": 18725,
+"lon": 4.80446,
+"lat": 52.78824
+},
+{
+"name": "Windeck",
+"local": "Windeck",
+"place": "town",
+"pop": 18724,
+"lon": 7.5746,
+"lat": 50.79771
+},
+{
+"name": "Hem",
+"local": "Hem",
+"place": "town",
+"pop": 18713,
+"lon": 3.18394,
+"lat": 50.65409
+},
+{
+"name": "Driebergen-Rijsenburg",
+"local": "Driebergen-Rijsenburg",
+"place": "town",
+"pop": 18653,
+"lon": 5.28348,
+"lat": 52.05229
+},
+{
+"name": "Jemeppe-sur-Sambre",
+"local": "Jemeppe-sur-Sambre",
+"place": "town",
+"pop": 18646,
+"lon": 4.66868,
+"lat": 50.46564
+},
+{
+"name": "Eitorf",
+"local": "Eitorf",
+"place": "town",
+"pop": 18585,
+"lon": 7.45035,
+"lat": 50.77103
+},
+{
+"name": "Hellemmes",
+"local": "Hellemmes",
+"place": "town",
+"pop": 18492,
+"lon": 3.10922,
+"lat": 50.62745
+},
+{
+"name": "Enkhuizen",
+"local": "Enkhuizen",
+"place": "town",
+"pop": 18468,
+"lon": 5.29012,
+"lat": 52.70363
+},
+{
+"name": "Wervik",
+"local": "Wervik",
+"place": "town",
+"pop": 18435,
+"lon": 3.04397,
+"lat": 50.77822
+},
+{
+"name": "Diepenbeek",
+"local": "Diepenbeek",
+"place": "town",
+"pop": 18403,
+"lon": 5.42003,
+"lat": 50.90785
+},
+{
+"name": "Lede",
+"local": "Lede",
+"place": "town",
+"pop": 18400,
+"lon": 3.97798,
+"lat": 50.96615
+},
+{
+"name": "Walcourt",
+"local": "Walcourt",
+"place": "town",
+"pop": 18398,
+"lon": 4.43141,
+"lat": 50.2514
+},
+{
+"name": "Drunen",
+"local": "Drunen",
+"place": "town",
+"pop": 18278,
+"lon": 5.13099,
+"lat": 51.68628
+},
+{
+"name": "Essen",
+"local": "Essen",
+"place": "town",
+"pop": 18256,
+"lon": 4.46983,
+"lat": 51.46792
+},
+{
+"name": "Leerdam",
+"local": "Leerdam",
+"place": "town",
+"pop": 18255,
+"lon": 5.09244,
+"lat": 51.89374
+},
+{
+"name": "Bodegraven",
+"local": "Bodegraven",
+"place": "town",
+"pop": 18187,
+"lon": 4.75109,
+"lat": 52.08343
+},
+{
+"name": "Winschoten",
+"local": "Winschoten",
+"place": "town",
+"pop": 18130,
+"lon": 7.03807,
+"lat": 53.143
+},
+{
+"name": "Velp",
+"local": "Velp",
+"place": "town",
+"pop": 18120,
+"lon": 5.97513,
+"lat": 51.99587
+},
+{
+"name": "Faches-Thumesnil",
+"local": "Faches-Thumesnil",
+"place": "town",
+"pop": 18110,
+"lon": 3.06979,
+"lat": 50.6026
+},
+{
+"name": "Burscheid",
+"local": "Burscheid",
+"place": "town",
+"pop": 18108,
+"lon": 7.12123,
+"lat": 51.08247
+},
+{
+"name": "Wijk bij Duurstede",
+"local": "Wijk bij Duurstede",
+"place": "town",
+"pop": 18095,
+"lon": 5.33744,
+"lat": 51.97519
+},
+{
+"name": "Ranst",
+"local": "Ranst",
+"place": "town",
+"pop": 18061,
+"lon": 4.5633,
+"lat": 51.1897
+},
+{
+"name": "Sindorf",
+"local": "Sindorf",
+"place": "town",
+"pop": 18050,
+"lon": 6.67207,
+"lat": 50.90768
+},
+{
+"name": "Lessen",
+"local": "Lessines",
+"place": "town",
+"pop": 18000,
+"lon": 3.83011,
+"lat": 50.7123
+},
+{
+"name": "Carvin",
+"local": "Carvin",
+"place": "town",
+"pop": 17852,
+"lon": 2.95775,
+"lat": 50.49341
+},
+{
+"name": "Avion",
+"local": "Avion",
+"place": "town",
+"pop": 17672,
+"lon": 2.83439,
+"lat": 50.41261
+},
+{
+"name": "Lebbeke",
+"local": "Lebbeke",
+"place": "town",
+"pop": 17651,
+"lon": 4.13077,
+"lat": 51.0004
+},
+{
+"name": "Marche-en-Famenne",
+"local": "Marche-en-Famenne",
+"place": "town",
+"pop": 17454,
+"lon": 5.34196,
+"lat": 50.22709
+},
+{
+"name": "Wezet",
+"local": "Visé",
+"place": "town",
+"pop": 17341,
+"lon": 5.69364,
+"lat": 50.73478
+},
+{
+"name": "Cuijk",
+"local": "Cuijk",
+"place": "town",
+"pop": 17295,
+"lon": 5.88005,
+"lat": 51.72994
+},
+{
+"name": "Soumagne",
+"local": "Soumagne",
+"place": "town",
+"pop": 17265,
+"lon": 5.73179,
+"lat": 50.63306
+},
+{
+"name": "Herve",
+"local": "Herve",
+"place": "town",
+"pop": 17213,
+"lon": 5.7931,
+"lat": 50.63916
+},
+{
+"name": "Beuningen",
+"local": "Beuningen",
+"place": "town",
+"pop": 17210,
+"lon": 5.76736,
+"lat": 51.85866
+},
+{
+"name": "Wassenberg",
+"local": "Wassenberg",
+"place": "town",
+"pop": 17182,
+"lon": 6.15609,
+"lat": 51.10074
+},
+{
+"name": "Beerse",
+"local": "Beerse",
+"place": "town",
+"pop": 17167,
+"lon": 4.85645,
+"lat": 51.31914
+},
+{
+"name": "Sinzig",
+"local": "Sinzig",
+"place": "town",
+"pop": 17135,
+"lon": 7.24908,
+"lat": 50.5452
+},
+{
+"name": "Duffel",
+"local": "Duffel",
+"place": "town",
+"pop": 17119,
+"lon": 4.5062,
+"lat": 51.09572
+},
+{
+"name": "Haren",
+"local": "Haren",
+"place": "town",
+"pop": 17108,
+"lon": 6.60614,
+"lat": 53.17098
+},
+{
+"name": "Kreuzau",
+"local": "Kreuzau",
+"place": "town",
+"pop": 17071,
+"lon": 6.48933,
+"lat": 50.74686
+},
+{
+"name": "Fontaine-l'Évêque",
+"local": "Fontaine-l'Évêque",
+"place": "town",
+"pop": 17000,
+"lon": 4.32476,
+"lat": 50.4107
+},
+{
+"name": "Dour",
+"local": "Dour",
+"place": "town",
+"pop": 16903,
+"lon": 3.77868,
+"lat": 50.39638
+},
+{
+"name": "Gescher",
+"local": "Gescher",
+"place": "town",
+"pop": 16887,
+"lon": 7.00388,
+"lat": 51.95687
+},
+{
+"name": "Gemert",
+"local": "Gemert",
+"place": "town",
+"pop": 16855,
+"lon": 5.68646,
+"lat": 51.55898
+},
+{
+"name": "Delfzijl",
+"local": "Delfzijl",
+"place": "town",
+"pop": 16820,
+"lon": 6.91351,
+"lat": 53.33256
+},
+{
+"name": "Rijen",
+"local": "Rijen",
+"place": "town",
+"pop": 16770,
+"lon": 4.9194,
+"lat": 51.58799
+},
+{
+"name": "Groesbeek",
+"local": "Groesbeek",
+"place": "town",
+"pop": 16692,
+"lon": 5.93054,
+"lat": 51.7741
+},
+{
+"name": "Bendorf",
+"local": "Bendorf",
+"place": "town",
+"pop": 16636,
+"lon": 7.57329,
+"lat": 50.42383
+},
+{
+"name": "Son en Breugel",
+"local": "Son en Breugel",
+"place": "town",
+"pop": 16626,
+"lon": 5.50084,
+"lat": 51.51731
+},
+{
+"name": "Kaatsheuvel",
+"local": "Kaatsheuvel",
+"place": "town",
+"pop": 16441,
+"lon": 5.03195,
+"lat": 51.6598
+},
+{
+"name": "Bredene",
+"local": "Bredene",
+"place": "town",
+"pop": 16411,
+"lon": 2.96479,
+"lat": 51.24085
+},
+{
+"name": "Fléron",
+"local": "Fléron",
+"place": "town",
+"pop": 16374,
+"lon": 5.68322,
+"lat": 50.61684
+},
+{
+"name": "Riemst",
+"local": "Riemst",
+"place": "town",
+"pop": 16284,
+"lon": 5.59787,
+"lat": 50.81158
+},
+{
+"name": "Mijdrecht",
+"local": "Mijdrecht",
+"place": "town",
+"pop": 16275,
+"lon": 4.86482,
+"lat": 52.20602
+},
+{
+"name": "Halver",
+"local": "Halver",
+"place": "town",
+"pop": 16218,
+"lon": 7.49873,
+"lat": 51.18744
+},
+{
+"name": "Vianen",
+"local": "Vianen",
+"place": "town",
+"pop": 16215,
+"lon": 5.09392,
+"lat": 51.98899
+},
+{
+"name": "Remagen",
+"local": "Remagen",
+"place": "town",
+"pop": 16036,
+"lon": 7.22868,
+"lat": 50.57921
+},
+{
+"name": "Peer",
+"local": "Peer",
+"place": "town",
+"pop": 16000,
+"lon": 5.45463,
+"lat": 51.13191
+},
+{
+"name": "Saint-Amand-les-Eaux",
+"local": "Saint-Amand-les-Eaux",
+"place": "town",
+"pop": 15980,
+"lon": 3.42811,
+"lat": 50.44915
+},
+{
+"name": "Zandvoort",
+"local": "Zandvoort",
+"place": "town",
+"pop": 15900,
+"lon": 4.53022,
+"lat": 52.37198
+},
+{
+"name": "Weener",
+"local": "Weener",
+"place": "town",
+"pop": 15714,
+"lon": 7.35362,
+"lat": 53.16459
+},
+{
+"name": "Wateringen",
+"local": "Wateringen",
+"place": "town",
+"pop": 15680,
+"lon": 4.27459,
+"lat": 52.02351
+},
+{
+"name": "Ciney",
+"local": "Ciney",
+"place": "town",
+"pop": 15670,
+"lon": 5.10087,
+"lat": 50.29649
+},
+{
+"name": "Sin-le-Noble",
+"local": "Sin-le-Noble",
+"place": "town",
+"pop": 15603,
+"lon": 3.11173,
+"lat": 50.36443
+},
+{
+"name": "Roden",
+"local": "Roden",
+"place": "town",
+"pop": 15595,
+"lon": 6.42752,
+"lat": 53.14054
+},
+{
+"name": "Hannuit",
+"local": "Hannut",
+"place": "town",
+"pop": 15587,
+"lon": 5.07799,
+"lat": 50.67246
+},
+{
+"name": "Boskoop",
+"local": "Boskoop",
+"place": "town",
+"pop": 15536,
+"lon": 4.66312,
+"lat": 52.07423
+},
+{
+"name": "Wattignies",
+"local": "Wattignies",
+"place": "town",
+"pop": 15531,
+"lon": 3.05117,
+"lat": 50.58788
+},
+{
+"name": "Bruggen",
+"local": "Brüggen",
+"place": "town",
+"pop": 15469,
+"lon": 6.18123,
+"lat": 51.24308
+},
+{
+"name": "Straelen",
+"local": "Straelen",
+"place": "town",
+"pop": 15401,
+"lon": 6.26944,
+"lat": 51.44393
+},
+{
+"name": "Bad Bentheim",
+"local": "Bad Bentheim",
+"place": "town",
+"pop": 15311,
+"lon": 7.16052,
+"lat": 52.30256
+},
+{
+"name": "Dison",
+"local": "Dison",
+"place": "town",
+"pop": 15289,
+"lon": 5.85473,
+"lat": 50.61137
+},
+{
+"name": "Epe",
+"local": "Epe",
+"place": "town",
+"pop": 15272,
+"lon": 5.98364,
+"lat": 52.34845
+},
+{
+"name": "Simmerath",
+"local": "Simmerath",
+"place": "town",
+"pop": 15266,
+"lon": 6.30053,
+"lat": 50.60725
+},
+{
+"name": "Odenthal",
+"local": "Odenthal",
+"place": "town",
+"pop": 15258,
+"lon": 7.11715,
+"lat": 51.03267
+},
+{
+"name": "Leopoldsburg",
+"local": "Leopoldsburg",
+"place": "town",
+"pop": 15215,
+"lon": 5.2627,
+"lat": 51.1193
+},
+{
+"name": "Boppard",
+"local": "Boppard",
+"place": "town",
+"pop": 15181,
+"lon": 7.58859,
+"lat": 50.23128
+},
+{
+"name": "Hückeswagen",
+"local": "Hückeswagen",
+"place": "town",
+"pop": 15102,
+"lon": 7.3414,
+"lat": 51.15049
+},
+{
+"name": "Bennekom",
+"local": "Bennekom",
+"place": "town",
+"pop": 15080,
+"lon": 5.67592,
+"lat": 51.998
+},
+{
+"name": "Landen",
+"local": "Landen",
+"place": "town",
+"pop": 15000,
+"lon": 5.08132,
+"lat": 50.75301
+},
+{
+"name": "Westervoort",
+"local": "Westervoort",
+"place": "town",
+"pop": 14991,
+"lon": 5.96725,
+"lat": 51.96271
+},
+{
+"name": "Chapelle-lez-Herlaimont",
+"local": "Chapelle-lez-Herlaimont",
+"place": "town",
+"pop": 14900,
+"lon": 4.2805,
+"lat": 50.47131
+},
+{
+"name": "Belle",
+"local": "Bailleul",
+"place": "town",
+"pop": 14869,
+"lon": 2.73493,
+"lat": 50.73967
+},
+{
+"name": "Beernem",
+"local": "Beernem",
+"place": "town",
+"pop": 14806,
+"lon": 3.33473,
+"lat": 51.14057
+},
+{
+"name": "Borgworm",
+"local": "Waremme",
+"place": "town",
+"pop": 14789,
+"lon": 5.25462,
+"lat": 50.69769
+},
+{
+"name": "Wierden",
+"local": "Wierden",
+"place": "town",
+"pop": 14775,
+"lon": 6.59218,
+"lat": 52.35799
+},
+{
+"name": "Bree",
+"local": "Bree",
+"place": "town",
+"pop": 14774,
+"lon": 5.59746,
+"lat": 51.14161
+},
+{
+"name": "Greverade",
+"local": "Grefrath",
+"place": "town",
+"pop": 14760,
+"lon": 6.34374,
+"lat": 51.33608
+},
+{
+"name": "Haubourdin",
+"local": "Haubourdin",
+"place": "town",
+"pop": 14757,
+"lon": 2.98644,
+"lat": 50.60936
+},
+{
+"name": "Harlingen",
+"local": "Harlingen",
+"place": "town",
+"pop": 14720,
+"lon": 5.4142,
+"lat": 53.17521
+},
+{
+"name": "Kalkar",
+"local": "Kalkar",
+"place": "town",
+"pop": 14389,
+"lon": 6.29275,
+"lat": 51.73888
+},
+{
+"name": "Lummen",
+"local": "Lummen",
+"place": "town",
+"pop": 14386,
+"lon": 5.19186,
+"lat": 50.98622
+},
+{
+"name": "Coevorden",
+"local": "Coevorden",
+"place": "town",
+"pop": 14355,
+"lon": 6.74074,
+"lat": 52.66123
+},
+{
+"name": "Zevenbergen",
+"local": "Zevenbergen",
+"place": "town",
+"pop": 14235,
+"lon": 4.60615,
+"lat": 51.64504
+},
+{
+"name": "Vlijmen",
+"local": "Vlijmen",
+"place": "town",
+"pop": 14225,
+"lon": 5.20912,
+"lat": 51.69426
+},
+{
+"name": "Hautmont",
+"local": "Hautmont",
+"place": "town",
+"pop": 14182,
+"lon": 3.92006,
+"lat": 50.25137
+},
+{
+"name": "Sprimont",
+"local": "Sprimont",
+"place": "town",
+"pop": 14147,
+"lon": 5.66172,
+"lat": 50.50553
+},
+{
+"name": "Caudry",
+"local": "Caudry",
+"place": "town",
+"pop": 14070,
+"lon": 3.41036,
+"lat": 50.12439
+},
+{
+"name": "Eghezée",
+"local": "Eghezée",
+"place": "town",
+"pop": 14000,
+"lon": 4.9066,
+"lat": 50.59168
+},
+{
+"name": "Genepiën",
+"local": "Genappe",
+"place": "town",
+"pop": 14000,
+"lon": 4.45107,
+"lat": 50.61087
+},
+{
+"name": "Lobberik",
+"local": "Lobberich",
+"place": "town",
+"pop": 14000,
+"lon": 6.27632,
+"lat": 51.30619
+},
+{
+"name": "Wulfen",
+"local": "Wulfen",
+"place": "town",
+"pop": 13975,
+"lon": 7.02197,
+"lat": 51.72431
+},
+{
+"name": "Monster",
+"local": "Monster",
+"place": "town",
+"pop": 13900,
+"lon": 4.17153,
+"lat": 52.0223
+},
+{
+"name": "Vriezenveen",
+"local": "Vriezenveen",
+"place": "town",
+"pop": 13895,
+"lon": 6.6148,
+"lat": 52.40867
+},
+{
+"name": "Amay",
+"local": "Amay",
+"place": "town",
+"pop": 13863,
+"lon": 5.3241,
+"lat": 50.54978
+},
+{
+"name": "Lys-lez-Lannoy",
+"local": "Lys-lez-Lannoy",
+"place": "town",
+"pop": 13793,
+"lon": 3.21621,
+"lat": 50.6713
+},
+{
+"name": "Roncq",
+"local": "Roncq",
+"place": "town",
+"pop": 13784,
+"lon": 3.1209,
+"lat": 50.75312
+},
+{
+"name": "Lochem",
+"local": "Lochem",
+"place": "town",
+"pop": 13719,
+"lon": 6.41449,
+"lat": 52.15847
+},
+{
+"name": "Dinant",
+"local": "Dinant",
+"place": "town",
+"pop": 13668,
+"lon": 4.91306,
+"lat": 50.25918
+},
+{
+"name": "Sint-Oedenrode",
+"local": "Sint-Oedenrode",
+"place": "town",
+"pop": 13635,
+"lon": 5.461,
+"lat": 51.56464
+},
+{
+"name": "Schermbeck",
+"local": "Schermbeck",
+"place": "town",
+"pop": 13633,
+"lon": 6.87022,
+"lat": 51.69261
+},
+{
+"name": "Edingen",
+"local": "Enghien - Edingen",
+"place": "town",
+"pop": 13563,
+"lon": 4.04119,
+"lat": 50.69571
+},
+{
+"name": "Leuze-en-Hainaut",
+"local": "Leuze-en-Hainaut",
+"place": "town",
+"pop": 13519,
+"lon": 3.62145,
+"lat": 50.60053
+},
+{
+"name": "Marienheide",
+"local": "Marienheide",
+"place": "town",
+"pop": 13514,
+"lon": 7.53179,
+"lat": 51.08331
+},
+{
+"name": "Berlare",
+"local": "Berlare",
+"place": "town",
+"pop": 13500,
+"lon": 4.00347,
+"lat": 51.02516
+},
+{
+"name": "Anzin",
+"local": "Anzin",
+"place": "town",
+"pop": 13422,
+"lon": 3.50207,
+"lat": 50.3704
+},
+{
+"name": "Brielle",
+"local": "Brielle",
+"place": "town",
+"pop": 13407,
+"lon": 4.16263,
+"lat": 51.90166
+},
+{
+"name": "Heesch",
+"local": "Heesch",
+"place": "town",
+"pop": 13370,
+"lon": 5.52663,
+"lat": 51.73519
+},
+{
+"name": "Wanze",
+"local": "Wanze",
+"place": "town",
+"pop": 13363,
+"lon": 5.21439,
+"lat": 50.53686
+},
+{
+"name": "Ommen",
+"local": "Ommen",
+"place": "town",
+"pop": 13300,
+"lon": 6.42519,
+"lat": 52.5208
+},
+{
+"name": "Schleiden",
+"local": "Schleiden",
+"place": "town",
+"pop": 13272,
+"lon": 6.47616,
+"lat": 50.52859
+},
+{
+"name": "Esneux",
+"local": "Esneux",
+"place": "town",
+"pop": 13240,
+"lon": 5.56862,
+"lat": 50.53359
+},
+{
+"name": "Dedemsvaart",
+"local": "Dedemsvaart",
+"place": "town",
+"pop": 13226,
+"lon": 6.45932,
+"lat": 52.59963
+},
+{
+"name": "Asten",
+"local": "Asten",
+"place": "town",
+"pop": 13214,
+"lon": 5.74587,
+"lat": 51.40409
+},
+{
+"name": "Twello",
+"local": "Twello",
+"place": "town",
+"pop": 13174,
+"lon": 6.10428,
+"lat": 52.23564
+},
+{
+"name": "Mouvaux",
+"local": "Mouvaux",
+"place": "town",
+"pop": 13173,
+"lon": 3.13689,
+"lat": 50.7029
+},
+{
+"name": "Blegny",
+"local": "Blegny",
+"place": "town",
+"pop": 13136,
+"lon": 5.72524,
+"lat": 50.67272
+},
+{
+"name": "Losser",
+"local": "Losser",
+"place": "town",
+"pop": 13130,
+"lon": 7.00465,
+"lat": 52.26204
+},
+{
+"name": "Joure",
+"local": "Joure",
+"place": "town",
+"pop": 13090,
+"lon": 5.80267,
+"lat": 52.96443
+},
+{
+"name": "Ham-sur-Heure-Nalinnes",
+"local": "Ham-sur-Heure-Nalinnes",
+"place": "town",
+"pop": 13000,
+"lon": 4.38032,
+"lat": 50.31716
+},
+{
+"name": "Saint-André-lez-Lille",
+"local": "Saint-André-lez-Lille",
+"place": "town",
+"pop": 12942,
+"lon": 3.04468,
+"lat": 50.6608
+},
+{
+"name": "Julianadorp",
+"local": "Julianadorp",
+"place": "town",
+"pop": 12916,
+"lon": 4.74461,
+"lat": 52.8907
+},
+{
+"name": "Liblar",
+"local": "Liblar",
+"place": "town",
+"pop": 12900,
+"lon": 6.81739,
+"lat": 50.81227
+},
+{
+"name": "Horst",
+"local": "Horst",
+"place": "town",
+"pop": 12895,
+"lon": 6.05392,
+"lat": 51.4525
+},
+{
+"name": "Lichtenvoorde",
+"local": "Lichtenvoorde",
+"place": "town",
+"pop": 12889,
+"lon": 6.57169,
+"lat": 51.98906
+},
+{
+"name": "Aalten",
+"local": "Aalten",
+"place": "town",
+"pop": 12870,
+"lon": 6.58103,
+"lat": 51.9286
+},
+{
+"name": "Wolvega",
+"local": "Wolvega",
+"place": "town",
+"pop": 12850,
+"lon": 6.00176,
+"lat": 52.87629
+},
+{
+"name": "Sikelijn",
+"local": "Seclin",
+"place": "town",
+"pop": 12834,
+"lon": 3.02528,
+"lat": 50.54521
+},
+{
+"name": "Franeker",
+"local": "Franeker",
+"place": "town",
+"pop": 12793,
+"lon": 5.54096,
+"lat": 53.18805
+},
+{
+"name": "Zandhoven",
+"local": "Zandhoven",
+"place": "town",
+"pop": 12729,
+"lon": 4.65951,
+"lat": 51.21479
+},
+{
+"name": "Komen",
+"local": "Comines",
+"place": "town",
+"pop": 12671,
+"lon": 3.00663,
+"lat": 50.76533
+},
+{
+"name": "Kuurne",
+"local": "Kuurne",
+"place": "town",
+"pop": 12650,
+"lon": 3.28647,
+"lat": 50.85229
+},
+{
+"name": "Vaassen",
+"local": "Vaassen",
+"place": "town",
+"pop": 12598,
+"lon": 5.96867,
+"lat": 52.29017
+},
+{
+"name": "Monschau",
+"local": "Monschau",
+"place": "town",
+"pop": 12577,
+"lon": 6.2408,
+"lat": 50.55447
+},
+{
+"name": "Dokkum",
+"local": "Dokkum",
+"place": "town",
+"pop": 12576,
+"lon": 5.99923,
+"lat": 53.32435
+},
+{
+"name": "Haselünne",
+"local": "Haselünne",
+"place": "town",
+"pop": 12543,
+"lon": 7.48305,
+"lat": 52.67187
+},
+{
+"name": "Olfen",
+"local": "Olfen",
+"place": "town",
+"pop": 12490,
+"lon": 7.3788,
+"lat": 51.70762
+},
+{
+"name": "Oudenbosch",
+"local": "Oudenbosch",
+"place": "town",
+"pop": 12479,
+"lon": 4.52789,
+"lat": 51.58894
+},
+{
+"name": "Schoonhoven",
+"local": "Schoonhoven",
+"place": "town",
+"pop": 12390,
+"lon": 4.85164,
+"lat": 51.9464
+},
+{
+"name": "Malmedy",
+"local": "Malmedy",
+"place": "town",
+"pop": 12345,
+"lon": 6.02761,
+"lat": 50.42653
+},
+{
+"name": "Boechout",
+"local": "Boechout",
+"place": "town",
+"pop": 12335,
+"lon": 4.49639,
+"lat": 51.16356
+},
+{
+"name": "Harnes",
+"local": "Harnes",
+"place": "town",
+"pop": 12317,
+"lon": 2.90682,
+"lat": 50.44741
+},
+{
+"name": "Bergen",
+"local": "Bergen",
+"place": "town",
+"pop": 12311,
+"lon": 4.70116,
+"lat": 52.67023
+},
+{
+"name": "Graven",
+"local": "Grez-Doiceau",
+"place": "town",
+"pop": 12288,
+"lon": 4.69623,
+"lat": 50.73862
+},
+{
+"name": "Druten",
+"local": "Druten",
+"place": "town",
+"pop": 12275,
+"lon": 5.6049,
+"lat": 51.88852
+},
+{
+"name": "Zelzate",
+"local": "Zelzate",
+"place": "town",
+"pop": 12242,
+"lon": 3.8105,
+"lat": 51.2
+},
+{
+"name": "Herk-de-Stad",
+"local": "Herk-de-Stad",
+"place": "town",
+"pop": 12240,
+"lon": 5.16597,
+"lat": 50.9407
+},
+{
+"name": "Bully-les-Mines",
+"local": "Bully-les-Mines",
+"place": "town",
+"pop": 12221,
+"lon": 2.71989,
+"lat": 50.4464
+},
+{
+"name": "De Lier",
+"local": "De Lier",
+"place": "town",
+"pop": 12220,
+"lon": 4.24713,
+"lat": 51.97518
+},
+{
+"name": "Boxmeer",
+"local": "Boxmeer",
+"place": "town",
+"pop": 12201,
+"lon": 5.9451,
+"lat": 51.64865
+},
+{
+"name": "Wezep",
+"local": "Wezep",
+"place": "town",
+"pop": 12175,
+"lon": 5.99954,
+"lat": 52.45791
+},
+{
+"name": "Goor",
+"local": "Goor",
+"place": "town",
+"pop": 12141,
+"lon": 6.5809,
+"lat": 52.23216
+},
+{
+"name": "Zaltbommel",
+"local": "Zaltbommel",
+"place": "town",
+"pop": 12137,
+"lon": 5.24103,
+"lat": 51.80671
+},
+{
+"name": "Klazienaveen",
+"local": "Klazienaveen",
+"place": "town",
+"pop": 12111,
+"lon": 6.98521,
+"lat": 52.72539
+},
+{
+"name": "Raismes",
+"local": "Raismes",
+"place": "town",
+"pop": 12055,
+"lon": 3.48239,
+"lat": 50.39163
+},
+{
+"name": "Hattem",
+"local": "Hattem",
+"place": "town",
+"pop": 12040,
+"lon": 6.056,
+"lat": 52.47732
+},
+{
+"name": "Rijkevorsel",
+"local": "Rijkevorsel",
+"place": "town",
+"pop": 12040,
+"lon": 4.75851,
+"lat": 51.35037
+},
+{
+"name": "Marly",
+"local": "Marly",
+"place": "town",
+"pop": 12024,
+"lon": 3.54359,
+"lat": 50.35007
+},
+{
+"name": "Theux",
+"local": "Theux",
+"place": "town",
+"pop": 12015,
+"lon": 5.81329,
+"lat": 50.53492
+},
+{
+"name": "Geldenaken",
+"local": "Jodoigne",
+"place": "town",
+"pop": 12000,
+"lon": 4.868,
+"lat": 50.72418
+},
+{
+"name": "Gerpinnes",
+"local": "Gerpinnes",
+"place": "town",
+"pop": 12000,
+"lon": 4.52768,
+"lat": 50.33782
+},
+{
+"name": "Someren",
+"local": "Someren",
+"place": "town",
+"pop": 11980,
+"lon": 5.71337,
+"lat": 51.38589
+},
+{
+"name": "Beyne-Heusay",
+"local": "Beyne-Heusay",
+"place": "town",
+"pop": 11977,
+"lon": 5.65341,
+"lat": 50.62206
+},
+{
+"name": "Appingedam",
+"local": "Appingedam",
+"place": "town",
+"pop": 11971,
+"lon": 6.85777,
+"lat": 53.32036
+},
+{
+"name": "Havixbeck",
+"local": "Havixbeck",
+"place": "town",
+"pop": 11944,
+"lon": 7.41357,
+"lat": 51.97509
+},
+{
+"name": "Schalksmühle",
+"local": "Schalksmühle",
+"place": "town",
+"pop": 11944,
+"lon": 7.52891,
+"lat": 51.24123
+},
+{
+"name": "Aywaille",
+"local": "Aywaille",
+"place": "town",
+"pop": 11938,
+"lon": 5.67632,
+"lat": 50.4759
+},
+{
+"name": "Somain",
+"local": "Somain",
+"place": "town",
+"pop": 11790,
+"lon": 3.2811,
+"lat": 50.35892
+},
+{
+"name": "Lechenich",
+"local": "Lechenich",
+"place": "town",
+"pop": 11700,
+"lon": 6.76525,
+"lat": 50.8001
+},
+{
+"name": "Montegnée",
+"local": "Montegnée",
+"place": "town",
+"pop": 11612,
+"lon": 5.51861,
+"lat": 50.64234
+},
+{
+"name": "Chaumont-Gistoux",
+"local": "Chaumont-Gistoux",
+"place": "town",
+"pop": 11601,
+"lon": 4.69742,
+"lat": 50.68398
+},
+{
+"name": "Heerde",
+"local": "Heerde",
+"place": "town",
+"pop": 11585,
+"lon": 6.03932,
+"lat": 52.38963
+},
+{
+"name": "Nœux-les-Mines",
+"local": "Nœux-les-Mines",
+"place": "town",
+"pop": 11520,
+"lon": 2.66209,
+"lat": 50.48089
+},
+{
+"name": "Raesfeld",
+"local": "Raesfeld",
+"place": "town",
+"pop": 11514,
+"lon": 6.83824,
+"lat": 51.76938
+},
+{
+"name": "Schüttorf",
+"local": "Schüttorf",
+"place": "town",
+"pop": 11507,
+"lon": 7.22209,
+"lat": 52.32162
+},
+{
+"name": "Ougrée",
+"local": "Ougrée",
+"place": "town",
+"pop": 11473,
+"lon": 5.54396,
+"lat": 50.59115
+},
+{
+"name": "Méricourt",
+"local": "Méricourt",
+"place": "town",
+"pop": 11431,
+"lon": 2.86642,
+"lat": 50.40158
+},
+{
+"name": "Billerbeck",
+"local": "Billerbeck",
+"place": "town",
+"pop": 11416,
+"lon": 7.29092,
+"lat": 51.97736
+},
+{
+"name": "Jemeppe-sur-Meuse",
+"local": "Jemeppe-sur-Meuse",
+"place": "town",
+"pop": 11394,
+"lon": 5.49972,
+"lat": 50.61809
+},
+{
+"name": "Oosterbeek",
+"local": "Oosterbeek",
+"place": "town",
+"pop": 11388,
+"lon": 5.84205,
+"lat": 51.98845
+},
+{
+"name": "Doesburg",
+"local": "Doesburg",
+"place": "town",
+"pop": 11341,
+"lon": 6.13937,
+"lat": 52.01396
+},
+{
+"name": "Alken",
+"local": "Alken",
+"place": "town",
+"pop": 11335,
+"lon": 5.30799,
+"lat": 50.87547
+},
+{
+"name": "Durbuy",
+"local": "Durbuy",
+"place": "town",
+"pop": 11326,
+"lon": 5.45625,
+"lat": 50.35241
+},
+{
+"name": "Bruay-sur-l'Escaut",
+"local": "Bruay-sur-l'Escaut",
+"place": "town",
+"pop": 11309,
+"lon": 3.53791,
+"lat": 50.39728
+},
+{
+"name": "Marquette-lez-Lille",
+"local": "Marquette-lez-Lille",
+"place": "town",
+"pop": 11213,
+"lon": 3.06472,
+"lat": 50.6761
+},
+{
+"name": "Steenbergen",
+"local": "Steenbergen",
+"place": "town",
+"pop": 11208,
+"lon": 4.3151,
+"lat": 51.58598
+},
+{
+"name": "Werkendam",
+"local": "Werkendam",
+"place": "town",
+"pop": 11204,
+"lon": 4.89873,
+"lat": 51.80792
+},
+{
+"name": "Farciennes",
+"local": "Farciennes",
+"place": "town",
+"pop": 11180,
+"lon": 4.54652,
+"lat": 50.43184
+},
+{
+"name": "Eibergen",
+"local": "Eibergen",
+"place": "town",
+"pop": 11175,
+"lon": 6.65117,
+"lat": 52.10327
+},
+{
+"name": "Zierikzee",
+"local": "Zierikzee",
+"place": "town",
+"pop": 11150,
+"lon": 3.92084,
+"lat": 51.64977
+},
+{
+"name": "Saint-Saulve",
+"local": "Saint-Saulve",
+"place": "town",
+"pop": 11117,
+"lon": 3.55473,
+"lat": 50.37102
+},
+{
+"name": "Beilen",
+"local": "Beilen",
+"place": "town",
+"pop": 11091,
+"lon": 6.51243,
+"lat": 52.8611
+},
+{
+"name": "Laren",
+"local": "Laren",
+"place": "town",
+"pop": 11088,
+"lon": 5.22519,
+"lat": 52.25659
+},
+{
+"name": "Nazareth",
+"local": "Nazareth",
+"place": "town",
+"pop": 11080,
+"lon": 3.59632,
+"lat": 50.9598
+},
+{
+"name": "De Pinte",
+"local": "De Pinte",
+"place": "town",
+"pop": 11046,
+"lon": 3.6496,
+"lat": 50.99242
+},
+{
+"name": "Anderlues",
+"local": "Anderlues",
+"place": "town",
+"pop": 11000,
+"lon": 4.27009,
+"lat": 50.40782
+},
+{
+"name": "Retie",
+"local": "Retie",
+"place": "town",
+"pop": 11000,
+"lon": 5.08439,
+"lat": 51.26759
+},
+{
+"name": "Leek",
+"local": "Leek",
+"place": "town",
+"pop": 10946,
+"lon": 6.37712,
+"lat": 53.16323
+},
+{
+"name": "Kelmis",
+"local": "Kelmis - La Calamine",
+"place": "town",
+"pop": 10943,
+"lon": 6.01334,
+"lat": 50.7155
+},
+{
+"name": "Hulst",
+"local": "Hulst",
+"place": "town",
+"pop": 10845,
+"lon": 4.0532,
+"lat": 51.28229
+},
+{
+"name": "Moorslede",
+"local": "Moorslede",
+"place": "town",
+"pop": 10840,
+"lon": 3.06303,
+"lat": 50.8914
+},
+{
+"name": "Grobbendonk",
+"local": "Grobbendonk",
+"place": "town",
+"pop": 10815,
+"lon": 4.7385,
+"lat": 51.19199
+},
+{
+"name": "Florennes",
+"local": "Florennes",
+"place": "town",
+"pop": 10800,
+"lon": 4.60302,
+"lat": 50.25142
+},
+{
+"name": "De Bilt",
+"local": "De Bilt",
+"place": "town",
+"pop": 10795,
+"lon": 5.17871,
+"lat": 52.1097
+},
+{
+"name": "Stein",
+"local": "Stein",
+"place": "town",
+"pop": 10765,
+"lon": 5.76697,
+"lat": 50.96944
+},
+{
+"name": "Oirschot",
+"local": "Oirschot",
+"place": "town",
+"pop": 10708,
+"lon": 5.31024,
+"lat": 51.50356
+},
+{
+"name": "Aiseau-Presles",
+"local": "Aiseau-Presles",
+"place": "town",
+"pop": 10700,
+"lon": 4.5712,
+"lat": 50.41636
+},
+{
+"name": "Bladel",
+"local": "Bladel",
+"place": "town",
+"pop": 10658,
+"lon": 5.21543,
+"lat": 51.36678
+},
+{
+"name": "Raeren",
+"local": "Raeren",
+"place": "town",
+"pop": 10651,
+"lon": 6.11084,
+"lat": 50.67613
+},
+{
+"name": "Borgloon",
+"local": "Borgloon",
+"place": "town",
+"pop": 10539,
+"lon": 5.34357,
+"lat": 50.80245
+},
+{
+"name": "Geldermalsen",
+"local": "Geldermalsen",
+"place": "town",
+"pop": 10535,
+"lon": 5.28764,
+"lat": 51.87993
+},
+{
+"name": "Staphorst",
+"local": "Staphorst",
+"place": "town",
+"pop": 10510,
+"lon": 6.20748,
+"lat": 52.64728
+},
+{
+"name": "Mierlo",
+"local": "Mierlo",
+"place": "town",
+"pop": 10493,
+"lon": 5.61875,
+"lat": 51.44376
+},
+{
+"name": "Vieux-Condé",
+"local": "Vieux-Condé",
+"place": "town",
+"pop": 10446,
+"lon": 3.56758,
+"lat": 50.47242
+},
+{
+"name": "Mülheim-Kärlich",
+"local": "Mülheim-Kärlich",
+"place": "town",
+"pop": 10416,
+"lon": 7.49753,
+"lat": 50.38689
+},
+{
+"name": "Dalfsen",
+"local": "Dalfsen",
+"place": "town",
+"pop": 10397,
+"lon": 6.25391,
+"lat": 52.51117
+},
+{
+"name": "Voorthuizen",
+"local": "Voorthuizen",
+"place": "town",
+"pop": 10350,
+"lon": 5.6072,
+"lat": 52.18716
+},
+{
+"name": "Jeumont",
+"local": "Jeumont",
+"place": "town",
+"pop": 10342,
+"lon": 4.09966,
+"lat": 50.2971
+},
+{
+"name": "Vosselaar",
+"local": "Vosselaar",
+"place": "town",
+"pop": 10300,
+"lon": 4.8878,
+"lat": 51.31292
+},
+{
+"name": "Elburg",
+"local": "Elburg",
+"place": "town",
+"pop": 10231,
+"lon": 5.84039,
+"lat": 52.44498
+},
+{
+"name": "Lemmer",
+"local": "Lemmer",
+"place": "town",
+"pop": 10225,
+"lon": 5.70991,
+"lat": 52.84449
+},
+{
+"name": "Hoek van Holland",
+"local": "Hoek van Holland",
+"place": "town",
+"pop": 10212,
+"lon": 4.13145,
+"lat": 51.97716
+},
+{
+"name": "Oignies",
+"local": "Oignies",
+"place": "town",
+"pop": 10210,
+"lon": 2.99387,
+"lat": 50.4643
+},
+{
+"name": "Douchy-les-Mines",
+"local": "Douchy-les-Mines",
+"place": "town",
+"pop": 10207,
+"lon": 3.39092,
+"lat": 50.29889
+},
+{
+"name": "Hoeilaart",
+"local": "Hoeilaart",
+"place": "town",
+"pop": 10200,
+"lon": 4.47441,
+"lat": 50.76748
+},
+{
+"name": "Courrières",
+"local": "Courrières",
+"place": "town",
+"pop": 10199,
+"lon": 2.94476,
+"lat": 50.45584
+},
+{
+"name": "Bolsward",
+"local": "Bolsward",
+"place": "town",
+"pop": 10185,
+"lon": 5.5229,
+"lat": 53.06202
+},
+{
+"name": "Zuidlaren",
+"local": "Zuidlaren",
+"place": "town",
+"pop": 10180,
+"lon": 6.68717,
+"lat": 53.09409
+},
+{
+"name": "Neuville-en-Ferrain",
+"local": "Neuville-en-Ferrain",
+"place": "town",
+"pop": 10160,
+"lon": 3.15258,
+"lat": 50.75026
+},
+{
+"name": "Houthulst",
+"local": "Houthulst",
+"place": "town",
+"pop": 10110,
+"lon": 2.95244,
+"lat": 50.97742
+},
+{
+"name": "Montigny-le-Tilleul",
+"local": "Montigny-le-Tilleul",
+"place": "town",
+"pop": 10100,
+"lon": 4.37934,
+"lat": 50.3789
+},
+{
+"name": "Auchel",
+"local": "Auchel",
+"place": "town",
+"pop": 10062,
+"lon": 2.46821,
+"lat": 50.50375
+},
+{
+"name": "Bergum",
+"local": "Burgum",
+"place": "town",
+"pop": 10058,
+"lon": 5.98711,
+"lat": 53.19548
+},
+{
+"name": "Louvain-la-Neuve",
+"local": "Louvain-la-Neuve",
+"place": "town",
+"pop": 10000,
+"lon": 4.61288,
+"lat": 50.6682
+},
+{
+"name": "Waldniel",
+"local": "Waldniel",
+"place": "town",
+"pop": 10000,
+"lon": 6.27297,
+"lat": 51.21304
+},
+{
+"name": "Écaussinnes",
+"local": "Écaussinnes",
+"place": "town",
+"pop": 10000,
+"lon": 4.17529,
+"lat": 50.56968
+},
+{
+"name": "Begijnendijk",
+"local": "Begijnendijk",
+"place": "town",
+"pop": 10000,
+"lon": 4.78214,
+"lat": 51.01941
+},
+{
+"name": "Seneffe",
+"local": "Seneffe",
+"place": "town",
+"pop": 10000,
+"lon": 4.2567,
+"lat": 50.52926
+},
+{
+"name": "Steenput",
+"local": "Estaimpuis",
+"place": "town",
+"pop": 10000,
+"lon": 3.26402,
+"lat": 50.70598
+},
+{
+"name": "Kaldenkerken",
+"local": "Kaldenkirchen",
+"place": "town",
+"pop": 10000,
+"lon": 6.19792,
+"lat": 51.32073
+},
+{
+"name": "Lillers",
+"local": "Lillers",
+"place": "town",
+"pop": 9988,
+"lon": 2.47604,
+"lat": 50.5606
+},
+{
+"name": "Villers-la-Ville",
+"local": "Villers-la-Ville",
+"place": "town",
+"pop": 9900,
+"lon": 4.53427,
+"lat": 50.57273
+},
+{
+"name": "Groenlo",
+"local": "Groenlo",
+"place": "town",
+"pop": 9882,
+"lon": 6.61704,
+"lat": 52.04259
+},
+{
+"name": "Montigny-en-Gohelle",
+"local": "Montigny-en-Gohelle",
+"place": "town",
+"pop": 9870,
+"lon": 2.92988,
+"lat": 50.4269
+},
+{
+"name": "Spa",
+"local": "Spa",
+"place": "town",
+"pop": 9806,
+"lon": 5.86276,
+"lat": 50.49207
+},
+{
+"name": "Monnickendam",
+"local": "Monnickendam",
+"place": "town",
+"pop": 9790,
+"lon": 5.03732,
+"lat": 52.45708
+},
+{
+"name": "Pepinster",
+"local": "Pepinster",
+"place": "town",
+"pop": 9735,
+"lon": 5.80371,
+"lat": 50.56752
+},
+{
+"name": "Oosterwolde",
+"local": "Oosterwolde",
+"place": "town",
+"pop": 9715,
+"lon": 6.29082,
+"lat": 52.98923
+},
+{
+"name": "Bondues",
+"local": "Bondues",
+"place": "town",
+"pop": 9713,
+"lon": 3.09216,
+"lat": 50.70346
+},
+{
+"name": "Sallaumines",
+"local": "Sallaumines",
+"place": "town",
+"pop": 9650,
+"lon": 2.85912,
+"lat": 50.42054
+},
+{
+"name": "Sankt Vith",
+"local": "Sankt Vith",
+"place": "town",
+"pop": 9481,
+"lon": 6.1259,
+"lat": 50.28039
+},
+{
+"name": "Condé-sur-l'Escaut",
+"local": "Condé-sur-l'Escaut",
+"place": "town",
+"pop": 9396,
+"lon": 3.59289,
+"lat": 50.44834
+},
+{
+"name": "Hoevelaken",
+"local": "Hoevelaken",
+"place": "town",
+"pop": 9365,
+"lon": 5.4577,
+"lat": 52.17571
+},
+{
+"name": "Halen",
+"local": "Halen",
+"place": "town",
+"pop": 9361,
+"lon": 5.11425,
+"lat": 50.94794
+},
+{
+"name": "Bad Breisig",
+"local": "Bad Breisig",
+"place": "town",
+"pop": 9341,
+"lon": 7.29838,
+"lat": 50.50982
+},
+{
+"name": "Neuenhaus",
+"local": "Neuenhaus",
+"place": "town",
+"pop": 9329,
+"lon": 6.96667,
+"lat": 52.5
+},
+{
+"name": "Huldenberg",
+"local": "Huldenberg",
+"place": "town",
+"pop": 9300,
+"lon": 4.5834,
+"lat": 50.78927
+},
+{
+"name": "Oudenburg",
+"local": "Oudenburg",
+"place": "town",
+"pop": 9279,
+"lon": 3.00494,
+"lat": 51.18419
+},
+{
+"name": "Breckerfeld",
+"local": "Breckerfeld",
+"place": "town",
+"pop": 9229,
+"lon": 7.46678,
+"lat": 51.26031
+},
+{
+"name": "Gennep",
+"local": "Gennep",
+"place": "town",
+"pop": 9167,
+"lon": 5.96911,
+"lat": 51.70128
+},
+{
+"name": "Denekamp",
+"local": "Denekamp",
+"place": "town",
+"pop": 9004,
+"lon": 7.0053,
+"lat": 52.37469
+},
+{
+"name": "Les Bons Villers",
+"local": "Les Bons Villers",
+"place": "town",
+"pop": 9000,
+"lon": 4.47635,
+"lat": 50.52264
+},
+{
+"name": "Court-Saint-Etienne",
+"local": "Court-Saint-Etienne",
+"place": "town",
+"pop": 9000,
+"lon": 4.56858,
+"lat": 50.64432
+},
+{
+"name": "Dessel",
+"local": "Dessel",
+"place": "town",
+"pop": 9000,
+"lon": 5.11282,
+"lat": 51.23908
+},
+{
+"name": "Vroomshoop",
+"local": "Vroomshoop",
+"place": "town",
+"pop": 8790,
+"lon": 6.57059,
+"lat": 52.46016
+},
+{
+"name": "Aulnoye-Aymeries",
+"local": "Aulnoye-Aymeries",
+"place": "town",
+"pop": 8756,
+"lon": 3.83364,
+"lat": 50.20025
+},
+{
+"name": "Mendig",
+"local": "Mendig",
+"place": "town",
+"pop": 8725,
+"lon": 7.28124,
+"lat": 50.37209
+},
+{
+"name": "Onnaing",
+"local": "Onnaing",
+"place": "town",
+"pop": 8719,
+"lon": 3.60112,
+"lat": 50.38708
+},
+{
+"name": "Grave",
+"local": "Grave",
+"place": "town",
+"pop": 8685,
+"lon": 5.74111,
+"lat": 51.75965
+},
+{
+"name": "Philippeville",
+"local": "Philippeville",
+"place": "town",
+"pop": 8600,
+"lon": 4.54361,
+"lat": 50.19627
+},
+{
+"name": "Medemblik",
+"local": "Medemblik",
+"place": "town",
+"pop": 8583,
+"lon": 5.10619,
+"lat": 52.76869
+},
+{
+"name": "Bedum",
+"local": "Bedum",
+"place": "town",
+"pop": 8580,
+"lon": 6.59619,
+"lat": 53.30031
+},
+{
+"name": "Hilvarenbeek",
+"local": "Hilvarenbeek",
+"place": "town",
+"pop": 8575,
+"lon": 5.13568,
+"lat": 51.48516
+},
+{
+"name": "Reusel",
+"local": "Reusel",
+"place": "town",
+"pop": 8554,
+"lon": 5.16153,
+"lat": 51.36144
+},
+{
+"name": "Ter Apel",
+"local": "Ter Apel",
+"place": "town",
+"pop": 8545,
+"lon": 7.06177,
+"lat": 52.87424
+},
+{
+"name": "Uedem",
+"local": "Uedem",
+"place": "town",
+"pop": 8503,
+"lon": 6.27357,
+"lat": 51.66864
+},
+{
+"name": "Aschendorf",
+"local": "Aschendorf",
+"place": "town",
+"pop": 8463,
+"lon": 7.33197,
+"lat": 53.05089
+},
+{
+"name": "Orp-Jauche",
+"local": "Orp-Jauche",
+"place": "town",
+"pop": 8390,
+"lon": 4.98922,
+"lat": 50.70007
+},
+{
+"name": "Vendin-le-Vieil",
+"local": "Vendin-le-Vieil",
+"place": "town",
+"pop": 8381,
+"lon": 2.86716,
+"lat": 50.47565
+},
+{
+"name": "Trooz",
+"local": "Trooz",
+"place": "town",
+"pop": 8200,
+"lon": 5.68837,
+"lat": 50.57281
+},
+{
+"name": "Anna Paulowna",
+"local": "Anna Paulowna",
+"place": "town",
+"pop": 8125,
+"lon": 4.82469,
+"lat": 52.8603
+},
+{
+"name": "Daun",
+"local": "Daun",
+"place": "town",
+"pop": 7994,
+"lon": 6.8305,
+"lat": 50.19625
+},
+{
+"name": "Zundert",
+"local": "Zundert",
+"place": "town",
+"pop": 7970,
+"lon": 4.66099,
+"lat": 51.47039
+},
+{
+"name": "Oude Pekela",
+"local": "Oude Pekela",
+"place": "town",
+"pop": 7955,
+"lon": 7.01386,
+"lat": 53.10743
+},
+{
+"name": "Eijsden",
+"local": "Eijsden",
+"place": "town",
+"pop": 7895,
+"lon": 5.70753,
+"lat": 50.77827
+},
+{
+"name": "Tholen",
+"local": "Tholen",
+"place": "town",
+"pop": 7890,
+"lon": 4.22328,
+"lat": 51.53545
+},
+{
+"name": "Borculo",
+"local": "Borculo",
+"place": "town",
+"pop": 7880,
+"lon": 6.51804,
+"lat": 52.11485
+},
+{
+"name": "Weißenthurm",
+"local": "Weißenthurm",
+"place": "town",
+"pop": 7803,
+"lon": 7.45575,
+"lat": 50.41452
+},
+{
+"name": "Middelharnis",
+"local": "Middelharnis",
+"place": "town",
+"pop": 7755,
+"lon": 4.16565,
+"lat": 51.75762
+},
+{
+"name": "Rheden",
+"local": "Rheden",
+"place": "town",
+"pop": 7680,
+"lon": 6.03028,
+"lat": 52.00438
+},
+{
+"name": "Zuidhorn",
+"local": "Zuidhorn",
+"place": "town",
+"pop": 7645,
+"lon": 6.40499,
+"lat": 53.24807
+},
+{
+"name": "Valkenburg",
+"local": "Valkenburg",
+"place": "town",
+"pop": 7635,
+"lon": 5.83125,
+"lat": 50.86475
+},
+{
+"name": "Gerolstein",
+"local": "Gerolstein",
+"place": "town",
+"pop": 7617,
+"lon": 6.66186,
+"lat": 50.22344
+},
+{
+"name": "Stiens",
+"local": "Stiens",
+"place": "town",
+"pop": 7545,
+"lon": 5.76421,
+"lat": 53.26075
+},
+{
+"name": "Winsum",
+"local": "Winsum",
+"place": "town",
+"pop": 7471,
+"lon": 6.5164,
+"lat": 53.32841
+},
+{
+"name": "Gorredijk",
+"local": "Gorredijk",
+"place": "town",
+"pop": 7349,
+"lon": 6.06416,
+"lat": 53.00596
+},
+{
+"name": "Yerseke",
+"local": "Yerseke",
+"place": "town",
+"pop": 7165,
+"lon": 4.04525,
+"lat": 51.49358
+},
+{
+"name": "Vaals",
+"local": "Vaals",
+"place": "town",
+"pop": 7080,
+"lon": 6.01905,
+"lat": 50.77102
+},
+{
+"name": "Edam",
+"local": "Edam",
+"place": "town",
+"pop": 7080,
+"lon": 5.05628,
+"lat": 52.51191
+},
+{
+"name": "Den Burg",
+"local": "Den Burg",
+"place": "town",
+"pop": 7010,
+"lon": 4.79674,
+"lat": 53.05523
+},
+{
+"name": "Terhulpen",
+"local": "La Hulpe",
+"place": "town",
+"pop": 7000,
+"lon": 4.4894,
+"lat": 50.73137
+},
+{
+"name": "Stavelot",
+"local": "Stavelot",
+"place": "town",
+"pop": 6919,
+"lon": 5.93103,
+"lat": 50.39424
+},
+{
+"name": "Eelde",
+"local": "Eelde",
+"place": "town",
+"pop": 6840,
+"lon": 6.56339,
+"lat": 53.13461
+},
+{
+"name": "Beaumont",
+"local": "Beaumont",
+"place": "town",
+"pop": 6800,
+"lon": 4.23831,
+"lat": 50.23553
+},
+{
+"name": "Polch",
+"local": "Polch",
+"place": "town",
+"pop": 6607,
+"lon": 7.31295,
+"lat": 50.29875
+},
+{
+"name": "Kall",
+"local": "Kall",
+"place": "town",
+"pop": 6600,
+"lon": 6.55558,
+"lat": 50.541
+},
+{
+"name": "Emlichheim",
+"local": "Emlichheim",
+"place": "town",
+"pop": 6553,
+"lon": 6.85274,
+"lat": 52.61197
+},
+{
+"name": "Rheurdt",
+"local": "Rheurdt",
+"place": "town",
+"pop": 6526,
+"lon": 6.46907,
+"lat": 51.46777
+},
+{
+"name": "Sögel",
+"local": "Sögel",
+"place": "town",
+"pop": 6526,
+"lon": 7.51956,
+"lat": 52.84181
+},
+{
+"name": "Tubbergen",
+"local": "Tubbergen",
+"place": "town",
+"pop": 6374,
+"lon": 6.78166,
+"lat": 52.40811
+},
+{
+"name": "Ouddorp",
+"local": "Ouddorp",
+"place": "town",
+"pop": 6245,
+"lon": 3.93592,
+"lat": 51.80931
+},
+{
+"name": "Bevekom",
+"local": "Beauvechain",
+"place": "town",
+"pop": 6000,
+"lon": 4.77173,
+"lat": 50.7809
+},
+{
+"name": "Linz am Rhein",
+"local": "Linz am Rhein",
+"place": "town",
+"pop": 5962,
+"lon": 7.28126,
+"lat": 50.56625
+},
+{
+"name": "Noyelles-Godault",
+"local": "Noyelles-Godault",
+"place": "town",
+"pop": 5906,
+"lon": 2.99646,
+"lat": 50.41977
+},
+{
+"name": "Norderney",
+"local": "Norderney",
+"place": "town",
+"pop": 5875,
+"lon": 7.14382,
+"lat": 53.70561
+},
+{
+"name": "Buitenpost",
+"local": "Buitenpost",
+"place": "town",
+"pop": 5762,
+"lon": 6.14423,
+"lat": 53.25403
+},
+{
+"name": "Horstmar",
+"local": "Horstmar",
+"place": "town",
+"pop": 5682,
+"lon": 7.30344,
+"lat": 52.08114
+},
+{
+"name": "Bad Hönningen",
+"local": "Bad Hönningen",
+"place": "town",
+"pop": 5659,
+"lon": 7.30659,
+"lat": 50.51574
+},
+{
+"name": "Lathen",
+"local": "Lathen",
+"place": "town",
+"pop": 5618,
+"lon": 7.31634,
+"lat": 52.86367
+},
+{
+"name": "Borkum",
+"local": "Borkum",
+"place": "town",
+"pop": 5559,
+"lon": 6.66822,
+"lat": 53.59029
+},
+{
+"name": "Kollum",
+"local": "Kollum",
+"place": "town",
+"pop": 5529,
+"lon": 6.14873,
+"lat": 53.27981
+},
+{
+"name": "Prüm",
+"local": "Prüm",
+"place": "town",
+"pop": 5427,
+"lon": 6.4249,
+"lat": 50.20695
+},
+{
+"name": "Cochem",
+"local": "Cochem",
+"place": "town",
+"pop": 5162,
+"lon": 7.16632,
+"lat": 50.14839
+},
+{
+"name": "Uithuizen",
+"local": "Uithuizen",
+"place": "town",
+"pop": 5105,
+"lon": 6.67322,
+"lat": 53.40744
+},
+{
+"name": "Houffalize",
+"local": "Houffalize",
+"place": "town",
+"pop": 5068,
+"lon": 5.78869,
+"lat": 50.13238
+},
+{
+"name": "Gieten",
+"local": "Gieten",
+"place": "town",
+"pop": 5061,
+"lon": 6.76385,
+"lat": 53.00331
+},
+{
+"name": "Lobbes",
+"local": "Lobbes",
+"place": "town",
+"pop": 5000,
+"lon": 4.26549,
+"lat": 50.34602
+},
+{
+"name": "Bad Münstereifel",
+"local": "Bad Münstereifel",
+"place": "town",
+"pop": 5000,
+"lon": 6.76365,
+"lat": 50.55457
+},
+{
+"name": "Le Quesnoy",
+"local": "Le Quesnoy",
+"place": "town",
+"pop": 4852,
+"lon": 3.63645,
+"lat": 50.24734
+},
+{
+"name": "Westerbork",
+"local": "Westerbork",
+"place": "town",
+"pop": 4808,
+"lon": 6.61031,
+"lat": 52.84922
+},
+{
+"name": "Emmelshausen",
+"local": "Emmelshausen",
+"place": "town",
+"pop": 4732,
+"lon": 7.55578,
+"lat": 50.15576
+},
+{
+"name": "Ferrières",
+"local": "Ferrières",
+"place": "town",
+"pop": 4724,
+"lon": 5.60639,
+"lat": 50.4002
+},
+{
+"name": "Borger",
+"local": "Borger",
+"place": "town",
+"pop": 4720,
+"lon": 6.79056,
+"lat": 52.92407
+},
+{
+"name": "Oostburg",
+"local": "Oostburg",
+"place": "town",
+"pop": 4632,
+"lon": 3.48955,
+"lat": 51.32719
+},
+{
+"name": "Kranenburg",
+"local": "Kranenburg",
+"place": "town",
+"pop": 4614,
+"lon": 6.00744,
+"lat": 51.78956
+},
+{
+"name": "Schoorl",
+"local": "Schoorl",
+"place": "town",
+"pop": 4585,
+"lon": 4.69395,
+"lat": 52.70091
+},
+{
+"name": "Nümbrecht",
+"local": "Nümbrecht",
+"place": "town",
+"pop": 4435,
+"lon": 7.54095,
+"lat": 50.9034
+},
+{
+"name": "Solesmes",
+"local": "Solesmes",
+"place": "town",
+"pop": 4249,
+"lon": 3.49738,
+"lat": 50.18516
+},
+{
+"name": "Avesnes-sur-Helpe",
+"local": "Avesnes-sur-Helpe",
+"place": "town",
+"pop": 4118,
+"lon": 3.93211,
+"lat": 50.12188
+},
+{
+"name": "Rheinbrohl",
+"local": "Rheinbrohl",
+"place": "town",
+"pop": 4079,
+"lon": 7.3302,
+"lat": 50.49771
+},
+{
+"name": "Rochefort",
+"local": "Rochefort",
+"place": "town",
+"pop": 4000,
+"lon": 5.22334,
+"lat": 50.15885
+},
+{
+"name": "Kinrooi",
+"local": "Kinrooi",
+"place": "town",
+"pop": 3637,
+"lon": 5.7414,
+"lat": 51.14497
+},
+{
+"name": "Münstermaifeld",
+"local": "Münstermaifeld",
+"place": "town",
+"pop": 3519,
+"lon": 7.36327,
+"lat": 50.24708
+},
+{
+"name": "Ulmen",
+"local": "Ulmen",
+"place": "town",
+"pop": 3268,
+"lon": 6.97996,
+"lat": 50.20827
+},
+{
+"name": "Bavay",
+"local": "Bavay",
+"place": "town",
+"pop": 3246,
+"lon": 3.79493,
+"lat": 50.29789
+},
+{
+"name": "Hillesheim",
+"local": "Hillesheim",
+"place": "town",
+"pop": 3158,
+"lon": 6.668,
+"lat": 50.29167
+},
+{
+"name": "Kaisersesch",
+"local": "Kaisersesch",
+"place": "town",
+"pop": 3103,
+"lon": 7.14049,
+"lat": 50.2308
+},
+{
+"name": "Adenau",
+"local": "Adenau",
+"place": "town",
+"pop": 2942,
+"lon": 6.9304,
+"lat": 50.38233
+},
+{
+"name": "Troisvierges",
+"local": "Troisvierges",
+"place": "town",
+"pop": 1799,
+"lon": 6.00207,
+"lat": 50.12127
+},
+{
+"name": "Oud-Heverlee",
+"local": "Oud-Heverlee",
+"place": "town",
+"pop": 0,
+"lon": 4.66293,
+"lat": 50.83763
+},
+{
+"name": "Maasmechelen",
+"local": "Maasmechelen",
+"place": "town",
+"pop": 0,
+"lon": 5.69602,
+"lat": 50.96342
+},
+{
+"name": "Sint-Gillis",
+"local": "Saint-Gilles - Sint-Gillis",
+"place": "town",
+"pop": 0,
+"lon": 4.34548,
+"lat": 50.825
+},
+{
+"name": "Etterbeek",
+"local": "Etterbeek",
+"place": "town",
+"pop": 0,
+"lon": 4.38617,
+"lat": 50.83614
+},
+{
+"name": "Berchem",
+"local": "Berchem",
+"place": "town",
+"pop": 0,
+"lon": 4.433,
+"lat": 51.19435
+},
+{
+"name": "Wilrijk",
+"local": "Wilrijk",
+"place": "town",
+"pop": 0,
+"lon": 4.39426,
+"lat": 51.17009
+},
+{
+"name": "Mortsel",
+"local": "Mortsel",
+"place": "town",
+"pop": 0,
+"lon": 4.4567,
+"lat": 51.17041
+},
+{
+"name": "Borsbeek",
+"local": "Borsbeek",
+"place": "town",
+"pop": 0,
+"lon": 4.48895,
+"lat": 51.19289
+},
+{
+"name": "Linnich",
+"local": "Linnich",
+"place": "town",
+"pop": 0,
+"lon": 6.26762,
+"lat": 50.98063
+},
+{
+"name": "Jambes",
+"local": "Jambes",
+"place": "town",
+"pop": 0,
+"lon": 4.87233,
+"lat": 50.45896
+},
+{
+"name": "Nijlen",
+"local": "Nijlen",
+"place": "town",
+"pop": 0,
+"lon": 4.67029,
+"lat": 51.161
+},
+{
+"name": "Heist-op-den-Berg",
+"local": "Heist-op-den-Berg",
+"place": "town",
+"pop": 0,
+"lon": 4.72868,
+"lat": 51.07599
+},
+{
+"name": "Herenthout",
+"local": "Herenthout",
+"place": "town",
+"pop": 0,
+"lon": 4.7544,
+"lat": 51.13924
+},
+{
+"name": "Berlaar",
+"local": "Berlaar",
+"place": "town",
+"pop": 0,
+"lon": 4.65751,
+"lat": 51.1179
+},
+{
+"name": "Staden",
+"local": "Staden",
+"place": "town",
+"pop": 0,
+"lon": 3.01457,
+"lat": 50.97471
+},
+{
+"name": "Bonheiden",
+"local": "Bonheiden",
+"place": "town",
+"pop": 0,
+"lon": 4.54839,
+"lat": 51.02532
+},
+{
+"name": "Arendonk",
+"local": "Arendonk",
+"place": "town",
+"pop": 0,
+"lon": 5.08646,
+"lat": 51.32023
+},
+{
+"name": "Beveren",
+"local": "Beveren",
+"place": "town",
+"pop": 0,
+"lon": 4.25778,
+"lat": 51.21261
+},
+{
+"name": "Zaventem",
+"local": "Zaventem",
+"place": "town",
+"pop": 0,
+"lon": 4.473,
+"lat": 50.88062
+},
+{
+"name": "Kortenberg",
+"local": "Kortenberg",
+"place": "town",
+"pop": 0,
+"lon": 4.53907,
+"lat": 50.88587
+},
+{
+"name": "Bertem",
+"local": "Bertem",
+"place": "town",
+"pop": 0,
+"lon": 4.63063,
+"lat": 50.86598
+},
+{
+"name": "Hasselt",
+"local": "Hasselt",
+"place": "city",
+"pop": 0,
+"lon": 5.3378,
+"lat": 50.93037
+},
+{
+"name": "Süchteln",
+"local": "Süchteln",
+"place": "town",
+"pop": 0,
+"lon": 6.37048,
+"lat": 51.28599
+},
+{
+"name": "Kalmthout",
+"local": "Kalmthout",
+"place": "town",
+"pop": 0,
+"lon": 4.4765,
+"lat": 51.38284
+},
+{
+"name": "Hoboken",
+"local": "Hoboken",
+"place": "town",
+"pop": 0,
+"lon": 4.36178,
+"lat": 51.17949
+},
+{
+"name": "Aarschot",
+"local": "Aarschot",
+"place": "town",
+"pop": 0,
+"lon": 4.83643,
+"lat": 50.98427
+},
+{
+"name": "Bilzen",
+"local": "Bilzen",
+"place": "town",
+"pop": 0,
+"lon": 5.51811,
+"lat": 50.87078
+},
+{
+"name": "Blankenberge",
+"local": "Blankenberge",
+"place": "town",
+"pop": 0,
+"lon": 3.13234,
+"lat": 51.31126
+},
+{
+"name": "Deinze",
+"local": "Deinze",
+"place": "town",
+"pop": 0,
+"lon": 3.52704,
+"lat": 50.98419
+},
+{
+"name": "Diest",
+"local": "Diest",
+"place": "town",
+"pop": 0,
+"lon": 5.05043,
+"lat": 50.98443
+},
+{
+"name": "Fosses-la-Ville",
+"local": "Fosses-la-Ville",
+"place": "town",
+"pop": 0,
+"lon": 4.69789,
+"lat": 50.39595
+},
+{
+"name": "Gistel",
+"local": "Gistel",
+"place": "town",
+"pop": 0,
+"lon": 2.96154,
+"lat": 51.15428
+},
+{
+"name": "Herentals",
+"local": "Herentals",
+"place": "town",
+"pop": 0,
+"lon": 4.83626,
+"lat": 51.17654
+},
+{
+"name": "Hoogstraten",
+"local": "Hoogstraten",
+"place": "town",
+"pop": 0,
+"lon": 4.76169,
+"lat": 51.40129
+},
+{
+"name": "Izegem",
+"local": "Izegem",
+"place": "town",
+"pop": 0,
+"lon": 3.21543,
+"lat": 50.91983
+},
+{
+"name": "Anderlecht",
+"local": "Anderlecht",
+"place": "town",
+"pop": 0,
+"lon": 4.32965,
+"lat": 50.8391
+},
+{
+"name": "Sint-Joost-ten-Node",
+"local": "Saint-Josse-ten-Noode - Sint-Joost-ten-Node",
+"place": "town",
+"pop": 0,
+"lon": 4.37459,
+"lat": 50.84984
+},
+{
+"name": "Schaarbeek",
+"local": "Schaerbeek - Schaarbeek",
+"place": "town",
+"pop": 0,
+"lon": 4.37371,
+"lat": 50.8676
+},
+{
+"name": "Ganshoren",
+"local": "Ganshoren",
+"place": "town",
+"pop": 0,
+"lon": 4.3078,
+"lat": 50.87033
+},
+{
+"name": "Koekelberg",
+"local": "Koekelberg",
+"place": "town",
+"pop": 0,
+"lon": 4.33155,
+"lat": 50.8606
+},
+{
+"name": "Sint-Agatha-Berchem",
+"local": "Berchem-Sainte-Agathe - Sint-Agatha-Berchem",
+"place": "town",
+"pop": 0,
+"lon": 4.29467,
+"lat": 50.86492
+},
+{
+"name": "Sint-Jans-Molenbeek",
+"local": "Molenbeek-Saint-Jean - Sint-Jans-Molenbeek",
+"place": "town",
+"pop": 0,
+"lon": 4.33864,
+"lat": 50.8546
+},
+{
+"name": "Vorst",
+"local": "Forest - Vorst",
+"place": "town",
+"pop": 0,
+"lon": 4.31812,
+"lat": 50.81179
+},
+{
+"name": "Ukkel",
+"local": "Uccle - Ukkel",
+"place": "town",
+"pop": 0,
+"lon": 4.33384,
+"lat": 50.80354
+},
+{
+"name": "Elsene",
+"local": "Ixelles - Elsene",
+"place": "town",
+"pop": 0,
+"lon": 4.36683,
+"lat": 50.83311
+},
+{
+"name": "Watermaal-Bosvoorde",
+"local": "Watermael-Boitsfort - Watermaal-Bosvoorde",
+"place": "town",
+"pop": 0,
+"lon": 4.41764,
+"lat": 50.79811
+},
+{
+"name": "Sint-Lambrechts-Woluwe",
+"local": "Woluwe-Saint-Lambert - Sint-Lambrechts-Woluwe",
+"place": "town",
+"pop": 0,
+"lon": 4.42567,
+"lat": 50.84304
+},
+{
+"name": "Sint-Pieters-Woluwe",
+"local": "Woluwe-Saint-Pierre - Sint-Pieters-Woluwe",
+"place": "town",
+"pop": 0,
+"lon": 4.42746,
+"lat": 50.83703
+},
+{
+"name": "Oudergem",
+"local": "Auderghem - Oudergem",
+"place": "town",
+"pop": 0,
+"lon": 4.42709,
+"lat": 50.81717
+},
+{
+"name": "Jette",
+"local": "Jette",
+"place": "town",
+"pop": 0,
+"lon": 4.32457,
+"lat": 50.87596
+},
+{
+"name": "Zwijndrecht",
+"local": "Zwijndrecht",
+"place": "town",
+"pop": 0,
+"lon": 4.33029,
+"lat": 51.21854
+},
+{
+"name": "Zonnebeke",
+"local": "Zonnebeke",
+"place": "town",
+"pop": 0,
+"lon": 2.98747,
+"lat": 50.87319
+},
+{
+"name": "Tielt",
+"local": "Tielt",
+"place": "town",
+"pop": 0,
+"lon": 3.32734,
+"lat": 51.00029
+},
+{
+"name": "Temse",
+"local": "Temse",
+"place": "town",
+"pop": 0,
+"lon": 4.21333,
+"lat": 51.12536
+},
+{
+"name": "Edegem",
+"local": "Edegem",
+"place": "town",
+"pop": 0,
+"lon": 4.44583,
+"lat": 51.15481
+},
+{
+"name": "La Roche-en-Ardenne",
+"local": "La Roche-en-Ardenne",
+"place": "town",
+"pop": 0,
+"lon": 5.57595,
+"lat": 50.18156
+},
+{
+"name": "Middelkerke",
+"local": "Middelkerke",
+"place": "town",
+"pop": 0,
+"lon": 2.82297,
+"lat": 51.18648
+},
+{
+"name": "De Haan",
+"local": "De Haan",
+"place": "town",
+"pop": 0,
+"lon": 3.03169,
+"lat": 51.27508
+},
+{
+"name": "De Panne",
+"local": "De Panne",
+"place": "town",
+"pop": 0,
+"lon": 2.59241,
+"lat": 51.09883
+},
+{
+"name": "Péruwelz",
+"local": "Péruwelz",
+"place": "town",
+"pop": 0,
+"lon": 3.59088,
+"lat": 50.50799
+},
+{
+"name": "Thuin",
+"local": "Thuin",
+"place": "town",
+"pop": 0,
+"lon": 4.28705,
+"lat": 50.33974
+},
+{
+"name": "Waregem",
+"local": "Waregem",
+"place": "town",
+"pop": 0,
+"lon": 3.43236,
+"lat": 50.88682
+},
+{
+"name": "Herent",
+"local": "Herent",
+"place": "town",
+"pop": 0,
+"lon": 4.67381,
+"lat": 50.90698
+},
+{
+"name": "Putte",
+"local": "Putte",
+"place": "town",
+"pop": 0,
+"lon": 4.63105,
+"lat": 51.05708
+},
+{
+"name": "Anzegem",
+"local": "Anzegem",
+"place": "town",
+"pop": 0,
+"lon": 3.4784,
+"lat": 50.83254
+},
+{
+"name": "Ingelmunster",
+"local": "Ingelmunster",
+"place": "town",
+"pop": 0,
+"lon": 3.255,
+"lat": 50.92028
+},
+{
+"name": "Eigenbrakel",
+"local": "Braine-l'Alleud",
+"place": "town",
+"pop": 0,
+"lon": 4.36927,
+"lat": 50.68287
+},
+{
+"name": "Keerbergen",
+"local": "Keerbergen",
+"place": "town",
+"pop": 0,
+"lon": 4.62907,
+"lat": 51.00375
+},
+{
+"name": "Boom",
+"local": "Boom",
+"place": "town",
+"pop": 0,
+"lon": 4.36672,
+"lat": 51.08738
+},
+{
+"name": "Borgerhout",
+"local": "Borgerhout",
+"place": "town",
+"pop": 0,
+"lon": 4.44624,
+"lat": 51.21285
+},
+{
+"name": "Elsdorf",
+"local": "Elsdorf",
+"place": "town",
+"pop": 0,
+"lon": 6.56983,
+"lat": 50.93713
+},
+{
+"name": "Schoten",
+"local": "Schoten",
+"place": "town",
+"pop": 0,
+"lon": 4.49804,
+"lat": 51.25163
+},
+{
+"name": "Brasschaat",
+"local": "Brasschaat",
+"place": "town",
+"pop": 0,
+"lon": 4.49173,
+"lat": 51.29007
+},
+{
+"name": "Dilbeek",
+"local": "Dilbeek",
+"place": "town",
+"pop": 0,
+"lon": 4.26626,
+"lat": 50.84807
+},
+{
+"name": "Ternat",
+"local": "Ternat",
+"place": "town",
+"pop": 0,
+"lon": 4.1757,
+"lat": 50.87134
+},
+{
+"name": "Sint-Pieters-Leeuw",
+"local": "Sint-Pieters-Leeuw",
+"place": "town",
+"pop": 0,
+"lon": 4.24436,
+"lat": 50.78003
+},
+{
+"name": "Mettet",
+"local": "Mettet",
+"place": "town",
+"pop": 0,
+"lon": 4.65849,
+"lat": 50.32121
+},
+{
+"name": "Lasne",
+"local": "Lasne",
+"place": "town",
+"pop": 0,
+"lon": 4.48442,
+"lat": 50.686
+},
+{
+"name": "Stabroek",
+"local": "Stabroek",
+"place": "town",
+"pop": 0,
+"lon": 4.36807,
+"lat": 51.33265
+},
+{
+"name": "Laarne",
+"local": "Laarne",
+"place": "town",
+"pop": 0,
+"lon": 3.85047,
+"lat": 51.02966
+},
+{
+"name": "Haacht",
+"local": "Haacht",
+"place": "town",
+"pop": 0,
+"lon": 4.63831,
+"lat": 50.97695
+},
+{
+"name": "Rumst",
+"local": "Rumst",
+"place": "town",
+"pop": 0,
+"lon": 4.42405,
+"lat": 51.07929
+},
+{
+"name": "Willebroek",
+"local": "Willebroek",
+"place": "town",
+"pop": 0,
+"lon": 4.35889,
+"lat": 51.06068
+},
+{
+"name": "Hemiksem",
+"local": "Hemiksem",
+"place": "town",
+"pop": 0,
+"lon": 4.34098,
+"lat": 51.14302
+},
+{
+"name": "Kruibeke",
+"local": "Kruibeke",
+"place": "town",
+"pop": 0,
+"lon": 4.30911,
+"lat": 51.17123
+},
+{
+"name": "Aartselaar",
+"local": "Aartselaar",
+"place": "town",
+"pop": 0,
+"lon": 4.38702,
+"lat": 51.1333
+},
+{
+"name": "Profondeville",
+"local": "Profondeville",
+"place": "town",
+"pop": 0,
+"lon": 4.8675,
+"lat": 50.3762
+},
+{
+"name": "Grimbergen",
+"local": "Grimbergen",
+"place": "town",
+"pop": 0,
+"lon": 4.37179,
+"lat": 50.93246
+},
+{
+"name": "Rotselaar",
+"local": "Rotselaar",
+"place": "town",
+"pop": 0,
+"lon": 4.70941,
+"lat": 50.95147
+},
+{
+"name": "Meise",
+"local": "Meise",
+"place": "town",
+"pop": 0,
+"lon": 4.32873,
+"lat": 50.93416
+},
+{
+"name": "Asse",
+"local": "Asse",
+"place": "town",
+"pop": 0,
+"lon": 4.20156,
+"lat": 50.90943
+},
+{
+"name": "Opwijk",
+"local": "Opwijk",
+"place": "town",
+"pop": 0,
+"lon": 4.18967,
+"lat": 50.96905
+},
+{
+"name": "Gavere",
+"local": "Gavere",
+"place": "town",
+"pop": 0,
+"lon": 3.66142,
+"lat": 50.92923
+},
+{
+"name": "Hamme",
+"local": "Hamme",
+"place": "town",
+"pop": 0,
+"lon": 4.13772,
+"lat": 51.09776
+},
+{
+"name": "Zemst",
+"local": "Zemst",
+"place": "town",
+"pop": 0,
+"lon": 4.46508,
+"lat": 50.98422
+},
+{
+"name": "Wommelgem",
+"local": "Wommelgem",
+"place": "town",
+"pop": 0,
+"lon": 4.5238,
+"lat": 51.2031
+},
+{
+"name": "Assenede",
+"local": "Assenede",
+"place": "town",
+"pop": 0,
+"lon": 3.75329,
+"lat": 51.22759
+},
+{
+"name": "Boortmeerbeek",
+"local": "Boortmeerbeek",
+"place": "town",
+"pop": 0,
+"lon": 4.57293,
+"lat": 50.98159
+},
+{
+"name": "Westerlo",
+"local": "Westerlo",
+"place": "town",
+"pop": 0,
+"lon": 4.91687,
+"lat": 51.08669
+},
+{
+"name": "Buggenhout",
+"local": "Buggenhout",
+"place": "town",
+"pop": 0,
+"lon": 4.20227,
+"lat": 51.01523
+},
+{
+"name": "Tremelo",
+"local": "Tremelo",
+"place": "town",
+"pop": 0,
+"lon": 4.70406,
+"lat": 50.9919
+},
+{
+"name": "Stekene",
+"local": "Stekene",
+"place": "town",
+"pop": 0,
+"lon": 4.03969,
+"lat": 51.20623
+},
+{
+"name": "Machelen",
+"local": "Machelen",
+"place": "town",
+"pop": 0,
+"lon": 4.4329,
+"lat": 50.91267
+},
+{
+"name": "Baarle",
+"local": "Baarle",
+"place": "town",
+"pop": 0,
+"lon": 4.93089,
+"lat": 51.44262
+},
+{
+"name": "Bocholt",
+"local": "Bocholt",
+"place": "town",
+"pop": 0,
+"lon": 5.57758,
+"lat": 51.17298
+},
+{
+"name": "Evere",
+"local": "Evere",
+"place": "town",
+"pop": 0,
+"lon": 4.40342,
+"lat": 50.87201
+},
+{
+"name": "Merelbeke",
+"local": "Merelbeke",
+"place": "town",
+"pop": 0,
+"lon": 3.74591,
+"lat": 50.99429
+},
+{
+"name": "Steenokkerzeel",
+"local": "Steenokkerzeel",
+"place": "town",
+"pop": 0,
+"lon": 4.51105,
+"lat": 50.90935
+},
+{
+"name": "Kampenhout",
+"local": "Kampenhout",
+"place": "town",
+"pop": 0,
+"lon": 4.54957,
+"lat": 50.94133
+},
+{
+"name": "Pont-à-Celles",
+"local": "Pont-à-Celles",
+"place": "town",
+"pop": 0,
+"lon": 4.36174,
+"lat": 50.51226
+},
+{
+"name": "Bornem",
+"local": "Bornem",
+"place": "town",
+"pop": 0,
+"lon": 4.23413,
+"lat": 51.0953
+},
+{
+"name": "Gosselies",
+"local": "Gosselies",
+"place": "town",
+"pop": 0,
+"lon": 4.43018,
+"lat": 50.46538
+},
+{
+"name": "Sint-Lievens-Houtem",
+"local": "Sint-Lievens-Houtem",
+"place": "town",
+"pop": 0,
+"lon": 3.85892,
+"lat": 50.92049
+},
+{
+"name": "Wemmel",
+"local": "Wemmel",
+"place": "town",
+"pop": 0,
+"lon": 4.30346,
+"lat": 50.90877
+},
+{
+"name": "Oosterzele",
+"local": "Oosterzele",
+"place": "town",
+"pop": 0,
+"lon": 3.80327,
+"lat": 50.94564
+},
+{
+"name": "Kraainem",
+"local": "Kraainem",
+"place": "town",
+"pop": 0,
+"lon": 4.46626,
+"lat": 50.86096
+},
+{
+"name": "Lubbeek",
+"local": "Lubbeek",
+"place": "town",
+"pop": 0,
+"lon": 4.8416,
+"lat": 50.88157
+},
+{
+"name": "Zoersel",
+"local": "Zoersel",
+"place": "town",
+"pop": 0,
+"lon": 4.71326,
+"lat": 51.27167
+},
+{
+"name": "Merchtem",
+"local": "Merchtem",
+"place": "town",
+"pop": 0,
+"lon": 4.23357,
+"lat": 50.95936
+},
+{
+"name": "Herselt",
+"local": "Herselt",
+"place": "town",
+"pop": 0,
+"lon": 4.88326,
+"lat": 51.0535
+},
+{
+"name": "Londerzeel",
+"local": "Londerzeel",
+"place": "town",
+"pop": 0,
+"lon": 4.3028,
+"lat": 51.00212
+},
+{
+"name": "Liedekerke",
+"local": "Liedekerke",
+"place": "town",
+"pop": 0,
+"lon": 4.08608,
+"lat": 50.87113
+},
+{
+"name": "'s-Gravenbrakel",
+"local": "Braine-le-Comte",
+"place": "town",
+"pop": 0,
+"lon": 4.13607,
+"lat": 50.61071
+},
+{
+"name": "Holsbeek",
+"local": "Holsbeek",
+"place": "town",
+"pop": 0,
+"lon": 4.75706,
+"lat": 50.92159
+},
+{
+"name": "Tessenderlo",
+"local": "Tessenderlo",
+"place": "town",
+"pop": 0,
+"lon": 5.08786,
+"lat": 51.06762
+},
+{
+"name": "Jurbeke",
+"local": "Jurbise",
+"place": "town",
+"pop": 0,
+"lon": 3.91132,
+"lat": 50.53251
+},
+{
+"name": "Boutersem",
+"local": "Boutersem",
+"place": "town",
+"pop": 0,
+"lon": 4.83213,
+"lat": 50.83999
+},
+{
+"name": "Morlanwelz-Mariemont",
+"local": "Morlanwelz-Mariemont",
+"place": "town",
+"pop": 0,
+"lon": 4.24209,
+"lat": 50.45596
+},
+{
+"name": "Manage",
+"local": "Manage",
+"place": "town",
+"pop": 0,
+"lon": 4.23556,
+"lat": 50.50402
+},
+{
+"name": "Couillet",
+"local": "Couillet",
+"place": "town",
+"pop": 0,
+"lon": 4.46863,
+"lat": 50.39122
+},
+{
+"name": "Gilly",
+"local": "Gilly",
+"place": "town",
+"pop": 0,
+"lon": 4.48598,
+"lat": 50.424
+},
+{
+"name": "Marcinelle",
+"local": "Marcinelle",
+"place": "town",
+"pop": 0,
+"lon": 4.44425,
+"lat": 50.39772
+},
+{
+"name": "Mont-sur-Marchienne",
+"local": "Mont-sur-Marchienne",
+"place": "town",
+"pop": 0,
+"lon": 4.40407,
+"lat": 50.38791
+},
+{
+"name": "Nederkruchten",
+"local": "Niederkrüchten",
+"place": "town",
+"pop": 0,
+"lon": 6.21966,
+"lat": 51.20004
+},
+{
+"name": "Zulte",
+"local": "Zulte",
+"place": "town",
+"pop": 0,
+"lon": 3.44856,
+"lat": 50.92066
+},
+{
+"name": "Sint-Martens-Latem",
+"local": "Sint-Martens-Latem",
+"place": "town",
+"pop": 0,
+"lon": 3.63975,
+"lat": 51.02097
+},
+{
+"name": "Koksijde",
+"local": "Koksijde",
+"place": "town",
+"pop": 0,
+"lon": 2.63493,
+"lat": 51.11877
+},
+{
+"name": "Oostkamp",
+"local": "Oostkamp",
+"place": "town",
+"pop": 0,
+"lon": 3.23445,
+"lat": 51.1532
+},
+{
+"name": "Lille",
+"local": "Lille",
+"place": "town",
+"pop": 0,
+"lon": 4.82424,
+"lat": 51.23822
+},
+{
+"name": "Melle",
+"local": "Melle",
+"place": "town",
+"pop": 0,
+"lon": 3.79888,
+"lat": 51.00303
+},
+{
+"name": "Evergem",
+"local": "Evergem",
+"place": "town",
+"pop": 0,
+"lon": 3.70786,
+"lat": 51.10879
+},
+{
+"name": "Olen",
+"local": "Olen",
+"place": "town",
+"pop": 0,
+"lon": 4.85973,
+"lat": 51.14386
+},
+{
+"name": "Meerhout",
+"local": "Meerhout",
+"place": "town",
+"pop": 0,
+"lon": 5.07724,
+"lat": 51.13174
+},
+{
+"name": "Dendermonde",
+"local": "Dendermonde",
+"place": "town",
+"pop": 0,
+"lon": 4.09811,
+"lat": 51.03123
+},
+{
+"name": "Waasmunster",
+"local": "Waasmunster",
+"place": "town",
+"pop": 0,
+"lon": 4.08422,
+"lat": 51.10971
+},
+{
+"name": "Wichelen",
+"local": "Wichelen",
+"place": "town",
+"pop": 0,
+"lon": 3.97425,
+"lat": 51.00608
+},
+{
+"name": "Haaltert",
+"local": "Haaltert",
+"place": "town",
+"pop": 0,
+"lon": 4.00577,
+"lat": 50.90225
+},
+{
+"name": "Kasterlee",
+"local": "Kasterlee",
+"place": "town",
+"pop": 0,
+"lon": 4.96781,
+"lat": 51.24079
+},
+{
+"name": "Ieper",
+"local": "Ieper",
+"place": "town",
+"pop": 0,
+"lon": 2.8846,
+"lat": 50.85219
+},
+{
+"name": "Oudenaarde",
+"local": "Oudenaarde",
+"place": "town",
+"pop": 0,
+"lon": 3.60414,
+"lat": 50.84337
+},
+{
+"name": "Denderleeuw",
+"local": "Denderleeuw",
+"place": "town",
+"pop": 0,
+"lon": 4.08164,
+"lat": 50.88345
+},
+{
+"name": "Sint-Niklaas",
+"local": "Sint-Niklaas",
+"place": "town",
+"pop": 0,
+"lon": 4.13951,
+"lat": 51.16467
+},
+{
+"name": "Geel",
+"local": "Geel",
+"place": "town",
+"pop": 0,
+"lon": 4.99032,
+"lat": 51.16108
+},
+{
+"name": "Veurne",
+"local": "Veurne",
+"place": "town",
+"pop": 0,
+"lon": 2.66213,
+"lat": 51.07243
+},
+{
+"name": "Nieuwpoort",
+"local": "Nieuwpoort",
+"place": "town",
+"pop": 0,
+"lon": 2.75167,
+"lat": 51.12943
+},
+{
+"name": "Diksmuide",
+"local": "Diksmuide",
+"place": "town",
+"pop": 0,
+"lon": 2.86472,
+"lat": 51.03334
+},
+{
+"name": "Aalst",
+"local": "Aalst",
+"place": "city",
+"pop": 0,
+"lon": 4.03921,
+"lat": 50.93832
+},
+{
+"name": "Roeselare",
+"local": "Roeselare",
+"place": "town",
+"pop": 0,
+"lon": 3.12439,
+"lat": 50.94495
+},
+{
+"name": "Zoutleeuw",
+"local": "Zoutleeuw",
+"place": "town",
+"pop": 0,
+"lon": 5.1031,
+"lat": 50.8332
+},
+{
+"name": "Vilvoorde",
+"local": "Vilvoorde",
+"place": "town",
+"pop": 0,
+"lon": 4.42313,
+"lat": 50.92871
+},
+{
+"name": "Halle",
+"local": "Halle",
+"place": "town",
+"pop": 0,
+"lon": 4.23743,
+"lat": 50.73605
+},
+{
+"name": "Mesen",
+"local": "Mesen - Messines",
+"place": "town",
+"pop": 0,
+"lon": 2.89845,
+"lat": 50.76542
+},
+{
+"name": "Menen",
+"local": "Menen",
+"place": "town",
+"pop": 0,
+"lon": 3.12089,
+"lat": 50.796
+},
+{
+"name": "Sint-Genesius-Rode",
+"local": "Sint-Genesius-Rode - Rhode-Saint-Genèse",
+"place": "town",
+"pop": 0,
+"lon": 4.34637,
+"lat": 50.74503
+},
+{
+"name": "Oupeye",
+"local": "Oupeye",
+"place": "town",
+"pop": 0,
+"lon": 5.64507,
+"lat": 50.70919
+},
+{
+"name": "Dülken",
+"local": "Dülken",
+"place": "town",
+"pop": 0,
+"lon": 6.33484,
+"lat": 51.25156
+},
+{
+"name": "Komen-Waasten",
+"local": "Comines-Warneton - Komen-Waasten",
+"place": "town",
+"pop": 0,
+"lon": 2.99976,
+"lat": 50.76874
+},
+{
+"name": "Gentbrugge",
+"local": "Gentbrugge",
+"place": "town",
+"pop": 0,
+"lon": 3.75888,
+"lat": 51.04472
+},
+{
+"name": "Oud-Turnhout",
+"local": "Oud-Turnhout",
+"place": "town",
+"pop": 0,
+"lon": 4.98171,
+"lat": 51.31783
+},
+{
+"name": "Ravels",
+"local": "Ravels",
+"place": "town",
+"pop": 0,
+"lon": 4.99556,
+"lat": 51.3717
+},
+{
+"name": "Mechelen",
+"local": "Mechelen",
+"place": "city",
+"pop": 0,
+"lon": 4.48035,
+"lat": 51.02814
+},
+{
+"name": "Balen",
+"local": "Balen",
+"place": "town",
+"pop": 0,
+"lon": 5.16969,
+"lat": 51.17076
+},
+{
+"name": "Sint-Gillis-Waas",
+"local": "Sint-Gillis-Waas",
+"place": "town",
+"pop": 0,
+"lon": 4.12861,
+"lat": 51.21799
+},
+{
+"name": "Zottegem",
+"local": "Zottegem",
+"place": "town",
+"pop": 0,
+"lon": 3.80925,
+"lat": 50.86946
+},
+{
+"name": "Beersel",
+"local": "Beersel",
+"place": "town",
+"pop": 0,
+"lon": 4.30795,
+"lat": 50.76608
+},
+{
+"name": "Hulshout",
+"local": "Hulshout",
+"place": "town",
+"pop": 0,
+"lon": 4.78855,
+"lat": 51.07539
+},
+{
+"name": "Destelbergen",
+"local": "Destelbergen",
+"place": "town",
+"pop": 0,
+"lon": 3.79789,
+"lat": 51.05562
+},
+{
+"name": "Bunschoten-Spakenburg",
+"local": "Bunschoten-Spakenburg",
+"place": "town",
+"pop": 0,
+"lon": 5.37316,
+"lat": 52.2452
+},
+{
+"name": "Le Rœulx",
+"local": "Le Rœulx",
+"place": "town",
+"pop": 0,
+"lon": 4.10886,
+"lat": 50.50168
+},
+{
+"name": "Sambreville",
+"local": "Sambreville",
+"place": "town",
+"pop": 0,
+"lon": 4.61082,
+"lat": 50.44906
+},
+{
+"name": "Beauraing",
+"local": "Beauraing",
+"place": "town",
+"pop": 0,
+"lon": 4.95493,
+"lat": 50.11027
+}
+]
