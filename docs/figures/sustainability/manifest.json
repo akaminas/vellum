@@ -1,20 +1,21 @@
 [
  {
-  "id": "sus_electricity",
+  "id": "sus_carbon_budget",
   "group": "sustainability",
-  "title": "Low-carbon sources made 42.6 % of the world's electricity in 2025, up from 35.3 % in 2000, and outgrew demand, so fossil generation fell",
-  "subtitle": "In 2025 world generation rose by 842 TWh: low-carbon sources added 883 TWh, fossil fuels −41 TWh, and solar passed wind",
+  "title": "The air kept 43 % of the 1 951 Gt of CO₂ emitted from 1960 to 2024, and the world warmed about 0.5 °C for every 1 000 Gt",
+  "subtitle": "CO₂ at Mauna Loa rose from 316 ppm in 1959 to 427 ppm in 2025; ocean and land took up the other 57 %",
   "kind": "composite",
-  "form": "five-panel composite: stacked area, diverging stacked bars, choropleth, ranked dot plot, small multiples",
+  "form": "five-panel composite: line, bars against a step line, dots with running mean, scatter with fit, stacked area",
   "medium": "paper",
   "tool": "matplotlib",
-  "data": "Ember yearly electricity data (2026) and Energy Institute Statistical Review of World Energy (2025), via Our World in Data (CC BY 4.0, downloaded 2026-10-12), 2000–2025; Natural Earth v5.1.2",
-  "script": "examples/python/sustainability/sus_electricity.py",
-  "alt": "Five panels on the world's electricity. a: stacked area of generation by source, 2000–2025; the low-carbon share goes from 35.3 per cent in 2000 to a low of 31.7 in 2007 and 42.6 in 2025. b: yearly change by source; in 2025 fossil generation fell by 41 TWh while total generation rose by 842 TWh. c: world map of the low-carbon share in 2024; 77 of 195 countries are above half. d: among the twenty largest producers the share rose fastest in Australia, 27 points a decade; 12 moved faster than the world's 8.1. e: the low-carbon share in the eight largest producers, by source.",
+  "data": "Mauna Loa monthly CO2 (NOAA GML and Scripps) to September 2026; GISTEMP v4 (NASA GISS); Global Carbon Budget (2025) via Our World in Data (CC BY 4.0); all downloaded 2026-10-12",
+  "script": "examples/python/sustainability/sus_carbon_budget.py",
+  "alt": "Five panels. a: CO2 at Mauna Loa from 316 ppm in 1959 to 427 ppm in 2025. b: the yearly rise against what emissions would have added; c: the airborne fraction, 43 per cent over 1960–2024. d: global temperature against cumulative CO2, 0.50 °C per 1,000 Gt (r = 0.95). e: yearly emissions by source since 1850; 4.6 Gt from land-use change and 38.6 Gt from fossil fuels and industry in 2024.",
+  "note": "Mauna Loa was shut by its eruption from 29 November 2022 to July 2023; NOAA fills those months from Maunakea. Growth is the difference of calendar-year means of complete years. Observed warming includes the effect of gases other than CO2 and of aerosols, so the slope in d is an empirical ratio, not the TCRE of CO2 alone.",
   "files": {
-   "light": "figures/sustainability/sus_electricity_light.png",
-   "dark": "figures/sustainability/sus_electricity_dark.png",
-   "pdf": "figures/sustainability/sus_electricity_light.pdf"
+   "light": "figures/sustainability/sus_carbon_budget_light.png",
+   "dark": "figures/sustainability/sus_carbon_budget_dark.png",
+   "pdf": "figures/sustainability/sus_carbon_budget_light.pdf"
   }
  },
  {
@@ -36,40 +37,21 @@
   }
  },
  {
-  "id": "sus_kaya",
+  "id": "sus_electricity",
   "group": "sustainability",
-  "title": "Since 1990 rising incomes added 20.6 Gt to the world's yearly CO₂; using less energy per dollar took off 15.9 Gt, a cleaner energy mix only 2.0 Gt",
-  "subtitle": "Fossil and industry CO₂ rose from 22.7 to 37.5 Gt a year, 1990–2022, split exactly by the Kaya identity (LMDI)",
+  "title": "Low-carbon sources made 42.6 % of the world's electricity in 2025, up from 35.3 % in 2000, and outgrew demand, so fossil generation fell",
+  "subtitle": "In 2025 world generation rose by 842 TWh: low-carbon sources added 883 TWh, fossil fuels −41 TWh, and solar passed wind",
   "kind": "composite",
-  "form": "five-panel composite: waterfall, stacked decomposition bars, index lines (log), highlighted line charts",
+  "form": "five-panel composite: stacked area, diverging stacked bars, choropleth, ranked dot plot, small multiples",
   "medium": "paper",
   "tool": "matplotlib",
-  "data": "Global Carbon Budget (2025), Energy Institute and U.S. EIA primary energy, Maddison Project Database (2023), UN WPP; via Our World in Data (CC BY 4.0, downloaded 2026-10-12), 1965–2024",
-  "script": "examples/python/sustainability/sus_kaya.py",
-  "alt": "Five panels on the drivers of world CO2. a: waterfall from 22.7 Gt in 1990 to 37.5 Gt in 2022: population +12.1, income per person +20.6, energy per dollar -15.9, CO2 per unit of energy -2.0 Gt. b: the same split for five periods; carbon intensity rose only in the 2000s. c: the four factors as indices since 1970. d: CO2 per unit of energy for the world, the four largest emitting countries and the EU-27, 1965–2024. e: energy per dollar of GDP, 1990–2022.",
+  "data": "Ember yearly electricity data (2026) and Energy Institute Statistical Review of World Energy (2025), via Our World in Data (CC BY 4.0, downloaded 2026-10-12), 2000–2025; Natural Earth v5.1.2",
+  "script": "examples/python/sustainability/sus_electricity.py",
+  "alt": "Five panels on the world's electricity. a: stacked area of generation by source, 2000–2025; the low-carbon share goes from 35.3 per cent in 2000 to a low of 31.7 in 2007 and 42.6 in 2025. b: yearly change by source; in 2025 fossil generation fell by 41 TWh while total generation rose by 842 TWh. c: world map of the low-carbon share in 2024; 77 of 195 countries are above half. d: among the twenty largest producers the share rose fastest in Australia, 27 points a decade; 12 moved faster than the world's 8.1. e: the low-carbon share in the eight largest producers, by source.",
   "files": {
-   "light": "figures/sustainability/sus_kaya_light.png",
-   "dark": "figures/sustainability/sus_kaya_dark.png",
-   "pdf": "figures/sustainability/sus_kaya_light.pdf"
-  }
- },
- {
-  "id": "sus_carbon_budget",
-  "group": "sustainability",
-  "title": "The air kept 43 % of the 1 951 Gt of CO₂ emitted from 1960 to 2024, and the world warmed about 0.5 °C for every 1 000 Gt",
-  "subtitle": "CO₂ at Mauna Loa rose from 316 ppm in 1959 to 427 ppm in 2025; ocean and land took up the other 57 %",
-  "kind": "composite",
-  "form": "five-panel composite: line, bars against a step line, dots with running mean, scatter with fit, stacked area",
-  "medium": "paper",
-  "tool": "matplotlib",
-  "data": "Mauna Loa monthly CO2 (NOAA GML and Scripps) to September 2026; GISTEMP v4 (NASA GISS); Global Carbon Budget (2025) via Our World in Data (CC BY 4.0); all downloaded 2026-10-12",
-  "script": "examples/python/sustainability/sus_carbon_budget.py",
-  "alt": "Five panels. a: CO2 at Mauna Loa from 316 ppm in 1959 to 427 ppm in 2025. b: the yearly rise against what emissions would have added; c: the airborne fraction, 43 per cent over 1960–2024. d: global temperature against cumulative CO2, 0.50 °C per 1,000 Gt (r = 0.95). e: yearly emissions by source since 1850; 4.6 Gt from land-use change and 38.6 Gt from fossil fuels and industry in 2024.",
-  "note": "Mauna Loa was shut by its eruption from 29 November 2022 to July 2023; NOAA fills those months from Maunakea. Growth is the difference of calendar-year means of complete years. Observed warming includes the effect of gases other than CO2 and of aerosols, so the slope in d is an empirical ratio, not the TCRE of CO2 alone.",
-  "files": {
-   "light": "figures/sustainability/sus_carbon_budget_light.png",
-   "dark": "figures/sustainability/sus_carbon_budget_dark.png",
-   "pdf": "figures/sustainability/sus_carbon_budget_light.pdf"
+   "light": "figures/sustainability/sus_electricity_light.png",
+   "dark": "figures/sustainability/sus_electricity_dark.png",
+   "pdf": "figures/sustainability/sus_electricity_light.pdf"
   }
  },
  {
@@ -88,6 +70,24 @@
    "light": "figures/sustainability/sus_world_electricity_light.png",
    "dark": "figures/sustainability/sus_world_electricity_dark.png",
    "pdf": "figures/sustainability/sus_world_electricity_light.pdf"
+  }
+ },
+ {
+  "id": "sus_kaya",
+  "group": "sustainability",
+  "title": "Since 1990 rising incomes added 20.6 Gt to the world's yearly CO₂; using less energy per dollar took off 15.9 Gt, a cleaner energy mix only 2.0 Gt",
+  "subtitle": "Fossil and industry CO₂ rose from 22.7 to 37.5 Gt a year, 1990–2022, split exactly by the Kaya identity (LMDI)",
+  "kind": "composite",
+  "form": "five-panel composite: waterfall, stacked decomposition bars, index lines (log), highlighted line charts",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Global Carbon Budget (2025), Energy Institute and U.S. EIA primary energy, Maddison Project Database (2023), UN WPP; via Our World in Data (CC BY 4.0, downloaded 2026-10-12), 1965–2024",
+  "script": "examples/python/sustainability/sus_kaya.py",
+  "alt": "Five panels on the drivers of world CO2. a: waterfall from 22.7 Gt in 1990 to 37.5 Gt in 2022: population +12.1, income per person +20.6, energy per dollar -15.9, CO2 per unit of energy -2.0 Gt. b: the same split for five periods; carbon intensity rose only in the 2000s. c: the four factors as indices since 1970. d: CO2 per unit of energy for the world, the four largest emitting countries and the EU-27, 1965–2024. e: energy per dollar of GDP, 1990–2022.",
+  "files": {
+   "light": "figures/sustainability/sus_kaya_light.png",
+   "dark": "figures/sustainability/sus_kaya_dark.png",
+   "pdf": "figures/sustainability/sus_kaya_light.pdf"
   }
  }
 ]
