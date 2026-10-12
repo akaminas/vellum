@@ -607,3 +607,11 @@ dialog.lightbox .lb-links a:hover { color: var(--accent); }
 .hero-map .sel-tile { aspect-ratio: 5 / 6; max-height: calc(100vh - 150px); margin-left: auto; }
 .hero-map .sel-tile img { padding: 0; object-fit: cover; }
 @media (max-width: 960px) { .hero-split2 { grid-template-columns: minmax(0, 1fr); } .hero-map .sel-tile { max-height: none; } }
+
+/* home: the map in both themes, side by side and large, first on the page */
+.hero-pair { width: min(1320px, calc(100vw - 48px)); margin: 20px 0 0 calc(50% - min(660px, 50vw - 24px)); }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.pair .sel-tile { aspect-ratio: 5 / 6; }
+.pair .sel-tile img { padding: 0; object-fit: cover; width: 100%; height: 100%; }
+.intro { padding-top: 72px; }
+@media (max-width: 760px) { .pair { grid-template-columns: minmax(0, 1fr); } }

@@ -86,7 +86,7 @@ def thumb(rel_png, width=720):
     src = os.path.join(DOCS, rel_png)
     if not os.path.exists(src): return None
     d, f = os.path.split(rel_png)
-    rel = f"{d}/thumbs/{os.path.splitext(f)[0]}.webp"
+    rel = f"{d}/thumbs/{os.path.splitext(f)[0]}{'' if width == 720 else f'.w{width}'}.webp"
     dst = os.path.join(DOCS, rel)
     if not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src):
         os.makedirs(os.path.dirname(dst), exist_ok=True)
@@ -196,7 +196,7 @@ def link_list(it):
 COVERS = {"talk/talk": "media/talk/talk-08.png", "pitch/pitch": "media/pitch/slide-05.png", "report/report": "media/report/page-2.png"}
 
 
-def tile_imgs(it, zoom, only=None, full=False):
+def tile_imgs(it, zoom, only=None, full=False, width=720):
     """The detail crops of both twins (or of the one image a piece has). only="light" or "dark" fixes one twin."""
     f = it.get("files", {})
     cover = COVERS.get(f'{it["group"]}/{it["id"]}')
@@ -210,7 +210,7 @@ def tile_imgs(it, zoom, only=None, full=False):
     for mode, src in (("light", light), ("dark", dark)):
         if not exists(src): continue
         cls = ("zoom " if zoom else "") + (f"twin-{mode}" if dark else "")
-        out.append(f'<img class="{cls.strip()}" src="{thumb(src) if full else crop(src)}" data-full="{src}"{extra} alt="{alt}" loading="lazy" decoding="async">')
+        out.append(f'<img class="{cls.strip()}" src="{thumb(src, width) if full else crop(src)}" data-full="{src}"{extra} alt="{alt}" loading="lazy" decoding="async">')
     return "".join(out)
 
 
@@ -258,6 +258,14 @@ def mosaic(keys, by_id):
     return '<div class="selected">' + "".join(tiles) + "</div>"
 
 
+def pair(keys, by_id):
+    """One work shown in both twins side by side, whatever the theme, large, each opening in the lightbox."""
+    it = by_id.get(keys[0])
+    if not it: return ""
+    tiles = [f'<div class="sel-tile">{tile_imgs(it, True, only=mode, full=True, width=1400)}</div>' for mode in ("light", "dark")]
+    return '<div class="pair">' + "".join(tiles) + "</div>"
+
+
 def strip(keys, by_id):
     """A full-width band of detail crops for the top of the home page, no captions."""
     tiles = []
@@ -286,6 +294,8 @@ def pages(items):
         p = os.path.join(DOCS, fn); t = open(p, encoding="utf-8").read()
         for n in ("head", "header", "footer"): t = fill(t, n, part[n])
         if "<!--#gallery-->" in t: t = fill(t, "gallery", gallery(items))
+        t = re.sub(r"<!--#pair ([^>]+?)-->.*?<!--/pair-->",
+                   lambda m: f"<!--#pair {m.group(1)}-->\n{pair(m.group(1).split(), by_id)}\n<!--/pair-->", t, flags=re.S)
         t = re.sub(r"<!--#strip ([^>]+?)-->.*?<!--/strip-->",
                    lambda m: f"<!--#strip {m.group(1)}-->\n{strip(m.group(1).split(), by_id)}\n<!--/strip-->", t, flags=re.S)
         t = re.sub(r"<!--#mosaic ([^>]+?)-->.*?<!--/mosaic-->",
