@@ -16,3 +16,12 @@ Every example figure is drawn from one of these files. Where a figure uses inven
 | `ne_110m_admin_0_countries.geojson` | Country outlines at 1:110 million | Natural Earth v5.1.2 | public domain |
 
 The two-trait adaptive landscape used by every 3D example is not data. It is the analytic function `landscape(z1, z2)` in `examples/python/_common.py`, illustrative by construction.
+
+## Composite figures and maps
+
+The ecology, sustainability and map examples keep their sources next to their data, with full citations, licences and
+download dates:
+
+- [`data/ecology/SOURCES.md`](ecology/SOURCES.md): Barro Colorado Island trees, oribatid mites, Canadian lynx, Doubs river fish
+- [`data/sustainability/SOURCES.md`](sustainability/SOURCES.md): Our World in Data CO₂ and energy, NOAA Mauna Loa CO₂, NASA GISTEMP
+- [`data/maps/SOURCES.md`](maps/SOURCES.md): the Netherlands map layers

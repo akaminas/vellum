@@ -1,0 +1,14 @@
+"set","variable","r2_full","n_candidates"
+"environment","WatrCont",0.436703834721302,5
+"environment","Shrub",0.436703834721302,5
+"environment","Substrate",0.436703834721302,5
+"environment","Topo",0.436703834721302,5
+"environment","SubsDens",0.436703834721302,5
+"space","PCNM2",0.479879708744584,43
+"space","PCNM3",0.479879708744584,43
+"space","PCNM8",0.479879708744584,43
+"space","PCNM1",0.479879708744584,43
+"space","PCNM6",0.479879708744584,43
+"space","PCNM4",0.479879708744584,43
+"space","PCNM37",0.479879708744584,43
+"space","PCNM9",0.479879708744584,43

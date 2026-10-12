@@ -2,19 +2,20 @@
  {
   "id": "square",
   "group": "infographic",
-  "title": "The pandemic brought world life expectancy its deepest fall since 1960",
-  "subtitle": "Social square, 1080 × 1080 px: number, headline, three stat tiles, one figure",
+  "title": "World life expectancy fell 1.7 years in the pandemic, then rose to a record 73.2",
+  "subtitle": "Social square, 1080 × 1080 px: the world line inside the spread of all countries, three stat tiles, a mini map and the deepest falls",
   "kind": "infographic",
   "form": "social square",
   "medium": "infographic",
   "tool": "HTML + SVG",
-  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0",
+  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0. Natural Earth v5.1.2 (outlines, UN regions, population estimates), public domain",
   "script": "examples/python/infographic/make_infographics.py",
-  "alt": "World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years.",
-  "words": 78,
-  "note": "One master, several formats: the same numbers and line chart as the story and the A4 report, all computed from the data file.",
+  "alt": "World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023.",
+  "words": 212,
+  "note": "One story, three formats: every number is computed from the data files by the script, nothing typed.",
   "files": {
    "light": "media/infographic/square.png",
+   "dark": "media/infographic/square_dark.png",
    "html": "media/infographic/square.html"
   }
  },
@@ -22,19 +23,40 @@
   "id": "story",
   "group": "infographic",
   "title": "The pandemic brought world life expectancy its deepest fall since 1960",
-  "subtitle": "Portrait story, 1080 × 1920 px: a stack of cards, line chart, waffle and dot timeline",
+  "subtitle": "Portrait story, 1080 × 1920 px: five numbered sections, a line chart of the world and its regions, a choropleth map, a fall-and-recovery bar chart, a unit chart of 236 countries and eight small multiples",
   "kind": "infographic",
   "form": "portrait story",
   "medium": "infographic",
   "tool": "HTML + SVG",
-  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0",
+  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0. Natural Earth v5.1.2 (outlines, UN regions, population estimates), public domain",
   "script": "examples/python/infographic/make_infographics.py",
-  "alt": "World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023.",
-  "words": 174,
-  "note": "One master, several formats: the same numbers and line chart as the story and the A4 report, all computed from the data file.",
+  "alt": "World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years.",
+  "words": 501,
+  "note": "One story, three formats: every number is computed from the data files by the script, nothing typed.",
   "files": {
    "light": "media/infographic/story.png",
+   "dark": "media/infographic/story_dark.png",
    "html": "media/infographic/story.html"
+  }
+ },
+ {
+  "id": "sheet",
+  "group": "infographic",
+  "title": "Countries have drawn together: the middle 80 % spanned 30 years of life expectancy in 1950, 19 in 2023",
+  "subtitle": "Landscape data sheet, 1920 × 1080 px: a beeswarm of every mapped country by decade, a bubble chart of the pandemic fall and the narrowing spread",
+  "kind": "infographic",
+  "form": "landscape data sheet",
+  "medium": "infographic",
+  "tool": "HTML + SVG",
+  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0. Natural Earth v5.1.2 (outlines, UN regions, population estimates), public domain",
+  "script": "examples/python/infographic/make_infographics.py",
+  "alt": "Beeswarm of 172 countries' life expectancy every decade from 1950 to 2023: the median rose from 49.2 to 75.3 years and the middle 80 % narrowed from 30.4 to 18.9 years. A bubble chart shows the pandemic fall against life expectancy in 2019.",
+  "words": 345,
+  "note": "One story, three formats: every number is computed from the data files by the script, nothing typed.",
+  "files": {
+   "light": "media/infographic/sheet.png",
+   "dark": "media/infographic/sheet_dark.png",
+   "html": "media/infographic/sheet.html"
   }
  }
 ]

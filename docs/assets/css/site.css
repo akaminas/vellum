@@ -592,3 +592,5 @@ dialog.lightbox img { max-height: 80vh; }
 dialog.lightbox .lb-bar { padding: 0 0 12px; }
 dialog.lightbox .lb-links a { font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--v-secondary); }
 dialog.lightbox .lb-links a:hover { color: var(--accent); }
+.composites .sel-tile { aspect-ratio: 4 / 5; }
+.composites .selected { gap: 16px; }

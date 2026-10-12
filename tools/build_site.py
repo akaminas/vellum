@@ -21,7 +21,7 @@ GH = "https://github.com/akaminas/vellum"
 STYLE_FILES = ["vellum.json", "vellum.py", "vellum.mplstyle", "vellum.R", "vellum-colors.sty", "vellum.css", "vellum-office.tsv", "vellum-web.js"]
 WEB_DATA = ["penguins.json", "co2-concentration.csv", "owid-life-expectancy.csv", "disasters.csv", "miserables.json",
             "cars.json", "gapminder.json", "driving.json"]
-KINDS = [("scientific", "Scientific"), ("3d", "3D"), ("colour", "Colour"), ("report", "Report"), ("conference", "Conference"),
+KINDS = [("composite", "Composite"), ("map", "Maps"), ("scientific", "Scientific"), ("3d", "3D"), ("colour", "Colour"), ("report", "Report"), ("conference", "Conference"),
          ("infographic", "Infographic"), ("slides", "Slides"), ("tools", "LaTeX and R"), ("interactive", "Interactive")]
 e = html.escape
 

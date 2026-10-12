@@ -1,0 +1,96 @@
+[
+ {
+  "id": "lynx_cycle",
+  "group": "ecology",
+  "title": "Canadian lynx peaked every 9.7 years for a century, a rhythm a two-year memory reproduces",
+  "subtitle": "Lynx trapped per year, 1821–1934 · 11 complete peaks, 1828–1925 · AR(2) on log₁₀ counts: φ₁ = 1.38, φ₂ = −0.75, R² = 0.83",
+  "kind": "composite",
+  "form": "six-panel composite: time series, periodogram, interval plot, phase portrait, parameter triangle, forecast",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Canadian lynx trappings 1821–1934, Elton and Nicholson (1942), via R datasets::lynx",
+  "script": "examples/python/ecology/lynx_cycle.py",
+  "alt": "Six panels on Canadian lynx trappings, 1821–1934. a: the yearly record on a log scale with 11 complete peaks from 1828 to 1925, 9 to 12 years apart, mean 9.7. b: the periodogram; the 9.5-year period holds 60 % of the variance of log counts. c: peak-to-peak 9.7 years (9.0–10.4), periodogram 9.5, AR(2) quasi-period 9.8 (8.8–11.3). d: the lag-2 phase portrait is a clockwise loop. e: the AR(2) coefficients φ₁ = 1.38, φ₂ = −0.75 lie in the complex-root region on the 10-year line, in both half-centuries. f: trained to 1914, the model's 95 % band holds all 20 held-out years.",
+  "note": "Peaks: years that are the maximum of the seven years around them, with the window inside the record (1934, the last year, is still rising and is not counted). AR(2) by least squares on log10 counts: c = 1.058, φ₁ = 1.384 (se 0.064), φ₂ = -0.748 (se 0.064), residual sd 0.230, R² = 0.834; modulus of the roots 0.865. Quasi-period interval from 20 000 draws of the coefficients. Periodogram range: half a Fourier bin each side. Forecast from 1914 with psi-weight variance (coefficients of the 1821–1914 fit, φ₁ = 1.39, φ₂ = -0.76); forecast trough 1918, observed 1919; forecast peak 1923, observed 1925.",
+  "files": {
+   "light": "figures/ecology/lynx_cycle_light.png",
+   "dark": "figures/ecology/lynx_cycle_dark.png",
+   "pdf": "figures/ecology/lynx_cycle_light.pdf"
+  }
+ },
+ {
+  "id": "bci_forest",
+  "group": "ecology",
+  "title": "Fifteen of 225 tree species hold half of Barro Colorado's 21 457 trees, while 19 were found once",
+  "subtitle": "Barro Colorado Island, Panama · 50 one-hectare plots, trees ≥ 10 cm in diameter · terracotta: the ten commonest species, indigo: the 19 singletons",
+  "kind": "composite",
+  "form": "seven-panel composite: rank-abundance with models, bars, occupancy-abundance, accumulation, distance decay, two grid maps",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Barro Colorado Island 50-ha plot, 1982 census, Condit et al. (2002), via R vegan::BCI and BCI.env",
+  "script": "examples/python/ecology/bci_forest.py",
+  "alt": "Seven panels on the 225 tree species of the 50-ha Barro Colorado plot. a: rank-abundance plot; abundances run from 1717 stems to one, and a lognormal model fits best by AIC. b: the ten commonest species hold 41.8 % of 21457 stems, led by Faramea occidentalis with 8.0 %. c: occupancy against abundance; 66 % of species occupy fewer plots than random placement predicts; 19 singletons. d: species accumulation reaches 225 at 50 ha; Chao1 estimates 236 and the jackknife 246. e: Bray–Curtis similarity falls from 0.64 for neighbouring plots to 0.49 at 900 m or more (Mantel r = 0.41). f: 77 to 109 species per hectare, fewer on the high plateau. g: Faramea occidentalis occurs in every plot, 7 to 80 stems.",
+  "note": "radfit (vegan 2.7.5) Poisson fits to the pooled abundances; AIC: Lognormal 1875, Mandelbrot 2121, Preemption 4917, Zipf 5466. Species accumulation: specaccum, method random, 999 permutations, 2.5–97.5 % band. Chao1 236.4 (se 6.5), jackknife 245.6 (se 5.7); intervals ±1.96 se. Distance decay: exponential with asymptote fitted by least squares, s = 0.50 + 0.24 exp(−d / 173 m); bin means of 100 m with ±1.96 se. Mantel test on Bray–Curtis dissimilarity and distance, Pearson, 999 permutations. Occupancy expected under Poisson placement: 50 (1 − exp(−N / 50)). 13 species have two stems.",
+  "files": {
+   "light": "figures/ecology/bci_forest_light.png",
+   "dark": "figures/ecology/bci_forest_dark.png",
+   "pdf": "figures/ecology/bci_forest_light.pdf"
+  }
+ },
+ {
+  "id": "mite_metacommunity",
+  "group": "ecology",
+  "title": "Habitat explains 44 % of the mite community, but 77 % of that is shared with space",
+  "subtitle": "Oribatid mites in 70 cores of Sphagnum peat, 35 species, 10 × 2.6 m · four community types (I–IV, by rising water content) in the same colours in every panel",
+  "kind": "composite",
+  "form": "five-panel composite: twin maps, NMDS with envfit, Euler diagram of variation partitioning, community table, GAM small multiples",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Oribatid mites of Lac Geai bog, Borcard and Legendre (1994), via R vegan::mite, mite.env, mite.xy",
+  "script": "examples/python/ecology/mite_metacommunity.py",
+  "alt": "Five panels on oribatid mites in 70 peat cores. a: two maps of the 10 by 2.6 m plot, water content and four community types; wet and dry patches hold different types. b: NMDS (stress 0.15); water content aligns with the first axis (r² = 0.68). c: an area-proportional Euler diagram: habitat explains 44 % and space 43 %, 33 % jointly; habitat alone 10 %, space alone 9 %, unexplained 47 %. d: the 35-species community table ordered by water shows species replacing one another. e: GAM response curves of FSET, HMIN2, LRUG, LCIL with optima at 134, 216, 478, 827 g/L.",
+  "note": "Variation partitioning of Hellinger-transformed counts by RDA (vegan varpart), adjusted R²: habitat alone 0.102 (p = 0.001), shared 0.335, space alone 0.092 (p = 0.001), residual 0.471; 999 permutations. Habitat: 5 variables (water content, substrate density, substrate, shrub cover, topography), all kept by forward selection; space: 8 PCNM eigenfunctions forward-selected from 43 with the double stopping criterion (ordiR2step). NMDS: metaMDS on Bray–Curtis, k = 2, stress 0.149. envfit r² (p): SubsDens 0.06 (0.145), WatrCont 0.68 (0.001), Substrate 0.19 (0.013), Shrub 0.34 (0.001), Topo 0.25 (0.001). Communities: Ward clustering on Hellinger distance, four groups. GAMs: y ~ s(water, k = 5), negative binomial, REML.",
+  "files": {
+   "light": "figures/ecology/mite_metacommunity_light.png",
+   "dark": "figures/ecology/mite_metacommunity_dark.png",
+   "pdf": "figures/ecology/mite_metacommunity_light.pdf"
+  }
+ },
+ {
+  "id": "doubs_fish",
+  "group": "ecology",
+  "title": "Doubs fish fall from 22 species to 3 at a polluted stretch 304 km from the source, and recover below it",
+  "subtitle": "Fish of the Doubs, 30 sites over 453 km, 27 species · terracotta: sites 23–25, where ammonium peaks at 1.8 mg/L and oxygen falls to 4.1 mg/L",
+  "kind": "composite",
+  "form": "six-panel composite: river map, profiles, community table, beta-diversity partition, RDA triplot, Euler diagram",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Doubs river fish, Verneaux (1973), 30 sites × 27 species, via R ade4::doubs",
+  "script": "examples/python/ecology/doubs_fish.py",
+  "alt": "Six panels on the fish of the Doubs river. a: the river from source to mouth with dots sized by species per site. b: species per site against distance from the source; richness falls from 22 at site 22 to 3 at site 23 (304 km), where oxygen is lowest and ammonium highest, and recovers to 21 at site 26. c: the 27-species community table in river order shows trout-zone species upstream, cyprinids downstream, and empty columns at sites 23–25. d: Sørensen dissimilarity between neighbouring sites peaks at 0.76 entering the stretch, 100 % of it nestedness. e: RDA on distance from source, oxygen and oxygen demand explains 54 % (adjusted). f: environment and space share 43 % of the variation.",
+  "note": "Abundance classes 0–5 as recorded. Site 8 has no fish and is left out of the RDA and the partition. tb-RDA on Hellinger-transformed abundances with standardised environment; forward selection (ordiR2step, double stopping) kept dfs, oxy, bdo; adjusted R² 0.537 (all 11 variables 0.558), p = 0.001. Variation partitioning against 6 forward-selected PCNM eigenfunctions of the site coordinates: environment alone 0.106 (p = 0.001), shared 0.431, space alone 0.134 (p = 0.001), residual 0.330. Beta diversity: Baselga (2010) partition of Sørensen into Simpson turnover and nestedness-resultant dissimilarity, presence–absence, computed in the script. Units: dfs in the data is tenths of a km, oxygen tenths of mg/L, ammonium hundredths of mg/L.",
+  "files": {
+   "light": "figures/ecology/doubs_fish_light.png",
+   "dark": "figures/ecology/doubs_fish_dark.png",
+   "pdf": "figures/ecology/doubs_fish_light.pdf"
+  }
+ },
+ {
+  "id": "bci_infographic",
+  "group": "ecology",
+  "title": "The forest in numbers: 15 of 225 species hold half of Barro Colorado's 21 457 trees",
+  "subtitle": "Portrait infographic, 1080 × 1920: hero number, three tiles, waffle, long tail, grid map, accumulation",
+  "kind": "composite",
+  "form": "infographic: hero number, stat tiles, waffle, bar chart, grid map, accumulation curve",
+  "medium": "infographic",
+  "tool": "matplotlib",
+  "data": "Barro Colorado Island 50-ha plot, 1982 census, Condit et al. (2002), via R vegan::BCI",
+  "script": "examples/python/ecology/bci_infographic.py",
+  "alt": "A portrait infographic about the Barro Colorado Island forest plot: 21 457 trees of 225 species in 50 hectares. 15 species hold half of the trees, 19 species were found once, 7 grow in every hectare. A waffle shows the share of the commonest species, a bar chart the long tail of rare species, a grid map 77 to 109 species per hectare, and an accumulation curve that reaches 225 with estimates of 236 to 246 species in all.",
+  "files": {
+   "light": "figures/ecology/bci_infographic_light.png",
+   "dark": "figures/ecology/bci_infographic_dark.png",
+   "pdf": "figures/ecology/bci_infographic_light.pdf"
+  }
+ }
+]
