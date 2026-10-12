@@ -1,5 +1,94 @@
 [
  {
+  "id": "anatomy",
+  "group": "colour",
+  "title": "A Vellum figure is built from eleven parts, each with one rule",
+  "subtitle": "An annotated specimen of a line figure, numbered in the margin: “Asia gained 33 years of life expectancy since 1950, the most of any continent”",
+  "kind": "colour",
+  "form": "annotated specimen",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Period life expectancy, UN WPP (2024) and others, processed by Our World in Data (CC BY 4.0); continents of countries from Natural Earth v5.1.2",
+  "script": "examples/python/colour/anatomy_specimen.py",
+  "alt": "A line chart of life expectancy in Asia, Africa, the Americas and Europe since 1950, with eleven numbered callouts in the margin pointing at the claim title, subtitle, unit line, grid, bottom spine, an end dot, an end label, the band, the dotted reference line, the quiet note and the footer. Asia gained 33 years, Africa 27, the Americas 21 and Europe 17.",
+  "note": "Specimen claim computed from the data: gains 1950–2023 of Asia 32.6, Africa 26.6, Americas 20.8, Europe 17.1 years. Reference line: the world in 1950, 46.4 years. Band: 25th to 75th percentile of the 46 countries Natural Earth places in Asia, per year.",
+  "parts": [
+   "1 · claim title · a sentence with a verb, Palatino 13 pt in ink, top left",
+   "2 · subtitle · what, where, when, Corbel 9 pt in muted, one title height below the claim",
+   "3 · unit line · the quantity and unit above the y axis, 7.5 pt muted, never a rotated label",
+   "4 · hairline grid · horizontal only, 0.6 pt in the grid colour, behind the data",
+   "5 · bottom spine · 0.8 pt in the grid colour; no top, left or right spine and no tick marks",
+   "6 · ringed end dot · 28 pt² in the tone with a 1.2 pt ring in the surface colour",
+   "7 · direct end label · 7.5 pt in ink beside the dot; pushed apart with a 0.5 pt muted leader when labels collide",
+   "8 · band · the tint at 0.55 opacity, no edge, explained by a quiet note",
+   "9 · reference line · 0.7 pt dotted (1 on 3 off) in ochre, labelled at its right end in muted",
+   "10 · quiet note · 7.5 pt muted, inside the plot where the data are not",
+   "11 · footer · source, script and git stamp, 6.5 pt muted, bottom left"
+  ],
+  "files": {
+   "light": "figures/colour/anatomy_light.png",
+   "dark": "figures/colour/anatomy_dark.png",
+   "pdf": "figures/colour/anatomy_light.pdf"
+  }
+ },
+ {
+  "id": "cvd_sheet",
+  "group": "colour",
+  "title": "The palette survives colour-vision deficiency because lightness alternates",
+  "subtitle": "The six tones and a four-line chart under normal vision, protanopia, deuteranopia and in greyscale",
+  "kind": "colour",
+  "form": "colour-vision simulation strip",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Period life expectancy of China, Russia, Brazil and India, UN WPP (2024) and others, processed by Our World in Data; simulation with generators/colorlab.py (Machado et al. 2009, severity 1)",
+  "script": "examples/python/colour/cvd_sheet.py",
+  "alt": "Four columns showing the six Vellum tones and the same four-line chart as seen with normal vision, protanopia, deuteranopia and in greyscale. The smallest distance between neighbouring tones is 18.3 in normal vision, 12.3 under protanopia, 11.4 under deuteranopia and 6.4 in greyscale.",
+  "note": "Smallest neighbour distance (OKLab × 100): light: normal vision 18.3, protanopia 12.3, deuteranopia 11.4, greyscale 6.4; dark: normal vision 18.4, protanopia 13.6, deuteranopia 11.3, greyscale 9.0.",
+  "files": {
+   "light": "figures/colour/cvd_sheet_light.png",
+   "dark": "figures/colour/cvd_sheet_dark.png",
+   "pdf": "figures/colour/cvd_sheet_light.pdf"
+  }
+ },
+ {
+  "id": "gradients",
+  "group": "colour",
+  "title": "Lightness carries the order, hue adds the range",
+  "subtitle": "The three named gradients over their greyscale, their OKLCH lightness and chroma, the teal ramp, the diverging scale and the grey middle of two joined complements",
+  "kind": "colour",
+  "form": "gradient sheet",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "style/vellum.json; OKLCH and luminance computed with generators/colorlab.py",
+  "script": "examples/python/colour/gradients_sheet.py",
+  "alt": "Three nine-stop gradients (lagoon, ember, shore) each over a greyscale strip that darkens evenly; lightness falls 0.073 per stop and chroma rises from 0.021 to 0.085 and back. Teal joined directly to terracotta in OKLab drops to chroma 0.015 in the middle (#7F8278).",
+  "note": "Light: mean lightness step 0.073 (smallest 0.070), chroma peak 0.085; teal–terracotta OKLab middle #7F8278 at C 0.015 (ends 0.085, 0.086). Dark: step 0.070, peak 0.085, middle #C3C6BC at C 0.014.",
+  "files": {
+   "light": "figures/colour/gradients_light.png",
+   "dark": "figures/colour/gradients_dark.png",
+   "pdf": "figures/colour/gradients_light.pdf"
+  }
+ },
+ {
+  "id": "lightness_trap",
+  "group": "colour",
+  "title": "At equal lightness six muted hues are six greys; alternating lightness separates them",
+  "subtitle": "Six hues at one OKLCH lightness against the Vellum tones, each colouring the same four-line chart, in colour and in greyscale",
+  "kind": "colour",
+  "form": "comparison of two colour sets",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Period life expectancy of four continents, UN WPP (2024) and others, processed by Our World in Data; colours from style/vellum.json and generators/colorlab.py",
+  "script": "examples/python/colour/lightness_trap.py",
+  "alt": "Two versions of the same four-line chart. Left: the six Vellum hues rebuilt at one lightness (L 0.56, C 0.085); in greyscale the lines are the same grey (smallest neighbour distance 0.0). Right: the Vellum tones, whose lightness alternates; in greyscale the lines stay apart (smallest distance 6.4).",
+  "note": "Smallest neighbour distance (OKLab × 100), light twin. Equal lightness: 13.8 in colour, 0.0 in greyscale, 8.1 under deficiency. Vellum tones: 18.3 in colour, 6.4 in greyscale, 11.4 under deficiency. Dark twin, equal lightness L 0.77: 13.9 in colour, 0.0 in greyscale, 8.0 under deficiency; Vellum: 18.4 in colour, 9.0 in greyscale, 11.3 under deficiency. The equal-lightness colours are a demonstration, not part of the palette.",
+  "files": {
+   "light": "figures/colour/lightness_trap_light.png",
+   "dark": "figures/colour/lightness_trap_dark.png",
+   "pdf": "figures/colour/lightness_trap_light.pdf"
+  }
+ },
+ {
   "id": "palette",
   "group": "colour",
   "title": "Neighbouring tones differ by 18 or more, by 11 or more under colour-vision deficiency",
@@ -72,95 +161,6 @@
    "light": "figures/colour/palette_light.png",
    "dark": "figures/colour/palette_dark.png",
    "pdf": "figures/colour/palette_light.pdf"
-  }
- },
- {
-  "id": "gradients",
-  "group": "colour",
-  "title": "Lightness carries the order, hue adds the range",
-  "subtitle": "The three named gradients over their greyscale, their OKLCH lightness and chroma, the teal ramp, the diverging scale and the grey middle of two joined complements",
-  "kind": "colour",
-  "form": "gradient sheet",
-  "medium": "screen",
-  "tool": "matplotlib",
-  "data": "style/vellum.json; OKLCH and luminance computed with generators/colorlab.py",
-  "script": "examples/python/colour/gradients_sheet.py",
-  "alt": "Three nine-stop gradients (lagoon, ember, shore) each over a greyscale strip that darkens evenly; lightness falls 0.073 per stop and chroma rises from 0.021 to 0.085 and back. Teal joined directly to terracotta in OKLab drops to chroma 0.015 in the middle (#7F8278).",
-  "note": "Light: mean lightness step 0.073 (smallest 0.070), chroma peak 0.085; teal–terracotta OKLab middle #7F8278 at C 0.015 (ends 0.085, 0.086). Dark: step 0.070, peak 0.085, middle #C3C6BC at C 0.014.",
-  "files": {
-   "light": "figures/colour/gradients_light.png",
-   "dark": "figures/colour/gradients_dark.png",
-   "pdf": "figures/colour/gradients_light.pdf"
-  }
- },
- {
-  "id": "lightness_trap",
-  "group": "colour",
-  "title": "At equal lightness six muted hues are six greys; alternating lightness separates them",
-  "subtitle": "Six hues at one OKLCH lightness against the Vellum tones, each colouring the same four-line chart, in colour and in greyscale",
-  "kind": "colour",
-  "form": "comparison of two colour sets",
-  "medium": "screen",
-  "tool": "matplotlib",
-  "data": "Period life expectancy of four continents, UN WPP (2024) and others, processed by Our World in Data; colours from style/vellum.json and generators/colorlab.py",
-  "script": "examples/python/colour/lightness_trap.py",
-  "alt": "Two versions of the same four-line chart. Left: the six Vellum hues rebuilt at one lightness (L 0.56, C 0.085); in greyscale the lines are the same grey (smallest neighbour distance 0.0). Right: the Vellum tones, whose lightness alternates; in greyscale the lines stay apart (smallest distance 6.4).",
-  "note": "Smallest neighbour distance (OKLab × 100), light twin. Equal lightness: 13.8 in colour, 0.0 in greyscale, 8.1 under deficiency. Vellum tones: 18.3 in colour, 6.4 in greyscale, 11.4 under deficiency. Dark twin, equal lightness L 0.77: 13.9 in colour, 0.0 in greyscale, 8.0 under deficiency; Vellum: 18.4 in colour, 9.0 in greyscale, 11.3 under deficiency. The equal-lightness colours are a demonstration, not part of the palette.",
-  "files": {
-   "light": "figures/colour/lightness_trap_light.png",
-   "dark": "figures/colour/lightness_trap_dark.png",
-   "pdf": "figures/colour/lightness_trap_light.pdf"
-  }
- },
- {
-  "id": "cvd_sheet",
-  "group": "colour",
-  "title": "The palette survives colour-vision deficiency because lightness alternates",
-  "subtitle": "The six tones and a four-line chart under normal vision, protanopia, deuteranopia and in greyscale",
-  "kind": "colour",
-  "form": "colour-vision simulation strip",
-  "medium": "screen",
-  "tool": "matplotlib",
-  "data": "Period life expectancy of China, Russia, Brazil and India, UN WPP (2024) and others, processed by Our World in Data; simulation with generators/colorlab.py (Machado et al. 2009, severity 1)",
-  "script": "examples/python/colour/cvd_sheet.py",
-  "alt": "Four columns showing the six Vellum tones and the same four-line chart as seen with normal vision, protanopia, deuteranopia and in greyscale. The smallest distance between neighbouring tones is 18.3 in normal vision, 12.3 under protanopia, 11.4 under deuteranopia and 6.4 in greyscale.",
-  "note": "Smallest neighbour distance (OKLab × 100): light: normal vision 18.3, protanopia 12.3, deuteranopia 11.4, greyscale 6.4; dark: normal vision 18.4, protanopia 13.6, deuteranopia 11.3, greyscale 9.0.",
-  "files": {
-   "light": "figures/colour/cvd_sheet_light.png",
-   "dark": "figures/colour/cvd_sheet_dark.png",
-   "pdf": "figures/colour/cvd_sheet_light.pdf"
-  }
- },
- {
-  "id": "anatomy",
-  "group": "colour",
-  "title": "A Vellum figure is built from eleven parts, each with one rule",
-  "subtitle": "An annotated specimen of a line figure, numbered in the margin: “Asia gained 33 years of life expectancy since 1950, the most of any continent”",
-  "kind": "colour",
-  "form": "annotated specimen",
-  "medium": "paper",
-  "tool": "matplotlib",
-  "data": "Period life expectancy, UN WPP (2024) and others, processed by Our World in Data (CC BY 4.0); continents of countries from Natural Earth v5.1.2",
-  "script": "examples/python/colour/anatomy_specimen.py",
-  "alt": "A line chart of life expectancy in Asia, Africa, the Americas and Europe since 1950, with eleven numbered callouts in the margin pointing at the claim title, subtitle, unit line, grid, bottom spine, an end dot, an end label, the band, the dotted reference line, the quiet note and the footer. Asia gained 33 years, Africa 27, the Americas 21 and Europe 17.",
-  "note": "Specimen claim computed from the data: gains 1950–2023 of Asia 32.6, Africa 26.6, Americas 20.8, Europe 17.1 years. Reference line: the world in 1950, 46.4 years. Band: 25th to 75th percentile of the 46 countries Natural Earth places in Asia, per year.",
-  "parts": [
-   "1 · claim title · a sentence with a verb, Palatino 13 pt in ink, top left",
-   "2 · subtitle · what, where, when, Corbel 9 pt in muted, one title height below the claim",
-   "3 · unit line · the quantity and unit above the y axis, 7.5 pt muted, never a rotated label",
-   "4 · hairline grid · horizontal only, 0.6 pt in the grid colour, behind the data",
-   "5 · bottom spine · 0.8 pt in the grid colour; no top, left or right spine and no tick marks",
-   "6 · ringed end dot · 28 pt² in the tone with a 1.2 pt ring in the surface colour",
-   "7 · direct end label · 7.5 pt in ink beside the dot; pushed apart with a 0.5 pt muted leader when labels collide",
-   "8 · band · the tint at 0.55 opacity, no edge, explained by a quiet note",
-   "9 · reference line · 0.7 pt dotted (1 on 3 off) in ochre, labelled at its right end in muted",
-   "10 · quiet note · 7.5 pt muted, inside the plot where the data are not",
-   "11 · footer · source, script and git stamp, 6.5 pt muted, bottom left"
-  ],
-  "files": {
-   "light": "figures/colour/anatomy_light.png",
-   "dark": "figures/colour/anatomy_dark.png",
-   "pdf": "figures/colour/anatomy_light.pdf"
   }
  }
 ]

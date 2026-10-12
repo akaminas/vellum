@@ -1,6 +1,6 @@
 {
  "source": "examples/python/report/make_report.py",
- "stamp": "99753b9-dirty",
+ "stamp": "daba9b8",
  "numbers": {
   "w1950": 46.3944,
   "w2019": 72.6093,
@@ -379,6 +379,6 @@
   "claim_projection": "In 2023 the world was 1.1 years below its trend",
   "claim_map": "Of the 35 countries with the lowest life expectancy, 31 are in Africa",
   "claim_dots": "Mexico, Colombia and South Africa fell four years or more and were back by 2023",
-  "stamp": "99753b9-dirty"
+  "stamp": "daba9b8"
  }
 }
