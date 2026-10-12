@@ -186,6 +186,8 @@ def link_list(it):
     if exists(f.get("light")): out.append(["PNG", f["light"]])
     if exists(f.get("dark")): out.append(["PNG, dark", f["dark"]])
     if exists(f.get("pdf")): out.append(["PDF", f["pdf"]])
+    if exists(f.get("pptx")): out.append(["PowerPoint", f["pptx"]])
+    if exists(f.get("pptx_dark")): out.append(["PowerPoint, dark", f["pptx_dark"]])
     if it.get("script"): out.append(["Script", f"{GH}/blob/main/{it['script']}"])
     return out
 

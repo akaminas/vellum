@@ -22,6 +22,7 @@ steps += [
     ("report", [PY, "examples/python/report/make_report.py"]),
     ("infographic", [PY, "examples/python/infographic/make_infographics.py"]),
     ("pitch", [PY, "examples/python/pitch/make_pitch.py"]),
+    ("powerpoint", [PY, "examples/python/office/make_pptx.py"]),
     ("latex tools", [PY, "examples/latex/build.py"]),
     ("talk", [PY, "examples/latex/talk/build.py"]),
     ("poster", [PY, "examples/latex/poster/build.py"]),

@@ -1,0 +1,54 @@
+[
+ {
+  "id": "pptx",
+  "group": "slides_pptx",
+  "title": "Every slide in this deck takes its colours and type from one Vellum theme",
+  "subtitle": "A PowerPoint template that Canva can import: Vellum theme colours and fonts, ten layouts, thirteen example slides, light and dark",
+  "kind": "slides",
+  "form": "PowerPoint template, 13 slides",
+  "medium": "slides",
+  "tool": "PowerPoint (python-pptx)",
+  "data": "Figures from the Vellum gallery; UN World Population Prospects (2024) and Ember (2026) with the Energy Institute (2025), processed by Our World in Data, CC BY 4.0",
+  "script": "examples/python/office/make_pptx.py",
+  "alt": "A 16:9 PowerPoint deck in the Vellum style, light and dark: a title slide, two section slides on the card, the Keeling curve and the life-expectancy small multiples as claim-and-figure slides, the adaptive landscape and its heat-map twin side by side, a native line chart of life expectancy in Asia, Africa and Europe with end labels, a native column chart of world electricity by source in 2000 and 2025, a big number (42.6 % low-carbon electricity in 2025), three stat tiles, a regional table, a closing slide and a slide on using the template in PowerPoint and Canva.",
+  "note": "Theme colours, fonts, master and layouts are set in the .pptx itself; previews exported by PowerPoint. Downloads: downloads/vellum-slides-light.pptx and downloads/vellum-slides-dark.pptx.",
+  "href": "downloads/vellum-slides-light.pptx",
+  "files": {
+   "light": "media/slides/light/slide-01.png",
+   "dark": "media/slides/dark/slide-01.png",
+   "pages": [
+    "media/slides/light/slide-01.png",
+    "media/slides/light/slide-02.png",
+    "media/slides/light/slide-03.png",
+    "media/slides/light/slide-04.png",
+    "media/slides/light/slide-05.png",
+    "media/slides/light/slide-06.png",
+    "media/slides/light/slide-07.png",
+    "media/slides/light/slide-08.png",
+    "media/slides/light/slide-09.png",
+    "media/slides/light/slide-10.png",
+    "media/slides/light/slide-11.png",
+    "media/slides/light/slide-12.png",
+    "media/slides/light/slide-13.png"
+   ],
+   "pages_dark": [
+    "media/slides/dark/slide-01.png",
+    "media/slides/dark/slide-02.png",
+    "media/slides/dark/slide-03.png",
+    "media/slides/dark/slide-04.png",
+    "media/slides/dark/slide-05.png",
+    "media/slides/dark/slide-06.png",
+    "media/slides/dark/slide-07.png",
+    "media/slides/dark/slide-08.png",
+    "media/slides/dark/slide-09.png",
+    "media/slides/dark/slide-10.png",
+    "media/slides/dark/slide-11.png",
+    "media/slides/dark/slide-12.png",
+    "media/slides/dark/slide-13.png"
+   ],
+   "pdf": "media/slides/vellum-slides-light.pdf",
+   "pptx": "downloads/vellum-slides-light.pptx",
+   "pptx_dark": "downloads/vellum-slides-dark.pptx"
+  }
+ }
+]
