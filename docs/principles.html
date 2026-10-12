@@ -16,7 +16,7 @@
 <script type="module" src="assets/js/site.js"></script>
 <!--/head-->
 <title>Principles · Vellum</title>
-<meta name="description" content="How a Vellum figure is made: the recipe, the removal test, defaults and the practices it avoids.">
+<meta name="description" content="How a Vellum figure is made: the recipe, the removal test and the practices it avoids.">
 </head>
 <body>
 <!--#header-->
@@ -63,74 +63,50 @@
   <ul class="toc">
     <li><a href="#recipe">Recipe</a></li>
     <li><a href="#removal">Removal test</a></li>
-    <li><a href="#departures">Defaults</a></li>
     <li><a href="#never">Never</a></li>
-    <li><a href="#scope">Scope</a></li>
     <li><a href="#references">References</a></li>
   </ul>
 </header>
 
 <h2 id="recipe">Recipe</h2>
 <ol class="rules">
-  <li><strong>Write the claim in one sentence.</strong> It becomes the title. If it needs two sentences, make two figures.</li>
-  <li><strong>Pick the form by the job of the data:</strong> change over time, comparison, distribution, relation, part of a whole, map, tree or network. <a href="forms.html">Chart forms</a>.</li>
-  <li><strong>Pick the medium and take its sizes:</strong> width, type sizes, and whether the dark twin applies. <a href="media.html">Media</a>.</li>
-  <li><strong>Load the palette through the tool's module</strong> and assign tones in the fixed order. Never past six: fold the rest into "other" or facet.</li>
-  <li><strong>Build the anatomy:</strong> claim title, unit line, end labels, ringed dots, hairline grid, footer with source and git stamp. <a href="anatomy.html">Anatomy</a>.</li>
-  <li><strong>Run the checklist</strong>, then render the figure and look at it; the validator checks colour, not collisions. <a href="checklist.html">Checklist</a>.</li>
-  <li><strong>Save PDF for print and PNG at 300 dpi for screens,</strong> with the git stamp in the footer or the file name.</li>
+  <li>Write the claim in one sentence; it is the title.</li>
+  <li>Pick the form by the job of the data. <a href="forms.html">Chart forms</a>.</li>
+  <li>Pick the medium and take its sizes. <a href="media.html">Media</a>.</li>
+  <li>Assign tones in slot order, six at most.</li>
+  <li>Build the anatomy: title, unit line, end labels, hairline grid, footer. <a href="anatomy.html">Anatomy</a>.</li>
+  <li>Run the checklist and look at the render. <a href="checklist.html">Checklist</a>.</li>
+  <li>Save PDF for print and PNG at 300 dpi for screens.</li>
 </ol>
-
-<div class="key">
-  <p><strong>One number goes in the text.</strong> "Life expectancy at birth was 73.2 years in 2023, against 46.4 in 1950" belongs in a sentence or a stat tile. So does a two-slice pie. Use a table when the reader will look values up.</p>
-</div>
 
 <h2 id="removal">Removal test</h2>
 <div class="split">
   <div class="prose">
-    <p>Remove the element, or replace it with one flat colour. If the figure loses information, the element was data; if not, delete it.</p>
-    <p>The test removes gradients that encode nothing, 3D on flat data, shadows, bevels, outlines on bars and dots, plot boxes, and legends that repeat the end labels. It keeps a heat map's colour scale, a third axis that is the shape of a surface, and a hatch that marks a missing value.</p>
+    <p>Remove the element or make it one flat colour. If no information is lost, delete it.</p>
   </div>
   <div>
     <ul class="never">
-      <li>a gradient as a page, card or slide background</li>
-      <li>a 3D effect on 2D data</li>
+      <li>a gradient background</li>
+      <li>3D on 2D data</li>
       <li>a glow, shadow, bevel or reflection</li>
-      <li>an outline around a bar or a dot</li>
+      <li>an outline on a bar or dot</li>
       <li>a box around the plot</li>
-      <li>a legend box for four series or fewer</li>
+      <li>a legend for four series or fewer</li>
     </ul>
   </div>
-</div>
-
-<h2 id="departures">Defaults</h2>
-<div class="prose">
-  <ul>
-    <li>The page is white; cream is used only for cards. A figure on white needs no second version for a journal.</li>
-    <li>Plain forms by default. At most one unusual form per piece, with a sentence on how to read it.</li>
-    <li>A circular form only when the angle means something: a season, an hour, a compass bearing.</li>
-    <li>Pastel tints for areas, muted tones for lines and dots. A pastel line on white is too faint to read.</li>
-    <li>Tint, tone and shade are computed per hue in OKLCH, and their proportions are fixed.</li>
-    <li>Annotations sit beside the data; the legend is secondary or absent.</li>
-    <li>Figures are regenerated from data by code, and a set of figures shares one style file.</li>
-  </ul>
 </div>
 
 <h2 id="never">Never</h2>
 <ul class="never">
   <li>a dashed gridline</li>
-  <li>a rainbow colour scale</li>
+  <li>a rainbow scale</li>
   <li>a pie with more than six slices</li>
-  <li>a title that is a noun phrase</li>
-  <li>text in a series colour (the mark beside the text gives identity)</li>
-  <li>a seventh series colour (fold, facet or grey out instead)</li>
-  <li>3D axes, except for a surface or a 3D scatter with a 2D twin</li>
+  <li>a noun-phrase title</li>
+  <li>text in a series colour</li>
+  <li>a seventh series colour</li>
+  <li>a circular form unless the angle means something</li>
+  <li>3D axes, except a surface or 3D scatter with a 2D twin</li>
 </ul>
-
-<h2 id="scope">Scope</h2>
-<div class="prose">
-  <p>Thesis figures, TikZ diagrams, modelling work, reports, policy briefs, posters, slides, pitch decks, infographics and notebooks. The medium sets sizes and density; the palette, fonts and anatomy stay the same, so figures made months apart in different tools read as one set.</p>
-</div>
 
 <h2 id="references">References</h2>
 <div class="prose">
@@ -155,7 +131,7 @@
       <li><a href="forms.html">Forms</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
       <li><a href="https://github.com/akaminas/vellum">GitHub</a></li><li><a href="downloads/vellum-style.zip">Download</a></li>
     </ul>
-    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git 7b4aa1d</p>
+    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git a8f0420</p>
   </div>
 </footer>
 <!--/footer-->

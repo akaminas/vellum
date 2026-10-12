@@ -1,0 +1,21 @@
+[
+ {
+  "id": "netherlands_rivers",
+  "group": "maps",
+  "title": "26 % of the Netherlands lies below sea level",
+  "subtitle": "A 50 × 60 cm print map in the manner of Nadieh Bremer's personal map of Norway: rivers and main canals as the featured layer, land below sea level hatched, height contours, a map-in-map of the Rhine and Maas basins",
+  "kind": "map",
+  "form": "reference map",
+  "medium": "print",
+  "tool": "matplotlib",
+  "data": "OpenStreetMap contributors (ODbL), coastline, rivers, canals, water areas, borders and places, via the Overpass API, downloaded 2026-10-12; AHN4 DTM (Rijkswaterstaat and Het Waterschapshuis, via PDOK, CC0); AWS Terrain Tiles (Mapzen; SRTM, GMTED2010, ETOPO1); Natural Earth 10 m rivers, lakes and countries (public domain)",
+  "script": "examples/python/maps/netherlands_rivers.py",
+  "alt": "A portrait print map of the Netherlands in Mercator projection. The country is white on a pale teal North Sea, its neighbours in cream. Land below sea level is hatched in teal: 26.4 % of the ground measured by AHN4, about 8 970 km², most of Holland, Flevoland, Friesland and Groningen. The Rhine enters from Germany and splits at the Pannerdensche Kop and the IJsselkop, marked in terracotta, into the Waal, Nederrijn–Lek and IJssel; with the Maas they are drawn in the deepest teal and thickest line, other rivers and canals thinner and lighter. Height contours rise to the Vaalserberg, 322 m; the lowest ground is −6.8 m in the Zuidplaspolder. A map-in-map shows the Rhine from the Alps and the Maas from France.",
+  "note": "Every number is computed from data/maps/ (nl_stats.json, written by fetch_nl.py). Labels are set as glyph outlines, bent along rivers and water bodies where they follow a shape. Rasters (sea, land, hatching, shadows, lakes) are drawn at 200 dpi and embedded in the PDF; lines and type are vector.",
+  "files": {
+   "light": "figures/maps/netherlands_rivers_light.png",
+   "dark": "figures/maps/netherlands_rivers_dark.png",
+   "pdf": "figures/maps/netherlands_rivers_light.pdf"
+  }
+ }
+]

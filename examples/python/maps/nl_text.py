@@ -111,7 +111,7 @@ def curved_label(ax, paper, text, guide_xy, prop, size, color, halo=None, halo_p
 
 
 def straight_label(ax, paper, text, xy, prop, size, color, ha="center", va="baseline", halo=None, halo_pt=2.0,
-                   tracking=0.0, angle=0.0, zorder=20, alpha=1.0, dx=0.0, dy=0.0):
+                   tracking=0.0, angle=0.0, zorder=20, alpha=1.0, dx=0.0, dy=0.0, clip=True):
     """A straight label at data point xy, offset (dx, dy) points, rotated by angle degrees, as glyph outlines."""
     verts, codes, width = layout(text, prop, size, tracking)
     if not len(verts):
@@ -124,7 +124,7 @@ def straight_label(ax, paper, text, xy, prop, size, color, ha="center", va="base
     P = P @ R + paper.to_pt([xy])[0] + [dx, dy]
     effects = [pe.withStroke(linewidth=halo_pt, foreground=halo)] if halo else []
     patch = PathPatch(Path(paper.to_data(P), codes), facecolor=color, edgecolor="none", lw=0, alpha=alpha,
-                      zorder=zorder, path_effects=effects)
+                      zorder=zorder, path_effects=effects, clip_on=clip)
     ax.add_patch(patch)
     return patch, width
 

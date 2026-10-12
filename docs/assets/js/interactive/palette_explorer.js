@@ -151,8 +151,7 @@ function draw(node, width, P, S) {
   const f1 = (v) => V.fmt(v, 1), f2 = (v) => V.fmt(v, 2);
   const plot = V.frame(node, {
     title: `Neighbouring tones stay ${f1(K.nv.nv)} apart, and ${f1(K.cvd.cvd)} under colour-vision deficiency`,
-    subtitle: `Every colour of the ${P.mode} twin, by job, from vellum.json. Distance is ΔE in OKLab × 100 between series ` +
-      `in slot order. Click a swatch to copy its hex; hover or focus it for its OKLCH coordinates and contrast.`,
+    subtitle: `${P.mode} twin · ΔE in OKLab × 100 · click a swatch to copy its hex`,
     footer: "style/vellum.json · assets/js/interactive/palette_explorer.js",
   });
   plot.classList.add("vpal-plot");
@@ -162,7 +161,7 @@ function draw(node, width, P, S) {
   // ---- neutrals
   let sec = V.el("section", { class: "vpal-sec", "aria-label": "Neutrals" }, plot);
   V.el("p", { class: "vpal-head" }, sec, "Seven neutrals");
-  V.el("p", { class: "vpal-sub" }, sec, "White (or charcoal) and six warm greys on hue 80: the page, and every line and label on it");
+  V.el("p", { class: "vpal-sub" }, sec, "Warm greys on hue 80");
   let grid = V.el("div", { class: "vpal-grid vpal-neutrals" }, sec);
   for (const [k, job] of Object.entries(NEUTRAL_JOBS)) {
     const cell = V.el("div", {}, grid);
@@ -174,7 +173,7 @@ function draw(node, width, P, S) {
   // ---- six families: columns of tint, tone, deep (rows of three on a phone)
   sec = V.el("section", { class: "vpal-sec", "aria-label": "Six families" }, plot);
   V.el("p", { class: "vpal-head" }, sec, "Six families, three steps of one hue angle each");
-  V.el("p", { class: "vpal-sub" }, sec, "Columns in slot order: series one is teal, series two terracotta, and so on");
+  V.el("p", { class: "vpal-sub" }, sec, "In slot order");
   const hueOf = (name) => S.families.find((f) => f.name === name).hue;
   if (!narrow) {
     grid = V.el("div", { class: "vpal-grid", style: { gridTemplateColumns: "minmax(120px, 0.9fr) repeat(6, minmax(0, 1fr))" } }, sec);
@@ -214,7 +213,7 @@ function draw(node, width, P, S) {
   // ---- status
   sec = V.el("section", { class: "vpal-sec", "aria-label": "Status colours" }, plot);
   V.el("p", { class: "vpal-head" }, sec, "Four status colours");
-  V.el("p", { class: "vpal-sub" }, sec, "Reserved, always with an icon and a label, never a series");
+  V.el("p", { class: "vpal-sub" }, sec, "Reserved; always with an icon and a label");
   grid = V.el("div", { class: "vpal-grid vpal-status" }, sec);
   for (const [k, hex] of Object.entries(P.status)) {
     const { t } = swatch(grid, hex, P, tip, plot, { label: `status ${k}`, nameText: `${STATUS_ICON[k]}  ${k}` });
@@ -223,8 +222,8 @@ function draw(node, width, P, S) {
 
   // ---- the checks
   sec = V.el("section", { class: "vpal-sec", "aria-label": "Checks" }, plot);
-  V.el("p", { class: "vpal-head" }, sec, "The checks, computed from the JSON as you read them");
-  V.el("p", { class: "vpal-sub" }, sec, "Colour-vision deficiency simulated with the Machado, Oliveira and Fernandes (2009) matrices at full severity; contrast is the WCAG ratio");
+  V.el("p", { class: "vpal-head" }, sec, "Checks");
+  V.el("p", { class: "vpal-sub" }, sec, "CVD after Machado et al. (2009); contrast as WCAG ratio");
   const tiles = V.el("div", { class: "tiles" }, sec);
   const tile = (value, label, compare, ok) => {
     const d = V.el("div", { class: "tile" }, tiles);
@@ -283,7 +282,7 @@ function draw(node, width, P, S) {
   if (K.three.nv >= FLOOR.nv && K.three.cvd >= FLOOR.cvd) {
     msg += ` The first three tones also pass as every pair (smallest ${f1(K.three.nv)}, and ${f1(K.three.cvd)} under deficiency), so a scatter or map may carry three series without labels.`;
   }
-  V.el("p", { class: "note" }, sec, msg);
+  void msg;   // the comparison with vellum.json stays computed, but the tables already show it
 
   // ---- every colour as a table
   const det = V.el("details", { class: "data-table" }, plot);

@@ -2,7 +2,7 @@
 
 Called by fetch_nl.py. Writes
   nl_land.geojson      land polygons built from the OSM coastline, clipped to the download box, tagged nl / other
-  nl_water.geojson     lakes and the wide water of rivers and canals (OSM water areas of 0.05 km2 and more)
+  nl_water.geojson     lakes (0.15 km2 and more) and the wide water of rivers and canals (0.02 km2 and more)
   nl_rivers.geojson    rivers and main canals as merged, simplified lines with name, kind, rank and country
   nl_borders.geojson   the land borders of the Netherlands and its neighbours (OSM admin_level 2, maritime parts dropped)
   nl_places.json       cities and towns with population

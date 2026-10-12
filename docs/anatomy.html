@@ -67,7 +67,6 @@
     <li><a href="#writing">Writing</a></li>
     <li><a href="#specimen">Specimen</a></li>
     <li><a href="#marks">Marks</a></li>
-    <li><a href="#spacers">Spacers</a></li>
     <li><a href="#labels">Labels</a></li>
     <li><a href="#sizes">Sizes</a></li>
     <li><a href="#panels">Panels</a></li>
@@ -88,7 +87,7 @@
       <text class="twin-dark" x="166" y="60" style="fill:var(--v-ink);font-size:13px;font-family:Consolas,monospace">#342F2A</text>
     </svg>
     <h3><span class="n">1</span>White page, cream cards</h3>
-    <p>White surface (charcoal <code>#2A2520</code> in the dark twin), warm greys. Panels and tiles are cream; figures sit on white, so one version suits a journal.</p>
+    <p>Figures on white (charcoal in the dark twin); panels and tiles in cream.</p>
   </div></li>
 
   <li><div class="card mark-card">
@@ -98,7 +97,7 @@
       <text x="12" y="92" style="fill:var(--v-muted);font-size:14px;font-family:var(--v-font-body)">the ticks, the labels, the footer</text>
     </svg>
     <h3><span class="n">2</span>Claim title</h3>
-    <p>A sentence with a verb, in Palatino, left aligned, in ink. All other text is a humanist sans.</p>
+    <p>A sentence with a verb, in Palatino. Other text in a humanist sans.</p>
   </div></li>
 
   <li><div class="card mark-card">
@@ -113,7 +112,7 @@
       </g>
     </svg>
     <h3><span class="n">3</span>Six families, fixed order</h3>
-    <p>Series use tones in the order teal, terracotta, indigo, ochre, mauve, moss. Areas use tints; emphasis and text on a tint use the deep step.</p>
+    <p>Tones for series, tints for areas, deeps for emphasis.</p>
   </div></li>
 
   <li><div class="card mark-card">
@@ -126,7 +125,7 @@
       <text x="244" y="78" style="fill:var(--v-ink);font-size:13px;font-family:var(--v-font-body)">second</text>
     </svg>
     <h3><span class="n">4</span>Direct labels</h3>
-    <p>Lines end in a ringed dot and an ink label. Up to four series: no legend. Five or six: legend plus end labels. Seven or more: fold or facet.</p>
+    <p>A ringed dot and an ink label at each line end. Legend only for five or six series; above six, facet.</p>
   </div></li>
 
   <li><div class="card mark-card">
@@ -135,7 +134,7 @@
       <path d="M14 98 L60 90 L106 84 L152 70 L198 62 L244 44 L290 34" style="fill:none;stroke:var(--v-indigo);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"/>
     </svg>
     <h3><span class="n">5</span>Hairline grid, no frame</h3>
-    <p>Solid horizontal hairlines, one step off the surface. No top, left or right spine, no box, no vertical or dashed grid.</p>
+    <p>Horizontal hairlines only; no box or side spines.</p>
   </div></li>
 
   <li><div class="card mark-card">
@@ -146,7 +145,7 @@
       <path d="M50 92 L110 84 L170 72 L230 58 L290 44" style="fill:none;stroke:var(--v-teal);stroke-width:2.4;stroke-linecap:round"/>
     </svg>
     <h3><span class="n">6</span>Unit line</h3>
-    <p>Quantity and unit in muted text above the y axis, upright, instead of a rotated label. The x label stays under its axis.</p>
+    <p>Quantity and unit above the y axis, upright and muted.</p>
   </div></li>
 
   <li><div class="card mark-card">
@@ -158,7 +157,7 @@
       <text x="16" y="104" style="fill:var(--v-muted);font-size:11px;font-family:var(--v-font-body)">NOAA GML, 1958–2020 · co2_keeling.py · git 99753b9</text>
     </svg>
     <h3><span class="n">7</span>Traceable footer</h3>
-    <p>Bottom left, small, muted: data source, script and git commit (with <code>-dirty</code> for an unclean tree).</p>
+    <p>Source, script and git commit, bottom left, muted.</p>
   </div></li>
 </ol>
 
@@ -169,28 +168,27 @@
     <span class="eyebrow">Title face</span>
     <p class="serif" style="font-size:2.4rem;line-height:1.1;margin:0 0 12px">Palatino</p>
     <p class="serif" style="font-size:1.25rem;line-height:1.35;color:var(--v-ink)">A claim in Palatino reads at arm’s length and from two metres away</p>
-    <p class="secondary small">Old-style serif with open counters, legible at 13 pt on a page and on a poster at two metres. Used only for the claim title and slide or poster headings.</p>
+    <p class="secondary small">For the claim title and slide or poster headings only.</p>
     <p class="small muted mb-0">Windows: Palatino Linotype · LaTeX: TeX Gyre Pagella · web: <code>'Palatino Linotype', 'TeX Gyre Pagella', Palatino, serif</code></p>
   </div>
   <div class="card">
     <span class="eyebrow">Body face</span>
     <p style="font-size:2.4rem;line-height:1.1;margin:0 0 12px">Corbel</p>
     <p style="font-size:1.1rem;line-height:1.45;color:var(--v-ink)">parts per million · 1958 · 2020 · γ = 0.5 · −3 °C · 12,045 deaths</p>
-    <p class="secondary small">Humanist sans with old-style numerals, Greek, subscript digits and a true minus (which Gill Sans lacks). Used for labels, ticks, unit line, annotations, legends, footer and report body text.</p>
+    <p class="secondary small">For all other text.</p>
     <p class="small muted mb-0">Windows: Corbel · LaTeX and the web: Lato · fallback: Segoe UI, then DejaVu Sans</p>
   </div>
 </div>
 <div class="grid grid-2 mt-2">
-  <div class="key mt-0"><p><strong>Weights and italics.</strong> One weight per face. Italics only for maths variables (<em>V</em><sub>A</sub>).</p></div>
-  <div class="key mt-0"><p><strong>Tables use lining figures.</strong> <code>font-variant-numeric: lining-nums tabular-nums</code> on the web, <code>\usepackage[lining]{lato}</code> in LaTeX.</p></div>
+  <div class="key mt-0"><p>One weight per face; italics only for maths variables (<em>V</em><sub>A</sub>).</p></div>
+  <div class="key mt-0"><p>Tables use lining figures: <code>font-variant-numeric: lining-nums tabular-nums</code>, <code>\usepackage[lining]{lato}</code>.</p></div>
 </div>
 
 <h2 id="scale">Type scale</h2>
 <div class="split">
   <div class="prose">
-    <p>Four levels: claim, body, secondary (unit, annotation, ticks) and footer. Sizes less than 1.5 pt apart are merged.</p>
-    <p>Figures are drawn at print size and not rescaled. Slides multiply by 2.2, posters by 2.6.</p>
-    <p>Text is ink or muted, never a series colour; a label inside a tint uses the family's deep step.</p>
+    <p>Draw at print size; do not rescale.</p>
+    <p>Text is ink or muted; a label on a tint uses the deep step.</p>
   </div>
   <div class="table-wrap">
     <table>
@@ -213,13 +211,12 @@
 <h2 id="writing">Writing</h2>
 <div class="split">
   <ol class="rules">
-    <li>Sentence case. No full stop after a title or label; a note that is a sentence ends with one.</li>
-    <li>The title is a claim with a verb.</li>
-    <li>The unit line is a noun phrase: "parts per million", "share of GDP, per cent".</li>
-    <li>True minus (U+2212). Units after a space: 10 km, 5 %.</li>
-    <li>Greek as letters (γ, α), with thin spaces around "=".</li>
-    <li>No project-internal abbreviations: "generations", not "gens".</li>
-    <li>Footer: "NOAA GML, 1958–2020 · co2_keeling.py · git 99753b9".</li>
+    <li>Sentence case; no full stop after a title or label.</li>
+    <li>Title: a claim with a verb.</li>
+    <li>Unit line: a noun phrase, such as "parts per million".</li>
+    <li>True minus (U+2212); a space before units: 10 km, 5 %.</li>
+    <li>Greek as letters, thin spaces around "=".</li>
+    <li>No internal abbreviations: "generations", not "gens".</li>
   </ol>
   <div>
     <div class="table-wrap">
@@ -233,36 +230,27 @@
         </tbody>
       </table>
     </div>
-    <div class="key"><p><strong>Three-second test.</strong> Cover the title. If a colleague cannot state the claim in three seconds, remove a series or split a panel.</p></div>
+    <div class="key"><p>If a colleague cannot state the claim within three seconds with the title covered, remove a series or split a panel.</p></div>
   </div>
 </div>
 
 <h2 id="specimen">Specimen</h2>
-<p class="prose">A figure with its eleven parts numbered.</p>
 <!--#fig colour/anatomy wide-->
-<figure class="figure wide" id="fig-colour-anatomy"><div class="frame"><img class="zoom twin-light " src="figures/colour/anatomy_light.png" data-full="figures/colour/anatomy_light.png" data-caption="A Vellum figure is built from eleven parts, each with one rule" alt="A line chart of life expectancy in Asia, Africa, the Americas and Europe since 1950, with eleven numbered callouts in the margin pointing at the claim title, subtitle, unit line, grid, bottom spine, an end dot, an end label, the band, the dotted reference line, the quiet note and the footer. Asia gained 33 years, Africa 27, the Americas 21 and Europe 17." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/colour/anatomy_dark.png" data-full="figures/colour/anatomy_dark.png" data-caption="A Vellum figure is built from eleven parts, each with one rule" alt="A line chart of life expectancy in Asia, Africa, the Americas and Europe since 1950, with eleven numbered callouts in the margin pointing at the claim title, subtitle, unit line, grid, bottom spine, an end dot, an end label, the band, the dotted reference line, the quiet note and the footer. Asia gained 33 years, Africa 27, the Americas 21 and Europe 17." loading="lazy" decoding="async"></div><figcaption>Period life expectancy, UN WPP (2024) and others, processed by Our World in Data (CC BY 4.0); continents of countries from Natural Earth v5.1.2 · Specimen claim computed from the data: gains 1950–2023 of Asia 32.6, Africa 26.6, Americas 20.8, Europe 17.1 years. Reference line: the world in 1950, 46.4 years. Band: 25th to 75th percentile of the 46 countries Natural Earth places in Asia, per year.<p class="fig-links"><a href="figures/colour/anatomy_light.png">PNG</a> <a href="figures/colour/anatomy_dark.png">PNG, dark</a> <a href="figures/colour/anatomy_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/colour/anatomy_specimen.py">Script</a></p></figcaption><ol class="parts small"><li>1 · claim title · a sentence with a verb, Palatino 13 pt in ink, top left</li><li>2 · subtitle · what, where, when, Corbel 9 pt in muted, one title height below the claim</li><li>3 · unit line · the quantity and unit above the y axis, 7.5 pt muted, never a rotated label</li><li>4 · hairline grid · horizontal only, 0.6 pt in the grid colour, behind the data</li><li>5 · bottom spine · 0.8 pt in the grid colour; no top, left or right spine and no tick marks</li><li>6 · ringed end dot · 28 pt² in the tone with a 1.2 pt ring in the surface colour</li><li>7 · direct end label · 7.5 pt in ink beside the dot; pushed apart with a 0.5 pt muted leader when labels collide</li><li>8 · band · the tint at 0.55 opacity, no edge, explained by a quiet note</li><li>9 · reference line · 0.7 pt dotted (1 on 3 off) in ochre, labelled at its right end in muted</li><li>10 · quiet note · 7.5 pt muted, inside the plot where the data are not</li><li>11 · footer · source, script and git stamp, 6.5 pt muted, bottom left</li></ol></figure>
+<figure class="figure wide" id="fig-colour-anatomy"><div class="frame"><img class="zoom twin-light " src="figures/colour/anatomy_light.png" data-full="figures/colour/anatomy_light.png" data-caption="A Vellum figure is built from eleven parts, each with one rule" alt="A line chart of life expectancy in Asia, Africa, the Americas and Europe since 1950, with eleven numbered callouts in the margin pointing at the claim title, subtitle, unit line, grid, bottom spine, an end dot, an end label, the band, the dotted reference line, the quiet note and the footer. Asia gained 33 years, Africa 27, the Americas 21 and Europe 17." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/colour/anatomy_dark.png" data-full="figures/colour/anatomy_dark.png" data-caption="A Vellum figure is built from eleven parts, each with one rule" alt="A line chart of life expectancy in Asia, Africa, the Americas and Europe since 1950, with eleven numbered callouts in the margin pointing at the claim title, subtitle, unit line, grid, bottom spine, an end dot, an end label, the band, the dotted reference line, the quiet note and the footer. Asia gained 33 years, Africa 27, the Americas 21 and Europe 17." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/colour/anatomy_light.png">PNG</a> <a href="figures/colour/anatomy_dark.png">PNG, dark</a> <a href="figures/colour/anatomy_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/colour/anatomy_specimen.py">Script</a></p></figcaption><ol class="parts small"><li>1 · claim title · a sentence with a verb, Palatino 13 pt in ink, top left</li><li>2 · subtitle · what, where, when, Corbel 9 pt in muted, one title height below the claim</li><li>3 · unit line · the quantity and unit above the y axis, 7.5 pt muted, never a rotated label</li><li>4 · hairline grid · horizontal only, 0.6 pt in the grid colour, behind the data</li><li>5 · bottom spine · 0.8 pt in the grid colour; no top, left or right spine and no tick marks</li><li>6 · ringed end dot · 28 pt² in the tone with a 1.2 pt ring in the surface colour</li><li>7 · direct end label · 7.5 pt in ink beside the dot; pushed apart with a 0.5 pt muted leader when labels collide</li><li>8 · band · the tint at 0.55 opacity, no edge, explained by a quiet note</li><li>9 · reference line · 0.7 pt dotted (1 on 3 off) in ochre, labelled at its right end in muted</li><li>10 · quiet note · 7.5 pt muted, inside the plot where the data are not</li><li>11 · footer · source, script and git stamp, 6.5 pt muted, bottom left</li></ol></figure>
 <!--/fig-->
 
-<div class="grid grid-2">
-  <div>
-    <h3 class="mt-0">Title block</h3>
-    <p>Flush with the left edge of the plot area. The subtitle gives data set, sample and key settings. In a journal the claim moves to the caption and the block is dropped.</p>
-    <h3>Panel title and unit line</h3>
-    <p>Each panel: a bold letter and a 9 pt claim in ink, then the unit line above the y axis. The x label stays under the axis, in muted.</p>
-  </div>
-  <div>
-    <h3 class="mt-0">Plot area</h3>
-    <p>No tick marks, only 8 pt muted labels: three to five per axis, at round numbers.</p>
-    <h3>Footer</h3>
-    <p>In a journal its content moves to the caption or the data statement.</p>
-  </div>
-</div>
+<ol class="rules">
+  <li>Title block: flush with the plot's left edge; the subtitle gives data set, sample and key settings.</li>
+  <li>Panel title: a bold letter and a 9 pt claim in ink.</li>
+  <li>Axes: three to five labels at round numbers.</li>
+  <li>In a journal: the claim moves to the caption, the footer to the data statement.</li>
+</ol>
 
 <h2 id="marks">Marks</h2>
 <div class="split">
   <div class="prose">
-    <p>The marker ring keeps it legible where it crosses a line. Bars have no stroke; the gap separates them.</p>
-    <p>In a paper, lines drop to 1.2 pt, member lines to 0.6 pt and markers to 20 pt² with a 1.0 pt ring.</p>
+    <p>Stacked fills and heat-map cells: 1.2 pt surface-colour gaps, no outlines.</p>
+    <p>In a paper: lines 1.2 pt, member lines 0.6 pt, markers 20 pt² with a 1.0 pt ring.</p>
   </div>
   <div class="table-wrap">
     <table>
@@ -283,44 +271,21 @@
   </div>
 </div>
 
-<h2 id="spacers">Spacers</h2>
-<div class="grid grid-2">
-  <div class="card">
-    <svg viewBox="0 0 300 110" role="img" aria-label="Stacked segments and heat map cells separated by gaps in the surface colour" style="width:100%">
-      <rect x="0" y="0" width="300" height="110" style="fill:var(--v-surface)"/>
-      <rect x="10" y="20" width="110" height="26" style="fill:var(--v-teal-tint)"/><rect x="122" y="20" width="70" height="26" style="fill:var(--v-terracotta-tint)"/><rect x="194" y="20" width="44" height="26" style="fill:var(--v-indigo-tint)"/><rect x="240" y="20" width="50" height="26" style="fill:var(--v-ochre-tint)"/>
-      <g><rect x="10" y="60" width="38" height="18" style="fill:#A5D5D7"/><rect x="50" y="60" width="38" height="18" style="fill:#73B9BC"/><rect x="90" y="60" width="38" height="18" style="fill:#429CA0"/><rect x="130" y="60" width="38" height="18" style="fill:#1B7D82"/>
-      <rect x="10" y="80" width="38" height="18" style="fill:#73B9BC"/><rect x="50" y="80" width="38" height="18" style="fill:#1B7D82"/><rect x="90" y="80" width="38" height="18" style="fill:#066166"/><rect x="130" y="80" width="38" height="18" style="fill:#034649"/></g>
-    </svg>
-    <h4>Gaps between fills</h4>
-    <p class="secondary small mb-0">Stacked segments, stacked areas and heat-map cells: 1.2 pt of surface colour. Adjacent bars: 0.4 of the slot. No outlines.</p>
-  </div>
-  <div class="card">
-    <svg viewBox="0 0 300 110" role="img" aria-label="Overlapping dots separated by rings in the surface colour" style="width:100%">
-      <rect x="0" y="0" width="300" height="110" style="fill:var(--v-surface)"/>
-      <path d="M10 90 C 80 80, 160 40, 290 24" style="fill:none;stroke:var(--v-indigo);stroke-width:2.2"/>
-      <g style="stroke:var(--v-surface);stroke-width:2.2"><circle cx="70" cy="70" r="8" style="fill:var(--v-teal)"/><circle cx="82" cy="64" r="8" style="fill:var(--v-teal)"/><circle cx="92" cy="74" r="8" style="fill:var(--v-terracotta)"/><circle cx="150" cy="50" r="8" style="fill:var(--v-teal)"/><circle cx="160" cy="44" r="8" style="fill:var(--v-terracotta)"/><circle cx="210" cy="36" r="8" style="fill:var(--v-terracotta)"/></g>
-    </svg>
-    <h4>Rings around dots</h4>
-    <p class="secondary small mb-0">A surface-colour ring keeps a dot legible over a line or another dot.</p>
-  </div>
-</div>
-
 <h2 id="labels">Labels</h2>
 <ol class="rules">
-  <li>Line labels: at the end, ink, 7.5 pt, 6 pt right of the end dot. Colliding labels are spread in order with a 0.5 pt muted leader (<code>endlabels</code> in <code>vellum.py</code>, <code>endLabels</code> in <code>vellum-web.js</code>; same <code>spread</code> algorithm).</li>
+  <li>Line labels: ink, 7.5 pt, 6 pt right of the end dot; colliding labels spread with a 0.5 pt muted leader (<code>endlabels</code> in <code>vellum.py</code>, <code>endLabels</code> in <code>vellum-web.js</code>).</li>
   <li>Callouts: ink text, thin muted leader, no arrowhead.</li>
-  <li>Reference lines: labelled at the right end, muted, above the line.</li>
-  <li>Quiet notes (band meaning, seed count): muted, 7.5 pt, inside the plot away from the data.</li>
-  <li>Values on marks only when the value is the point, e.g. a short bar chart.</li>
-  <li>Legend only for five or six series: top left inside the plot, no frame, end labels kept.</li>
+  <li>Reference lines: label at the right end, above, muted.</li>
+  <li>Quiet notes: muted, 7.5 pt, inside the plot away from the data.</li>
+  <li>Values on marks only when the value is the point.</li>
+  <li>Legend: top left inside the plot, no frame, end labels kept.</li>
 </ol>
 
 <h2 id="sizes">Named sizes</h2>
 <div class="split">
   <div class="prose">
-    <p><code>V.size("double")</code> returns the size in inches; the other tools share the table.</p>
-    <p>Thesis at 125 mm text width: 4.92 in. Journals use their own widths where they differ (88 or 180 mm for Nature). Infographics use <code>dpi=100</code>, so 1080 px is 10.8 in.</p>
+    <p><code>V.size("double")</code> returns inches.</p>
+    <p>Thesis (125 mm text): 4.92 in wide. Use a journal's own widths where they differ. Infographics: <code>dpi=100</code>, so 1080 px is 10.8 in.</p>
   </div>
   <div class="table-wrap">
     <table>
@@ -341,11 +306,11 @@
 
 <h2 id="panels">Multi-panel figures</h2>
 <div class="prose">
-  <p>Bold letters a, b, c before each panel claim. Panels in reading order, the finding last (bottom right). Shared axes share ticks; one unit line per row. With per-panel title blocks, gaps are 0.42 of a panel width and 0.55 of a panel height.</p>
-  <p>Small multiples: same axes, one family per panel, other members in rule grey behind.</p>
+  <p>Panels in reading order, the finding last. Shared axes share ticks; one unit line per row. Gaps: 0.42 of a panel width, 0.55 of a panel height.</p>
+  <p>Small multiples: same axes, one family per panel, the rest in rule grey behind.</p>
 </div>
 <!--#fig science/life_small_multiples wide-->
-<figure class="figure wide" id="fig-science-life_small_multiples"><div class="frame"><img class="zoom twin-light " src="figures/science/life_small_multiples_light.png" data-full="figures/science/life_small_multiples_light.png" data-caption="Life expectancy rose in all 236 countries since 1950, but the trend hides collapses" alt="Six small line charts of life expectancy from 1950 to 2023 over all other countries in grey: Japan gained 25 years, steadily (1950: 59 years · no fall above 0.5 in a year); China lost 15 years to famine (1960: 33 years); Lebanon lost 30 years to civil war (1976: 36 years); Rwanda lost 31 years to genocide (1994: 12 years); Eswatini lost 18 years to HIV (2004: 44 years, peak 62 in 1988); Bolivia lost 6 years to covid-19 (2021: 61 years)." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/life_small_multiples_dark.png" data-full="figures/science/life_small_multiples_dark.png" data-caption="Life expectancy rose in all 236 countries since 1950, but the trend hides collapses" alt="Six small line charts of life expectancy from 1950 to 2023 over all other countries in grey: Japan gained 25 years, steadily (1950: 59 years · no fall above 0.5 in a year); China lost 15 years to famine (1960: 33 years); Lebanon lost 30 years to civil war (1976: 36 years); Rwanda lost 31 years to genocide (1994: 12 years); Eswatini lost 18 years to HIV (2004: 44 years, peak 62 in 1988); Bolivia lost 6 years to covid-19 (2021: 61 years)." loading="lazy" decoding="async"></div><figcaption>Our World in Data, period life expectancy at birth (UN WPP 2024 and others), 1950–2023, countries only<p class="fig-links"><a href="figures/science/life_small_multiples_light.png">PNG</a> <a href="figures/science/life_small_multiples_dark.png">PNG, dark</a> <a href="figures/science/life_small_multiples_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/life_small_multiples.py">Script</a></p></figcaption></figure>
+<figure class="figure wide" id="fig-science-life_small_multiples"><div class="frame"><img class="zoom twin-light " src="figures/science/life_small_multiples_light.png" data-full="figures/science/life_small_multiples_light.png" data-caption="Life expectancy rose in all 236 countries since 1950, but the trend hides collapses" alt="Six small line charts of life expectancy from 1950 to 2023 over all other countries in grey: Japan gained 25 years, steadily (1950: 59 years · no fall above 0.5 in a year); China lost 15 years to famine (1960: 33 years); Lebanon lost 30 years to civil war (1976: 36 years); Rwanda lost 31 years to genocide (1994: 12 years); Eswatini lost 18 years to HIV (2004: 44 years, peak 62 in 1988); Bolivia lost 6 years to covid-19 (2021: 61 years)." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/life_small_multiples_dark.png" data-full="figures/science/life_small_multiples_dark.png" data-caption="Life expectancy rose in all 236 countries since 1950, but the trend hides collapses" alt="Six small line charts of life expectancy from 1950 to 2023 over all other countries in grey: Japan gained 25 years, steadily (1950: 59 years · no fall above 0.5 in a year); China lost 15 years to famine (1960: 33 years); Lebanon lost 30 years to civil war (1976: 36 years); Rwanda lost 31 years to genocide (1994: 12 years); Eswatini lost 18 years to HIV (2004: 44 years, peak 62 in 1988); Bolivia lost 6 years to covid-19 (2021: 61 years)." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/science/life_small_multiples_light.png">PNG</a> <a href="figures/science/life_small_multiples_dark.png">PNG, dark</a> <a href="figures/science/life_small_multiples_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/life_small_multiples.py">Script</a></p></figcaption></figure>
 <!--/fig-->
 
 </main>
@@ -363,7 +328,7 @@
       <li><a href="forms.html">Forms</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
       <li><a href="https://github.com/akaminas/vellum">GitHub</a></li><li><a href="downloads/vellum-style.zip">Download</a></li>
     </ul>
-    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git 7b4aa1d</p>
+    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git a8f0420</p>
   </div>
 </footer>
 <!--/footer-->

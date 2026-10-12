@@ -92,7 +92,7 @@ SUBTITLE = ("The Rhine, the Maas and the Schelde reach the North Sea across a de
 import textwrap                                         # noqa: E402
 TITLE_LINES = textwrap.wrap(TITLE, 25)
 SUBTITLE_WRAPPED = "\n".join(textwrap.wrap(SUBTITLE, 62))
-INSET_RECT = (4.0, 24.6, 9.0)                           # x, y of the lower left corner and width, paper cm
+INSET_W = 10.2                                           # width of the map-in-map, paper cm
 SOURCE = ("Data: © OpenStreetMap contributors (ODbL), via Overpass; AHN4 DTM, Rijkswaterstaat and Het Waterschapshuis, "
           "via PDOK (CC0); AWS Terrain Tiles (SRTM, GMTED, ETOPO1; Mapzen); Natural Earth (public domain). "
           "Mercator projection")
@@ -108,20 +108,20 @@ def palette(V):
                     grat=seq[0], grat_a=0.9, cross=V.tone("teal"),
                     contour=V.rule, contour_major=V.muted, contour_a=0.6,
                     river1=V.deep("teal"), river2=V.tone("teal"), river3=seq[2], canal=V.tone("teal"),
-                    river_out=V.tone("teal"), river_out_minor=seq[2], river_area=V.tone("teal"),
+                    river_out=V.tone("teal"), river_out_minor=seq[2], river_area=V.tint("teal"),
                     border=V.muted, border_band=V.grid,
                     ink=V.ink, secondary=V.secondary, muted=V.muted, halo=V.surface, water_ink=V.deep("teal"),
-                    accent=V.tone("terracotta"), rule=V.rule, card=V.card)
+                    accent=V.tone("terracotta"), rule=V.rule, card=V.card, card_edge="none")
     return dict(page=V.surface, sea=seq[0], lake=seq[0], shadow="#000000", shadow_a=0.45,
                 land_nl=V.grid, land_other=V.card, other_veil=(V.grid, 0.0),
                 polder=V.tint("teal"), polder_a=0.35, hatch=V.tint("teal"), hatch_a=0.9, hatch_sp=3.4, hatch_w=0.6,
                 grat=seq[1], grat_a=0.9, cross=seq[3],
                 contour=V.rule, contour_major=V.muted, contour_a=0.7,
                 river1=V.tone("teal"), river2=seq[4], river3=seq[3], canal=seq[4],
-                river_out=seq[3], river_out_minor=seq[2], river_area=seq[3],
+                river_out=seq[3], river_out_minor=seq[2], river_area=seq[0],
                 border=V.muted, border_band=V.grid,
                 ink=V.ink, secondary=V.secondary, muted=V.muted, halo=V.surface, water_ink=V.deep("teal"),
-                accent=V.tone("terracotta"), rule=V.rule, card=V.card)
+                accent=V.tone("terracotta"), rule=V.rule, card=V.card, card_edge=V.rule)
 
 
 def rgb(c):
@@ -226,8 +226,8 @@ def build_rasters(P, F):
     col = (L * land[..., None] + sh_rgb * (shadow_a * (1 - land))[..., None]) / np.maximum(a_tot[..., None], 1e-6)
     land_rgba = np.concatenate([col, a_tot[..., None]], 2)
     # lakes, with an inner shadow along their shores
-    inner = blur(shift(1 - lakes, 1.0, 1.5, F), 4, F) * lakes
-    lake_rgb = over(np.ones((F.h, F.w, 3), np.float32) * rgb(P["lake"]), P["shadow"], np.clip(inner * P["shadow_a"] * 1.4, 0, 1))
+    inner = blur(shift(1 - lakes, 0.8, 1.2, F), 2.5, F) * lakes
+    lake_rgb = over(np.ones((F.h, F.w, 3), np.float32) * rgb(P["lake"]), P["shadow"], np.clip(inner * P["shadow_a"], 0, 1))
     lake_rgba = np.concatenate([lake_rgb, lakes[..., None]], 2)
     return sea, land_rgba, lake_rgba, z, land, nl, lakes
 
@@ -264,13 +264,17 @@ def in_boxes(x, y, boxes):
 
 
 def crosses(ax, P, V, boxes=()):
-    arm = 7 / PT_PER_UNIT
+    """Small thick crosses at the whole degrees: teal on the sea, a quiet grey on land."""
+    arm = 6.5 / PT_PER_UNIT
+    land = [LAND["nl"], LAND["other"]]
     for lon in np.arange(3.0, 7.6, MAJOR):
         for lat in np.arange(51.0, 54.0, MAJOR):
             x, y = lon, float(G.merc_y(lat))
             if in_boxes(x, y, boxes): continue
+            on_land = any(g.contains(Point(x, y)) for g in land)
             for dx, dy in ((arm, 0), (0, arm)):
-                ax.plot([x - dx, x + dx], [y - dy, y + dy], color=P["cross"], lw=1.6, solid_capstyle="butt", zorder=12)
+                ax.plot([x - dx, x + dx], [y - dy, y + dy], color=P["rule"] if on_land else P["cross"], lw=1.5,
+                        solid_capstyle="butt", zorder=12)
 
 
 def degree_labels(fig, ax, P, V):
@@ -280,13 +284,13 @@ def degree_labels(fig, ax, P, V):
     for lon in np.arange(3.0, 7.6, MAJOR):
         for y, va, d in ((Y1, "bottom", 6), (Y0, "top", -6)):
             T.straight_label(ax, PAPER, f"{lon:.0f}° E", (lon, y), fprop, size, P["muted"], ha="center",
-                             va="bottom" if va == "bottom" else "top", dy=d, tracking=0.04)
+                             va="bottom" if va == "bottom" else "top", dy=d, tracking=0.04, clip=False)
     for lat in np.arange(51.0, 54.0, MAJOR):
         y = float(G.merc_y(lat))
         T.straight_label(ax, PAPER, f"{lat:.0f}° N", (X0, y), fprop, size, P["muted"], ha="center", va="bottom",
-                         angle=90, dx=-6, tracking=0.04)
+                         angle=90, dx=-6, tracking=0.04, clip=False)
         T.straight_label(ax, PAPER, f"{lat:.0f}° N", (X1, y), fprop, size, P["muted"], ha="center", va="bottom",
-                         angle=-90, dx=6, tracking=0.04)
+                         angle=-90, dx=6, tracking=0.04, clip=False)
 
 
 # ---------------------------------------------------------------- contours
@@ -347,7 +351,8 @@ def rivers(ax, P):
     colours, the parts abroad lighter and thinner."""
     groups = {}
     for g, p in RIVERS:
-        r, kind, home = p["rank"], p["kind"], p["part"] == "nl"
+        # the Eems estuary is a disputed border water: drawn as foreign, like the Ems upstream
+        r, kind, home = p["rank"], p["kind"], p["part"] == "nl" and p["name"] not in ("Eems", "Ems")
         lw = RIVER_STYLE[(r, "river" if r == 1 else kind)]
         if home:
             col = {1: P["river1"], 2: P["river2"] if kind == "river" else P["canal"], 3: P["river3"]}[r]
@@ -396,8 +401,8 @@ NEIGHBOUR_CITIES = [("Antwerpen", "e"), ("Gent", "s"), ("Brugge", "s"), ("Bruxel
 DISPLAY = {"Bruxelles - Brussel": "Brussel", "'s-Hertogenbosch": "’s-Hertogenbosch"}
 PROVINCES = [("FRYSLÂN", 5.97, 53.07, 0), ("GRONINGEN", 6.86, 53.12, 0), ("DRENTHE", 6.62, 52.84, 0),
              ("OVERIJSSEL", 6.42, 52.40, 0), ("FLEVOLAND", 5.62, 52.62, 0), ("GELDERLAND", 6.42, 52.06, 0),
-             ("NOORD-HOLLAND", 4.88, 52.78, 0), ("ZUID-HOLLAND", 4.62, 52.095, 0),
-             ("ZEELAND", 3.85, 51.29, 0), ("NOORD-BRABANT", 5.25, 51.43, 0), ("LIMBURG", 5.93, 51.26, -72)]
+             ("NOORD-HOLLAND", 4.96, 52.70, 0), ("ZUID-HOLLAND", 4.70, 52.10, 0),
+             ("ZEELAND", 3.55, 51.31, 0), ("NOORD-BRABANT", 5.25, 51.43, 0), ("LIMBURG", 5.93, 51.26, -72)]
 COUNTRIES = [("BELGIË", 4.25, 50.62), ("DEUTSCHLAND", 6.95, 51.80)]
 
 
@@ -458,16 +463,16 @@ def river_guide(name, lon, lat, length_pt):
 
 
 RIVER_LABELS = [  # name in the data, label text, anchor lon, lat, side (+1 above the line, -1 below), size
-    ("Waal", "Waal", 5.62, 51.875, 1, 13), ("Nederrijn", "Nederrijn", 5.42, 51.96, 1, 12), ("Lek", "Lek", 4.86, 51.94, 1, 12),
+    ("Waal", "Waal", 5.72, 51.88, 1, 13), ("Nederrijn", "Nederrijn", 5.50, 51.955, 1, 12), ("Lek", "Lek", 5.18, 51.985, 1, 12),
     ("IJssel", "IJssel", 6.13, 52.36, 1, 13), ("Maas", "Maas", 5.88, 51.45, -1, 13), ("Maas", "Maas", 5.25, 51.775, 1, 12),
-    ("Bergsche Maas", "Bergsche Maas", 4.97, 51.715, -1, 10.5), ("Rijn", "Rhein", 6.62, 51.66, 1, 12),
-    ("Nieuwe Waterweg", "Nieuwe Waterweg", 4.2, 51.95, 1, 10), ("Eems", "Ems", 7.30, 53.05, 1, 11),
-    ("Maas", "Meuse", 5.70, 50.55, 1, 10.5), ("Schelde", "Schelde", 4.29, 51.10, 1, 10.5),
+    ("Bergsche Maas", "Bergsche Maas", 4.97, 51.715, -1, 10.5), ("Rijn", "Rhein", 6.45, 51.74, 1, 12),
+    ("Eems", "Ems", 7.30, 53.05, 1, 11),
+    ("Maas", "Meuse", 5.25, 50.53, 1, 10.5), ("Schelde", "Schelde", 4.29, 51.10, 1, 10.5),
     ("Overijsselsche Vecht", "Vecht", 6.55, 52.55, 1, 10), ("Zwarte Water", "Zwarte Water", 6.08, 52.58, 1, 9),
     ("Roer", "Roer", 6.10, 51.12, 1, 9), ("Dommel", "Dommel", 5.40, 51.58, 1, 9), ("Linge", "Linge", 5.25, 51.86, -1, 9),
     ("Noordzeekanaal", "Noordzeekanaal", 4.72, 52.43, 1, 9), ("Amsterdam-Rijnkanaal", "Amsterdam-Rijnkanaal", 5.20, 52.20, 1, 8.5),
     ("Twentekanaal", "Twentekanaal", 6.45, 52.22, 1, 8.5), ("Prinses Margrietkanaal", "Prinses Margrietkanaal", 5.62, 53.0, 1, 8.5),
-    ("Van Starkenborghkanaal", "Van Starkenborghkanaal", 6.38, 53.25, -1, 8.5),
+    ("Van Starkenborghkanaal", "Van Starkenborghkanaal", 6.28, 53.245, -1, 8.5),
     ("Lippe", "Lippe", 7.10, 51.67, 1, 9.5),
 ]
 
@@ -485,24 +490,24 @@ def river_label(ax, P, name, text, lon, lat, side, size):
 
 
 WATER_LABELS = [  # text, guide points (lon, lat), size, tracking
-    ("NOORDZEE", [(4.55, 53.80), (5.30, 53.84), (6.05, 53.80)], 30, 0.6),
+    ("NOORDZEE", [(2.66, 51.755), (3.10, 51.80), (3.54, 51.765)], 26, 0.6),
     ("WADDENZEE", [(5.05, 53.22), (5.5, 53.33), (6.0, 53.43)], 15, 0.5),
-    ("IJsselmeer", [(5.17, 52.83), (5.45, 52.90)], 16, 0.18),
+    ("IJsselmeer", [(5.20, 52.79), (5.48, 52.87)], 16, 0.18),
     ("Markermeer", [(5.12, 52.52), (5.33, 52.58)], 12, 0.15),
     ("Oosterschelde", [(3.72, 51.62), (3.92, 51.56), (4.08, 51.52)], 11, 0.12),
     ("Westerschelde", [(3.55, 51.41), (3.75, 51.38), (3.95, 51.37)], 11, 0.12),
     ("Haringvliet", [(4.05, 51.80), (4.25, 51.73)], 10, 0.1),
-    ("Hollandsch Diep", [(4.45, 51.69), (4.62, 51.70)], 9, 0.08),
+    ("Hollandsch Diep", [(4.47, 51.672), (4.62, 51.682)], 8.5, 0.06),
     ("Grevelingen", [(3.88, 51.735), (4.05, 51.71)], 9, 0.1),
     ("Lauwersmeer", [(6.15, 53.37), (6.25, 53.36)], 8, 0.05),
     ("Eems", [(6.95, 53.45), (7.05, 53.35)], 10, 0.12),
     ("Dollard", [(7.10, 53.27), (7.25, 53.26)], 9, 0.1),
 ]
-ISLANDS = [("Texel", [(4.745, 53.03), (4.79, 53.10), (4.86, 53.165)]), ("Vlieland", [(4.93, 53.235), (5.10, 53.30)]),
-           ("Terschelling", [(5.17, 53.37), (5.33, 53.42), (5.52, 53.45)]), ("Ameland", [(5.64, 53.45), (5.90, 53.46)]),
-           ("Schiermonnikoog", [(6.10, 53.478), (6.32, 53.495)])]
-REGIONS = [("VELUWE", [(5.70, 52.26), (5.95, 52.26)]), ("UTRECHTSE HEUVELRUG", [(5.27, 52.135), (5.40, 52.06), (5.55, 51.985)]),
-           ("DE PEEL", [(5.75, 51.38), (5.95, 51.38)]), ("HET GOOI", [(5.13, 52.28), (5.25, 52.28)])]
+ISLANDS = [("Texel", [(4.745, 53.03), (4.79, 53.10), (4.86, 53.165)]), ("Vlieland", [(4.93, 53.228), (5.10, 53.293)]),
+           ("Terschelling", [(5.17, 53.36), (5.33, 53.408), (5.52, 53.438)]), ("Ameland", [(5.64, 53.445), (5.90, 53.452)]),
+           ("Schiermonnikoog", [(6.12, 53.472), (6.30, 53.484)])]
+REGIONS = [("VELUWE", [(5.70, 52.26), (5.95, 52.26)]), ("DE PEEL", [(5.75, 51.38), (5.95, 51.38)]),
+           ("Afsluitdijk", [(5.10, 52.945), (5.33, 53.045)])]
 
 
 def smooth_guide(pts):
@@ -517,19 +522,21 @@ def smooth_guide(pts):
 def labels(ax, P):
     for name, x_, y_, ang in PROVINCES:
         T.straight_label(ax, PAPER, name, xy(x_, y_), T.fp(SANS), 11.5, P["muted"], ha="center", va="center",
-                         tracking=0.36, alpha=0.6, angle=ang, zorder=15)
+                         tracking=0.3, alpha=0.6, angle=ang, zorder=15)
     for name, x_, y_ in COUNTRIES:
         T.straight_label(ax, PAPER, name, xy(x_, y_), T.fp(SANS), 16, P["muted"], ha="center", va="center",
                          tracking=0.6, alpha=0.55, zorder=15)
     for name, pts in REGIONS:
-        T.curved_label(ax, PAPER, name, smooth_guide(pts), T.fp(SERIF, style="italic"), 9, P["muted"], tracking=0.3,
-                       smooth=0, zorder=15, halo=P["halo"], halo_pt=2.0)
+        on_water = name == "Afsluitdijk"                # the dam's name sits on the water beside it
+        T.curved_label(ax, PAPER, name, smooth_guide(pts), T.fp(SERIF, style="italic"), 9,
+                       P["water_ink"] if on_water else P["muted"], tracking=0.3 if not on_water else 0.12, smooth=0,
+                       zorder=15, halo=P["lake"] if on_water else P["halo"], halo_pt=2.0)
     for text, pts, size, tr in WATER_LABELS:
         T.curved_label(ax, PAPER, text, smooth_guide(pts), T.fp(SERIF, style="italic"), size, P["water_ink"],
-                       tracking=tr, smooth=0, zorder=16, alpha=0.85)
+                       tracking=tr, smooth=0, zorder=16, alpha=0.9, halo=P["lake"], halo_pt=2.4)
     for name, pts in ISLANDS:
-        T.curved_label(ax, PAPER, name, smooth_guide(pts), T.fp(SANS, "bold"), 9.5, P["ink"], tracking=0.22,
-                       smooth=0, zorder=15, alpha=0.3)
+        T.curved_label(ax, PAPER, name, smooth_guide(pts), T.fp(SANS, "bold"), 8.5, P["ink"], tracking=0.16,
+                       smooth=0, zorder=15, alpha=0.32)
     for name, size, where in CITIES:
         place_label(ax, P, name, size, where, "city")
     for name, where in TOWNS:
@@ -577,8 +584,8 @@ def story(ax, P):
                      ha="center", va="top", halo=P["halo"], halo_pt=2.8, dy=-7, zorder=22)
     x, y = xy(lo["lon"], lo["lat"])
     ax.scatter([x], [y], s=46, marker="v", color=P["ink"], edgecolors=P["halo"], linewidths=1.0, zorder=22)
-    T.straight_label(ax, PAPER, f"lowest ground {lo['m']:.1f} m".replace("-", "−"), (x, y), T.fp(SANS, "bold", "italic"), 9.5,
-                     P["ink"], ha="left", va="center", halo=P["halo"], halo_pt=2.8, dx=7, dy=-1, zorder=22)
+    T.straight_label(ax, PAPER, f"lowest ground {LOWEST} m", (x, y), T.fp(SANS, "bold", "italic"), 9.5,
+                     P["ink"], ha="right", va="center", halo=P["halo"], halo_pt=2.8, dx=-7, dy=-1, zorder=22)
 
 
 # ---------------------------------------------------------------- title block, legend, scale bar
@@ -600,7 +607,7 @@ def title_block(fig, ax, P, V):
     fig.text(fx, cm_to_fig(0, sy)[1], SUBTITLE_WRAPPED, fontsize=12.5, color=P["secondary"], fontfamily=SANS, va="top",
              ha="left", linespacing=1.45)
     bottom = sy - 0.62 * (SUBTITLE_WRAPPED.count("\n") + 1) - 0.4
-    return bottom - 1.2, (x - 0.6, bottom, x + 16.2, top + 0.6)
+    return bottom - 1.2, (x - 0.6, bottom, x + 15.6, top + 0.6)
 
 
 def legend(fig, ax, P, V, top_cm):
@@ -608,12 +615,13 @@ def legend(fig, ax, P, V, top_cm):
     x = G.MARGIN_CM + 1.4
     lax = fig.add_axes([0, 0, 1, 1], facecolor="none"); lax.set_xlim(0, G.PAPER_CM[0]); lax.set_ylim(0, G.PAPER_CM[1])
     lax.axis("off"); lax.set_zorder(40); lax.set_aspect("auto")
-    card = (x - 0.6, top_cm - 8 * 0.78 - 2.55, x + 11.4, top_cm + 0.65)
+    card = (x - 0.6, top_cm - 8 * 0.78 - 1.95, x + 11.4, top_cm + 0.65)
     for k, a in enumerate((0.05, 0.035, 0.025, 0.015)):
         d = 0.05 * (k + 1)
         lax.add_patch(Rectangle((card[0] - d + 0.06, card[1] - d - 0.08), card[2] - card[0] + 2 * d, card[3] - card[1] + 2 * d,
                                 facecolor=P["shadow"], alpha=a, edgecolor="none", zorder=-2))
-    lax.add_patch(Rectangle(card[:2], card[2] - card[0], card[3] - card[1], facecolor=P["card"], edgecolor="none", zorder=-1))
+    lax.add_patch(Rectangle(card[:2], card[2] - card[0], card[3] - card[1], facecolor=P["card"], edgecolor=P["card_edge"],
+                            lw=0.6, zorder=-1))
     rows = [
         ("swatch", 0, None, "Land below sea level (NAP 0 m), hatched"),
         ("swatch", 1, None, "More than 4 m below, cross-hatched"),
@@ -668,24 +676,29 @@ INSET_EXT = (1.0, 12.6, 45.6, 54.4)
 
 
 def inset(fig, P, V, rect_cm):
+    """The map-in-map on a card; rect_cm is the x and the top of the card's content, and the map's width, in paper cm.
+    Returns the card's box."""
     feats = load_fc("nl_inset.geojson")
     x0, x1, la0, la1 = INSET_EXT
     y0, y1 = float(G.merc_y(la0)), float(G.merc_y(la1))
-    x_cm, y_cm, w_cm = rect_cm
+    x_cm, top_cm, w_cm = rect_cm
     h_cm = w_cm * (y1 - y0) / (x1 - x0)
-    # card with a soft shadow
+    y_cm = top_cm - h_cm
+    # a card like the legend's, holding the map and its caption
     sax = fig.add_axes([0, 0, 1, 1], facecolor="none"); sax.set_xlim(0, G.PAPER_CM[0]); sax.set_ylim(0, G.PAPER_CM[1]); sax.axis("off")
-    sax.set_zorder(35)
-    for k, a in enumerate((0.05, 0.04, 0.03, 0.02)):
-        d = 0.06 * (k + 1)
-        sax.add_patch(Rectangle((x_cm - d + 0.08, y_cm - d - 0.1), w_cm + 2 * d, h_cm + 2 * d, facecolor=P["shadow"],
-                                alpha=a, edgecolor="none"))
+    sax.set_zorder(35); sax.set_aspect("auto")
+    card = (x_cm - 0.6, y_cm - 2.15, x_cm + w_cm + 0.6, y_cm + h_cm + 0.6)
+    for k, a in enumerate((0.05, 0.035, 0.025, 0.015)):
+        d = 0.05 * (k + 1)
+        sax.add_patch(Rectangle((card[0] - d + 0.06, card[1] - d - 0.08), card[2] - card[0] + 2 * d, card[3] - card[1] + 2 * d,
+                                facecolor=P["shadow"], alpha=a, edgecolor="none"))
+    sax.add_patch(Rectangle(card[:2], card[2] - card[0], card[3] - card[1], facecolor=P["card"], edgecolor=P["card_edge"], lw=0.6))
     iax = fig.add_axes([x_cm / G.PAPER_CM[0], y_cm / G.PAPER_CM[1], w_cm / G.PAPER_CM[0], h_cm / G.PAPER_CM[1]])
     iax.set_zorder(36)
     iax.set_xlim(x0, x1); iax.set_ylim(y0, y1); iax.set_xticks([]); iax.set_yticks([])
     iax.set_facecolor(P["sea"])
-    for s in iax.spines.values():
-        s.set_visible(True); s.set_color(P["ink"]); s.set_linewidth(0.6)
+    for s_ in iax.spines.values():
+        s_.set_visible(True); s_.set_color(P["rule"]); s_.set_linewidth(0.5)
     for g, p in feats:
         g = to_map(g)
         if p["layer"] == "country":
@@ -711,7 +724,7 @@ def inset(fig, P, V, rect_cm):
         iax.add_collection(LineCollection(lines_of(g), colors=col, linewidths=lw, zorder=3 if is_main else 2,
                                           capstyle="round", joinstyle="round"))
     # the main map's frame
-    iax.add_patch(Rectangle((X0, Y0), X1 - X0, Y1 - Y0, fill=False, edgecolor=P["accent"], lw=0.9, zorder=5))
+    iax.add_patch(Rectangle((X0, Y0), X1 - X0, Y1 - Y0, fill=False, edgecolor=P["ink"], lw=0.7, zorder=5))
     ip = T.Paper(x0, y0, w_cm * CM * 72 / (x1 - x0))
     T.straight_label(iax, ip, "Rhein", xy(8.15, 49.6), T.fp(SERIF, style="italic"), 9, P["water_ink"], ha="left", va="center",
                      halo=P["halo"], halo_pt=2, dx=4, angle=70)
@@ -721,11 +734,11 @@ def inset(fig, P, V, rect_cm):
                      halo=P["halo"], halo_pt=2, dy=-5)
     T.straight_label(iax, ip, "ALPEN", xy(9.7, 46.4), T.fp(SANS), 7.5, P["muted"], ha="center", va="center", tracking=0.4)
     # caption under the card
-    t = fig.text(x_cm / G.PAPER_CM[0], (y_cm - 0.3) / G.PAPER_CM[1],
-                 "Where the water comes from: the Rhine rises in the Alps,\nthe Maas in north-east France", fontsize=10,
-                 color=P["secondary"], fontfamily=SANS, ha="left", va="top", linespacing=1.35, zorder=37)
-    t.set_path_effects([pe.withStroke(linewidth=3, foreground=P["land_other"])])
-    return iax
+    sax.text(x_cm, y_cm - 0.35, "WHERE THE WATER COMES FROM", fontsize=9, color=P["water_ink"], fontfamily=SANS,
+             fontweight="bold", ha="left", va="top")
+    sax.text(x_cm, y_cm - 0.9, "The Rhine rises in the Swiss Alps, the Maas in north-east France;\nthe rectangle is the extent of the main map",
+             fontsize=10, color=P["secondary"], fontfamily=SANS, ha="left", va="top", linespacing=1.35)
+    return card
 
 
 # ---------------------------------------------------------------- draw
@@ -759,12 +772,13 @@ def draw(V):
     labels(ax, P)
     story(ax, P)
     bottom, tbox = title_block(fig, ax, P, V)
-    lbox = legend(fig, ax, P, V, bottom)
-    boxes = [cm_to_data(*tbox[:2]) + cm_to_data(*tbox[2:]), cm_to_data(*lbox[:2]) + cm_to_data(*lbox[2:])]
+    legend_h = 0.65 + 8 * 0.78 + 2.0                  # the legend card sits on the quiet land in the lower left
+    lbox = legend(fig, ax, P, V, G.MARGIN_CM + 0.8 + legend_h - 0.65)
+    ibox = inset(fig, P, V, (G.MARGIN_CM + 1.4, bottom, INSET_W))
+    boxes = [cm_to_data(*b[:2]) + cm_to_data(*b[2:]) for b in (tbox, lbox, ibox)]
     a, b = cm_to_data(*tbox[:2]), cm_to_data(*tbox[2:])
     ax.add_patch(Rectangle(a, b[0] - a[0], b[1] - a[1], facecolor=P["sea"], edgecolor="none", zorder=1.5))
     crosses(ax, P, V, boxes)
-    inset(fig, P, V, INSET_RECT)
     footer_line(fig, P)
     # frame
     ax.add_patch(Rectangle((X0, Y0), X1 - X0, Y1 - Y0, fill=False, edgecolor=P["ink"], lw=0.8, zorder=30))

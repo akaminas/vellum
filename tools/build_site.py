@@ -157,11 +157,9 @@ def links(it):
 
 
 def figure_block(it, cls=""):
+    # the figure carries its own claim, units and source; the caption only gives the files
     body = twin_imgs(it)
     cap = []
-    if it.get("caption"): cap.append(e(it["caption"]))
-    meta = " · ".join(e(x) for x in (it.get("data"), it.get("note")) if x)
-    if meta: cap.append(meta)
     parts = ""
     if it.get("parts"):
         parts = '<ol class="parts small">' + "".join(f"<li>{e(p)}</li>" for p in it["parts"]) + "</ol>"

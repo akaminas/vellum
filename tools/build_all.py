@@ -15,9 +15,9 @@ RSCRIPT = r"C:\Program Files\R\R-4.6.1\bin\Rscript.exe" if os.name == "nt" else 
 steps = [("ecology data", [RSCRIPT, "examples/python/ecology/export_data.R"])]
 for group in ("science", "threed", "colour", "ecology", "sustainability", "maps"):
     scripts = sorted(glob.glob(os.path.join(REPO, "examples", "python", group, "*.py")))
-    # helpers start with "_"; fetch_* scripts download data, which is committed, so they are run by hand
+    # helpers start with "_" or "nl_"; fetch_* scripts download data, which is committed, so they are run by hand
     steps += [(f"{group}/{os.path.basename(f)}", [PY, f]) for f in scripts
-              if not os.path.basename(f).startswith(("_", "fetch"))]
+              if not os.path.basename(f).startswith(("_", "fetch", "nl_"))]
 steps += [
     ("report", [PY, "examples/python/report/make_report.py"]),
     ("infographic", [PY, "examples/python/infographic/make_infographics.py"]),

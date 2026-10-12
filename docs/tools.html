@@ -73,12 +73,11 @@
 
 <h2 id="pipeline">Pipeline</h2>
 <!--#fig tools/tikz_pipeline wide-->
-<figure class="figure wide" id="fig-tools-tikz_pipeline"><div class="frame"><img class="zoom twin-light " src="figures/tools/tikz_pipeline_light.png" data-full="figures/tools/tikz_pipeline_light.png" data-caption="Every colour is defined once, in vellum.json, and every style file derives from it" alt="A left-to-right diagram: build_palettes.py searches OKLCH for the tone lightness and writes palettes.json; make_vellum_json.py turns it into vellum.json, the source of truth; make_assets.py generates vellum.mplstyle, vellum.R, vellum-colors.sty, vellum.css and vellum-office.tsv, and the hand-written vellum.py reads vellum.json at run time; the files feed matplotlib, ggplot2, pgfplots, TikZ and beamer, the web, and Office and Canva." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/tikz_pipeline_dark.png" data-full="figures/tools/tikz_pipeline_dark.png" data-caption="Every colour is defined once, in vellum.json, and every style file derives from it" alt="A left-to-right diagram: build_palettes.py searches OKLCH for the tone lightness and writes palettes.json; make_vellum_json.py turns it into vellum.json, the source of truth; make_assets.py generates vellum.mplstyle, vellum.R, vellum-colors.sty, vellum.css and vellum-office.tsv, and the hand-written vellum.py reads vellum.json at run time; the files feed matplotlib, ggplot2, pgfplots, TikZ and beamer, the web, and Office and Canva." loading="lazy" decoding="async"></div><figcaption>the repository&#x27;s own generators/ and style/ folders<p class="fig-links"><a href="figures/tools/tikz_pipeline_light.png">PNG</a> <a href="figures/tools/tikz_pipeline_dark.png">PNG, dark</a> <a href="figures/tools/tikz_pipeline_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/tikz_pipeline.tex">Script</a></p></figcaption></figure>
+<figure class="figure wide" id="fig-tools-tikz_pipeline"><div class="frame"><img class="zoom twin-light " src="figures/tools/tikz_pipeline_light.png" data-full="figures/tools/tikz_pipeline_light.png" data-caption="Every colour is defined once, in vellum.json, and every style file derives from it" alt="A left-to-right diagram: build_palettes.py searches OKLCH for the tone lightness and writes palettes.json; make_vellum_json.py turns it into vellum.json, the source of truth; make_assets.py generates vellum.mplstyle, vellum.R, vellum-colors.sty, vellum.css and vellum-office.tsv, and the hand-written vellum.py reads vellum.json at run time; the files feed matplotlib, ggplot2, pgfplots, TikZ and beamer, the web, and Office and Canva." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/tikz_pipeline_dark.png" data-full="figures/tools/tikz_pipeline_dark.png" data-caption="Every colour is defined once, in vellum.json, and every style file derives from it" alt="A left-to-right diagram: build_palettes.py searches OKLCH for the tone lightness and writes palettes.json; make_vellum_json.py turns it into vellum.json, the source of truth; make_assets.py generates vellum.mplstyle, vellum.R, vellum-colors.sty, vellum.css and vellum-office.tsv, and the hand-written vellum.py reads vellum.json at run time; the files feed matplotlib, ggplot2, pgfplots, TikZ and beamer, the web, and Office and Canva." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/tools/tikz_pipeline_light.png">PNG</a> <a href="figures/tools/tikz_pipeline_dark.png">PNG, dark</a> <a href="figures/tools/tikz_pipeline_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/tikz_pipeline.tex">Script</a></p></figcaption></figure>
 <!--/fig-->
 <div class="split">
   <div class="prose">
-    <p><code>build_palettes.py</code> runs a seeded search for tone lightness that maximises the smallest neighbour distance at 3:1 contrast. <code>make_vellum_json.py</code> derives tints, deeps, ramps, diverging scale, gradients and dark twin, and writes <code>vellum.json</code>. <code>make_assets.py</code> writes the five tool files.</p>
-    <p>The pipeline reproduces the published files byte for byte.</p>
+    <p>To rebuild the style files:</p>
   </div>
   <div>
 <pre data-copy><code>cd generators
@@ -109,7 +108,7 @@ git diff --stat ../style                    # nothing: the files are reproduced 
 <h2 id="python">matplotlib</h2>
 <div class="split">
   <div>
-    <p><code>use</code> resets the rcParams: fonts (Corbel, then Lato, Segoe UI, DejaVu Sans), surface, spines, grid, ticks, colour cycle, line width, and save options (300 dpi, Type 42 fonts). The helpers implement the anatomy.</p>
+    <p><code>use</code> sets the rcParams; the helpers draw the anatomy.</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th>helper</th><th>does</th></tr></thead>
@@ -146,56 +145,60 @@ ax3 = V.axes3d(fig, rect=(0, 0.02, 0.55, 0.74), labels=("z1", "z2", "w"))
 V.surface3d(ax3, Z1, Z2, W, cmap=V.cmap_gradient("lagoon"))</code></pre>
   </div>
 </div>
-<p class="prose">Gallery scripts: <a href="https://github.com/akaminas/vellum/tree/main/examples/python"><code>examples/python/</code></a>, each drawing both twins from one function (<a href="gallery.html">gallery</a>).</p>
+<p class="prose">Examples: <a href="https://github.com/akaminas/vellum/tree/main/examples/python"><code>examples/python/</code></a>.</p>
 
 <h2 id="r">R and ggplot2</h2>
 <div class="split rev">
   <div>
     <!--#fig tools/ggplot_penguins-->
-<figure class="figure " id="fig-tools-ggplot_penguins"><div class="frame"><img class="zoom twin-light " src="figures/tools/ggplot_penguins_light.png" data-full="figures/tools/ggplot_penguins_light.png" data-caption="Within each species longer beaks are deeper; pooled, the trend reverses" alt="A scatter plot of beak depth against beak length for 342 penguins: within Adélie, Chinstrap and Gentoo the fitted slopes are +0.18, +0.22 and +0.20 mm per mm, while one line through all three species slopes at −0.09." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/ggplot_penguins_dark.png" data-full="figures/tools/ggplot_penguins_dark.png" data-caption="Within each species longer beaks are deeper; pooled, the trend reverses" alt="A scatter plot of beak depth against beak length for 342 penguins: within Adélie, Chinstrap and Gentoo the fitted slopes are +0.18, +0.22 and +0.20 mm per mm, while one line through all three species slopes at −0.09." loading="lazy" decoding="async"></div><figcaption>Palmer penguins, Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via vega-datasets 2.8.0 · Simpson&#x27;s paradox: the pooled trend reverses the trend inside every species.<p class="fig-links"><a href="figures/tools/ggplot_penguins_light.png">PNG</a> <a href="figures/tools/ggplot_penguins_dark.png">PNG, dark</a> <a href="figures/tools/ggplot_penguins_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/r/ggplot_penguins.R">Script</a></p></figcaption></figure>
+<figure class="figure " id="fig-tools-ggplot_penguins"><div class="frame"><img class="zoom twin-light " src="figures/tools/ggplot_penguins_light.png" data-full="figures/tools/ggplot_penguins_light.png" data-caption="Within each species longer beaks are deeper; pooled, the trend reverses" alt="A scatter plot of beak depth against beak length for 342 penguins: within Adélie, Chinstrap and Gentoo the fitted slopes are +0.18, +0.22 and +0.20 mm per mm, while one line through all three species slopes at −0.09." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/ggplot_penguins_dark.png" data-full="figures/tools/ggplot_penguins_dark.png" data-caption="Within each species longer beaks are deeper; pooled, the trend reverses" alt="A scatter plot of beak depth against beak length for 342 penguins: within Adélie, Chinstrap and Gentoo the fitted slopes are +0.18, +0.22 and +0.20 mm per mm, while one line through all three species slopes at −0.09." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/tools/ggplot_penguins_light.png">PNG</a> <a href="figures/tools/ggplot_penguins_dark.png">PNG, dark</a> <a href="figures/tools/ggplot_penguins_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/r/ggplot_penguins.R">Script</a></p></figcaption></figure>
 <!--/fig-->
   </div>
   <div>
-    <p>Source the file, add the theme and scales, put the claim in <code>labs(title)</code> and the unit in <code>labs(subtitle)</code>. The theme drops the y title, legend and vertical grid.</p>
+    <p>Add <code>theme_vellum()</code> and the scales; claim in <code>labs(title)</code>, unit in <code>labs(subtitle)</code>.</p>
     <ol class="small">
-      <li>Room for end labels: <code>expansion(mult = c(0, 0.32))</code> on x.</li>
+      <li>End labels: <code>expansion(mult = c(0, 0.32))</code> on x.</li>
       <li>Highlight: <code>values = c(rest = vellum$rule, focus = vellum$tone[2])</code>.</li>
       <li>Error bars: <code>geom_errorbar(width = 0, colour = vellum$secondary, linewidth = vellum$thin)</code>.</li>
       <li>Heat map: <code>geom_tile(colour = vellum$surface, linewidth = 0.4)</code> with <code>scale_fill_vellum_grad("lagoon")</code>.</li>
-      <li>3D: ggplot2 has none; use base <code>persp</code> for the surface.</li>
+      <li>3D: base <code>persp</code>.</li>
     </ol>
   </div>
 </div>
 <!--#fig tools/persp_landscape wide-->
-<figure class="figure wide" id="fig-tools-persp_landscape"><div class="frame"><img class="zoom twin-light " src="figures/tools/persp_landscape_light.png" data-full="figures/tools/persp_landscape_light.png" data-caption="A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72" alt="A lagoon-coloured surface drawn with R persp(): a peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90 and a saddle of 0.26 between them; beside it the same values from above as an image with seven contour lines and a colour bar." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/persp_landscape_dark.png" data-full="figures/tools/persp_landscape_dark.png" data-caption="A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72" alt="A lagoon-coloured surface drawn with R persp(): a peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90 and a saddle of 0.26 between them; beside it the same values from above as an image with seven contour lines and a colour bar." loading="lazy" decoding="async"></div><figcaption>analytic two-trait landscape w(z1, z2) from examples/python/_common.py (illustrative) · illustrative: an analytic function, not data. The same surface is drawn in matplotlib and pgfplots.<p class="fig-links"><a href="figures/tools/persp_landscape_light.png">PNG</a> <a href="figures/tools/persp_landscape_dark.png">PNG, dark</a> <a href="figures/tools/persp_landscape_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/r/persp_landscape.R">Script</a></p></figcaption></figure>
+<figure class="figure wide" id="fig-tools-persp_landscape"><div class="frame"><img class="zoom twin-light " src="figures/tools/persp_landscape_light.png" data-full="figures/tools/persp_landscape_light.png" data-caption="A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72" alt="A lagoon-coloured surface drawn with R persp(): a peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90 and a saddle of 0.26 between them; beside it the same values from above as an image with seven contour lines and a colour bar." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/persp_landscape_dark.png" data-full="figures/tools/persp_landscape_dark.png" data-caption="A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72" alt="A lagoon-coloured surface drawn with R persp(): a peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90 and a saddle of 0.26 between them; beside it the same values from above as an image with seven contour lines and a colour bar." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/tools/persp_landscape_light.png">PNG</a> <a href="figures/tools/persp_landscape_dark.png">PNG, dark</a> <a href="figures/tools/persp_landscape_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/r/persp_landscape.R">Script</a></p></figcaption></figure>
 <!--/fig-->
 
 <h2 id="latex">LaTeX: pgfplots, TikZ, beamer</h2>
 <div class="split">
   <div>
-    <p>Load after TikZ and pgfplots. Tones <code>vteal</code> … <code>vmoss</code>, tints <code>vtealTint</code>, deeps <code>vtealDeep</code>, neutrals <code>vSurface</code> … <code>vInk</code>; the dark twin adds <code>D</code> (<code>vtealD</code>). Do not mix families with <code>!</code>; the result is off-palette.</p>
-    <p><code>vellum</code> axis style: bottom axis line, horizontal hairline grid, no tick marks, muted tick labels with a true minus, slot order at 1.6 pt, frameless legend. The axis <code>title</code> is the unit line; the claim goes outside the axis in the serif. <code>vellum 3d</code>: view, box, flat shading, horizontal axis names (<code>z buffer=sort</code> on the surface plot only). Dark variants: <code>vellum dark</code>, <code>vellum 3d dark</code>. Colormaps: <code>vellum lagoon</code>, <code>vellum ember</code>, <code>vellum shore</code> and the single families, each with <code> dark</code>. TikZ: <code>vellum box</code>, <code>vellum box tint=&lt;family&gt;</code>, <code>vellum arrow</code>, <code>vellum guide</code>, <code>vellum label</code>, <code>vellum claim</code>; <code>\vellumtikzdark</code> switches to the dark twin.</p>
+    <p>Load after TikZ and pgfplots.</p>
+    <ul class="small">
+      <li>Colours: <code>vteal</code> … <code>vmoss</code>, <code>vtealTint</code>, <code>vtealDeep</code>, <code>vSurface</code> … <code>vInk</code>; dark twin adds <code>D</code> (<code>vtealD</code>). Do not mix with <code>!</code>.</li>
+      <li>Axes: <code>vellum</code>, <code>vellum 3d</code> (<code>z buffer=sort</code> on the surface only), <code>vellum dark</code>, <code>vellum 3d dark</code>. The axis <code>title</code> is the unit line.</li>
+      <li>Colormaps: <code>vellum lagoon</code>, <code>vellum ember</code>, <code>vellum shore</code>, the single families, each with <code> dark</code>.</li>
+      <li>TikZ: <code>vellum box</code>, <code>vellum box tint=&lt;family&gt;</code>, <code>vellum arrow</code>, <code>vellum guide</code>, <code>vellum label</code>, <code>vellum claim</code>; <code>\vellumtikzdark</code>.</li>
+    </ul>
 <pre data-copy><code>\node[vellum box tint=indigo] (a) {source\\ the data};
 \node[vellum box tint=teal, right=1cm of a] (b) {script\\ draws the figure};
 \draw[vellum arrow] (a) -- node[vellum label, above] {reads} (b);</code></pre>
   </div>
   <div>
     <!--#fig tools/pgfplots_co2-->
-<figure class="figure " id="fig-tools-pgfplots_co2"><div class="frame"><img class="zoom twin-light " src="figures/tools/pgfplots_co2_light.png" data-full="figures/tools/pgfplots_co2_light.png" data-caption="Carbon dioxide at Mauna Loa rose every year from 1959 to 2019" alt="A line chart of annual mean CO2 at Mauna Loa rising every year from 316.0 ppm in 1959 to 411.5 ppm in 2019, passing the dotted 350 ppm reference in 1988." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/pgfplots_co2_dark.png" data-full="figures/tools/pgfplots_co2_dark.png" data-caption="Carbon dioxide at Mauna Loa rose every year from 1959 to 2019" alt="A line chart of annual mean CO2 at Mauna Loa rising every year from 316.0 ppm in 1959 to 411.5 ppm in 2019, passing the dotted 350 ppm reference in 1988." loading="lazy" decoding="async"></div><figcaption>Mauna Loa monthly CO2, NOAA Global Monitoring Laboratory and Scripps Institution of Oceanography, 1958-2020, via vega-datasets 2.8.0<p class="fig-links"><a href="figures/tools/pgfplots_co2_light.png">PNG</a> <a href="figures/tools/pgfplots_co2_dark.png">PNG, dark</a> <a href="figures/tools/pgfplots_co2_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/pgfplots_co2.tex">Script</a></p></figcaption></figure>
+<figure class="figure " id="fig-tools-pgfplots_co2"><div class="frame"><img class="zoom twin-light " src="figures/tools/pgfplots_co2_light.png" data-full="figures/tools/pgfplots_co2_light.png" data-caption="Carbon dioxide at Mauna Loa rose every year from 1959 to 2019" alt="A line chart of annual mean CO2 at Mauna Loa rising every year from 316.0 ppm in 1959 to 411.5 ppm in 2019, passing the dotted 350 ppm reference in 1988." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/pgfplots_co2_dark.png" data-full="figures/tools/pgfplots_co2_dark.png" data-caption="Carbon dioxide at Mauna Loa rose every year from 1959 to 2019" alt="A line chart of annual mean CO2 at Mauna Loa rising every year from 316.0 ppm in 1959 to 411.5 ppm in 2019, passing the dotted 350 ppm reference in 1988." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/tools/pgfplots_co2_light.png">PNG</a> <a href="figures/tools/pgfplots_co2_dark.png">PNG, dark</a> <a href="figures/tools/pgfplots_co2_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/pgfplots_co2.tex">Script</a></p></figcaption></figure>
 <!--/fig-->
   </div>
 </div>
 <!--#fig tools/pgfplots_landscape wide-->
-<figure class="figure wide" id="fig-tools-pgfplots_landscape"><div class="frame"><img class="zoom twin-light " src="figures/tools/pgfplots_landscape_light.png" data-full="figures/tools/pgfplots_landscape_light.png" data-caption="A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72" alt="A lagoon-coloured surface with a high peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90, and a saddle of 0.26 between them; beside it the same surface seen from above as a heat map with seven contour lines and a colour bar." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/pgfplots_landscape_dark.png" data-full="figures/tools/pgfplots_landscape_dark.png" data-caption="A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72" alt="A lagoon-coloured surface with a high peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90, and a saddle of 0.26 between them; beside it the same surface seen from above as a heat map with seven contour lines and a colour bar." loading="lazy" decoding="async"></div><figcaption>analytic two-trait landscape w(z1, z2) from examples/python/_common.py (illustrative) · illustrative: an analytic function, not data. The same surface is drawn in matplotlib and base R persp.<p class="fig-links"><a href="figures/tools/pgfplots_landscape_light.png">PNG</a> <a href="figures/tools/pgfplots_landscape_dark.png">PNG, dark</a> <a href="figures/tools/pgfplots_landscape_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/pgfplots_landscape.tex">Script</a></p></figcaption></figure>
+<figure class="figure wide" id="fig-tools-pgfplots_landscape"><div class="frame"><img class="zoom twin-light " src="figures/tools/pgfplots_landscape_light.png" data-full="figures/tools/pgfplots_landscape_light.png" data-caption="A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72" alt="A lagoon-coloured surface with a high peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90, and a saddle of 0.26 between them; beside it the same surface seen from above as a heat map with seven contour lines and a colour bar." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/pgfplots_landscape_dark.png" data-full="figures/tools/pgfplots_landscape_dark.png" data-caption="A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72" alt="A lagoon-coloured surface with a high peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90, and a saddle of 0.26 between them; beside it the same surface seen from above as a heat map with seven contour lines and a colour bar." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/tools/pgfplots_landscape_light.png">PNG</a> <a href="figures/tools/pgfplots_landscape_dark.png">PNG, dark</a> <a href="figures/tools/pgfplots_landscape_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/pgfplots_landscape.tex">Script</a></p></figcaption></figure>
 <!--/fig-->
-<p class="prose">Beamer: <code>\vellumbeamer</code> or <code>\vellumbeamerdark</code> sets structure in teal, alerts in terracotta, blocks on the card, serif frame titles, no navigation symbols. Used for the <a href="media.html#talk">talk deck</a> and the <a href="media.html#poster">A0 poster</a>.</p>
+<p class="prose">Beamer: <code>\vellumbeamer</code> or <code>\vellumbeamerdark</code>, as in the <a href="media.html#talk">talk deck</a> and <a href="media.html#poster">poster</a>.</p>
 
 <h2 id="web">Web</h2>
 <div class="split">
   <div class="prose">
-    <p><code>vellum.css</code>: every colour as a <code>--v-*</code> variable under <code>:root</code>, dark values under <code>[data-theme="dark"]</code>, plus fonts and the three gradients. This site uses it.</p>
-    <p><a href="https://github.com/akaminas/vellum/blob/main/docs/assets/js/vellum-web.js"><code>vellum-web.js</code></a> reads <code>vellum.json</code> and provides SVG helpers: <code>axes</code> with grid and unit line, ringed <code>dot</code>s, dotted <code>reference</code> lines, <code>endLabels</code> with leaders, a value-first <code>tooltip</code>, and colour science (OKLCH, colour-vision simulation, ΔE, contrast) matching the Python generators. Plain JavaScript, no dependencies; used for the <a href="interactive.html">interactive page</a>.</p>
-    <p>Charts read the tokens at run time, so they follow the page theme.</p>
+    <p><code>vellum.css</code>: colours as <code>--v-*</code> variables, dark values under <code>[data-theme="dark"]</code>.</p>
+    <p><a href="https://github.com/akaminas/vellum/blob/main/docs/assets/js/vellum-web.js"><code>vellum-web.js</code></a>: SVG helpers (<code>axes</code>, <code>dot</code>, <code>reference</code>, <code>endLabels</code>, <code>tooltip</code>) and colour functions; no dependencies.</p>
   </div>
 <pre data-copy><code>import * as V from "./vellum-web.js";
 
@@ -220,30 +223,29 @@ V.responsive(plot, (width, P) => {       // redraws on resize and when the twin 
     <ol class="small secondary">
       <li>Design → Variants → Colors → Customize. Dark 1 ink <code>2A2825</code>, Light 1 surface <code>FFFFFF</code>, Dark 2 secondary <code>5A5650</code>, Light 2 card <code>FAF6EE</code>.</li>
       <li>Accents 1–6, tones in slot order: <code>419BA0</code> <code>A1644F</code> <code>415688</code> <code>806629</code> <code>AD78A1</code> <code>567E4D</code>. Hyperlink: <code>415688</code>.</li>
-      <li>Fonts: Palatino Linotype headings, Corbel body. Save as <code>Vellum.thmx</code>; make a dark theme from the TSV's dark rows.</li>
-      <li>Charts: gridlines <code>E6E0D4</code> at 0.5 pt, no border, no vertical gridlines, no legend up to four series, text boxes at line ends, chart area no fill.</li>
+      <li>Fonts: Palatino Linotype headings, Corbel body. Save as <code>Vellum.thmx</code>.</li>
+      <li>Charts: gridlines <code>E6E0D4</code> at 0.5 pt, no border or vertical gridlines, labels at line ends, no fill.</li>
     </ol>
   </div>
   <div class="card">
     <h3>Canva</h3>
     <ol class="small secondary">
-      <li>Brand Kit → Colors: seven neutrals, six tones and six tints from <code>vellum-office.tsv</code>, named by family and step; status colours in a group "status, with an icon".</li>
-      <li>Fonts: Palatino Linotype headings if uploads are allowed, else EB Garamond; Lato body.</li>
-      <li>One template per infographic format: headline, three tiles, figure slot, white surface.</li>
-      <li>Import figures as PNGs at the format's pixel size; Canva charts cannot do end labels or rings.</li>
+      <li>Brand Kit → Colors: neutrals, tones and tints from <code>vellum-office.tsv</code>.</li>
+      <li>Fonts: Palatino Linotype (else EB Garamond) headings, Lato body.</li>
+      <li>Import figures as PNGs at the format's pixel size.</li>
     </ol>
   </div>
   <div class="card">
     <h3>Excalidraw</h3>
-    <p class="small secondary">White background. Boxes: 1 px secondary <code>#5A5650</code> stroke, card or tint fill. Text: ink, 16 px, "normal" font. Arrows secondary, guides dotted rule <code>#C7C3BD</code>, labels muted. Highlights: terracotta tint with terracotta deep text. Roughness 0.</p>
+    <p class="small secondary">Roughness 0. Boxes: 1 px <code>#5A5650</code> stroke, card or tint fill. Text: ink, 16 px. Guides: dotted <code>#C7C3BD</code>.</p>
   </div>
   <div class="card">
     <h3>Google Docs and Slides, Excel</h3>
-    <p class="small secondary">Enter colours from the TSV in the custom picker. Lato body; EB Garamond or Libre Baskerville headings (Google has no Palatino). Excel tables: ink header on card, alternate rows in card, lining figures. Report charts: draw with <code>vellum.py</code> or <code>vellum.R</code> from exported CSV.</p>
+    <p class="small secondary">Colours from the TSV; Lato body, EB Garamond headings. Tables: ink header on card, alternate rows in card.</p>
   </div>
 </div>
 <div class="key">
-  <p><strong>Not used:</strong> gradient fills on shapes, slides or text (only legend bars, from the TSV's nine stops); Office or Canva 3D charts. Put 3D figures in decks as PNGs from matplotlib or R at slot size.</p>
+  <p>No gradient fills on shapes or text, and no Office or Canva 3D charts; use PNGs from matplotlib or R.</p>
 </div>
 
 </main>
@@ -261,7 +263,7 @@ V.responsive(plot, (width, P) => {       // redraws on resize and when the twin 
       <li><a href="forms.html">Forms</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
       <li><a href="https://github.com/akaminas/vellum">GitHub</a></li><li><a href="downloads/vellum-style.zip">Download</a></li>
     </ul>
-    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git 7b4aa1d</p>
+    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git a8f0420</p>
   </div>
 </footer>
 <!--/footer-->

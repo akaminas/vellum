@@ -74,57 +74,53 @@
 
 <section>
   <h2 class="mt-0">3D surface and flat twin</h2>
-  <p class="prose">A two-peak surface, shaded by height on the lagoon gradient. Drag to rotate it; point at the flat twin to mark the same spot on the surface (an open ring when hidden). The view starts orthographic at elevation 24°, azimuth −58°; "Reset view" returns there.</p>
+  <p class="prose">A two-peak surface and its flat twin. Drag to rotate; point at the twin to mark the same spot on the surface.</p>
   <div class="vfig" id="surface3d" data-interactive="surface3d"></div>
 </section>
 
 <section>
   <h2>Life expectancy explorer</h2>
-  <p class="prose">Choose up to four countries; each keeps its colour while selected, and the world average sits behind in grey. The crosshair reads every line for a year, and the title is recomputed for the selection.</p>
+  <p class="prose">Choose up to four countries against the world average; the crosshair reads every line for a year.</p>
   <div class="vfig" id="life_explorer" data-interactive="life_explorer"></div>
 </section>
 
 <section>
   <h2>Progressive reveal</h2>
-  <p class="prose">Life expectancy by income group, built one series per step as in a talk, with fixed axes; step 5 highlights the claim's group in terracotta. Press 1, then Next or the arrow keys.</p>
+  <p class="prose">Life expectancy by income group, one series per step. Press 1, then Next or the arrow keys.</p>
   <div class="vfig" id="reveal" data-interactive="reveal"></div>
 </section>
 
 <section>
   <h2>Heat map</h2>
-  <p class="prose">Disaster deaths by type and decade, 1900s to 2010s, on a log-scaled lagoon gradient; hatched cells have no record. Point at the cells, or tab in and use the arrow keys; rows can be sorted by total.</p>
+  <p class="prose">Disaster deaths by type and decade; hatched cells have no record. Point at a cell or use the arrow keys; sort rows by total.</p>
   <div class="vfig" id="disasters_heat" data-interactive="disasters_heat"></div>
 </section>
 
 <section>
   <h2>Penguin scatter</h2>
-  <p class="prose">Pick any two of four penguin measures; each species gets a fit line labelled with its correlation, and the title is recomputed. Beak length against depth shows Simpson's paradox, with the pooled fit as a dotted grey line.</p>
+  <p class="prose">Pick any two of four penguin measures; each species gets its own fit. Beak length against depth shows Simpson's paradox.</p>
   <div class="vfig" id="penguins_scatter" data-interactive="penguins_scatter"></div>
 </section>
 
 <section>
   <h2>World map</h2>
-  <p class="prose">Life expectancy in five teal classes fixed at the 2023 quintiles; use the slider to move between 1950 and 2023. A linked dot strip below shows small countries. Missing values are hatched in terracotta.</p>
+  <p class="prose">Life expectancy in five classes fixed at the 2023 quintiles. Move the slider from 1950 to 2023.</p>
   <div class="vfig" id="life_map" data-interactive="life_map"></div>
 </section>
 
 <section>
   <h2>Network</h2>
-  <p class="prose">Character co-occurrence in a static, pre-computed force layout; the six largest groups take the six tones. Hover, tap or search a character to highlight it and its neighbours in terracotta.</p>
+  <p class="prose">Character co-occurrence. Hover, tap or search a character to highlight its neighbours.</p>
   <div class="vfig" id="network" data-interactive="network"></div>
 </section>
 
 <section id="colour-tools">
   <h2>Colour tools</h2>
-  <p class="prose">The three tools from the <a href="colour.html">colour page</a>, computed live from <code>vellum.json</code> with the same formulas as the Python generators. The simulator shows the palette under each colour-vision deficiency beside a common default palette, two of whose colours fall to 0.7 apart under protanopia. The gradient inspector plots lightness along each gradient, including a rainbow for comparison.</p>
+  <p class="prose">The <a href="colour.html">colour page</a> tools, computed live from <code>vellum.json</code>: a colour-vision simulator, a gradient inspector and a palette explorer.</p>
   <div class="vfig" id="cvd_simulator" data-interactive="cvd_simulator"></div>
   <div class="vfig" id="gradient_explorer" data-interactive="gradient_explorer"></div>
   <div class="vfig" id="palette_explorer" data-interactive="palette_explorer"></div>
 </section>
-
-<div class="key mt-6">
-  <p><strong>Build.</strong> Plain JavaScript modules on <a href="https://github.com/akaminas/vellum/blob/main/docs/assets/js/vellum-web.js"><code>vellum-web.js</code></a>, which reads the same <code>vellum.json</code> as the other tools. No framework or chart library. Each figure has a table view for readers who do not use a pointer.</p>
-</div>
 
 </main>
 
@@ -141,7 +137,7 @@
       <li><a href="forms.html">Forms</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
       <li><a href="https://github.com/akaminas/vellum">GitHub</a></li><li><a href="downloads/vellum-style.zip">Download</a></li>
     </ul>
-    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git 7b4aa1d</p>
+    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git a8f0420</p>
   </div>
 </footer>
 <!--/footer-->

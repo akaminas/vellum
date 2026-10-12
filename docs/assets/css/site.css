@@ -594,3 +594,6 @@ dialog.lightbox .lb-links a { font-size: 0.74rem; letter-spacing: 0.14em; text-t
 dialog.lightbox .lb-links a:hover { color: var(--accent); }
 .composites .sel-tile { aspect-ratio: 4 / 5; }
 .composites .selected { gap: 16px; }
+.mapfeature .selected { grid-template-columns: minmax(0, 600px); justify-content: center; }
+.mapfeature .sel-tile { aspect-ratio: 5 / 6; }
+.mapfeature .sel-tile img { padding: 0; object-fit: cover; }

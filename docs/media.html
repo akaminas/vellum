@@ -77,17 +77,16 @@
   <div class="title-card"><span class="mono-label">Papers · 89 or 183 mm · matplotlib</span><h2>Paper figure</h2></div>
 </section>
 <div class="split">
-  <div class="prose">
-    <p>The title block is removed. The claim becomes the first sentence of the caption and the panel claims its lettered sentences; sources go in the data and code availability statement, and the file name carries the stamp.</p>
-    <p>Drawn at final width: 3.5 in (89 mm) single column, 7.2 in (183 mm) double. Lines 1.2 pt, markers 20 pt², at most four series per panel. The tones alternate in lightness, so the figure survives greyscale printing. A journal's own requirements, such as a named font, take precedence.</p>
-  </div>
-  <div class="card">
-    <h4 class="mt-0">Files for a journal</h4>
-    <p class="small secondary">One vector PDF per figure with fonts embedded (<code>pdf.fonttype 42</code>), named <code>fig2_claim_&lt;sha&gt;.pdf</code>. TIFF or EPS converted from the PDF at 600 dpi. Composite figures are assembled in the plotting script so they regenerate. At most one 3D figure, with its 2D twin as panel b.</p>
-  </div>
+  <p class="prose">No title block: the claim opens the caption, and the file name carries the stamp.</p>
+  <ul class="secondary">
+    <li>Drawn at final width: 89 mm single column, 183 mm double</li>
+    <li>Lines 1.2 pt, markers 20 pt², four series per panel at most</li>
+    <li>Tones alternate in lightness, so greyscale prints hold</li>
+    <li>One vector PDF per figure, fonts embedded</li>
+  </ul>
 </div>
 <!--#fig science/journal_penguins wide-->
-<figure class="figure wide" id="fig-science-journal_penguins"><div class="frame"><img class="zoom twin-light " src="figures/science/journal_penguins_light.png" data-full="figures/science/journal_penguins_light.png" data-caption="Beak depth falls with beak length across all penguins but rises within every species" alt="Three panels. a: beak depth against beak length; the pooled fit slopes down (r = −0.24) while each species&#x27; fit slopes up. b: Gentoo beaks are about 3.4 mm shallower than Adelie and Chinstrap in both sexes. c: correlations with intervals, negative pooled and positive within species (0.53)." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/journal_penguins_dark.png" data-full="figures/science/journal_penguins_dark.png" data-caption="Beak depth falls with beak length across all penguins but rises within every species" alt="Three panels. a: beak depth against beak length; the pooled fit slopes down (r = −0.24) while each species&#x27; fit slopes up. b: Gentoo beaks are about 3.4 mm shallower than Adelie and Chinstrap in both sexes. c: correlations with intervals, negative pooled and positive within species (0.53)." loading="lazy" decoding="async"></div><figcaption>Beak depth falls with beak length across all penguins but rises within every species. a, Beak length against beak depth for 342 penguins; the grey line is the least-squares fit to all birds (r = −0.24), the coloured lines are fits within each species (r = 0.39, 0.65 and 0.64 for Adelie, Chinstrap and Gentoo). b, Beak depth by species and sex; small dots are birds, ringed dots are means. Gentoo beaks are 3.4 to 3.5 mm shallower than those of the other species of the same sex, and males are deeper than females by 1.5 to 1.7 mm in every species, so the differences between species, not the relation within them, make the pooled slope negative. c, Pearson r between beak length and depth with 95 % intervals from Fisher&#x27;s z: the sign turns positive once species is taken into account (r = 0.53) and stays positive within species and sex (r = 0.19). n = 342 birds with complete measurements, 333 with recorded sex (b and the last row of c). Data: Palmer penguins, Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via the palmerpenguins R package and vega-datasets 2.8.0; figure drawn by examples/python/science/journal_penguins.py at git 6c65dfc.<br>Palmer penguins, Gorman, Williams and Fraser (2014), 342 birds with complete measurements<p class="fig-links"><a href="figures/science/journal_penguins_light.png">PNG</a> <a href="figures/science/journal_penguins_dark.png">PNG, dark</a> <a href="figures/science/journal_penguins_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/journal_penguins.py">Script</a></p></figcaption></figure>
+<figure class="figure wide" id="fig-science-journal_penguins"><div class="frame"><img class="zoom twin-light " src="figures/science/journal_penguins_light.png" data-full="figures/science/journal_penguins_light.png" data-caption="Beak depth falls with beak length across all penguins but rises within every species" alt="Three panels. a: beak depth against beak length; the pooled fit slopes down (r = −0.24) while each species&#x27; fit slopes up. b: Gentoo beaks are about 3.4 mm shallower than Adelie and Chinstrap in both sexes. c: correlations with intervals, negative pooled and positive within species (0.53)." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/journal_penguins_dark.png" data-full="figures/science/journal_penguins_dark.png" data-caption="Beak depth falls with beak length across all penguins but rises within every species" alt="Three panels. a: beak depth against beak length; the pooled fit slopes down (r = −0.24) while each species&#x27; fit slopes up. b: Gentoo beaks are about 3.4 mm shallower than Adelie and Chinstrap in both sexes. c: correlations with intervals, negative pooled and positive within species (0.53)." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/science/journal_penguins_light.png">PNG</a> <a href="figures/science/journal_penguins_dark.png">PNG, dark</a> <a href="figures/science/journal_penguins_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/journal_penguins.py">Script</a></p></figcaption></figure>
 <!--/fig-->
 
 <section class="project-hero bleed" id="thesis" style="--pos:50% 45%">
@@ -96,14 +95,13 @@
   <div class="title-card"><span class="mono-label">Dissertation · 125 mm text width</span><h2>Dissertation</h2></div>
 </section>
 <div class="split">
-  <div class="prose">
-    <p>Each figure keeps its claim title and subtitle so it can be read outside the chapter; the caption restates the claim and explains how to read the figure.</p>
-    <p>Body in TeX Gyre Pagella 11 pt on a 125 mm text width; Lato for captions, tables, margin notes and figure text. Figures drawn 4.92 in wide. Chapter numbers in teal, links in indigo without boxes. Tables in Lato with lining figures, no vertical rules, 0.5 pt rules at the header and foot, and alternate rows in the card colour.</p>
-  </div>
-  <div class="key">
-    <p><strong>Colours across chapters.</strong> Model in teal, data and highlights in terracotta, bounds in dotted ochre, and one gradient per variable throughout the thesis.</p>
-    <p class="secondary">One chapter is printed in greyscale before the final build; a figure that fails gets a label.</p>
-  </div>
+  <p class="prose">Each figure keeps its claim title, so it reads outside the chapter.</p>
+  <ul class="secondary">
+    <li>Body in TeX Gyre Pagella 11 pt; Lato for captions, tables and figure text</li>
+    <li>Figures at the full text width</li>
+    <li>Model in teal, data in terracotta, bounds in dotted ochre, in every chapter</li>
+    <li>Tables without vertical rules</li>
+  </ul>
 </div>
 
 <section class="project-hero bleed" id="poster" style="--pos:50% 42%">
@@ -112,13 +110,17 @@
 </section>
 <div class="split">
   <div>
-    <p>One claim, read from two metres. White sheet, cream column cards, one central figure, three short text columns and a 90 pt Palatino headline. Body 28 pt, figure text 23 pt, nothing under 18 pt, under 300 words.</p>
-    <p>Teal for headings and the highlighted series; terracotta for the key number, set as a stat tile. The central figure is a 3D scatter with its 2D twin beside it.</p>
-    <p class="small muted">Built with beamerposter and <code>vellum-colors.sty</code>. The figure is drawn by <code>vellum.py</code> at poster size, scaled by 2.6.</p>
+    <p>One claim, read from two metres.</p>
+    <ul class="secondary">
+      <li>Headline 90 pt, body 28 pt, nothing under 18 pt</li>
+      <li>Under 300 words</li>
+      <li>One central figure: a 3D scatter beside its 2D twin</li>
+      <li>The key number in terracotta, as a stat tile</li>
+    </ul>
   </div>
   <div>
     <!--#fig poster/poster-->
-<figure class="figure " id="fig-poster-poster"><div class="frame"><img class="zoom " src="media/poster/poster.png" data-full="media/poster/poster.png" data-caption="Beak shape, not body size, tells penguin species apart" alt="An A0 portrait poster on white with cream cards. Headline: beak shape, not body size, tells penguin species apart. The central figure is a 3D scatter of beak depth, beak length and flipper length for 342 penguins of three species, with its beak-length against beak-depth twin beside it. Stat tile: 94 % of birds are placed in their own species by beak length and depth (leave-one-out nearest species mean), against 63 % by body mass alone." loading="lazy" decoding="async"></div><figcaption>Palmer penguins: Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via the palmerpenguins R package and vega-datasets 2.8.0 (CC0) · Figure and every number by examples/python/poster/make_poster_figures.py (light, scale 2.6 on 2.6 x V.size(&#x27;poster&#x27;), placed at 1:1); built by examples/latex/poster/build.py. QR code to https://akaminas.github.io/vellum/ by the qrcode package.<p class="fig-links"><a href="media/poster/poster.png">PNG</a> <a href="media/poster/poster.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/poster/poster.tex">Script</a></p></figcaption></figure>
+<figure class="figure " id="fig-poster-poster"><div class="frame"><img class="zoom " src="media/poster/poster.png" data-full="media/poster/poster.png" data-caption="Beak shape, not body size, tells penguin species apart" alt="An A0 portrait poster on white with cream cards. Headline: beak shape, not body size, tells penguin species apart. The central figure is a 3D scatter of beak depth, beak length and flipper length for 342 penguins of three species, with its beak-length against beak-depth twin beside it. Stat tile: 94 % of birds are placed in their own species by beak length and depth (leave-one-out nearest species mean), against 63 % by body mass alone." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="media/poster/poster.png">PNG</a> <a href="media/poster/poster.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/poster/poster.tex">Script</a></p></figcaption></figure>
 <!--/fig-->
   </div>
 </div>
@@ -128,14 +130,13 @@
   <div class="title-card"><span class="mono-label">Talk · 16:9 · beamer, dark twin</span><h2>Talk</h2></div>
 </section>
 <div class="split">
-  <div class="prose">
-    <p>The frame title states the claim and the figure's own title block is dropped. Dark twin for a projector in a dark room; light twin for daylight or a deck read later, chosen once per deck.</p>
-    <p>A four-series figure is revealed one series per slide. A surface is shown at two or three fixed views, followed by its flat twin. Lists of four items at most, no text under 16 pt.</p>
-  </div>
-  <div class="card">
-    <h4 class="mt-0">Sizes on a 16:9 frame</h4>
-    <p class="small secondary">Title 28 pt Palatino; body 20 pt Lato, four lines at most; figure text at 2.2 × print size; footer 10 pt with short title, slide number and stamp. Margins 8 mm. Figures drawn at <code>V.size("slide")</code>, 10 × 5.2 in, with <code>vellum.use("dark", scale=2.2)</code>.</p>
-  </div>
+  <p class="prose">The frame title states the claim; the figure drops its own title.</p>
+  <ul class="secondary">
+    <li>Dark twin for a dark room, light for daylight, chosen once per deck</li>
+    <li>One series revealed per slide; surfaces at fixed views, then flat</li>
+    <li>Title 28 pt, body 20 pt, nothing under 16 pt</li>
+    <li>Figure text at 2.2 × print size</li>
+  </ul>
 </div>
 <!--#viewer talk/talk-->
 <div class="viewer" data-pages="[&quot;media/talk/talk-01.png&quot;, &quot;media/talk/talk-02.png&quot;, &quot;media/talk/talk-03.png&quot;, &quot;media/talk/talk-04.png&quot;, &quot;media/talk/talk-05.png&quot;, &quot;media/talk/talk-06.png&quot;, &quot;media/talk/talk-07.png&quot;, &quot;media/talk/talk-08.png&quot;, &quot;media/talk/talk-09.png&quot;, &quot;media/talk/talk-10.png&quot;, &quot;media/talk/talk-11.png&quot;, &quot;media/talk/talk-12.png&quot;, &quot;media/talk/talk-13.png&quot;, &quot;media/talk/talk-14.png&quot;]" data-alt="beamer deck" aria-label="A dark 16:9 deck of 11 frames (14 pages with the diagram&#x27;s build steps). In an illustrative simulation on a two-peak landscape, most random starts end on the lower peak at fitness 0.72, not on the higher one at 1.00; four populations are revealed one by one, the surface is shown at two fixed views and then as a heat map with the basin boundary."><div class="viewer-stage" style="aspect-ratio:1600/900"><img alt=""></div><div class="viewer-bar"><button class="btn prev" type="button">Previous</button><span class="viewer-count"></span><button class="btn next" type="button">Next</button></div><div class="viewer-strip"></div></div><div class="fig-meta">illustrative simulation on the analytic landscape w(z1, z2) of examples/python/_common.py; not data · Illustrative simulation, labelled on every slide. Figures by examples/python/talk/make_talk_figures.py, built by examples/latex/talk/build.py. The page is the 160 x 90 mm frame enlarged by 1.764 so the 10 in slide figure and the 28/20/10 pt type sizes hold at 1:1.<p class="fig-links"><a href="media/talk/talk-01.png">PNG</a> <a href="media/talk/talk.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/talk/talk.tex">Script</a></p></div>
@@ -146,16 +147,13 @@
   <div class="title-card"><span class="mono-label">Pitch deck · ten slides · HTML</span><h2>Pitch deck</h2></div>
 </section>
 <div class="split">
-  <div class="prose">
-    <p>Ten slides for a funder or committee, written to be read without a speaker. Light mode, plain chart forms, key numbers as stat tiles.</p>
-    <p>Teal for structure, terracotta once per slide for the key point, other colours only inside charts. Each slide title is a claim; a line under each figure gives the number's origin, and the footer the source and date.</p>
-  </div>
-  <div class="card">
-    <h4 class="mt-0">Slide order</h4>
-    <ol class="small secondary mb-0">
-      <li>Claim.</li><li>Problem, one stat tile.</li><li>Existing work.</li><li>Approach, up to five boxes.</li><li>Evidence, one highlighted series.</li><li>Evidence, small multiples.</li><li>Outcomes, three stat tiles.</li><li>Milestone timeline.</li><li>The ask, in terracotta.</li><li>Contact.</li>
-    </ol>
-  </div>
+  <p class="prose">Ten slides for a funder, read without a speaker.</p>
+  <ul class="secondary">
+    <li>Light mode, plain chart forms</li>
+    <li>Each title a claim; key numbers as stat tiles</li>
+    <li>Terracotta once per slide, for the key point</li>
+    <li>Source and date in every footer</li>
+  </ul>
 </div>
 <!--#viewer pitch/pitch-->
 <div class="viewer" data-pages="[&quot;media/pitch/slide-01.png&quot;, &quot;media/pitch/slide-02.png&quot;, &quot;media/pitch/slide-03.png&quot;, &quot;media/pitch/slide-04.png&quot;, &quot;media/pitch/slide-05.png&quot;, &quot;media/pitch/slide-06.png&quot;, &quot;media/pitch/slide-07.png&quot;, &quot;media/pitch/slide-08.png&quot;, &quot;media/pitch/slide-09.png&quot;, &quot;media/pitch/slide-10.png&quot;]" data-alt="pitch deck, 10 slides" aria-label="Ten-slide pitch deck. Evidence: world life expectancy fell 1.7 years in 2020–21, the deepest fall since 1960; regional falls ranged from 0.1 to 3.4 years; every region was back above its 2019 level by 2023. The ask, illustrative: €1.2 million over two years."><div class="viewer-stage" style="aspect-ratio:3200/1800"><img alt=""></div><div class="viewer-bar"><button class="btn prev" type="button">Previous</button><span class="viewer-count"></span><button class="btn next" type="button">Next</button></div><div class="viewer-strip"></div></div><div class="fig-meta">UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0 · Illustrative proposal: the pipeline, plan, budget and ask are invented; the evidence slides use real data.<p class="fig-links"><a href="media/pitch/slide-01.png">PNG</a> <a href="media/pitch/pitch.pdf">PDF</a> <a href="media/pitch/pitch.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/pitch/make_pitch.py">Script</a></p></div>
@@ -166,14 +164,13 @@
   <div class="title-card"><span class="mono-label">Report · A4 · HTML and matplotlib</span><h2>Report</h2></div>
 </section>
 <div class="split">
-  <div class="prose">
-    <p>Sections follow the argument: situation, trend, gap, options, ask. Each has one figure whose title is its claim, and the summary repeats those titles. Projections are tint bands with the line dotted after the last observed year; every figure has a dated source.</p>
-    <p>A4, 20 mm margins, twelve columns with 4 mm gutters, body 10.5 pt, Palatino headings. Key messages in cream boxes with a 2 pt teal left rule. Country comparisons are dot plots sorted by value, focal countries in terracotta.</p>
-  </div>
-  <div class="key">
-    <p><strong>Host brands.</strong> The host keeps its logo, cover and heading colour; the figures follow Vellum. The host's primary colour can take slot one if it is ΔE 15 from terracotta and 3:1 on white.</p>
-    <p class="secondary">The seventeen SDG colours fail the distance checks against each other, so they appear only as small icons beside goal names.</p>
-  </div>
+  <p class="prose">Sections follow the argument: situation, trend, gap, options, ask. One figure each, titled with its claim.</p>
+  <ul class="secondary">
+    <li>20 mm margins, twelve columns, body 10.5 pt</li>
+    <li>Projections as tint bands, dotted after the last observed year</li>
+    <li>Country comparisons as sorted dot plots, focal countries in terracotta</li>
+    <li>A host keeps its logo and cover; the figures stay Vellum</li>
+  </ul>
 </div>
 <!--#viewer report/report-->
 <div class="viewer" data-pages="[&quot;media/report/page-1.png&quot;, &quot;media/report/page-2.png&quot;, &quot;media/report/page-3.png&quot;]" data-alt="A4 report, 3 pages" aria-label="Page one of a three-page A4 report: a summary of five claims, three stat tiles and a line chart of world life expectancy, which rose from 46.4 years in 1950 to 73.2 in 2023."><div class="viewer-stage" style="aspect-ratio:1588/2246;max-width:620px;margin:0 auto"><img alt=""></div><div class="viewer-bar"><button class="btn prev" type="button">Previous</button><span class="viewer-count"></span><button class="btn next" type="button">Next</button></div><div class="viewer-strip"></div></div><div class="fig-meta">Period life expectancy at birth, UN World Population Prospects (2024) and others, processed by Our World in Data, 1950–2023; country outlines and 2019 population estimates, Natural Earth v5.1.2 · Illustrative layout, real data. Every number is computed by the script and written to media/report/numbers.json.<p class="fig-links"><a href="media/report/page-1.png">PNG</a> <a href="media/report/report.pdf">PDF</a> <a href="media/report/index.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/report/make_report.py">Script</a></p></div>
@@ -184,25 +181,24 @@
   <div class="title-card"><span class="mono-label">Infographic · 1080 × 1920 px · HTML and SVG</span><h2>Infographic</h2></div>
 </section>
 <div class="split">
-  <div class="prose">
-    <p>Three formats from one script and one dataset: a 1080 × 1920 story in five numbered sections, a 1080 × 1080 summary and a 1920 × 1080 data sheet. Each has a serif claim, a hero number or tiles, several linked views and a footer with data, method and git stamp.</p>
-    <p>Views: a line chart with the regions behind the world, an Equal Earth choropleth on the ember scale, a fall-and-recovery chart, a unit chart of 236 countries, small multiples, and a beeswarm of 172 countries per decade. Every number is printed from the data.</p>
-  </div>
-  <div class="card">
-    <h4 class="mt-0">Build</h4>
-    <p class="small secondary">HTML and SVG drawn with <code>vellum-web.js</code> helpers, rendered to PNG at 2× by headless Edge, light and dark from the same page.</p>
-  </div>
+  <p class="prose">Three formats from one script and one dataset: story, square and data sheet.</p>
+  <ul class="secondary">
+    <li>1080 × 1920, 1080 × 1080 and 1920 × 1080 px</li>
+    <li>Line chart, Equal Earth choropleth, unit chart, small multiples, beeswarm</li>
+    <li>Every number printed from the data</li>
+    <li>Rendered at 2× by headless Edge, light and dark from one page</li>
+  </ul>
 </div>
 <div class="grid grid-2">
   <!--#fig infographic/square-->
-<figure class="figure " id="fig-infographic-square"><div class="frame"><img class="zoom twin-light " src="media/infographic/square.png" data-full="media/infographic/square.png" data-caption="World life expectancy fell 1.7 years in the pandemic, then rose to a record 73.2" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023." loading="lazy" decoding="async"><img class="zoom twin-dark " src="media/infographic/square_dark.png" data-full="media/infographic/square_dark.png" data-caption="World life expectancy fell 1.7 years in the pandemic, then rose to a record 73.2" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023." loading="lazy" decoding="async"></div><figcaption>UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0. Natural Earth v5.1.2 (outlines, UN regions, population estimates), public domain · One story, three formats: every number is computed from the data files by the script, nothing typed.<p class="fig-links"><a href="media/infographic/square.png">PNG</a> <a href="media/infographic/square_dark.png">PNG, dark</a> <a href="media/infographic/square.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/infographic/make_infographics.py">Script</a></p></figcaption></figure>
+<figure class="figure " id="fig-infographic-square"><div class="frame"><img class="zoom twin-light " src="media/infographic/square.png" data-full="media/infographic/square.png" data-caption="World life expectancy fell 1.7 years in the pandemic, then rose to a record 73.2" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023." loading="lazy" decoding="async"><img class="zoom twin-dark " src="media/infographic/square_dark.png" data-full="media/infographic/square_dark.png" data-caption="World life expectancy fell 1.7 years in the pandemic, then rose to a record 73.2" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="media/infographic/square.png">PNG</a> <a href="media/infographic/square_dark.png">PNG, dark</a> <a href="media/infographic/square.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/infographic/make_infographics.py">Script</a></p></figcaption></figure>
 <!--/fig-->
   <!--#fig infographic/story-->
-<figure class="figure " id="fig-infographic-story"><div class="frame"><img class="zoom twin-light " src="media/infographic/story.png" data-full="media/infographic/story.png" data-caption="The pandemic brought world life expectancy its deepest fall since 1960" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years." loading="lazy" decoding="async"><img class="zoom twin-dark " src="media/infographic/story_dark.png" data-full="media/infographic/story_dark.png" data-caption="The pandemic brought world life expectancy its deepest fall since 1960" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years." loading="lazy" decoding="async"></div><figcaption>UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0. Natural Earth v5.1.2 (outlines, UN regions, population estimates), public domain · One story, three formats: every number is computed from the data files by the script, nothing typed.<p class="fig-links"><a href="media/infographic/story.png">PNG</a> <a href="media/infographic/story_dark.png">PNG, dark</a> <a href="media/infographic/story.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/infographic/make_infographics.py">Script</a></p></figcaption></figure>
+<figure class="figure " id="fig-infographic-story"><div class="frame"><img class="zoom twin-light " src="media/infographic/story.png" data-full="media/infographic/story.png" data-caption="The pandemic brought world life expectancy its deepest fall since 1960" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years." loading="lazy" decoding="async"><img class="zoom twin-dark " src="media/infographic/story_dark.png" data-full="media/infographic/story_dark.png" data-caption="The pandemic brought world life expectancy its deepest fall since 1960" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="media/infographic/story.png">PNG</a> <a href="media/infographic/story_dark.png">PNG, dark</a> <a href="media/infographic/story.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/infographic/make_infographics.py">Script</a></p></figcaption></figure>
 <!--/fig-->
 </div>
 <!--#fig infographic/sheet-->
-<figure class="figure " id="fig-infographic-sheet"><div class="frame"><img class="zoom twin-light " src="media/infographic/sheet.png" data-full="media/infographic/sheet.png" data-caption="Countries have drawn together: the middle 80 % spanned 30 years of life expectancy in 1950, 19 in 2023" alt="Beeswarm of 172 countries&#x27; life expectancy every decade from 1950 to 2023: the median rose from 49.2 to 75.3 years and the middle 80 % narrowed from 30.4 to 18.9 years. A bubble chart shows the pandemic fall against life expectancy in 2019." loading="lazy" decoding="async"><img class="zoom twin-dark " src="media/infographic/sheet_dark.png" data-full="media/infographic/sheet_dark.png" data-caption="Countries have drawn together: the middle 80 % spanned 30 years of life expectancy in 1950, 19 in 2023" alt="Beeswarm of 172 countries&#x27; life expectancy every decade from 1950 to 2023: the median rose from 49.2 to 75.3 years and the middle 80 % narrowed from 30.4 to 18.9 years. A bubble chart shows the pandemic fall against life expectancy in 2019." loading="lazy" decoding="async"></div><figcaption>UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0. Natural Earth v5.1.2 (outlines, UN regions, population estimates), public domain · One story, three formats: every number is computed from the data files by the script, nothing typed.<p class="fig-links"><a href="media/infographic/sheet.png">PNG</a> <a href="media/infographic/sheet_dark.png">PNG, dark</a> <a href="media/infographic/sheet.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/infographic/make_infographics.py">Script</a></p></figcaption></figure>
+<figure class="figure " id="fig-infographic-sheet"><div class="frame"><img class="zoom twin-light " src="media/infographic/sheet.png" data-full="media/infographic/sheet.png" data-caption="Countries have drawn together: the middle 80 % spanned 30 years of life expectancy in 1950, 19 in 2023" alt="Beeswarm of 172 countries&#x27; life expectancy every decade from 1950 to 2023: the median rose from 49.2 to 75.3 years and the middle 80 % narrowed from 30.4 to 18.9 years. A bubble chart shows the pandemic fall against life expectancy in 2019." loading="lazy" decoding="async"><img class="zoom twin-dark " src="media/infographic/sheet_dark.png" data-full="media/infographic/sheet_dark.png" data-caption="Countries have drawn together: the middle 80 % spanned 30 years of life expectancy in 1950, 19 in 2023" alt="Beeswarm of 172 countries&#x27; life expectancy every decade from 1950 to 2023: the median rose from 49.2 to 75.3 years and the middle 80 % narrowed from 30.4 to 18.9 years. A bubble chart shows the pandemic fall against life expectancy in 2019." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="media/infographic/sheet.png">PNG</a> <a href="media/infographic/sheet_dark.png">PNG, dark</a> <a href="media/infographic/sheet.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/infographic/make_infographics.py">Script</a></p></figcaption></figure>
 <!--/fig-->
 
 </main>
@@ -220,7 +216,7 @@
       <li><a href="forms.html">Forms</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
       <li><a href="https://github.com/akaminas/vellum">GitHub</a></li><li><a href="downloads/vellum-style.zip">Download</a></li>
     </ul>
-    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git 7b4aa1d</p>
+    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git a8f0420</p>
   </div>
 </footer>
 <!--/footer-->
