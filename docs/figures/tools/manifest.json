@@ -93,28 +93,6 @@
   }
  },
  {
-  "id": "tikz_ricker",
-  "group": "tools",
-  "kind": "scientific",
-  "medium": "paper",
-  "script": "examples/latex/tikz_ricker.tex",
-  "title": "Faster growth drives a population from a steady state through period doubling into chaos",
-  "subtitle": "Ricker map · the steady state gives way at r = 2, the Lyapunov exponent turns positive at r = 2.69",
-  "form": "bifurcation diagram, Lyapunov exponent and time series",
-  "tool": "pgfplots",
-  "also": [
-   "tools"
-  ],
-  "data": "Ricker map (Ricker 1954; May 1976), iterated in prepare_data.py",
-  "alt": "a: the long-run population sizes of the Ricker map for growth rates r from 1.6 to 3.6, one steady state up to r = 2, then a two-cycle, a four-cycle and chaos from r = 2.69. b: the Lyapunov exponent on the same axis, negative while periodic and positive in chaos. c: three populations over 40 generations at r = 1.8, 2.4 and 3.0: a steady state, a two-cycle and chaos.",
-  "note": "a model, not data.",
-  "files": {
-   "light": "figures/tools/tikz_ricker_light.png",
-   "dark": "figures/tools/tikz_ricker_dark.png",
-   "pdf": "figures/tools/tikz_ricker_light.pdf"
-  }
- },
- {
   "id": "tikz_enrichment",
   "group": "tools",
   "kind": "scientific",
@@ -155,6 +133,28 @@
    "light": "figures/tools/tikz_loggerhead_light.png",
    "dark": "figures/tools/tikz_loggerhead_dark.png",
    "pdf": "figures/tools/tikz_loggerhead_light.pdf"
+  }
+ },
+ {
+  "id": "tikz_ricker",
+  "group": "tools",
+  "kind": "scientific",
+  "medium": "paper",
+  "script": "examples/latex/tikz_ricker.tex",
+  "title": "Faster growth drives a population from a steady state through period doubling into chaos",
+  "subtitle": "Ricker map · the steady state gives way at r = 2, the Lyapunov exponent turns positive at r = 2.69",
+  "form": "bifurcation diagram, Lyapunov exponent and time series",
+  "tool": "pgfplots",
+  "also": [
+   "tools"
+  ],
+  "data": "Ricker map (Ricker 1954; May 1976), iterated in prepare_data.py",
+  "alt": "a: the long-run population sizes of the Ricker map for growth rates r from 1.6 to 3.6, one steady state up to r = 2, then a two-cycle, a four-cycle and chaos from r = 2.69. b: the Lyapunov exponent on the same axis, negative while periodic and positive in chaos. c: three populations over 40 generations at r = 1.8, 2.4 and 3.0: a steady state, a two-cycle and chaos.",
+  "note": "a model, not data.",
+  "files": {
+   "light": "figures/tools/tikz_ricker_light.png",
+   "dark": "figures/tools/tikz_ricker_dark.png",
+   "pdf": "figures/tools/tikz_ricker_light.pdf"
   }
  }
 ]
