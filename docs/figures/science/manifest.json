@@ -73,6 +73,24 @@
   }
  },
  {
+  "id": "driving_dual_axis",
+  "group": "science",
+  "title": "As petrol got 58 % cheaper from 1980 to 1998, Americans drove 44 % more miles each",
+  "subtitle": "Miles driven per person (left axis) and the price of a gallon of petrol in 2010 dollars (right axis), United States, 1956–2010",
+  "kind": "scientific",
+  "form": "line chart with a second y axis",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Miles driven per capita and petrol price in 2010 dollars, United States, 1956–2010 (Fairfield, NYT 2010; vega-datasets)",
+  "script": "examples/python/science/driving_dual_axis.py",
+  "alt": "Two lines on two y axes, 1956 to 2010: miles driven per person (left axis, teal) rises from 3,675 to a peak of 10,067 in 2005; the price of a gallon of petrol in 2010 dollars (right axis, terracotta) falls 58 % from $3.30 in 1980 to $1.39 in 1998, while driving per person rises 44 %. The price peaks at $3.31 in 2008.",
+  "files": {
+   "light": "figures/science/driving_dual_axis_light.png",
+   "dark": "figures/science/driving_dual_axis_dark.png",
+   "pdf": "figures/science/driving_dual_axis_light.pdf"
+  }
+ },
+ {
   "id": "journal_penguins",
   "group": "science",
   "title": "Beak depth falls with beak length across all penguins but rises within every species",
@@ -83,7 +101,7 @@
   "tool": "matplotlib",
   "data": "Palmer penguins, Gorman, Williams and Fraser (2014), 342 birds with complete measurements",
   "script": "examples/python/science/journal_penguins.py",
-  "caption": "Beak depth falls with beak length across all penguins but rises within every species. a, Beak length against beak depth for 342 penguins; the grey line is the least-squares fit to all birds (r = −0.24), the coloured lines are fits within each species (r = 0.39, 0.65 and 0.64 for Adelie, Chinstrap and Gentoo). b, Beak depth by species and sex; small dots are birds, ringed dots are means. Gentoo beaks are 3.4 to 3.5 mm shallower than those of the other species of the same sex, and males are deeper than females by 1.5 to 1.7 mm in every species, so the differences between species, not the relation within them, make the pooled slope negative. c, Pearson r between beak length and depth with 95 % intervals from Fisher's z: the sign turns positive once species is taken into account (r = 0.53) and stays positive within species and sex (r = 0.19). n = 342 birds with complete measurements, 333 with recorded sex (b and the last row of c). Data: Palmer penguins, Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via the palmerpenguins R package and vega-datasets 2.8.0; figure drawn by examples/python/science/journal_penguins.py at git ceaff1d.",
+  "caption": "Beak depth falls with beak length across all penguins but rises within every species. a, Beak length against beak depth for 342 penguins; the grey line is the least-squares fit to all birds (r = −0.24), the coloured lines are fits within each species (r = 0.39, 0.65 and 0.64 for Adelie, Chinstrap and Gentoo). b, Beak depth by species and sex; small dots are birds, ringed dots are means. Gentoo beaks are 3.4 to 3.5 mm shallower than those of the other species of the same sex, and males are deeper than females by 1.5 to 1.7 mm in every species, so the differences between species, not the relation within them, make the pooled slope negative. c, Pearson r between beak length and depth with 95 % intervals from Fisher's z: the sign turns positive once species is taken into account (r = 0.53) and stays positive within species and sex (r = 0.19). n = 342 birds with complete measurements, 333 with recorded sex (b and the last row of c). Data: Palmer penguins, Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via the palmerpenguins R package and vega-datasets 2.8.0; figure drawn by examples/python/science/journal_penguins.py at git 6c65dfc.",
   "alt": "Three panels. a: beak depth against beak length; the pooled fit slopes down (r = −0.24) while each species' fit slopes up. b: Gentoo beaks are about 3.4 mm shallower than Adelie and Chinstrap in both sexes. c: correlations with intervals, negative pooled and positive within species (0.53).",
   "files": {
    "light": "figures/science/journal_penguins_light.png",
@@ -144,6 +162,25 @@
    "light": "figures/science/miserables_network_light.png",
    "dark": "figures/science/miserables_network_dark.png",
    "pdf": "figures/science/miserables_network_light.pdf"
+  }
+ },
+ {
+  "id": "miserables_wordcloud",
+  "group": "science",
+  "title": "Valjean co-appears 158 times with other characters, 1.5 times as often as Marius",
+  "subtitle": "Les Misérables · the 50 most connected of 77 characters · the area of each name is proportional to its co-appearances",
+  "kind": "scientific",
+  "form": "word cloud with ranked values",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Knuth, The Stanford GraphBase (1993), Les Misérables co-occurrences, via vega-datasets 2.8.0",
+  "script": "examples/python/science/miserables_wordcloud.py",
+  "alt": "Word cloud of the 50 most connected of the 77 characters of Les Misérables, word area proportional to co-appearances. Largest: Valjean (158), Marius (104), Enjolras (91), Courfeyrac (84), Cosette (68), Combeferre (68). Valjean has 1.5 times the co-appearances of Marius, and shares a chapter with 36 characters.",
+  "note": "Layout: deterministic Archimedean spiral, largest word first, collision-checked on the rendered text boxes; no random seed involved.",
+  "files": {
+   "light": "figures/science/miserables_wordcloud_light.png",
+   "dark": "figures/science/miserables_wordcloud_dark.png",
+   "pdf": "figures/science/miserables_wordcloud_light.pdf"
   }
  },
  {
@@ -218,43 +255,6 @@
    "light": "figures/science/primates_tree_light.png",
    "dark": "figures/science/primates_tree_dark.png",
    "pdf": "figures/science/primates_tree_light.pdf"
-  }
- },
- {
-  "id": "miserables_wordcloud",
-  "group": "science",
-  "title": "Valjean co-appears 158 times with other characters, 1.5 times as often as Marius",
-  "subtitle": "Les Misérables · the 50 most connected of 77 characters · the area of each name is proportional to its co-appearances",
-  "kind": "scientific",
-  "form": "word cloud with ranked values",
-  "medium": "screen",
-  "tool": "matplotlib",
-  "data": "Knuth, The Stanford GraphBase (1993), Les Misérables co-occurrences, via vega-datasets 2.8.0",
-  "script": "examples/python/science/miserables_wordcloud.py",
-  "alt": "Word cloud of the 50 most connected of the 77 characters of Les Misérables, word area proportional to co-appearances. Largest: Valjean (158), Marius (104), Enjolras (91), Courfeyrac (84), Cosette (68), Combeferre (68). Valjean has 1.5 times the co-appearances of Marius, and shares a chapter with 36 characters.",
-  "note": "Layout: deterministic Archimedean spiral, largest word first, collision-checked on the rendered text boxes; no random seed involved.",
-  "files": {
-   "light": "figures/science/miserables_wordcloud_light.png",
-   "dark": "figures/science/miserables_wordcloud_dark.png",
-   "pdf": "figures/science/miserables_wordcloud_light.pdf"
-  }
- },
- {
-  "id": "driving_dual_axis",
-  "group": "science",
-  "title": "As petrol got 58 % cheaper from 1980 to 1998, Americans drove 44 % more miles each",
-  "subtitle": "Miles driven per person (left axis) and the price of a gallon of petrol in 2010 dollars (right axis), United States, 1956–2010",
-  "kind": "scientific",
-  "form": "line chart with a second y axis",
-  "medium": "screen",
-  "tool": "matplotlib",
-  "data": "Miles driven per capita and petrol price in 2010 dollars, United States, 1956–2010 (Fairfield, NYT 2010; vega-datasets)",
-  "script": "examples/python/science/driving_dual_axis.py",
-  "alt": "Two lines on two y axes, 1956 to 2010: miles driven per person (left axis, teal) rises from 3,675 to a peak of 10,067 in 2005; the price of a gallon of petrol in 2010 dollars (right axis, terracotta) falls 58 % from $3.30 in 1980 to $1.39 in 1998, while driving per person rises 44 %. The price peaks at $3.31 in 2008.",
-  "files": {
-   "light": "figures/science/driving_dual_axis_light.png",
-   "dark": "figures/science/driving_dual_axis_dark.png",
-   "pdf": "figures/science/driving_dual_axis_light.pdf"
   }
  }
 ]

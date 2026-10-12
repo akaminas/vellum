@@ -185,6 +185,8 @@ def target_of(it):
 
 def link_list(it):
     f = it.get("files", {}); out = []
+    target = target_of(it)
+    if target: out.append(["Open " + ("the interactive" if it["group"] == "interactive" else "all pages"), target])
     if exists(f.get("light")): out.append(["PNG", f["light"]])
     if exists(f.get("dark")): out.append(["PNG, dark", f["dark"]])
     if exists(f.get("pdf")): out.append(["PDF", f["pdf"]])
@@ -233,11 +235,7 @@ def gallery(items):
             chips.append(f'<button class="chip" type="button" data-filter="{k}" aria-pressed="false">{label} <span class="muted">{counts[k]}</span></button>')
     works = []
     for it in items:
-        target = target_of(it)
-        if target:
-            tile = f'<a class="work-tile" href="{target}" aria-label="{e(it.get("title", ""), quote=True)}">{tile_imgs(it, False)}{caption(it)}</a>'
-        else:
-            tile = f'<div class="work-tile">{tile_imgs(it, True)}{caption(it)}</div>'
+        tile = f'<div class="work-tile">{tile_imgs(it, True, full=True)}{caption(it)}</div>'
         works.append(f'<figure class="work" data-kind="{e(it.get("kind", ""))}" id="g-{it["group"]}-{it["id"]}">{tile}{badge(it)}</figure>')
     return ('<div class="filter-row center" role="group" aria-label="Filter the gallery">' + "".join(chips) + "</div>"
             '<p class="sr-only" aria-live="polite" id="gallery-status"></p>'
@@ -251,7 +249,7 @@ def mosaic(keys, by_id):
         it = by_id.get(key)
         if not it: continue
         href = target_of(it) or f'gallery.html#g-{it["group"]}-{it["id"]}'
-        tiles.append(f'<a class="sel-tile" href="{href}" aria-label="{e(it.get("title", ""), quote=True)}">{tile_imgs(it, False, full=True)}{caption(it)}</a>')
+        tiles.append(f'<div class="sel-tile">{tile_imgs(it, True, full=True)}{caption(it)}</div>')
     return '<div class="selected">' + "".join(tiles) + "</div>"
 
 

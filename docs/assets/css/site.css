@@ -574,3 +574,21 @@ main h2 { border-bottom: 0; padding-bottom: 0; }
 .sel-tile img { object-fit: contain; padding: 14px; }
 .sel-tile::after { box-shadow: inset 0 0 0 1px var(--line); }
 .facts code { display: none; }
+
+/* work tiles: a visible frame; a click opens the figure in the lightbox */
+:root { --frame: #D9D5CC; }
+:root[data-theme="dark"] { --frame: #4D463F; }
+.work-tile, .sel-tile { border: 1px solid var(--frame) !important; border-radius: 6px; background: var(--v-surface); cursor: zoom-in; transition: border-color 0.2s, box-shadow 0.2s; }
+.sel-tile::after { display: none; }
+.work-tile:hover, .sel-tile:hover { border-color: var(--accent) !important; box-shadow: 0 10px 30px -18px rgba(30, 26, 22, 0.5); }
+.work-tile img { object-fit: contain; padding: 14px; }
+.tile-cap { pointer-events: none; }
+.works { gap: 22px; }
+dialog.lightbox { padding: 18px 18px 14px; border-radius: 14px; border: 1px solid var(--frame); box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.55); max-width: min(92vw, 1500px); }
+dialog.lightbox::backdrop { background: rgba(24, 21, 18, 0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+dialog.lightbox[open] { animation: lb-in 0.22s ease-out; }
+@keyframes lb-in { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: none; } }
+dialog.lightbox img { max-height: 80vh; }
+dialog.lightbox .lb-bar { padding: 0 0 12px; }
+dialog.lightbox .lb-links a { font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--v-secondary); }
+dialog.lightbox .lb-links a:hover { color: var(--accent); }
