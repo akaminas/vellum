@@ -56,3 +56,14 @@ site coordinates (km).
 - Analyses follow Borcard, D., Gillet, F. and Legendre, P. (2018). *Numerical Ecology with R*, 2nd edn. Springer. Beta-diversity
   partition (computed in `doubs_fish.py`): Baselga, A. (2010). Partitioning the turnover and nestedness components of beta
   diversity. *Global Ecology and Biogeography* 19, 134–143.
+
+## Loggerhead sea turtle stage model: `loggerhead_crouse1987.csv`
+
+The seven-stage projection matrix of loggerhead turtles (*Caretta caretta*) on Little Cumberland Island, Georgia: eggs and
+hatchlings, small juveniles, large juveniles, subadults, novice breeders, first-year remigrants and mature breeders. One row
+per non-zero entry (from stage, to stage, annual rate, and whether it is stasis, growth or fecundity). Typed in from the paper.
+
+- Crouse, D. T., Crowder, L. B. and Caswell, H. (1987). A stage-based population model for loggerhead sea turtles and
+  implications for conservation. *Ecology* 68, 1412–1423.
+- Used in `examples/latex/tikz_loggerhead.tex`; λ, elasticities and the survival scenarios are computed by
+  `examples/latex/prepare_data.py`.

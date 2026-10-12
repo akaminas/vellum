@@ -226,8 +226,9 @@ def badge(it):
 
 
 def kinds_of(it):
-    """The gallery categories of a piece: its kind, and "infographic" too when its medium is an infographic."""
-    out = [it.get("kind", "")]
+    """The gallery categories of a piece: its kind, any it lists under "also", and "infographic" too when its medium is
+    an infographic."""
+    out = [it.get("kind", "")] + [k for k in it.get("also", []) if k != it.get("kind")]
     if it.get("medium") == "infographic" and "infographic" not in out: out.append("infographic")
     return out
 

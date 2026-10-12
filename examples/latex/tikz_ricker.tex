@@ -1,0 +1,62 @@
+% tikz_ricker.tex: the Ricker map's route to chaos, in pgfplots. a: the long-run population sizes against the growth
+% rate (the bifurcation diagram); b: the Lyapunov exponent on the same r axis; c: three populations over 40 generations.
+% Points, exponents and series are written by prepare_data.py (data/ricker_*.dat, data/ricker_macros.tex).
+% Light twin: lualatex tikz_ricker.tex; dark twin: lualatex -jobname=tikz_ricker_dark tikz_ricker.tex
+\documentclass[11pt, border=0pt]{standalone}
+\usepackage{vellum-twin}
+\input{data/ricker_macros.tex}
+\newcommand\panel[3]{\node[anchor=base west, inner sep=0pt, text=vInk\vD, font=\vLabelFont] at (#1,#2) {\textbf{#3}};}
+\newcommand\note[3][]{\node[inner sep=0pt, text=vSecondary\vD, font=\vUnitFont, align=left, #1] at #2 {#3};}
+\begin{document}
+\sffamily
+\begin{tikzpicture}[x=1cm, y=1cm]
+  \def\W{18.288}\def\H{11.15}                                  % 7.2 in wide, drawn at the printed size
+  \fill[vSurface\vD] (0,0) rectangle (\W,\H);
+  \useasboundingbox (0,0) rectangle (\W,\H);
+  \node[anchor=north west, inner sep=0pt, text=vInk\vD, font=\vTitleFont] at (0.45,\H-0.4)
+    {Faster growth drives a population through period doubling into chaos};
+  \node[anchor=north west, inner sep=0pt, text=vMuted\vD, font=\vSubtitleFont] at (0.45,\H-1.08)
+    {Ricker map $N_{t+1} = N_t\, e^{\,r(1 - N_t)}$ · the steady state gives way at $r = 2$, and the Lyapunov exponent
+     turns positive at $r = \rkOnset$};
+  \pgfplotsset{onr/.style={vellum twin, scale only axis, width=10.6cm, xmin=1.6, xmax=3.6, xtick={2,2.5,3,3.5},
+    xticklabels={2,2.5,3,3.5}}}
+
+  % ---- a: the attractor at each r, 200 generations after 600, one dot each
+  \panel{1.15}{9.3}{a\quad Long-run population sizes}
+  \begin{axis}[onr, at={(1.15cm,5.15cm)}, anchor=south west, height=3.2cm, ymin=0, ymax=4, ytick={0,1,2,3,4},
+      xticklabels={}, title={population $N_t$, in units of the carrying capacity}]
+    \foreach \r in {2,\rkOnset} {\edef\next{\noexpand\draw[vellum guide] (axis cs:\r,0) -- (axis cs:\r,4);}\next}
+    \addplot[only marks, mark=*, mark size=0.24pt, vindigo\vD] table[x=r, y=N] {data/ricker_points.dat};
+    \note[anchor=south west, fill=vSurface\vD, inner sep=1pt]{(axis cs:1.65,1.12)}{one steady state}
+    \note[anchor=west, fill=vSurface\vD, inner sep=1pt]{(axis cs:2.03,3.5)}{first doubling, $r = 2$}
+    \note[anchor=west, fill=vSurface\vD, inner sep=1pt]{(axis cs:2.72,3.5)}{chaos from $r = \rkOnset$}
+    \note[anchor=west, fill=vSurface\vD, inner sep=1pt]{(axis cs:2.08,2.15)}{two-cycle}
+  \end{axis}
+
+  % ---- b: the Lyapunov exponent; below zero nearby populations converge, above it they diverge
+  \panel{1.15}{4.75}{b\quad Sensitivity to the starting size}
+  \begin{axis}[onr, at={(1.15cm,2.0cm)}, anchor=south west, height=1.95cm, ymin=-1.6, ymax=0.6, ytick={-1,0},
+      xlabel={growth rate $r$}, title={Lyapunov exponent $\lambda$, per generation · below 0 periodic, above 0 chaotic}]
+    \addplot[fill=vtealTint\vD, draw=none] table[x=r, y=neg] {data/ricker_lyapunov.dat} \closedcycle;
+    \addplot[fill=vterracottaTint\vD, draw=none] table[x=r, y=pos] {data/ricker_lyapunov.dat} \closedcycle;
+    \draw[vRule\vD, line width=0.6pt] (axis cs:1.6,0) -- (axis cs:3.6,0);
+    \addplot[vInk\vD, line width=0.7pt] table[x=r, y=lam] {data/ricker_lyapunov.dat};
+    \foreach \r in {2,\rkOnset} {\edef\next{\noexpand\draw[vellum guide] (axis cs:\r,-1.6) -- (axis cs:\r,0.6);}\next}
+  \end{axis}
+
+  % ---- c: three populations, one per regime, from the same start
+  \panel{13.2}{9.3}{c\quad Three populations}
+  \pgfplotsset{series/.style={vellum twin, scale only axis, width=4.55cm, height=1.4cm, xmin=0, xmax=40, ymin=0, ymax=3,
+    ytick={0,1,2,3}, yticklabels={0,,2,}, xtick={0,10,20,30,40}}}
+  \foreach \k/\r/\what/\y/\lab in {0/\rkSa/steady state/6.95/{}, 1/\rkSb/two-cycle/4.45/{}, 2/\rkSc/chaos/2.0/{generation $t$}} {
+    \begin{axis}[series, at={(13.2cm,\y cm)}, anchor=south west, title={$r = \r$ · \what}, xlabel={\lab},
+        xticklabels={\ifnum\k=2 0\else\fi, , , ,\ifnum\k=2 40\else\fi}]
+      \addplot[vRule\vD, line width=0.6pt] table[x=t, y=N] {data/ricker_series_\k.dat};
+      \addplot[only marks, mark=*, mark size=1.15pt, vindigo\vD, mark options={draw=vSurface\vD, line width=0.5pt}]
+        table[x=t, y=N] {data/ricker_series_\k.dat};
+    \end{axis}}
+
+  \node[anchor=south west, inner sep=0pt, text=vMuted\vD, font=\vFooterFont] at (0.45,0.25)
+    {\vfooter{model after Ricker (1954) and May (1976); iterated in prepare\_data.py}};
+\end{tikzpicture}
+\end{document}

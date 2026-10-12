@@ -57,6 +57,38 @@ def meta(name, n):
                 f"peak of {n['lsLow']} at z1 = {n['lsLowX']}, z2 = {n['lsLowY']}, and a saddle of {n['lsSaddle']} between them; "
                 "beside it the same surface seen from above as a heat map with seven contour lines and a colour bar.",
             note="illustrative: an analytic function, not data. The same surface is drawn in matplotlib and base R persp."),
+        "tikz_enrichment": dict(
+            title=f"Past a carrying capacity of {n['enKh']}, a richer habitat turns a stable equilibrium into boom and bust",
+            subtitle="Rosenzweig–MacArthur predator–prey model · two phase planes and the bifurcation in K",
+            form="phase planes and bifurcation diagram", tool="pgfplots", kind="scientific", also=["tools"],
+            data="Rosenzweig–MacArthur model (Rosenzweig 1971), integrated with SciPy; densities scaled",
+            alt=f"Three panels. a: the phase plane at K = {n['enKa']}, with a direction field, the prey and predator nullclines "
+                f"and an orbit spiralling into the stable equilibrium at N = {n['enNstar']}, P = {n['enPa']}. b: at K = {n['enKb']} "
+                f"the equilibrium is unstable and orbits join a limit cycle on which the predator swings from {n['enCycLo']} to "
+                f"{n['enCycHi']}. c: the predator against K; the equilibrium is stable up to a Hopf bifurcation at K = {n['enKh']}, "
+                f"after which the cycle widens to {n['enLoK']}–{n['enHiK']} at K = 4.5.",
+            note="a model, not data: the paradox of enrichment (Rosenzweig 1971)."),
+        "tikz_ricker": dict(
+            title="Faster growth drives a population from a steady state through period doubling into chaos",
+            subtitle=f"Ricker map · the steady state gives way at r = 2, the Lyapunov exponent turns positive at r = {n['rkOnset']}",
+            form="bifurcation diagram, Lyapunov exponent and time series", tool="pgfplots", kind="scientific", also=["tools"],
+            data="Ricker map (Ricker 1954; May 1976), iterated in prepare_data.py",
+            alt=f"a: the long-run population sizes of the Ricker map for growth rates r from 1.6 to 3.6, one steady state up to "
+                f"r = 2, then a two-cycle, a four-cycle and chaos from r = {n['rkOnset']}. b: the Lyapunov exponent on the same "
+                f"axis, negative while periodic and positive in chaos. c: three populations over 40 generations at r = "
+                f"{n['rkSa']}, {n['rkSb']} and {n['rkSc']}: a steady state, a two-cycle and chaos.",
+            note="a model, not data."),
+        "tikz_loggerhead": dict(
+            title="Even perfect nest survival cannot halt the loggerhead decline; better survival at sea can",
+            subtitle=f"stage-structured model of a Georgia population · λ = {n['tuLambda']}, a decline of {n['tuDecline']} % a year",
+            form="life-cycle graph, elasticities and scenarios", tool="TikZ and pgfplots", kind="scientific", also=["tools"],
+            data="stage matrix of Crouse, Crowder and Caswell (1987), Ecology 68, 1412–1423; data/ecology/loggerhead_crouse1987.csv",
+            alt=f"a: the seven-stage life cycle of loggerhead turtles, from eggs and hatchlings to mature breeders, with arrows "
+                f"for staying, growing and reproducing, each as wide as its elasticity of λ; staying as a mature breeder has the "
+                f"largest, {n['tuEgg']}. b: the elasticities summed by stage. c: λ when the annual survival of one stage is raised: "
+                f"even 100 % survival of eggs and hatchlings gives λ = {n['tuMaxa']}, while λ reaches 1 with {n['tuNeedg']} % "
+                f"better survival of mature breeders, {n['tuNeedb']} % of small juveniles, {n['tuNeedd']} % of subadults or "
+                f"{n['tuNeedc']} % of large juveniles."),
     }
     m = dict(kind="tools", medium="paper", script=rel(os.path.join(HERE, name + ".tex")))
     m.update(M[name])

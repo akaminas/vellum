@@ -1,0 +1,14 @@
+from,to,rate,type
+1,2,0.6747,growth
+2,2,0.7370,stasis
+2,3,0.0486,growth
+3,3,0.6610,stasis
+3,4,0.0147,growth
+4,4,0.6907,stasis
+4,5,0.0518,growth
+5,6,0.8091,growth
+6,7,0.8091,growth
+7,7,0.8089,stasis
+5,1,127,fecundity
+6,1,4,fecundity
+7,1,80,fecundity

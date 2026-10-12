@@ -1,0 +1,90 @@
+% tikz_enrichment.tex: the paradox of enrichment in the Rosenzweig-MacArthur predator-prey model, in pgfplots.
+% a and b: phase planes at two carrying capacities, with the direction field, the nullclines and an orbit; c: the
+% bifurcation diagram, the predator's equilibrium and the range of its cycle against K. Orbits, fields and every number
+% in the text come from prepare_data.py (data/enrich_*.dat, data/enrich_macros.tex).
+% Light twin: lualatex tikz_enrichment.tex; dark twin: lualatex -jobname=tikz_enrichment_dark tikz_enrichment.tex
+\documentclass[11pt, border=0pt]{standalone}
+\usepackage{vellum-twin}
+\usetikzlibrary{arrows.meta}
+\input{data/enrich_macros.tex}
+% a panel: its letter in bold and its claim, as vellum.py's panel()
+\newcommand\panel[3]{\node[anchor=base west, inner sep=0pt, text=vInk\vD, font=\vLabelFont] at (#1,#2) {\textbf{#3}};}
+% an end label in the text colours, never the series colour
+\newcommand\elabel[3][]{\node[anchor=west, inner sep=0pt, xshift=4pt, text=vSecondary\vD, font=\vUnitFont, align=left, #1] at #2 {#3};}
+\begin{document}
+\sffamily
+\begin{tikzpicture}[x=1cm, y=1cm]
+  \def\W{18.288}\def\H{9.4}                                   % 7.2 in wide, drawn at the printed size
+  \fill[vSurface\vD] (0,0) rectangle (\W,\H);
+  \useasboundingbox (0,0) rectangle (\W,\H);
+  \node[anchor=north west, inner sep=0pt, text=vInk\vD, font=\vTitleFont] at (0.45,\H-0.4)
+    {Enrichment past $K = \enKh$ turns a stable equilibrium into boom and bust};
+  \node[anchor=north west, inner sep=0pt, text=vMuted\vD, font=\vSubtitleFont] at (0.45,\H-1.08)
+    {Rosenzweig–MacArthur model $\dot N = N(1 - N/K) - NP/(1 + N)$, $\dot P = \enB\,NP/(1 + N) - \enD P$ · densities scaled};
+
+  \pgfplotsset{phase/.style={vellum twin, scale only axis, width=4.5cm, height=4.5cm, xmin=0, xmax=3, ymin=0, ymax=2.4,
+      xtick={0,1,2,3}, ytick={0,0.8,1.6,2.4}, yticklabels={0,0.8,1.6,2.4}, xlabel={prey $N$}, title={predator $P$}},
+    field/.style={vRule\vD, line width=0.45pt, quiver={u=\thisrow{u}, v=\thisrow{v},
+      every arrow/.append style={-{Stealth[length=2.3pt, width=2.1pt]}}}},
+    prey null/.style={vteal\vD, line width=1.1pt},
+    pred null/.style={vterracotta\vD, line width=1.1pt}}
+
+  % ---- a: below the hump of the prey nullcline, the orbit spirals into the equilibrium
+  \panel{1.0}{7.15}{a\quad K = \enKa: oscillations die out}
+  \begin{axis}[phase, at={(1.0cm,1.75cm)}, anchor=south west]
+    \addplot[field] table[x=N, y=P] {data/enrich_field_a.dat};
+    \addplot[prey null] table[x=N, y=P] {data/enrich_null_a.dat};
+    \addplot[pred null] coordinates {(\enNstar,0) (\enNstar,2.4)};
+    \addplot[vindigo\vD, line width=\vLine] table[x=N, y=P] {data/enrich_orbit_a.dat};
+    \node[vellum dot=vSecondary\vD, minimum size=4pt] at (axis cs:1.85,0.3) {};
+    \node[vellum dot=vInk\vD] (eq) at (axis cs:\enNstar,\enPa) {};
+    \elabel{(axis cs:1.85,0.3)}{start}
+    \elabel[anchor=south west, xshift=0pt, yshift=1pt]{(axis cs:\enNstar,2.4)}{$\dot P = 0$}
+    \elabel[anchor=south west, xshift=1pt]{(axis cs:2.0,0.04)}{$\dot N = 0$}
+    \draw[vRule\vD, line width=0.4pt] (eq) -- (axis cs:0.86,1.44);
+    \elabel[anchor=south west, xshift=0pt, fill=vSurface\vD, inner sep=1pt]{(axis cs:0.86,1.44)}{stable equilibrium}
+  \end{axis}
+
+  % ---- b: past the hump, the equilibrium repels and every orbit joins one cycle
+  \panel{6.75}{7.15}{b\quad K = \enKb: a limit cycle}
+  \begin{axis}[phase, at={(6.75cm,1.75cm)}, anchor=south west]
+    \addplot[field] table[x=N, y=P] {data/enrich_field_b.dat};
+    \addplot[prey null] table[x=N, y=P] {data/enrich_null_b.dat};
+    \addplot[pred null] coordinates {(\enNstar,0) (\enNstar,2.4)};
+    \addplot[vindigo\vD, line width=0.6pt] table[x=N, y=P] {data/enrich_orbit_b.dat};
+    \addplot[vindigo\vD, line width=\vLine] table[x=N, y=P] {data/enrich_cycle_b.dat};
+    \node[circle, inner sep=0pt, minimum size=\vMarker, fill=vSurface\vD, draw=vInk\vD, line width=1pt] (eq)
+      at (axis cs:\enNstar,\enPb) {};
+    \elabel[anchor=south west, xshift=0pt, yshift=1pt]{(axis cs:\enNstar,2.4)}{$\dot P = 0$}
+    \elabel[anchor=south west, xshift=1pt, fill=vSurface\vD, inner sep=1pt]{(axis cs:2.66,0.5)}{$\dot N = 0$}
+    \elabel[anchor=west, xshift=5pt, fill=vSurface\vD, inner sep=1pt]{(eq)}{unstable}
+    \elabel[anchor=south west]{(axis cs:1.6,\enCycHi)}{limit cycle}
+  \end{axis}
+
+  % ---- c: the bifurcation in K. The equilibrium holds to the Hopf point; past it the predator swings over a widening range
+  \panel{12.5}{7.15}{c\quad The bifurcation in K}
+  \begin{axis}[vellum twin, at={(12.5cm,1.75cm)}, anchor=south west, scale only axis, width=4.3cm, height=4.5cm,
+      xmin=0.3, xmax=4.5, ymin=0, ymax=3.2, xtick={1,2,3,4}, ytick={0,1,2,3}, xlabel={carrying capacity $K$},
+      title={predator $P$}]
+    \addplot[fill=vindigoTint\vD, draw=none] table[x=K, y=P] {data/enrich_cycle_band.dat};   % the cycle's range
+    \addplot[vindigo\vD, line width=\vLine] table[x=K, y=hi] {data/enrich_cycle_range.dat};
+    \addplot[vindigo\vD, line width=\vLine] table[x=K, y=lo] {data/enrich_cycle_range.dat};
+    \addplot[vInk\vD, line width=1.1pt] table[x=K, y=P] {data/enrich_eq_stable.dat};
+    \addplot[vellum reference=vInk\vD, line width=1pt] table[x=K, y=P] {data/enrich_eq_unstable.dat};
+    \foreach \k/\l in {\enKa/a, \enKb/b} {
+      \edef\next{\noexpand\draw[vellum guide] (axis cs:\k,0) -- (axis cs:\k,3.2);
+        \noexpand\node[anchor=south, inner sep=1pt, text=vMuted\vD, font=\noexpand\vUnitFont\noexpand\bfseries] at (axis cs:\k,3.2) {\l};}
+      \next}
+    \node[vellum dot=vInk\vD] (h) at (axis cs:\enKh,\enPh) {};
+    \node[anchor=north west, inner sep=1pt, text=vSecondary\vD, font=\vUnitFont, align=left, fill=vSurface\vD]
+      at ([xshift=2pt, yshift=-3pt]h) {Hopf, $K = \enKh$};
+    \elabel{(axis cs:4.5,\enHiK)}{cycle\\maximum}
+    \elabel{(axis cs:4.5,\enLoK)}{minimum}
+    \elabel[anchor=south east, xshift=0pt, yshift=3pt]{(axis cs:2.0,1.17)}{stable}
+    \elabel[anchor=south, xshift=0pt, yshift=2pt]{(axis cs:3.9,1.38)}{unstable}
+  \end{axis}
+
+  \node[anchor=south west, inner sep=0pt, text=vMuted\vD, font=\vFooterFont] at (0.45,0.25)
+    {\vfooter{model after Rosenzweig (1971), Science 171, 385–387; orbits integrated with SciPy in prepare\_data.py}};
+\end{tikzpicture}
+\end{document}

@@ -66,6 +66,7 @@
     <li><a href="#python">matplotlib</a></li>
     <li><a href="#r">R</a></li>
     <li><a href="#latex">LaTeX</a></li>
+    <li><a href="#tikz-models">TikZ: ecological models</a></li>
     <li><a href="#web">Web</a></li>
     <li><a href="#office">Office, Canva, Excalidraw</a></li>
   </ul>
@@ -194,6 +195,18 @@ V.surface3d(ax3, Z1, Z2, W, cmap=V.cmap_gradient("lagoon"))</code></pre>
 <!--/fig-->
 <p class="prose">Beamer: <code>\vellumbeamer</code> or <code>\vellumbeamerdark</code>, as in the <a href="media.html#talk">talk deck</a> and <a href="media.html#poster">poster</a>.</p>
 
+<h2 id="tikz-models">TikZ: ecological models</h2>
+<p class="prose">Three models drawn entirely in TikZ and pgfplots with <code>vellum-colors.sty</code>; the numbers are computed in Python and typeset as macros.</p>
+<!--#fig tools/tikz_enrichment wide-->
+<figure class="figure wide" id="fig-tools-tikz_enrichment"><div class="frame"><img class="zoom twin-light " src="figures/tools/tikz_enrichment_light.png" data-full="figures/tools/tikz_enrichment_light.png" data-caption="Past a carrying capacity of 2.33, a richer habitat turns a stable equilibrium into boom and bust" alt="Three panels. a: the phase plane at K = 2, with a direction field, the prey and predator nullclines and an orbit spiralling into the stable equilibrium at N = 0.67, P = 1.11. b: at K = 3 the equilibrium is unstable and orbits join a limit cycle on which the predator swings from 0.54 to 1.96. c: the predator against K; the equilibrium is stable up to a Hopf bifurcation at K = 2.33, after which the cycle widens to 0.20–2.98 at K = 4.5." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/tikz_enrichment_dark.png" data-full="figures/tools/tikz_enrichment_dark.png" data-caption="Past a carrying capacity of 2.33, a richer habitat turns a stable equilibrium into boom and bust" alt="Three panels. a: the phase plane at K = 2, with a direction field, the prey and predator nullclines and an orbit spiralling into the stable equilibrium at N = 0.67, P = 1.11. b: at K = 3 the equilibrium is unstable and orbits join a limit cycle on which the predator swings from 0.54 to 1.96. c: the predator against K; the equilibrium is stable up to a Hopf bifurcation at K = 2.33, after which the cycle widens to 0.20–2.98 at K = 4.5." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/tools/tikz_enrichment_light.png">PNG</a> <a href="figures/tools/tikz_enrichment_dark.png">PNG, dark</a> <a href="figures/tools/tikz_enrichment_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/tikz_enrichment.tex">Script</a></p></figcaption></figure>
+<!--/fig-->
+<!--#fig tools/tikz_ricker wide-->
+<figure class="figure wide" id="fig-tools-tikz_ricker"><div class="frame"><img class="zoom twin-light " src="figures/tools/tikz_ricker_light.png" data-full="figures/tools/tikz_ricker_light.png" data-caption="Faster growth drives a population from a steady state through period doubling into chaos" alt="a: the long-run population sizes of the Ricker map for growth rates r from 1.6 to 3.6, one steady state up to r = 2, then a two-cycle, a four-cycle and chaos from r = 2.69. b: the Lyapunov exponent on the same axis, negative while periodic and positive in chaos. c: three populations over 40 generations at r = 1.8, 2.4 and 3.0: a steady state, a two-cycle and chaos." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/tikz_ricker_dark.png" data-full="figures/tools/tikz_ricker_dark.png" data-caption="Faster growth drives a population from a steady state through period doubling into chaos" alt="a: the long-run population sizes of the Ricker map for growth rates r from 1.6 to 3.6, one steady state up to r = 2, then a two-cycle, a four-cycle and chaos from r = 2.69. b: the Lyapunov exponent on the same axis, negative while periodic and positive in chaos. c: three populations over 40 generations at r = 1.8, 2.4 and 3.0: a steady state, a two-cycle and chaos." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/tools/tikz_ricker_light.png">PNG</a> <a href="figures/tools/tikz_ricker_dark.png">PNG, dark</a> <a href="figures/tools/tikz_ricker_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/tikz_ricker.tex">Script</a></p></figcaption></figure>
+<!--/fig-->
+<!--#fig tools/tikz_loggerhead wide-->
+<figure class="figure wide" id="fig-tools-tikz_loggerhead"><div class="frame"><img class="zoom twin-light " src="figures/tools/tikz_loggerhead_light.png" data-full="figures/tools/tikz_loggerhead_light.png" data-caption="Even perfect nest survival cannot halt the loggerhead decline; better survival at sea can" alt="a: the seven-stage life cycle of loggerhead turtles, from eggs and hatchlings to mature breeders, with arrows for staying, growing and reproducing, each as wide as its elasticity of λ; staying as a mature breeder has the largest, 0.230. b: the elasticities summed by stage. c: λ when the annual survival of one stage is raised: even 100 % survival of eggs and hatchlings gives λ = 0.965, while λ reaches 1 with 17 % better survival of mature breeders, 20 % of small juveniles, 24 % of subadults or 27 % of large juveniles." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/tikz_loggerhead_dark.png" data-full="figures/tools/tikz_loggerhead_dark.png" data-caption="Even perfect nest survival cannot halt the loggerhead decline; better survival at sea can" alt="a: the seven-stage life cycle of loggerhead turtles, from eggs and hatchlings to mature breeders, with arrows for staying, growing and reproducing, each as wide as its elasticity of λ; staying as a mature breeder has the largest, 0.230. b: the elasticities summed by stage. c: λ when the annual survival of one stage is raised: even 100 % survival of eggs and hatchlings gives λ = 0.965, while λ reaches 1 with 17 % better survival of mature breeders, 20 % of small juveniles, 24 % of subadults or 27 % of large juveniles." loading="lazy" decoding="async"></div><figcaption><p class="fig-links"><a href="figures/tools/tikz_loggerhead_light.png">PNG</a> <a href="figures/tools/tikz_loggerhead_dark.png">PNG, dark</a> <a href="figures/tools/tikz_loggerhead_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/tikz_loggerhead.tex">Script</a></p></figcaption></figure>
+<!--/fig-->
+
 <h2 id="web">Web</h2>
 <div class="split">
   <div class="prose">
@@ -264,7 +277,7 @@ V.responsive(plot, (width, P) => {       // redraws on resize and when the twin 
       <li><a href="forms.html">Forms</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
       <li><a href="https://github.com/akaminas/vellum">GitHub</a></li><li><a href="downloads/vellum-style.zip">Download</a></li>
     </ul>
-    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git b20ba0c</p>
+    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git 1ef84cd</p>
   </div>
 </footer>
 <!--/footer-->

@@ -1,0 +1,94 @@
+% tikz_loggerhead.tex: the stage-structured model of loggerhead sea turtles (Crouse, Crowder and Caswell 1987) in TikZ
+% and pgfplots. a: the life-cycle graph, each arrow as wide as its elasticity of lambda; b: the elasticities summed by
+% stage and kind; c: lambda when the survival of one stage is raised. Rates from data/ecology/loggerhead_crouse1987.csv;
+% lambda, elasticities and scenarios from prepare_data.py (data/turtle_*.dat, data/turtle_macros.tex).
+% Light twin: lualatex tikz_loggerhead.tex; dark twin: lualatex -jobname=tikz_loggerhead_dark tikz_loggerhead.tex
+\documentclass[11pt, border=0pt]{standalone}
+\usepackage{vellum-twin}
+\usetikzlibrary{arrows.meta}
+\input{data/turtle_macros.tex}
+\newcommand\panel[3]{\node[anchor=base west, inner sep=0pt, text=vInk\vD, font=\vLabelFont] at (#1,#2) {\textbf{#3}};}
+\newcommand\note[3][]{\node[inner sep=0pt, text=vSecondary\vD, font=\vUnitFont, align=left, #1] at #2 {#3};}
+\begin{document}
+\sffamily
+\begin{tikzpicture}[x=1cm, y=1cm,
+    stage/.style={vellum box, align=center, text width=1.5cm, minimum height=0.98cm, inner sep=3pt, font=\vUnitFont},
+    flow/.style={-{Stealth[length=2.6pt 1.3, width=2.6pt 1.8]}, line cap=butt, shorten >=1.5pt, shorten <=1.5pt},
+    ew/.style={line width={0.4pt + 15pt * #1}}]                 % an arrow as wide as its elasticity
+  \def\W{18.288}\def\H{13.0}                                  % 7.2 in wide, drawn at the printed size
+  \fill[vSurface\vD] (0,0) rectangle (\W,\H);
+  \useasboundingbox (0,0) rectangle (\W,\H);
+  \node[anchor=north west, inner sep=0pt, text=vInk\vD, font=\vTitleFont] at (0.45,\H-0.4)
+    {Even perfect nest survival cannot halt the loggerhead decline; better survival at sea can};
+  \node[anchor=north west, inner sep=0pt, text=vMuted\vD, font=\vSubtitleFont] at (0.45,\H-1.08)
+    {stage-structured model of a Georgia population · the population shrinks by \tuDecline\,\% a year, $\lambda = \tuLambda$};
+
+  % ---- a: the life cycle. Boxes are stages; arrows are annual rates, as wide as the elasticity of lambda to them
+  \panel{0.45}{11.25}{a\quad The life cycle, each arrow as wide as its elasticity}
+  \foreach \i/\name in {1/{eggs,\\hatchlings}, 2/{small\\juveniles}, 3/{large\\juveniles}, 4/{subadults}, 5/{novice\\breeders},
+      6/{first-year\\remigrants}, 7/{mature\\breeders}}
+    \node[stage] (s\i) at ({1.45 + (\i - 1) * 2.56}, 9.45) {\name};
+  % growth: to the next stage
+  \foreach \a/\b/\l in {1/2/ab, 2/3/bc, 3/4/cd, 4/5/de, 5/6/ef, 6/7/fg} {
+    \draw[flow, vteal\vD, ew=\csname tuE\l\endcsname] (s\a.east) -- (s\b.west);
+    \node[anchor=south, inner sep=1pt, yshift=3pt, text=vMuted\vD, font=\vFooterFont] at ($(s\a.east)!0.5!(s\b.west)$)
+      {\csname tuA\l\endcsname};}
+  % stasis: a loop above the box
+  \foreach \a/\l in {2/bb, 3/cc, 4/dd, 7/gg} {
+    \draw[flow, vindigo\vD, ew=\csname tuE\l\endcsname] ([xshift=-0.32cm]s\a.north) .. controls +(-0.1,0.78) and +(0.1,0.78)
+      .. ([xshift=0.32cm]s\a.north);
+    \node[anchor=west, inner sep=0pt, text=vMuted\vD, font=\vFooterFont] at ([xshift=0.46cm, yshift=0.42cm]s\a.north)
+      {\csname tuA\l\endcsname};}
+  % fecundity: eggs laid, an arc under the row back to the first stage
+  \foreach \a/\l/\d/\x in {5/ea/0.9/0.42, 6/fa/1.5/0.12, 7/ga/2.1/-0.18} {
+    \draw[flow, vterracotta\vD, ew=\csname tuE\l\endcsname] (s\a.south) .. controls +(0,-\d) and +(0,-\d)
+      .. ([xshift=\x cm]s1.south);
+    \node[anchor=south, inner sep=1pt, text=vMuted\vD, font=\vFooterFont, fill=vSurface\vD] at ($(s\a.south)!0.5!(s1.south)+(0,{-0.75*\d})$)
+      {\csname tuA\l\endcsname\ eggs};}
+  \node[anchor=north east, inner sep=0pt, text=vSecondary\vD, font=\vUnitFont, align=right] at (17.9,11.15)
+    {\textcolor{vindigo\vD}{\rule[0.6pt]{12pt}{2pt}}\,stay\quad
+     \textcolor{vteal\vD}{\rule[0.6pt]{12pt}{2pt}}\,grow\quad
+     \textcolor{vterracotta\vD}{\rule[0.6pt]{12pt}{2pt}}\,reproduce · labels are annual rates};
+
+  % ---- b: elasticities summed by stage; they add up to 1
+  \panel{0.45}{6.75}{b\quad Where $\lambda$ is most sensitive}
+  \begin{axis}[vellum twin, at={(2.95cm,1.75cm)}, anchor=south west, scale only axis, width=4.6cm, height=4.3cm,
+      xbar stacked, bar width=0.4cm, y dir=reverse, ymin=0.45, ymax=7.55, xmin=0, xmax=0.3, xtick={0,0.1,0.2,0.3},
+      xticklabels={0,0.1,0.2,0.3}, ytick={1,...,7}, ymajorgrids=false, xmajorgrids, axis x line*=bottom,
+      yticklabels={eggs and hatchlings, small juveniles, large juveniles, subadults, novice breeders, first-year remigrants,
+        mature breeders}, yticklabel style={text=vSecondary\vD}, xlabel={elasticity of $\lambda$, summed by stage},
+      every axis plot/.append style={draw=vSurface\vD, line width=0.8pt}]
+    \addplot[fill=vindigo\vD] table[x=stasis, y=stage] {data/turtle_elasticity.dat};
+    \addplot[fill=vteal\vD] table[x=growth, y=stage] {data/turtle_elasticity.dat};
+    \addplot[fill=vterracotta\vD] table[x=fecundity, y=stage] {data/turtle_elasticity.dat};
+  \end{axis}
+
+  % ---- c: lambda when one stage's survival rises; each line ends where that survival reaches 1, or at +50 %
+  \panel{10.0}{6.75}{c\quad Raising the survival of one stage to 100\,\%}
+  \begin{axis}[vellum twin, at={(10.0cm,1.75cm)}, anchor=south west, scale only axis, width=5.3cm, height=4.05cm,
+      xmin=0.6, xmax=1, ymin=0.93, ymax=1.075, xtick={0.6,0.7,0.8,0.9,1}, xticklabels={60,70,80,90,100}, ytick={0.95,1,1.05},
+      yticklabels={0.95,1.00,1.05}, xlabel={annual survival of the stage, \%}, title={population growth rate $\lambda$ · dots: survival today}]
+    \draw[vellum reference=vMuted\vD] (axis cs:0.6,1) -- (axis cs:1,1);
+    \note[anchor=south west, inner sep=1pt]{(axis cs:0.603,1.0015)}{stable}
+    \foreach \s/\t in {2/b, 3/c, 4/d, 7/g} {
+      \edef\next{\noexpand\addplot[vSecondary\vD, line width=1pt] table[x=surv, y=lam] {data/turtle_scenario_\s.dat};
+        \noexpand\node[vellum dot=vSecondary\vD, minimum size=4.2pt] at (axis cs:\csname tuSurv\t\endcsname,\tuLambda) {};}
+      \next}
+    \addplot[vochre\vD, line width=\vLine] table[x=surv, y=lam] {data/turtle_scenario_1.dat};
+    \node[vellum dot=vochre\vD] at (axis cs:\tuSurva,\tuLambda) {};
+    % where each line ends, and where its label goes: nudged apart where the lines end close together
+    \coordinate (ec) at (axis cs:1,\tuMaxc);  \coordinate (lc) at (axis cs:1,1.064);
+    \coordinate (eg) at (axis cs:1,\tuMaxg);  \coordinate (lg) at (axis cs:1,1.047);
+    \coordinate (ed) at (axis cs:1,\tuMaxd);  \coordinate (ld) at (axis cs:1,1.0345);
+    \coordinate (eb) at (axis cs:1,\tuMaxb);  \coordinate (lb) at (axis cs:1,1.022);
+    \coordinate (ea) at (axis cs:1,\tuMaxa);  \coordinate (la) at (axis cs:1,\tuMaxa);
+  \end{axis}
+  % end labels with a short leader from the line's end
+  \foreach \t/\name in {c/large juveniles, g/mature breeders, d/subadults, b/small juveniles, a/{eggs and hatchlings\\$\lambda = \tuMaxa$ at 100\,\%}} {
+    \draw[vRule\vD, line width=0.4pt] (e\t) -- ++(0.12,0) |- ([xshift=0.3cm]l\t);
+    \node[anchor=west, inner sep=0pt, xshift=0.36cm, text=vSecondary\vD, font=\vUnitFont, align=left] at (l\t) {\name};}
+
+  \node[anchor=south west, inner sep=0pt, text=vMuted\vD, font=\vFooterFont] at (0.45,0.25)
+    {\vfooter{Crouse, Crowder and Caswell (1987), Ecology 68, 1412–1423; elasticities after Caswell (2001)}};
+\end{tikzpicture}
+\end{document}
