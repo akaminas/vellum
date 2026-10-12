@@ -227,8 +227,15 @@ def badge(it):
     return f'<span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24">{BADGES[key]}</svg></span>'
 
 
+def kinds_of(it):
+    """The gallery categories of a piece: its kind, and "infographic" too when its medium is an infographic."""
+    out = [it.get("kind", "")]
+    if it.get("medium") == "infographic" and "infographic" not in out: out.append("infographic")
+    return out
+
+
 def gallery(items):
-    counts = {k: sum(1 for it in items if it.get("kind") == k) for k, _ in KINDS}
+    counts = {k: sum(1 for it in items if k in kinds_of(it)) for k, _ in KINDS}
     chips = ['<button class="chip" type="button" data-filter="all" aria-pressed="true">All <span class="muted">' + str(len(items)) + "</span></button>"]
     for k, label in KINDS:
         if counts[k]:
@@ -236,7 +243,7 @@ def gallery(items):
     works = []
     for it in items:
         tile = f'<div class="work-tile">{tile_imgs(it, True, full=True)}{caption(it)}</div>'
-        works.append(f'<figure class="work" data-kind="{e(it.get("kind", ""))}" id="g-{it["group"]}-{it["id"]}">{tile}{badge(it)}</figure>')
+        works.append(f'<figure class="work" data-kind="{e(" ".join(kinds_of(it)))}" id="g-{it["group"]}-{it["id"]}">{tile}{badge(it)}</figure>')
     return ('<div class="filter-row center" role="group" aria-label="Filter the gallery">' + "".join(chips) + "</div>"
             '<p class="sr-only" aria-live="polite" id="gallery-status"></p>'
             '<div class="works">' + "".join(works) + "</div>")

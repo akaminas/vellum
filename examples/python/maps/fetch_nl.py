@@ -17,7 +17,7 @@ Sources (see data/maps/SOURCES.md):
 
 Projection: everything is stored in lon / lat (EPSG:4326). The elevation grid is stored on the map's own Mercator grid.
 """
-import io, json, math, os, sys, tempfile, time, urllib.parse, urllib.request, zipfile
+import json, math, os, sys, tempfile, time, urllib.parse, urllib.request
 
 import numpy as np
 from PIL import Image
@@ -31,21 +31,20 @@ sys.path.insert(0, HERE)
 from nl_geo import FRAME, BBOX, merc_y, merc_lat, GRID   # noqa: E402  (the map frame, shared with the drawing script)
 
 UA = {"User-Agent": "vellum-figure-style/1.0 (https://github.com/akaminas/vellum; one-off map download)"}
-OVERPASS = ["https://overpass-api.de/api/interpreter", "https://overpass.private.coffee/api/interpreter",
-            "https://overpass.kumi.systems/api/interpreter"]
+OVERPASS = ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter"]
 S, W, N, E = BBOX
-B = f"({S},{W},{N},{E})"
-QUERIES = {
-    "coastline": f'way["natural"="coastline"]{B};out geom;',
-    "rivers": f'way["waterway"="river"]{B};out tags geom;',
-    "canals": f'way["waterway"="canal"]{B};out tags geom;',
-    "water_rel": f'rel["natural"="water"]{B};out tags geom;',
-    "water_way": f'way["natural"="water"]["water"~"^(lake|river|reservoir|lagoon|oxbow|canal|basin)$"]{B};out tags geom;',
-    "water_way_named": f'way["natural"="water"][!"water"]["name"]{B};out tags geom;',
-    "borders": f'way["boundary"="administrative"]["admin_level"="2"]{B};out tags geom;',
+QUERIES = {   # {B} is the bounding box; the heavy queries run in TILES x TILES pieces, merged by element id
+    "coastline": 'way["natural"="coastline"]{B};out geom;',
+    "rivers": 'way["waterway"="river"]{B};out tags geom;',
+    "canals": 'way["waterway"="canal"]{B};out tags geom;',
+    "water_rel": 'rel["natural"="water"]{B};out tags geom;',
+    "water_way": 'way["natural"="water"]["water"~"^(lake|river|reservoir|lagoon|oxbow|canal|basin)$"]{B};out tags geom;',
+    "water_way_named": 'way["natural"="water"][!"water"]["name"]{B};out tags geom;',
+    "borders": 'way["boundary"="administrative"]["admin_level"="2"]{B};out tags geom;',
     "nl_relation": 'rel(47796);out geom;',
-    "places": f'node["place"~"^(city|town)$"]{B};out;',
+    "places": 'node["place"~"^(city|town)$"]{B};out;',
 }
+TILES = {"rivers": 3, "canals": 2, "water_rel": 3, "water_way": 3, "water_way_named": 2, "borders": 2}
 
 
 def get(url, data=None, tries=4, timeout=600):
@@ -60,16 +59,25 @@ def get(url, data=None, tries=4, timeout=600):
     raise RuntimeError(f"could not fetch {url}")
 
 
-def overpass(name):
-    path = os.path.join(CACHE, f"osm_{name}.json")
+def curl_post(url, q, timeout=400):
+    """POST an Overpass query with curl (the public instances turned urllib requests away with 504s here)."""
+    import subprocess
+    r = subprocess.run(["curl", "-s", "-f", "-m", str(timeout), "-A", "vellum-map/1.0", url, "--data-urlencode", f"data={q}"],
+                       capture_output=True)
+    if r.returncode != 0:
+        raise RuntimeError(f"curl exit {r.returncode}")
+    return r.stdout
+
+
+def overpass_one(q, path, label):
     if os.path.exists(path):
         return json.load(open(path, encoding="utf-8"))
-    q = f"[out:json][timeout:900][maxsize:1073741824];{QUERIES[name]}"
-    for k in range(6):
+    q = f"[out:json][timeout:300];{q}"
+    for k in range(10):
         ep = OVERPASS[k % len(OVERPASS)]
-        print(f"overpass {name} via {ep}", flush=True)
+        print(f"overpass {label} via {ep}", flush=True)
         try:
-            raw = get(ep, urllib.parse.urlencode({"data": q}).encode(), tries=1, timeout=900)
+            raw = curl_post(ep, q)
             js = json.loads(raw)
             if "remark" in js and "error" in js["remark"].lower():
                 raise RuntimeError(js["remark"])
@@ -77,8 +85,26 @@ def overpass(name):
             return js
         except Exception as e:
             print(f"  failed: {str(e)[:200]}", flush=True)
-            time.sleep(30)
-    raise RuntimeError(f"overpass {name} failed")
+            time.sleep(30 + 15 * k)
+    raise RuntimeError(f"overpass {label} failed")
+
+
+def overpass(name):
+    n = TILES.get(name, 1)
+    if n == 1:
+        return overpass_one(QUERIES[name].format(B=f"({S},{W},{N},{E})"), os.path.join(CACHE, f"osm_{name}.json"), name)
+    seen, els = set(), []
+    for i in range(n):
+        for j in range(n):
+            s0, s1 = S + (N - S) * j / n, S + (N - S) * (j + 1) / n
+            w0, w1 = W + (E - W) * i / n, W + (E - W) * (i + 1) / n
+            b = f"({s0:.4f},{w0:.4f},{s1:.4f},{w1:.4f})"
+            js = overpass_one(QUERIES[name].format(B=b), os.path.join(CACHE, f"osm_{name}_{i}{j}.json"), f"{name} {i}{j}")
+            for e in js["elements"]:
+                key = (e["type"], e["id"])
+                if key not in seen:
+                    seen.add(key); els.append(e)
+    return {"elements": els}
 
 
 # ---- AHN: the PDOK WCS, point-sampled on a 100 m grid in RD New, in tiles of 50 km
