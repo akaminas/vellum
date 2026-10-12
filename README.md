@@ -95,10 +95,8 @@ of the site and the example figures are under [CC BY 4.0](https://creativecommon
 keep their own licences, listed in `data/SOURCES.md`. TeX Gyre Pagella, served as the web fallback for Palatino, is under
 the GUST Font License (`docs/assets/fonts/GUST-FONT-LICENSE.txt`).
 
-## Sources of the style
+## References
 
-Vellum was written after studying Nadieh Bremer's portfolio at [Visual Cinnamon](https://www.visualcinnamon.com/), the
-featured examples of the [R Graph Gallery](https://r-graph-gallery.com/), the pastel palettes on
-[Color Hunt](https://colorhunt.co/) and the colour vocabulary of Canva's colour combinations. The colour science uses
-OKLab (Björn Ottosson, 2020) and the colour-vision simulation of Machado, Oliveira and Fernandes (2009). The site's
-principles page lists what was taken from each, and where Vellum departs from them.
+- Björn Ottosson (2020), *A perceptual color space for image processing* (OKLab), https://bottosson.github.io/posts/oklab/
+- Machado, Oliveira and Fernandes (2009), *A physiologically-based model for simulation of color vision deficiency*,
+  IEEE TVCG 15(6), 1291–1298.

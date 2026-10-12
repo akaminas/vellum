@@ -219,5 +219,42 @@
    "dark": "figures/science/primates_tree_dark.png",
    "pdf": "figures/science/primates_tree_light.pdf"
   }
+ },
+ {
+  "id": "miserables_wordcloud",
+  "group": "science",
+  "title": "Valjean co-appears 158 times with other characters, 1.5 times as often as Marius",
+  "subtitle": "Les Misérables · the 50 most connected of 77 characters · the area of each name is proportional to its co-appearances",
+  "kind": "scientific",
+  "form": "word cloud with ranked values",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Knuth, The Stanford GraphBase (1993), Les Misérables co-occurrences, via vega-datasets 2.8.0",
+  "script": "examples/python/science/miserables_wordcloud.py",
+  "alt": "Word cloud of the 50 most connected of the 77 characters of Les Misérables, word area proportional to co-appearances. Largest: Valjean (158), Marius (104), Enjolras (91), Courfeyrac (84), Cosette (68), Combeferre (68). Valjean has 1.5 times the co-appearances of Marius, and shares a chapter with 36 characters.",
+  "note": "Layout: deterministic Archimedean spiral, largest word first, collision-checked on the rendered text boxes; no random seed involved.",
+  "files": {
+   "light": "figures/science/miserables_wordcloud_light.png",
+   "dark": "figures/science/miserables_wordcloud_dark.png",
+   "pdf": "figures/science/miserables_wordcloud_light.pdf"
+  }
+ },
+ {
+  "id": "driving_dual_axis",
+  "group": "science",
+  "title": "As petrol got 58 % cheaper from 1980 to 1998, Americans drove 44 % more miles each",
+  "subtitle": "Miles driven per person (left axis) and the price of a gallon of petrol in 2010 dollars (right axis), United States, 1956–2010",
+  "kind": "scientific",
+  "form": "line chart with a second y axis",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Miles driven per capita and petrol price in 2010 dollars, United States, 1956–2010 (Fairfield, NYT 2010; vega-datasets)",
+  "script": "examples/python/science/driving_dual_axis.py",
+  "alt": "Two lines on two y axes, 1956 to 2010: miles driven per person (left axis, teal) rises from 3,675 to a peak of 10,067 in 2005; the price of a gallon of petrol in 2010 dollars (right axis, terracotta) falls 58 % from $3.30 in 1980 to $1.39 in 1998, while driving per person rises 44 %. The price peaks at $3.31 in 2008.",
+  "files": {
+   "light": "figures/science/driving_dual_axis_light.png",
+   "dark": "figures/science/driving_dual_axis_dark.png",
+   "pdf": "figures/science/driving_dual_axis_light.pdf"
+  }
  }
 ]

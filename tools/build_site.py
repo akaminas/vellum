@@ -196,7 +196,7 @@ def link_list(it):
 COVERS = {"talk/talk": "media/talk/talk-08.png", "pitch/pitch": "media/pitch/slide-05.png", "report/report": "media/report/page-2.png"}
 
 
-def tile_imgs(it, zoom, only=None):
+def tile_imgs(it, zoom, only=None, full=False):
     """The detail crops of both twins (or of the one image a piece has). only="light" or "dark" fixes one twin."""
     f = it.get("files", {})
     cover = COVERS.get(f'{it["group"]}/{it["id"]}')
@@ -210,7 +210,7 @@ def tile_imgs(it, zoom, only=None):
     for mode, src in (("light", light), ("dark", dark)):
         if not exists(src): continue
         cls = ("zoom " if zoom else "") + (f"twin-{mode}" if dark else "")
-        out.append(f'<img class="{cls.strip()}" src="{crop(src)}" data-full="{src}"{extra} alt="{alt}" loading="lazy" decoding="async">')
+        out.append(f'<img class="{cls.strip()}" src="{thumb(src) if full else crop(src)}" data-full="{src}"{extra} alt="{alt}" loading="lazy" decoding="async">')
     return "".join(out)
 
 
@@ -245,15 +245,16 @@ def gallery(items):
 
 
 def mosaic(keys, by_id):
-    """A full-bleed mosaic of works, edge to edge, each tile leading to its place in the gallery or its page."""
+    """A grid of selected works, each tile in the twin that matches the theme, its title and tools below it."""
     tiles = []
-    for k, key in enumerate(keys):
+    for key in keys:
         it = by_id.get(key)
         if not it: continue
-        twin = "dark" if (k // 4 + k % 4) % 2 else "light"   # a checkerboard of the two twins, by intended position
         href = target_of(it) or f'gallery.html#g-{it["group"]}-{it["id"]}'
-        tiles.append(f'<a href="{href}" aria-label="{e(it.get("title", ""), quote=True)}">{tile_imgs(it, False, twin)}{caption(it)}</a>')
-    return '<div class="mosaic bleed">' + "".join(tiles) + "</div>"
+        kind = " · ".join(t for t in (it.get("form"), it.get("tool")) if t)
+        tiles.append(f'<a class="work-card" href="{href}"><span class="work-img">{tile_imgs(it, False, full=True)}</span>'
+                     f'<span class="work-title">{e(it.get("title", ""))}</span><span class="work-kind">{e(kind)}</span></a>')
+    return '<div class="selected">' + "".join(tiles) + "</div>"
 
 
 # ---------------------------------------------------------------- 4. pages

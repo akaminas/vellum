@@ -24,7 +24,7 @@ if (toggle) {
 
 // ---- the current page in the nav
 const here = location.pathname.split("/").pop() || "index.html";
-for (const a of document.querySelectorAll(".nav-half a, .footer-nav a")) {
+for (const a of document.querySelectorAll(".nav a, .footer-nav a")) {
   if (a.getAttribute("href") === here) a.setAttribute("aria-current", "page");
 }
 

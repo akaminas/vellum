@@ -16,45 +16,41 @@
 <script type="module" src="assets/js/site.js"></script>
 <!--/head-->
 <title>Media · Vellum</title>
-<meta name="description" content="Vellum in each medium: journal papers, a dissertation, an A0 conference poster, a talk in the dark twin, a pitch deck, an A4 report and social infographics. The medium changes the sizes and the density, never the palette, the fonts or the anatomy.">
+<meta name="description" content="Vellum across media: paper figures, a dissertation, a conference poster, a talk, a pitch deck, a report and an infographic.">
 </head>
 <body>
 <!--#header-->
 <a class="skip" href="#main">Skip to the content</a>
 <header class="site-header">
-  <div class="nav-wrap">
-    <nav class="nav-half nav-left" aria-label="The style">
+  <div class="header-in">
+    <a class="brand" href="index.html" aria-label="Vellum, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path class="bm-grid" d="M3 12.5h26M3 20.5h26"/>
+        <path class="bm-v" d="M6 7.5 15.5 25"/>
+        <path class="bm-v2" d="M15.5 25 25.5 7.5"/>
+        <circle class="bm-dot" cx="25.5" cy="7.5" r="3.4"/>
+      </svg>
+      <span class="brand-word">Vellum</span>
+    </a>
+    <nav class="nav" aria-label="Site">
+      <a href="gallery.html">Work</a>
+      <a href="interactive.html">Interactive</a>
+      <a href="media.html">Media</a>
       <a href="principles.html">Principles</a>
       <a href="colour.html">Colour</a>
       <a href="anatomy.html">Anatomy</a>
       <a href="forms.html">Forms</a>
-    </nav>
-    <a class="brand" href="index.html" aria-label="Vellum, home" title="Vellum">
-      <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
-        <circle cx="15.87" cy="5.04" r="4.3" style="fill:var(--v-ochre)"/>
-        <circle cx="22.66" cy="8.57" r="4.3" style="fill:var(--v-terracotta)"/>
-        <circle cx="24.06" cy="19.23" r="4.3" style="fill:var(--v-mauve)"/>
-        <circle cx="14.13" cy="24.96" r="4.3" style="fill:var(--v-indigo)"/>
-        <circle cx="5.60" cy="18.42" r="4.3" style="fill:var(--v-teal)"/>
-        <circle cx="7.34" cy="8.57" r="4.3" style="fill:var(--v-moss)"/>
-      </svg>
-      <span class="brand-word">Vellum</span>
-    </a>
-    <nav class="nav-half nav-right" aria-label="The work">
-      <a href="gallery.html">Gallery</a>
-      <a href="interactive.html">Interactive</a>
-      <a href="media.html">Media</a>
       <a href="tools.html">Tools</a>
     </nav>
-  </div>
-  <div class="header-tools">
-    <button class="icon-btn theme-toggle" type="button" aria-label="Switch twin">
-      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
-      <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
-    </button>
-    <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
-      <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-    </a>
+    <div class="header-tools">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+        <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+      </a>
+    </div>
   </div>
 </header>
 <!--/header-->
@@ -63,8 +59,8 @@
 
 <header class="page-head">
   <span class="eyebrow">Media</span>
-  <h1>The medium changes the sizes and the density, never the palette</h1>
-  <p class="lead">A journal column, a thesis, an A0 poster, a talk in a dark hall, a pitch deck read without a speaker, an A4 report and a phone-sized infographic. Each medium has its own sizes, density and reader, and each one keeps the same palette, fonts and anatomy. Three of the examples below tell one story, life expectancy since 1950, in three formats.</p>
+  <h1>Media</h1>
+  <p class="lead">Seven formats with the same palette, fonts and anatomy. The pitch deck, report and infographics share one dataset: life expectancy since 1950.</p>
   <ul class="toc">
     <li><a href="#paper">Papers</a></li>
     <li><a href="#thesis">Dissertation</a></li>
@@ -79,16 +75,16 @@
 <section class="project-hero bleed" id="paper" style="--pos:50% 50%">
   <img class="twin-light" src="figures/science/journal_penguins_light.png" alt="" loading="lazy">
   <img class="twin-dark" src="figures/science/journal_penguins_dark.png" alt="" loading="lazy">
-  <div class="title-card"><span class="mono-label">Papers · 89 or 183 mm · matplotlib</span><h2>Papers: the title moves to the caption</h2></div>
+  <div class="title-card"><span class="mono-label">Papers · 89 or 183 mm · matplotlib</span><h2>Paper figure</h2></div>
 </section>
 <div class="split">
   <div class="prose">
-    <p>A paper figure is Vellum with the title block removed. Everything else stays, which is how a paper is still recognisable as yours. The claim becomes the first sentence of the caption; the subtitle's content becomes the caption's next sentences; panel letters stay in the figure and panel claims become the caption's lettered sentences. The footer's content goes in the data and code availability statement, and the file name carries the stamp.</p>
-    <p>Single column 3.5 in (89 mm), double 7.2 in (183 mm), drawn at the final width and never scaled into a column. Lines 1.2 pt instead of 1.6, markers 20 pt². Four series per panel at most. The figure must survive greyscale printing, which the alternating lightness of the tones guarantees. A journal's own requirements take precedence: if it names a font, use it and keep every other rule.</p>
+    <p>The title block is removed. The claim becomes the first sentence of the caption and the panel claims its lettered sentences; sources go in the data and code availability statement, and the file name carries the stamp.</p>
+    <p>Drawn at final width: 3.5 in (89 mm) single column, 7.2 in (183 mm) double. Lines 1.2 pt, markers 20 pt², at most four series per panel. The tones alternate in lightness, so the figure survives greyscale printing. A journal's own requirements, such as a named font, take precedence.</p>
   </div>
   <div class="card">
     <h4 class="mt-0">Files for a journal</h4>
-    <p class="small secondary">Vector PDF with the fonts embedded (<code>pdf.fonttype 42</code>), one file per figure, named <code>fig2_claim_&lt;sha&gt;.pdf</code>. TIFF or EPS converted from the PDF at 600 dpi for line art, never redrawn. Composite figures are composed in the plotting script, not in a drawing program, so they regenerate. A heat map takes one family or lagoon with a legend bar; a 3D figure is allowed once, with its 2D twin as panel b.</p>
+    <p class="small secondary">One vector PDF per figure with fonts embedded (<code>pdf.fonttype 42</code>), named <code>fig2_claim_&lt;sha&gt;.pdf</code>. TIFF or EPS converted from the PDF at 600 dpi. Composite figures are assembled in the plotting script so they regenerate. At most one 3D figure, with its 2D twin as panel b.</p>
   </div>
 </div>
 <!--#fig science/journal_penguins wide-->
@@ -98,28 +94,28 @@
 <section class="project-hero bleed" id="thesis" style="--pos:50% 45%">
   <img class="twin-light" src="figures/colour/anatomy_light.png" alt="" loading="lazy">
   <img class="twin-dark" src="figures/colour/anatomy_dark.png" alt="" loading="lazy">
-  <div class="title-card"><span class="mono-label">Dissertation · 125 mm text width</span><h2>Dissertation: the whole style, without exception</h2></div>
+  <div class="title-card"><span class="mono-label">Dissertation · 125 mm text width</span><h2>Dissertation</h2></div>
 </section>
 <div class="split">
   <div class="prose">
-    <p>A thesis is read from the figures first. Every figure is a card a reader can take out of the chapter and understand alone, so unlike a paper the thesis figure keeps its claim title and subtitle inside the figure, and the caption below repeats the claim in one sentence and adds how to read it.</p>
-    <p>Body in TeX Gyre Pagella 11 pt on a 125 mm text width; Lato for captions, tables, margin notes and figure text; chapter numbers in the teal tone; links in the indigo tone without boxes. Figures are drawn 4.92 in wide. Tables in Lato with lining figures, no vertical rules, a 0.5 pt ink rule above and below the header and at the foot, alternate rows in the card colour.</p>
+    <p>Each figure keeps its claim title and subtitle so it can be read outside the chapter; the caption restates the claim and explains how to read the figure.</p>
+    <p>Body in TeX Gyre Pagella 11 pt on a 125 mm text width; Lato for captions, tables, margin notes and figure text. Figures drawn 4.92 in wide. Chapter numbers in teal, links in indigo without boxes. Tables in Lato with lining figures, no vertical rules, 0.5 pt rules at the header and foot, and alternate rows in the card colour.</p>
   </div>
   <div class="key">
-    <p><strong>One language across chapters.</strong> The semantic slots hold for the whole thesis: the model is teal, data and the highlighted thing terracotta, bounds ochre and dotted. A reader who learned the colours in chapter 2 reads chapter 5 without a legend. One gradient per variable for the whole thesis.</p>
-    <p class="secondary">Before the final build, print one chapter in greyscale on the department printer. A figure that fails gets a label, not a louder colour.</p>
+    <p><strong>Colours across chapters.</strong> Model in teal, data and highlights in terracotta, bounds in dotted ochre, and one gradient per variable throughout the thesis.</p>
+    <p class="secondary">One chapter is printed in greyscale before the final build; a figure that fails gets a label.</p>
   </div>
 </div>
 
 <section class="project-hero bleed" id="poster" style="--pos:50% 42%">
   <img src="media/poster/poster.png" alt="" loading="lazy">
-  <div class="title-card"><span class="mono-label">Conference poster · A0 portrait · beamerposter</span><h2>Posters: one figure with a title, not a paper on a wall</h2></div>
+  <div class="title-card"><span class="mono-label">Conference poster · A0 portrait · beamerposter</span><h2>Conference poster</h2></div>
 </section>
 <div class="split">
   <div>
-    <p>A0 portrait, read from two metres, one claim. A white sheet with cream column cards, one large central figure, three short columns of text, and a Palatino headline at 90 pt that states the claim. Body 28 pt, figure body 23 pt, nothing under 18 pt, under 300 words in all.</p>
-    <p>One accent, the teal tone, for headings and the highlighted series; terracotta for the single most important number, set as a stat tile. A poster that uses all six families outside its figure looks like a flyer. It may carry the one unusual form Vellum allows per piece, here a 3D scatter with its 2D twin beside it, because a reader standing in front of it has time to learn it.</p>
-    <p class="small muted">Built with beamerposter and <code>vellum-colors.sty</code>; the central figure is drawn by <code>vellum.py</code> at the poster size, the one medium where a figure is scaled, by exactly 2.6.</p>
+    <p>One claim, read from two metres. White sheet, cream column cards, one central figure, three short text columns and a 90 pt Palatino headline. Body 28 pt, figure text 23 pt, nothing under 18 pt, under 300 words.</p>
+    <p>Teal for headings and the highlighted series; terracotta for the key number, set as a stat tile. The central figure is a 3D scatter with its 2D twin beside it.</p>
+    <p class="small muted">Built with beamerposter and <code>vellum-colors.sty</code>. The figure is drawn by <code>vellum.py</code> at poster size, scaled by 2.6.</p>
   </div>
   <div>
     <!--#fig poster/poster-->
@@ -130,16 +126,16 @@
 
 <section class="project-hero bleed" id="talk" style="--pos:50% 50%">
   <img src="media/talk/talk-08.png" alt="" loading="lazy">
-  <div class="title-card"><span class="mono-label">Talk · 16:9 · beamer, dark twin</span><h2>Talks: a figure with a sentence</h2></div>
+  <div class="title-card"><span class="mono-label">Talk · 16:9 · beamer, dark twin</span><h2>Talk</h2></div>
 </section>
 <div class="split">
   <div class="prose">
-    <p>A slide is a figure with a sentence. The sentence is the frame title and it is the claim; the figure's own title block is dropped. The dark twin for a projector in a dark hall, where it hides the projector's weakness and the light tones glow; the light twin for a meeting room with daylight or a deck that will be read later. Decide once per deck.</p>
-    <p>A figure with four series is shown in four steps, each adding a series in its slot colour while the earlier ones stay. A surface is shown at two or three fixed views on consecutive slides, never spinning, and its flat twin follows. No bullet list longer than four, no logo on every slide, no text under 16 pt.</p>
+    <p>The frame title states the claim and the figure's own title block is dropped. Dark twin for a projector in a dark room; light twin for daylight or a deck read later, chosen once per deck.</p>
+    <p>A four-series figure is revealed one series per slide. A surface is shown at two or three fixed views, followed by its flat twin. Lists of four items at most, no text under 16 pt.</p>
   </div>
   <div class="card">
     <h4 class="mt-0">Sizes on a 16:9 frame</h4>
-    <p class="small secondary">Title 28 pt Palatino, body 20 pt Lato at most four lines, figure text at the print scale times 2.2, footer 10 pt muted with the short title, slide number and stamp. Margins 8 mm. Figures drawn at <code>V.size("slide")</code>, 10 × 5.2 in, with <code>vellum.use("dark", scale=2.2)</code>.</p>
+    <p class="small secondary">Title 28 pt Palatino; body 20 pt Lato, four lines at most; figure text at 2.2 × print size; footer 10 pt with short title, slide number and stamp. Margins 8 mm. Figures drawn at <code>V.size("slide")</code>, 10 × 5.2 in, with <code>vellum.use("dark", scale=2.2)</code>.</p>
   </div>
 </div>
 <!--#viewer talk/talk-->
@@ -148,17 +144,17 @@
 
 <section class="project-hero bleed" id="pitch" style="--pos:50% 50%">
   <img src="media/pitch/slide-05.png" alt="" loading="lazy">
-  <div class="title-card"><span class="mono-label">Pitch deck · ten slides · HTML</span><h2>Pitch decks: larger numbers, fewer figures</h2></div>
+  <div class="title-card"><span class="mono-label">Pitch deck · ten slides · HTML</span><h2>Pitch deck</h2></div>
 </section>
 <div class="split">
   <div class="prose">
-    <p>A deck for a funder, a partner or a committee: ten to fifteen slides, read without a speaker as often as with one. Light mode. The reader is not an expert, so every figure is a plain form, every number is a stat tile, and the terracotta highlight is used once per slide for the thing to remember.</p>
-    <p>Teal for structure, terracotta for the one thing that matters, everything else in ink, secondary, muted and card. A deck that uses mauve or ochre outside a chart has lost its discipline. Every slide stands alone: its title is the claim, a line under the figure says where the number comes from, and the footer carries the source and date.</p>
+    <p>Ten slides for a funder or committee, written to be read without a speaker. Light mode, plain chart forms, key numbers as stat tiles.</p>
+    <p>Teal for structure, terracotta once per slide for the key point, other colours only inside charts. Each slide title is a claim; a line under each figure gives the number's origin, and the footer the source and date.</p>
   </div>
   <div class="card">
-    <h4 class="mt-0">The arc, in ten slides</h4>
+    <h4 class="mt-0">Slide order</h4>
     <ol class="small secondary mb-0">
-      <li>The one-sentence claim.</li><li>The problem, as one stat tile.</li><li>What exists and why it is not enough.</li><li>The approach, as at most five boxes.</li><li>Evidence: one figure, one highlighted series.</li><li>Evidence: small multiples.</li><li>What it delivers: three stat tiles.</li><li>The plan: a timeline of milestones.</li><li>The ask: one number in terracotta.</li><li>Contact and the stamp.</li>
+      <li>Claim.</li><li>Problem, one stat tile.</li><li>Existing work.</li><li>Approach, up to five boxes.</li><li>Evidence, one highlighted series.</li><li>Evidence, small multiples.</li><li>Outcomes, three stat tiles.</li><li>Milestone timeline.</li><li>The ask, in terracotta.</li><li>Contact.</li>
     </ol>
   </div>
 </div>
@@ -168,16 +164,16 @@
 
 <section class="project-hero bleed" id="report" style="--pos:50% 28%">
   <img src="media/report/page-2.png" alt="" loading="lazy">
-  <div class="title-card"><span class="mono-label">Report · A4 · HTML and matplotlib</span><h2>Reports: an argument with figures at its joints</h2></div>
+  <div class="title-card"><span class="mono-label">Report · A4 · HTML and matplotlib</span><h2>Report</h2></div>
 </section>
 <div class="split">
   <div class="prose">
-    <p>Define the order of the argument before drawing anything: the situation, the trend, the gap, the options, the ask. Each section has one figure that carries its claim; the executive summary repeats the claims as the figure titles. Every title is a claim a minister could repeat. Units in words, years as years, projections as tint bands with the line dotted after the last observed year, sources under every figure with the year of the data.</p>
-    <p>A4, 20 mm margins, a twelve-column grid with 4 mm gutters, body 10.5 pt, headings in Palatino. Key messages in cream boxes with a 2 pt teal rule on the left and no other border. Plain forms throughout and one memorable form per report. Country comparisons are dot plots sorted by value with the focal countries in terracotta, never a bar chart of forty bars in six colours.</p>
+    <p>Sections follow the argument: situation, trend, gap, options, ask. Each has one figure whose title is its claim, and the summary repeats those titles. Projections are tint bands with the line dotted after the last observed year; every figure has a dated source.</p>
+    <p>A4, 20 mm margins, twelve columns with 4 mm gutters, body 10.5 pt, Palatino headings. Key messages in cream boxes with a 2 pt teal left rule. Country comparisons are dot plots sorted by value, focal countries in terracotta.</p>
   </div>
   <div class="key">
-    <p><strong>Living beside a host brand.</strong> The host's logo, cover and heading colour are the host's. Inside the figures, Vellum's rules stand. The host's primary colour may take slot one if it passes the same checks (ΔE 15 from terracotta, 3:1 on white); otherwise it stays outside the figures.</p>
-    <p class="secondary">The seventeen SDG colours are a brand, not a palette: they fail every distance check beside each other. Use them only as a small icon beside a goal's name.</p>
+    <p><strong>Host brands.</strong> The host keeps its logo, cover and heading colour; the figures follow Vellum. The host's primary colour can take slot one if it is ΔE 15 from terracotta and 3:1 on white.</p>
+    <p class="secondary">The seventeen SDG colours fail the distance checks against each other, so they appear only as small icons beside goal names.</p>
   </div>
 </div>
 <!--#viewer report/report-->
@@ -186,16 +182,16 @@
 
 <section class="project-hero bleed" id="infographic" style="--pos:50% 22%">
   <img src="media/infographic/story.png" alt="" loading="lazy">
-  <div class="title-card"><span class="mono-label">Infographic · 1080 × 1920 px · HTML and SVG</span><h2>Infographics: the number first, then the headline</h2></div>
+  <div class="title-card"><span class="mono-label">Infographic · 1080 × 1920 px · HTML and SVG</span><h2>Infographic</h2></div>
 </section>
 <div class="split">
   <div class="prose">
-    <p>A one-page explainer read in under a minute by someone who did not ask for it. Three to five stat tiles and one figure on a white sheet with cream tiles and a Palatino headline. The reader meets the number, then the headline, then the sentence, then the source, and there are no other text sizes. It is the one medium where tints may be used as large blocks.</p>
-    <p>At 1080 px: a 64 px margin, twelve columns with 24 px gutters, an 8 px base unit, at least 30 per cent empty, at most 80 words. Areas proportional to values, bars from zero, the base of every comparison in its label. Two families and one terracotta highlight outside the figure. Never a gradient, never a photograph behind text, never 3D.</p>
+    <p>A one-page explainer: three to five stat tiles and one figure on white with cream tiles and a Palatino headline. Four text sizes only: number, headline, sentence, source. Tints may be used as large blocks here.</p>
+    <p>At 1080 px: 64 px margin, twelve columns with 24 px gutters, 8 px base unit, at least 30 % empty space, at most 80 words. Bars start at zero and every comparison states its base. No gradients, photographs behind text or 3D.</p>
   </div>
   <div class="card">
     <h4 class="mt-0">One master, several formats</h4>
-    <p class="small secondary">Design the portrait story (1080 × 1920) first, as a stack of cards; the square is its first three cards. Every format is rendered from the same script with its own size, and every number is printed by the script from the data, not typed. A change in the data regenerates every format.</p>
+    <p class="small secondary">The portrait story (1080 × 1920) is a stack of cards; the square is its first three. One script renders every format and prints every number from the data.</p>
   </div>
 </div>
 <div class="grid grid-2">
@@ -211,21 +207,18 @@
 
 <!--#footer-->
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap footer-in">
     <div>
-      <ul class="footer-nav">
-        <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
-        <li><a href="forms.html">Forms</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="interactive.html">Interactive</a></li>
-        <li><a href="media.html">Media</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
-      </ul>
-      <p><span class="serif" style="font-size:1.1rem;color:var(--v-ink)">Vellum</span>, a visual language for figures, by <a href="https://akaminas.github.io/">Alexandros Kaminas</a>.</p>
-      <p>Code under the MIT licence; text and figures under CC BY 4.0. Every figure on this site is drawn by a script in <a href="https://github.com/akaminas/vellum">the repository</a> from the data listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">data/SOURCES.md</a>.</p>
+      <p class="footer-brand"><span class="serif">Vellum</span> · by <a href="https://akaminas.github.io/">Alexandros Kaminas</a></p>
+      <p>Code MIT · text and figures CC BY 4.0 · data as listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">SOURCES.md</a></p>
     </div>
-    <div>
-      <p>Built from <code>style/vellum.json</code> · git ceaff1d</p>
-      <p><a href="downloads/vellum-style.zip">Download the style files</a></p>
-      <p>Site design after <a href="https://www.visualcinnamon.com/">Visual Cinnamon</a> and <a href="https://r-graph-gallery.com/">the R Graph Gallery</a>.</p>
-    </div>
+    <ul class="footer-nav">
+      <li><a href="gallery.html">Work</a></li><li><a href="interactive.html">Interactive</a></li><li><a href="media.html">Media</a></li>
+      <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
+      <li><a href="forms.html">Forms</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
+      <li><a href="https://github.com/akaminas/vellum">GitHub</a></li><li><a href="downloads/vellum-style.zip">Download</a></li>
+    </ul>
+    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git a4f352d</p>
   </div>
 </footer>
 <!--/footer-->

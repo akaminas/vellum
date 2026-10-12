@@ -16,45 +16,41 @@
 <script type="module" src="assets/js/site.js"></script>
 <!--/head-->
 <title>Forms · Vellum</title>
-<meta name="description" content="Which chart form for which job of the data, and the Vellum rules for each: lines, areas, slopes, bars, dot plots, distributions, scatter plots, heat maps, part-of-whole forms, maps, trees, networks, flows, and when a third axis is allowed.">
+<meta name="description" content="Rules for each chart form in Vellum, from line charts and a second y axis to maps, networks, word clouds and 3D.">
 </head>
 <body>
 <!--#header-->
 <a class="skip" href="#main">Skip to the content</a>
 <header class="site-header">
-  <div class="nav-wrap">
-    <nav class="nav-half nav-left" aria-label="The style">
+  <div class="header-in">
+    <a class="brand" href="index.html" aria-label="Vellum, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path class="bm-grid" d="M3 12.5h26M3 20.5h26"/>
+        <path class="bm-v" d="M6 7.5 15.5 25"/>
+        <path class="bm-v2" d="M15.5 25 25.5 7.5"/>
+        <circle class="bm-dot" cx="25.5" cy="7.5" r="3.4"/>
+      </svg>
+      <span class="brand-word">Vellum</span>
+    </a>
+    <nav class="nav" aria-label="Site">
+      <a href="gallery.html">Work</a>
+      <a href="interactive.html">Interactive</a>
+      <a href="media.html">Media</a>
       <a href="principles.html">Principles</a>
       <a href="colour.html">Colour</a>
       <a href="anatomy.html">Anatomy</a>
       <a href="forms.html">Forms</a>
-    </nav>
-    <a class="brand" href="index.html" aria-label="Vellum, home" title="Vellum">
-      <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
-        <circle cx="15.87" cy="5.04" r="4.3" style="fill:var(--v-ochre)"/>
-        <circle cx="22.66" cy="8.57" r="4.3" style="fill:var(--v-terracotta)"/>
-        <circle cx="24.06" cy="19.23" r="4.3" style="fill:var(--v-mauve)"/>
-        <circle cx="14.13" cy="24.96" r="4.3" style="fill:var(--v-indigo)"/>
-        <circle cx="5.60" cy="18.42" r="4.3" style="fill:var(--v-teal)"/>
-        <circle cx="7.34" cy="8.57" r="4.3" style="fill:var(--v-moss)"/>
-      </svg>
-      <span class="brand-word">Vellum</span>
-    </a>
-    <nav class="nav-half nav-right" aria-label="The work">
-      <a href="gallery.html">Gallery</a>
-      <a href="interactive.html">Interactive</a>
-      <a href="media.html">Media</a>
       <a href="tools.html">Tools</a>
     </nav>
-  </div>
-  <div class="header-tools">
-    <button class="icon-btn theme-toggle" type="button" aria-label="Switch twin">
-      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
-      <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
-    </button>
-    <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
-      <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-    </a>
+    <div class="header-tools">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+        <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+      </a>
+    </div>
   </div>
 </header>
 <!--/header-->
@@ -63,15 +59,17 @@
 
 <header class="page-head">
   <span class="eyebrow">Forms</span>
-  <h1>Name the job of the data, then take the form</h1>
-  <p class="lead">Seven families of data job, after the R Graph Gallery's index, each with its form and its rules. Colour follows the job: identity takes the tones in order, magnitude takes one ramp, polarity takes the diverging pair, state takes status.</p>
+  <h1>Chart forms</h1>
+  <p class="lead">Forms grouped by the job of the data, with the rules for each.</p>
   <ul class="toc">
     <li><a href="#zero">0 Is it a figure?</a></li>
     <li><a href="#time">1 Change over time</a></li>
+    <li><a href="#dual">Second y axis</a></li>
     <li><a href="#compare">2 Comparison</a></li>
     <li><a href="#distribution">3 Distribution</a></li>
     <li><a href="#relation">4 Relation</a></li>
     <li><a href="#whole">5 Part of a whole</a></li>
+    <li><a href="#wordcloud">Word cloud</a></li>
     <li><a href="#maps">6 Maps</a></li>
     <li><a href="#networks">7 Trees and networks</a></li>
     <li><a href="#threed">The third axis</a></li>
@@ -79,10 +77,10 @@
   </ul>
 </header>
 
-<h2 id="zero">0. Is it a figure at all?</h2>
+<h2 id="zero">0. Is it a figure?</h2>
 <div class="split">
   <div class="prose">
-    <p>One number with a comparison is a sentence in the text or a stat tile on a slide, not a one-bar chart. A two-slice pie is a sentence. A table beats a chart when the reader will look values up rather than see a pattern.</p>
+    <p>One number with a comparison goes in the text or on a stat tile, not in a one-bar chart. A two-slice pie is a sentence. Use a table when the reader will look values up.</p>
   </div>
   <div class="grid grid-2" style="gap:16px">
     <div class="tile"><span class="value num">73.2</span><span class="label">years of life expected at birth, worldwide, 2023</span><span class="compare">against 46.4 in 1950</span></div>
@@ -93,12 +91,12 @@
 <h2 id="time">1. Change over time</h2>
 <div class="split">
   <div>
-    <h3 class="mt-0">Line chart, the default</h3>
-    <p>Tones in slot order at 1.6 pt, ringed end dots, end labels. Up to four series without a legend. Uncertainty as a tint band at 0.55 opacity with a quiet note saying what the band is. Member runs as 0.7 pt lines in the tone with the mean on top. Time on x, always. Counts start at zero; for a rate or an index, the unit line says where the axis starts. A log axis gets a note.</p>
+    <h3 class="mt-0">Line chart</h3>
+    <p>The default. Tones in slot order, 1.6 pt, ringed end dots, end labels; up to four series without a legend. Uncertainty: a tint band at 0.55 opacity, with a note. Member runs: 0.7 pt in the tone, mean on top. Time on x. Counts start at zero; otherwise the unit line gives the axis start. Log axes get a note.</p>
     <h3>Area and stacked area</h3>
-    <p>Tints with a 1.2 pt surface gap between layers, the slot order from the bottom, each layer labelled at its right end in its deep step. Stack only parts of a whole. A streamgraph is allowed on a poster or a slide for a whole that drifts in time, and says that its baseline is centred.</p>
+    <p>Tints, 1.2 pt surface gaps, slot order from the bottom, each layer labelled at its right end in its deep step. Stack only parts of a whole. Streamgraphs on posters and slides only, noting the centred baseline.</p>
     <h3>Slope and bump charts</h3>
-    <p>Two moments: a slope chart, tones for the series the figure is about, rule grey for the rest, labels at both ends. Ranks over time: a bump chart with one series in terracotta and the others in rule grey.</p>
+    <p>Slope chart for two moments: tones for the claimed series, rule grey for the rest, labels at both ends. Bump chart for ranks: one series terracotta, the rest rule grey.</p>
   </div>
   <div>
     <!--#fig science/co2_keeling-->
@@ -115,15 +113,28 @@
 <!--/fig-->
 </div>
 
+<h2 id="dual">Second y axis</h2>
+<div class="prose">
+  <p>Allowed for two series on a shared x axis when the claim is about their timing or co-movement and an index to a common base would hide the units.</p>
+  <ul>
+    <li>The series take slots 1 and 2.</li>
+    <li>Tick labels stay in muted text.</li>
+    <li>Each axis has its unit line at its top, left-aligned on the left and right-aligned on the right, led by a short line key in the series colour.</li>
+    <li>One grid only: the right axis's ticks fall on the left axis's gridlines.</li>
+    <li>End labels name the series.</li>
+  </ul>
+</div>
+<!--#fig science/driving_dual_axis-->
+<figure class="figure " id="fig-science-driving_dual_axis"><div class="frame"><img class="zoom twin-light " src="figures/science/driving_dual_axis_light.png" data-full="figures/science/driving_dual_axis_light.png" data-caption="As petrol got 58 % cheaper from 1980 to 1998, Americans drove 44 % more miles each" alt="Two lines on two y axes, 1956 to 2010: miles driven per person (left axis, teal) rises from 3,675 to a peak of 10,067 in 2005; the price of a gallon of petrol in 2010 dollars (right axis, terracotta) falls 58 % from $3.30 in 1980 to $1.39 in 1998, while driving per person rises 44 %. The price peaks at $3.31 in 2008." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/driving_dual_axis_dark.png" data-full="figures/science/driving_dual_axis_dark.png" data-caption="As petrol got 58 % cheaper from 1980 to 1998, Americans drove 44 % more miles each" alt="Two lines on two y axes, 1956 to 2010: miles driven per person (left axis, teal) rises from 3,675 to a peak of 10,067 in 2005; the price of a gallon of petrol in 2010 dollars (right axis, terracotta) falls 58 % from $3.30 in 1980 to $1.39 in 1998, while driving per person rises 44 %. The price peaks at $3.31 in 2008." loading="lazy" decoding="async"></div><figcaption>Miles driven per capita and petrol price in 2010 dollars, United States, 1956–2010 (Fairfield, NYT 2010; vega-datasets)<p class="fig-links"><a href="figures/science/driving_dual_axis_light.png">PNG</a> <a href="figures/science/driving_dual_axis_dark.png">PNG, dark</a> <a href="figures/science/driving_dual_axis_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/driving_dual_axis.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+
 <h2 id="compare">2. Comparison and ranking</h2>
 <div class="split">
   <div>
     <h3 class="mt-0">Bar chart</h3>
-    <p>Horizontal when the labels are words, vertical when the categories are ordered. One series takes one colour: the teal tint for the many, the terracotta tone for the one highlighted. The value at the bar end in ink when the figure is about the values. Sorted by value unless the order means something. Error bars in secondary, no caps. Never colour nominal bars by their value; never a bar chart of one bar.</p>
+    <p>Horizontal for word labels, vertical for ordered categories. One series, one colour: teal tint, with the highlighted bar in the terracotta tone. Values at bar ends in ink when they matter. Sort by value unless the order means something. Error bars in secondary, no caps. No value-coloured nominal bars, no one-bar charts. Several variables per item: a table or small multiples.</p>
     <h3>Dot plot, lollipop and dumbbell</h3>
-    <p>A dot plot replaces a bar chart with more than about twelve categories: a ringed dot at the value on a 0.7 pt rule-grey stem. Two values per category, before and after, are two dots joined by a stem: the dumbbell.</p>
-    <h3>Radar, circular bar, parallel coordinates</h3>
-    <p>Not used for comparison. A circular form only when the angle means something: a month, an hour, a compass bearing. Several variables per item go in a table or in small multiples of bars.</p>
+    <p>Beyond about twelve categories: ringed dots on 0.7 pt rule-grey stems. Before and after: two dots joined by a stem (dumbbell).</p>
   </div>
   <div>
     <!--#fig report/report_dotplot-->
@@ -141,9 +152,9 @@
   </div>
   <div>
     <h3 class="mt-0">Histogram and density</h3>
-    <p>A histogram in the tint with a 1.2 pt surface gap between bars, one series only. Two or more distributions as density curves in the tones with the area as the tint at 0.3 opacity, or as a ridgeline: one row per group, the tone line over the tint area, rows in slot order from the top. The subtitle says the bin width or bandwidth.</p>
+    <p>Histogram: one series in the tint, 1.2 pt gaps. Several distributions: density curves in the tones over tint at 0.3 opacity, or a ridgeline in slot order from the top. The subtitle gives the bin width or bandwidth.</p>
     <h3>Box, violin, beeswarm</h3>
-    <p>Fewer than about thirty points: show them, as a beeswarm of ringed dots. Thirty to a few hundred: a box plot in the tone with the box filled in the tint, whiskers 0.7 pt. Many: a violin in the tint with the tone outline. The unit line says what the box and the whiskers are.</p>
+    <p>Under about thirty points: a beeswarm of ringed dots. Up to a few hundred: a box plot, tone outline, tint fill, 0.7 pt whiskers. More: a violin in the tint with a tone outline. The unit line defines box and whiskers.</p>
   </div>
 </div>
 
@@ -151,11 +162,11 @@
 <div class="split">
   <div>
     <h3 class="mt-0">Scatter plot</h3>
-    <p>Ringed dots. Up to three families without labels, because the first three tones pass every pair, not only neighbours; more with direct labels. A predicted-against-observed scatter carries the identity line in rule grey with "y = x" written along it. A fit line in the tone at 1.6 pt with its band in the tint. Text labels on points only for the points the claim names.</p>
+    <p>Ringed dots. Up to three families unlabelled (the first three tones are distinct in every pair); more need direct labels. Predicted against observed: a rule-grey "y = x" line. Fit line 1.6 pt in the tone, band in the tint. Label only points the claim names.</p>
     <h3>Heat map and 2D density</h3>
-    <p>One ramp, teal by default, or the lagoon gradient when the values span many decades or the lowest cells must stay visible. Cells separated by 1.2 pt surface lines, no spines, a legend bar without an outline. Values inside cells only where they change the reading. A failed or missing cell is hatched in the terracotta tone on the card colour. The axis ticks are the parameter values, not indices.</p>
+    <p>One ramp, teal by default; lagoon when values span many decades or low cells must stay visible. 1.2 pt surface lines between cells, no spines, legend bar without outline. Values in cells only where they help. Missing or failed cells hatched in the terracotta tone on the card colour. Ticks are parameter values, not indices.</p>
     <h3>Connected scatter and correlogram</h3>
-    <p>A connected scatter for a path in two variables over time: a 1.6 pt line with ringed dots and the years labelled every few steps. A correlogram as a half matrix on the diverging scale, the midpoint at zero.</p>
+    <p>Connected scatter: 1.6 pt line, ringed dots, years labelled every few steps. Correlogram: half matrix on the diverging scale, midpoint at zero.</p>
   </div>
   <div>
     <!--#fig science/penguins_scatter-->
@@ -177,14 +188,29 @@
 
 <h2 id="whole">5. Part of a whole</h2>
 <div class="prose">
-  <p>A single part of a whole is a horizontal stacked bar of tints with surface gaps, the labels inside the segments in the deep step where they fit. A waffle, ten by ten, for a share the reader should count. A treemap only for a hierarchy; a Voronoi treemap is a poster and report form, never a paper form. A pie or doughnut only up to six segments, at a glance, with the shares written on them, and never for close values.</p>
+  <p>Default: a horizontal stacked bar of tints with surface gaps, labels in the deep step inside segments. A ten-by-ten waffle for a share to count. Treemaps only for hierarchies; Voronoi treemaps for posters and reports, not papers. Pies and doughnuts: six segments at most, shares written on, not for close values.</p>
 </div>
+
+<h2 id="wordcloud">Word cloud</h2>
+<div class="prose">
+  <p>Allowed as an overview of counts, not for precise comparison.</p>
+  <ul>
+    <li>Words horizontal.</li>
+    <li>Font size ∝ √count, so a word's area tracks its count.</li>
+    <li>Deterministic layout: the same data give the same picture.</li>
+    <li>Colour only to mark a role or group.</li>
+    <li>The exact counts of the top few words given beside it.</li>
+  </ul>
+</div>
+<!--#fig science/miserables_wordcloud-->
+<figure class="figure " id="fig-science-miserables_wordcloud"><div class="frame"><img class="zoom twin-light " src="figures/science/miserables_wordcloud_light.png" data-full="figures/science/miserables_wordcloud_light.png" data-caption="Valjean co-appears 158 times with other characters, 1.5 times as often as Marius" alt="Word cloud of the 50 most connected of the 77 characters of Les Misérables, word area proportional to co-appearances. Largest: Valjean (158), Marius (104), Enjolras (91), Courfeyrac (84), Cosette (68), Combeferre (68). Valjean has 1.5 times the co-appearances of Marius, and shares a chapter with 36 characters." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/miserables_wordcloud_dark.png" data-full="figures/science/miserables_wordcloud_dark.png" data-caption="Valjean co-appears 158 times with other characters, 1.5 times as often as Marius" alt="Word cloud of the 50 most connected of the 77 characters of Les Misérables, word area proportional to co-appearances. Largest: Valjean (158), Marius (104), Enjolras (91), Courfeyrac (84), Cosette (68), Combeferre (68). Valjean has 1.5 times the co-appearances of Marius, and shares a chapter with 36 characters." loading="lazy" decoding="async"></div><figcaption>Knuth, The Stanford GraphBase (1993), Les Misérables co-occurrences, via vega-datasets 2.8.0 · Layout: deterministic Archimedean spiral, largest word first, collision-checked on the rendered text boxes; no random seed involved.<p class="fig-links"><a href="figures/science/miserables_wordcloud_light.png">PNG</a> <a href="figures/science/miserables_wordcloud_dark.png">PNG, dark</a> <a href="figures/science/miserables_wordcloud_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/miserables_wordcloud.py">Script</a></p></figcaption></figure>
+<!--/fig-->
 
 <h2 id="maps">6. Position: maps</h2>
 <div class="split">
   <div>
-    <p>Land in the card colour or the classes, borders in the grid colour at 0.4 pt, water as the surface. A choropleth takes one ramp with its classes stated in the legend (quantiles or equal steps), and countries without data hatched. A bubble map takes ringed dots sized by area, with three reference sizes in the legend. No basemap tiles, no relief, no labels except the places the claim names.</p>
-    <p>Small countries vanish on a world map, so a dot plot of the same values goes beside it. A 3D tilted map is a terrain figure, not a Vellum figure: draw the map flat and colour the value.</p>
+    <p>Land in the card colour or the classes, borders 0.4 pt in the grid colour, water as the surface. Choropleth: one ramp, classes (quantiles or equal steps) in the legend, no-data countries hatched. Bubble map: ringed dots sized by area, three reference sizes in the legend. No tiles, relief or labels beyond places the claim names. Maps are flat.</p>
+    <p>Small countries vanish on a world map; add a dot plot of the same values.</p>
   </div>
   <div>
     <!--#fig report/report_choropleth-->
@@ -202,11 +228,11 @@
   </div>
   <div>
     <h3 class="mt-0">Phylogeny and tree</h3>
-    <p>Branches 1.0 pt in secondary, tips as ringed dots, the clades the figure is about in the tones (first clade teal, second terracotta) and the rest in secondary. A time axis at the bottom in muted with the present at the right. No node circles, no support values unless the claim is about support.</p>
+    <p>Branches 1.0 pt in secondary, tips as ringed dots. Claimed clades in the tones (teal, then terracotta), the rest in secondary. Time axis at the bottom in muted, present at the right. No node circles; support values only if the claim is about them.</p>
     <h3>Network</h3>
-    <p>Edges 0.4 pt in rule grey at 0.6 opacity, nodes as ringed dots in the tones by community, up to six communities. A highlighted node and its neighbours in terracotta, the rest faded to the grid colour. The subtitle says how the layout was made.</p>
+    <p>Edges 0.4 pt rule grey at 0.6 opacity; nodes as ringed dots coloured by community, up to six. Highlight: node and neighbours in terracotta, the rest in the grid colour. The subtitle names the layout method.</p>
     <h3>Sankey and chord</h3>
-    <p>Flows in tints at 0.6 opacity, nodes as bars in the tones, labels in ink on the nodes. A chord diagram only as small multiples when there are more than about eight groups.</p>
+    <p>Flows in tints at 0.6 opacity, nodes as bars in the tones, labels in ink. Chord diagrams with more than about eight groups: small multiples.</p>
   </div>
 </div>
 <!--#fig science/miserables_network wide-->
@@ -216,12 +242,12 @@
 <h2 id="threed">The third axis</h2>
 <div class="split">
   <div class="prose">
-    <p>A 3D axis is used only when three measured quantities form one shape and the shape is the claim. Every other third dimension is a colour, a size, a panel or a contour line. Four questions, in order:</p>
+    <p>Use a 3D axis only when three measured quantities form one shape and the shape is the claim. Otherwise the third dimension is a colour, size, panel or contour. Four questions, in order:</p>
     <ol>
-      <li>Are x, y and z three quantities of equal standing, so that z = f(x, y)? If z is a category, a count per group or a time, it is not a third axis.</li>
-      <li>Is the shape the claim: a ridge, a trough, a saddle, the place of a peak, several optima?</li>
-      <li>Can the reader do the task from a heat map with contour lines? If yes, stop here and draw that.</li>
-      <li>If yes to 1 and 2 and no to 3, draw the 3D figure, and add its 2D twin.</li>
+      <li>Are x, y and z of equal standing, z = f(x, y)? A category, a count per group or a time is not a third axis.</li>
+      <li>Is the shape the claim: a ridge, trough, saddle, peak location, several optima?</li>
+      <li>Can the task be done from a heat map with contours? If yes, draw that.</li>
+      <li>If yes to 1 and 2 and no to 3, draw the 3D figure and its 2D twin.</li>
     </ol>
   </div>
   <div>
@@ -247,12 +273,12 @@
 <!--/fig-->
 <div class="grid grid-2">
   <div class="card">
-    <h4 class="mt-0">Every 3D figure has a 2D twin</h4>
-    <p class="secondary">A heat map with contour lines of the same data, the same gradient, the same limits, the same axes, as panel b or in the supplement. The twin is where a value is read; the 3D panel is where the shape is seen. On the web a rotatable version is allowed beside the static one: <a href="interactive.html#surface3d">try it</a>.</p>
+    <h4 class="mt-0">The 2D twin</h4>
+    <p class="secondary">A heat map with contours of the same data, gradient, limits and axes, as panel b or in the supplement. Values are read from the twin; the shape is seen in 3D. On the web a rotatable version may sit beside the static one: <a href="interactive.html#surface3d">try it</a>.</p>
   </div>
   <div class="card">
-    <h4 class="mt-0">Never 3D</h4>
-    <p class="secondary">3D bars, 3D pies, 3D areas, extruded or ribbon lines, a perspective tilt on a flat chart, a shadow, a bevel, a reflection. These add area and distortion that encode nothing and make the front bars look bigger than the back ones. In a pitch deck, a report or an infographic, no 3D at all: a reader who is not a specialist reads depth as decoration.</p>
+    <h4 class="mt-0">No 3D for</h4>
+    <p class="secondary">Bars, pies, areas, extruded or ribbon lines, perspective tilts on flat charts, shadows, bevels, reflections: they add distortion and make front bars look bigger. No 3D at all in pitch decks, reports or infographics.</p>
   </div>
 </div>
 <!--#fig threed/penguins_scatter3d wide-->
@@ -261,32 +287,29 @@
 
 <h2 id="always">Across all forms</h2>
 <ol class="rules">
-  <li>Identity takes the tones in slot order; magnitude takes one ramp; polarity takes the diverging pair; state takes status.</li>
-  <li>Highlight one, grey the rest, when the claim is about one thing. Terracotta is the highlight; rule grey is the rest.</li>
-  <li>Facet into small multiples before adding a seventh colour or a second axis.</li>
-  <li>Every form has its direct labels and its quiet note saying what the marks are.</li>
-  <li>The claim decides the form. A form the reader cannot name needs a sentence in the subtitle that says how to read it.</li>
+  <li>Identity: tones in slot order. Magnitude: one ramp. Polarity: the diverging pair. State: status colours.</li>
+  <li>When the claim is about one thing: terracotta for it, rule grey for the rest.</li>
+  <li>Facet into small multiples before adding a seventh colour. A second y axis only under the rules above.</li>
+  <li>Each form has direct labels and a note saying what the marks are.</li>
+  <li>A form the reader may not know gets a subtitle sentence on how to read it.</li>
 </ol>
 
 </main>
 
 <!--#footer-->
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap footer-in">
     <div>
-      <ul class="footer-nav">
-        <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
-        <li><a href="forms.html">Forms</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="interactive.html">Interactive</a></li>
-        <li><a href="media.html">Media</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
-      </ul>
-      <p><span class="serif" style="font-size:1.1rem;color:var(--v-ink)">Vellum</span>, a visual language for figures, by <a href="https://akaminas.github.io/">Alexandros Kaminas</a>.</p>
-      <p>Code under the MIT licence; text and figures under CC BY 4.0. Every figure on this site is drawn by a script in <a href="https://github.com/akaminas/vellum">the repository</a> from the data listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">data/SOURCES.md</a>.</p>
+      <p class="footer-brand"><span class="serif">Vellum</span> · by <a href="https://akaminas.github.io/">Alexandros Kaminas</a></p>
+      <p>Code MIT · text and figures CC BY 4.0 · data as listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">SOURCES.md</a></p>
     </div>
-    <div>
-      <p>Built from <code>style/vellum.json</code> · git ceaff1d</p>
-      <p><a href="downloads/vellum-style.zip">Download the style files</a></p>
-      <p>Site design after <a href="https://www.visualcinnamon.com/">Visual Cinnamon</a> and <a href="https://r-graph-gallery.com/">the R Graph Gallery</a>.</p>
-    </div>
+    <ul class="footer-nav">
+      <li><a href="gallery.html">Work</a></li><li><a href="interactive.html">Interactive</a></li><li><a href="media.html">Media</a></li>
+      <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
+      <li><a href="forms.html">Forms</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
+      <li><a href="https://github.com/akaminas/vellum">GitHub</a></li><li><a href="downloads/vellum-style.zip">Download</a></li>
+    </ul>
+    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git a4f352d</p>
   </div>
 </footer>
 <!--/footer-->

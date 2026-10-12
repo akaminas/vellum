@@ -16,45 +16,41 @@
 <script type="module" src="assets/js/site.js"></script>
 <!--/head-->
 <title>Interactive · Vellum</title>
-<meta name="description" content="Interactive figures in the Vellum style, in plain JavaScript on vellum-web.js: a rotatable 3D surface linked to its flat twin, a life-expectancy explorer, a progressive reveal, a heat map, a scatter with chosen axes, a world map, a network, and three colour tools.">
+<meta name="description" content="Interactive Vellum figures in SVG and JavaScript: a 3D surface, explorers, a heat map, a map, a network and colour tools.">
 </head>
 <body>
 <!--#header-->
 <a class="skip" href="#main">Skip to the content</a>
 <header class="site-header">
-  <div class="nav-wrap">
-    <nav class="nav-half nav-left" aria-label="The style">
+  <div class="header-in">
+    <a class="brand" href="index.html" aria-label="Vellum, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path class="bm-grid" d="M3 12.5h26M3 20.5h26"/>
+        <path class="bm-v" d="M6 7.5 15.5 25"/>
+        <path class="bm-v2" d="M15.5 25 25.5 7.5"/>
+        <circle class="bm-dot" cx="25.5" cy="7.5" r="3.4"/>
+      </svg>
+      <span class="brand-word">Vellum</span>
+    </a>
+    <nav class="nav" aria-label="Site">
+      <a href="gallery.html">Work</a>
+      <a href="interactive.html">Interactive</a>
+      <a href="media.html">Media</a>
       <a href="principles.html">Principles</a>
       <a href="colour.html">Colour</a>
       <a href="anatomy.html">Anatomy</a>
       <a href="forms.html">Forms</a>
-    </nav>
-    <a class="brand" href="index.html" aria-label="Vellum, home" title="Vellum">
-      <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
-        <circle cx="15.87" cy="5.04" r="4.3" style="fill:var(--v-ochre)"/>
-        <circle cx="22.66" cy="8.57" r="4.3" style="fill:var(--v-terracotta)"/>
-        <circle cx="24.06" cy="19.23" r="4.3" style="fill:var(--v-mauve)"/>
-        <circle cx="14.13" cy="24.96" r="4.3" style="fill:var(--v-indigo)"/>
-        <circle cx="5.60" cy="18.42" r="4.3" style="fill:var(--v-teal)"/>
-        <circle cx="7.34" cy="8.57" r="4.3" style="fill:var(--v-moss)"/>
-      </svg>
-      <span class="brand-word">Vellum</span>
-    </a>
-    <nav class="nav-half nav-right" aria-label="The work">
-      <a href="gallery.html">Gallery</a>
-      <a href="interactive.html">Interactive</a>
-      <a href="media.html">Media</a>
       <a href="tools.html">Tools</a>
     </nav>
-  </div>
-  <div class="header-tools">
-    <button class="icon-btn theme-toggle" type="button" aria-label="Switch twin">
-      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
-      <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
-    </button>
-    <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
-      <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-    </a>
+    <div class="header-tools">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+        <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+      </a>
+    </div>
   </div>
 </header>
 <!--/header-->
@@ -63,8 +59,8 @@
 
 <header class="page-head">
   <span class="eyebrow">Interactive</span>
-  <h1>The static figure first, interaction as a layer</h1>
-  <p class="lead">Each figure on this page reads completely before you touch it: claim, labels and values are all there at first paint. Interaction adds a way in: a tooltip that leads with the value, a crosshair that finds the year, a highlight that greys the rest, a surface you can turn. Every one follows the theme, so switch to the dark twin and watch them redraw.</p>
+  <h1>Interactive figures</h1>
+  <p class="lead">Each figure is complete as a static image; tooltips, crosshairs and highlights are added on top. All follow the light or dark theme.</p>
   <ul class="toc">
     <li><a href="#surface3d">3D surface and twin</a></li>
     <li><a href="#life_explorer">Life expectancy</a></li>
@@ -78,78 +74,75 @@
 </header>
 
 <section>
-  <h2 class="mt-0">A surface you can turn, read from its flat twin</h2>
-  <p class="prose">Turn the surface to see its shape: two peaks of unequal height and the saddle between them, the feature the title names. Then read values on the flat twin, where pointing at any spot marks the same point on the surface, as an open ring when a ridge hides it. The view starts at the house default, orthographic at elevation 24° and azimuth −58°, and returns there with "Reset view". Flat shading by height on the lagoon gradient, no lighting and no mesh lines, transparent panes with three ticks per axis, contours on the floor: the surface shows the shape, the twin is where values are read.</p>
+  <h2 class="mt-0">3D surface and flat twin</h2>
+  <p class="prose">A two-peak surface, shaded by height on the lagoon gradient. Drag to rotate it; point at the flat twin to mark the same spot on the surface (an open ring when hidden). The view starts orthographic at elevation 24°, azimuth −58°; "Reset view" returns there.</p>
   <div class="vfig" id="surface3d" data-interactive="surface3d"></div>
 </section>
 
 <section>
-  <h2>Choose the countries; the colours stay put</h2>
-  <p class="prose">Add and remove countries, up to four, and watch the colours. A country keeps its colour for as long as it stays chosen, so removing one never repaints the others: colour follows the entity, never its rank. Lines end in ringed dots and direct labels instead of a legend, the world sits behind in rule grey as context, and the crosshair reads every line in a year at once. The claim is recomputed for the countries you choose.</p>
+  <h2>Life expectancy explorer</h2>
+  <p class="prose">Choose up to four countries; each keeps its colour while selected, and the world average sits behind in grey. The crosshair reads every line for a year, and the title is recomputed for the selection.</p>
   <div class="vfig" id="life_explorer" data-interactive="life_explorer"></div>
 </section>
 
 <section>
-  <h2>A progressive reveal, as on a slide</h2>
-  <p class="prose">This is how Vellum shows a figure in a talk. Each step adds one series in its slot colour, with its end label, while the earlier ones stay, and the axes and label positions never move. The last step puts the group the claim is about in terracotta and greys the rest. Press 1 and step through it as an audience would see it.</p>
+  <h2>Progressive reveal</h2>
+  <p class="prose">Life expectancy by income group, built one series per step as in a talk, with fixed axes; step 5 highlights the claim's group in terracotta. Press 1, then Next or the arrow keys.</p>
   <div class="vfig" id="reveal" data-interactive="reveal"></div>
 </section>
 
 <section>
-  <h2>A heat map on a gradient, with missing cells hatched</h2>
-  <p class="prose">Each cell is one type of disaster in one decade, coloured on a log scale on the lagoon gradient, so both millions and single digits stay visible. Point at or tab through the cells to read them; the legend bar marks where each sits on the scale. Hatched cells mean no record, not zero: Vellum never draws missing data as the lowest colour of the scale. Sort by total to see which disasters dominated, and read the top rows from left to right to see how far they fell.</p>
+  <h2>Heat map</h2>
+  <p class="prose">Disaster deaths by type and decade, 1900s to 2010s, on a log-scaled lagoon gradient; hatched cells have no record. Point at the cells, or tab in and use the arrow keys; rows can be sorted by total.</p>
   <div class="vfig" id="disasters_heat" data-interactive="disasters_heat"></div>
 </section>
 
 <section>
-  <h2>A scatter with the axes in your hands</h2>
-  <p class="prose">Choose any two of the four measures. Each species keeps its colour and its own fit line, labelled directly with its correlation, and the claim is recomputed for the axes you pick. With beak length against beak depth, every species shows a positive relation while the pooled birds show a negative one: Simpson's paradox, stated in the title and drawn as a dotted grey line.</p>
+  <h2>Penguin scatter</h2>
+  <p class="prose">Pick any two of four penguin measures; each species gets a fit line labelled with its correlation, and the title is recomputed. Beak length against depth shows Simpson's paradox, with the pooled fit as a dotted grey line.</p>
   <div class="vfig" id="penguins_scatter" data-interactive="penguins_scatter"></div>
 </section>
 
 <section>
-  <h2>A world map in five stated classes</h2>
-  <p class="prose">Five classes of the teal ramp at the 2023 quintiles, held fixed for every year, so a colour means the same in 1950 as in 2023. Slide back to 1950 and almost the whole map drops into the lowest class. Small countries vanish on a world map, so each also appears as a dot in the strip below, linked to the map. One ramp, stated classes, land without a value in the card colour with a terracotta hatch, borders in the grid colour, no labels.</p>
+  <h2>World map</h2>
+  <p class="prose">Life expectancy in five teal classes fixed at the 2023 quintiles; use the slider to move between 1950 and 2023. A linked dot strip below shows small countries. Missing values are hatched in terracotta.</p>
   <div class="vfig" id="life_map" data-interactive="life_map"></div>
 </section>
 
 <section>
-  <h2>A network where one node is the point</h2>
-  <p class="prose">Characters are linked when they appear in the same chapter, in a force layout that is seeded and run to rest before the page paints, so it never moves. The six largest groups take the six tones in slot order and the rest are rule grey. Hover, tap or search a character: it and its neighbours turn terracotta and everything else fades to the grid colour. The "highlight one, grey the rest" rule turns a hairball into a readable neighbourhood.</p>
+  <h2>Network</h2>
+  <p class="prose">Character co-occurrence in a static, pre-computed force layout; the six largest groups take the six tones. Hover, tap or search a character to highlight it and its neighbours in terracotta.</p>
   <div class="vfig" id="network" data-interactive="network"></div>
 </section>
 
 <section id="colour-tools">
   <h2>Colour tools</h2>
-  <p class="prose">The three tools from the <a href="colour.html">colour page</a>, gathered here. Each computes its numbers live from <code>vellum.json</code>, with the same formulas as the Python generators. The simulator recomputes every series colour exactly as a reader with each kind of colour-vision deficiency sees it, against a common saturated default palette: under protanopia two of the default's colours fall to 0.7 apart. The gradient inspector shows why a rainbow is never used: its lightness climbs and then falls, so it has no order the eye can read.</p>
+  <p class="prose">The three tools from the <a href="colour.html">colour page</a>, computed live from <code>vellum.json</code> with the same formulas as the Python generators. The simulator shows the palette under each colour-vision deficiency beside a common default palette, two of whose colours fall to 0.7 apart under protanopia. The gradient inspector plots lightness along each gradient, including a rainbow for comparison.</p>
   <div class="vfig" id="cvd_simulator" data-interactive="cvd_simulator"></div>
   <div class="vfig" id="gradient_explorer" data-interactive="gradient_explorer"></div>
   <div class="vfig" id="palette_explorer" data-interactive="palette_explorer"></div>
 </section>
 
 <div class="key mt-6">
-  <p><strong>How these are built.</strong> Plain JavaScript modules on <a href="https://github.com/akaminas/vellum/blob/main/docs/assets/js/vellum-web.js"><code>vellum-web.js</code></a>, which reads the same <code>vellum.json</code> as every other tool. No framework and no chart library: the anatomy (hairline grid, unit line, ringed dots, end labels with leaders, value-first tooltips) is a dozen small functions. Each figure has a table view under it for readers who do not use a pointer.</p>
+  <p><strong>Build.</strong> Plain JavaScript modules on <a href="https://github.com/akaminas/vellum/blob/main/docs/assets/js/vellum-web.js"><code>vellum-web.js</code></a>, which reads the same <code>vellum.json</code> as the other tools. No framework or chart library. Each figure has a table view for readers who do not use a pointer.</p>
 </div>
 
 </main>
 
 <!--#footer-->
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap footer-in">
     <div>
-      <ul class="footer-nav">
-        <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
-        <li><a href="forms.html">Forms</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="interactive.html">Interactive</a></li>
-        <li><a href="media.html">Media</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
-      </ul>
-      <p><span class="serif" style="font-size:1.1rem;color:var(--v-ink)">Vellum</span>, a visual language for figures, by <a href="https://akaminas.github.io/">Alexandros Kaminas</a>.</p>
-      <p>Code under the MIT licence; text and figures under CC BY 4.0. Every figure on this site is drawn by a script in <a href="https://github.com/akaminas/vellum">the repository</a> from the data listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">data/SOURCES.md</a>.</p>
+      <p class="footer-brand"><span class="serif">Vellum</span> · by <a href="https://akaminas.github.io/">Alexandros Kaminas</a></p>
+      <p>Code MIT · text and figures CC BY 4.0 · data as listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">SOURCES.md</a></p>
     </div>
-    <div>
-      <p>Built from <code>style/vellum.json</code> · git ceaff1d</p>
-      <p><a href="downloads/vellum-style.zip">Download the style files</a></p>
-      <p>Site design after <a href="https://www.visualcinnamon.com/">Visual Cinnamon</a> and <a href="https://r-graph-gallery.com/">the R Graph Gallery</a>.</p>
-    </div>
+    <ul class="footer-nav">
+      <li><a href="gallery.html">Work</a></li><li><a href="interactive.html">Interactive</a></li><li><a href="media.html">Media</a></li>
+      <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
+      <li><a href="forms.html">Forms</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
+      <li><a href="https://github.com/akaminas/vellum">GitHub</a></li><li><a href="downloads/vellum-style.zip">Download</a></li>
+    </ul>
+    <p class="footer-stamp">Built from <code>style/vellum.json</code> · git a4f352d</p>
   </div>
 </footer>
 <!--/footer-->

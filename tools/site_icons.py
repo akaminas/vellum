@@ -366,45 +366,18 @@ def twin():
     return out + dot(46, 54, 3.6, "var(--v-terracotta)")
 
 
-# ---------------------------------------------------------------- forms Vellum does not use
-def radar():
-    pts = [(50 + r * math.cos(math.radians(a)), 50 + r * math.sin(math.radians(a))) for a, r in zip(range(-90, 270, 60), (30, 18, 26, 14, 28, 20))]
-    web = line([(50 + 34 * math.cos(math.radians(a)), 50 + 34 * math.sin(math.radians(a))) for a in range(-90, 271, 60)], 1, D, ";opacity:.5")
-    return web + path("M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts) + "Z", "none", T, 2.6)
-
-
-def pie3d():
-    return (f'<ellipse cx="50" cy="58" rx="34" ry="14" style="fill:{D}"/>' + rect(16, 46, 68, 12, D)
-            + f'<ellipse cx="50" cy="46" rx="34" ry="14" style="fill:{T}"/>' + path("M50,46 L84,46 A34,14 0 0 1 62,59Z", S))
-
-
 def dualaxis():
-    return (line([(16, 18), (16, 82), (84, 82), (84, 18)], 1.6, D) + line([(20, 70), (40, 50), (60, 58), (80, 26)], 2.6)
-            + line([(20, 34), (40, 46), (60, 30), (80, 62)], 2.6, D))
-
-
-def rainbow():
-    cols = ("#3B4CC0", "#2C7FB8", "#41B6C4", "#A1DAB4", "#FFFFB2", "#FECC5C", "#FD8D3C", "#E31A1C")   # a counterexample only
-    return "".join(rect(14 + i * 9, 24, 8.6, 52, c) for i, c in enumerate(cols))
+    # two lines on one hairline grid, each axis marked by a short key in its series colour
+    grid = "".join(line([(18, y), (82, y)], 1.2, S) for y in (30, 50, 70))
+    return (grid + line([(18, 86), (82, 86)], 1.4, D) + line([(10, 18), (16, 18)], 3, T) + line([(84, 18), (90, 18)], 3, D)
+            + line([(20, 72), (36, 58), (52, 62), (68, 42), (80, 30)], 2.6) + line([(20, 40), (36, 46), (52, 34), (68, 56), (80, 64)], 2.6, D))
 
 
 def wordcloud():
-    words = (("data", 26, 50, 50, T), ("chart", 14, 30, 30, D), ("form", 12, 70, 28, D), ("colour", 11, 30, 72, D), ("claim", 13, 68, 74, T))
+    words = (("Valjean", 19, 50, 50, T), ("Javert", 12, 30, 30, D), ("Marius", 12, 72, 30, D), ("Cosette", 11, 30, 71, D),
+             ("Fantine", 11, 70, 71, D), ("Myriel", 8, 50, 86, D))
     return "".join(f'<text x="{x}" y="{y}" text-anchor="middle" dominant-baseline="middle" style="fill:{c};font-size:{s}px;font-family:var(--v-font-body);font-weight:700">{w}</text>' for w, s, x, y, c in words)
 
-
-def manypie():
-    out = ""; a = -90
-    for k in range(12):
-        b = a + 30
-        x1, y1 = 50 + 32 * math.cos(math.radians(a)), 50 + 32 * math.sin(math.radians(a))
-        x2, y2 = 50 + 32 * math.cos(math.radians(b)), 50 + 32 * math.sin(math.radians(b))
-        out += path(f"M50,50 L{x1:.1f},{y1:.1f} A32,32 0 0 1 {x2:.1f},{y2:.1f}Z", (T, D, S)[k % 3], BG, 1)
-        a = b
-    return out
-
-
-STRIKE = f'<line x1="18" y1="82" x2="82" y2="18" style="stroke:var(--v-terracotta);stroke-width:4;stroke-linecap:round"/>'
 
 # family, colour family, anchor on forms.html, [(label, icon, href or None)]
 ROWS = [
@@ -414,28 +387,22 @@ ROWS = [
         ("Correlogram", correlogram, "science/cars_correlogram"), ("Bubble", bubble, None), ("Connected scatter", connected, "science/driving_connected"),
         ("2D density", hexbin, None)]),
     ("Comparison and ranking", "moss", "compare", [("Bar", barh, None), ("Lollipop", lollipop, None), ("Dot plot", dotplot, "report/report_dotplot"),
-        ("Dumbbell", dumbbell, "report/report_dotplot"), ("Slope", slope, "science/life_slope"), ("Bump", bump, None)]),
+        ("Dumbbell", dumbbell, "report/report_dotplot"), ("Slope", slope, "science/life_slope"), ("Bump", bump, None),
+        ("Word cloud", wordcloud, "science/miserables_wordcloud")]),
     ("Part of a whole", "terracotta", "whole", [("Stacked bar", stackedbar, None), ("Waffle", waffle, "infographic/story"),
         ("Treemap", treemap, None), ("Pie, six slices at most", pie, None), ("Doughnut", doughnut, None)]),
     ("Change over time", "indigo", "time", [("Line", lines, "science/co2_keeling"), ("Line with a band", band, "report/report_projection"),
         ("Area", area, None), ("Stacked area", stackedarea, "science/population_stacked"), ("Streamgraph", stream, None),
-        ("Small multiples", multiples, "science/life_small_multiples")]),
+        ("Small multiples", multiples, "science/life_small_multiples"),
+        ("Second y axis", dualaxis, "science/driving_dual_axis")]),
     ("Maps", "mauve", "maps", [("Choropleth", choropleth, "report/report_choropleth"), ("Bubble map", bubblemap, None),
         ("Tile map", tilemap, None)]),
     ("Flow, trees and networks", "teal", "networks", [("Tree", tree, "science/primates_tree"), ("Network", network, "science/miserables_network"),
         ("Sankey", sankey, None), ("Chord", chord, None)]),
     ("The third axis, with its twin", "lagoon", "threed", [("Surface", surface, "threed/landscape_surface"), ("3D scatter", scatter3d, "threed/penguins_scatter3d"),
         ("The flat twin", twin, "threed/landscape_surface")]),
-    ("Forms Vellum does not use", "rule", None, [("Radar", radar, None), ("3D pie", pie3d, None), ("Second y axis", dualaxis, None),
-        ("Rainbow scale", rainbow, None), ("Word cloud", wordcloud, None), ("Twelve-slice pie", manypie, None)]),
 ]
 
-WHY_NOT = {"Radar": "not used for comparison: area and angle distort the values",
-           "3D pie": "depth encodes nothing and enlarges the front slice",
-           "Second y axis": "two measures are two panels, or an index to a common base",
-           "Rainbow scale": "no order the eye can read; lightness rises and falls",
-           "Word cloud": "size of a word is not readable as a value",
-           "Twelve-slice pie": "more than six slices cannot be compared"}
 
 TOOLS = [("vellum.json", "teal", "{ }", "source"), ("vellum.py", "indigo", "py", "matplotlib"),
          ("vellum.R", "moss", "R", "ggplot2"), ("vellum-colors.sty", "ochre", "TeX", "LaTeX"),
@@ -446,16 +413,14 @@ TOOLS = [("vellum.json", "teal", "{ }", "source"), ("vellum.py", "indigo", "py",
 def family_vars(fam):
     if fam == "grey":
         return "--ic:var(--v-secondary);--ic-tint:var(--v-grid);--ic-deep:var(--v-ink)"
-    if fam == "rule":
-        return "--ic:var(--v-muted);--ic-tint:var(--v-card);--ic-deep:var(--v-rule)"
     if fam == "lagoon":
         return "--ic:var(--v-teal);--ic-tint:var(--v-card);--ic-deep:var(--v-indigo)"
     return f"--ic:var(--v-{fam});--ic-tint:var(--v-{fam}-tint);--ic-deep:var(--v-{fam}-deep)"
 
 
-def disc(fn, label, strike=False):
+def disc(fn, label):
     return (f'<span class="ic-disc"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
-            f'<rect width="100" height="100" style="fill:{BG}"/>{fn()}{STRIKE if strike else ""}</svg></span>')
+            f'<rect width="100" height="100" style="fill:{BG}"/>{fn()}</svg></span>')
 
 
 def index(by_id=None, link_prefix=""):
@@ -465,18 +430,12 @@ def index(by_id=None, link_prefix=""):
     for name, fam, anchor, items in ROWS:
         out.append(f'<section class="fi-row" style="{family_vars(fam)}"><h3 class="fi-name"><span class="fi-key"></span>{name}</h3><ul class="fi-items">')
         for label, fn, key in items:
-            strike = anchor is None
             if key and key in by_id:
                 g, i = key.split("/")
                 href = f"{link_prefix}gallery.html#g-{g}-{i}"
-            elif anchor:
-                href = f"{link_prefix}forms.html#{anchor}"
             else:
-                href = f"{link_prefix}principles.html#never"
-            title = WHY_NOT.get(label, "")
-            tip = f' title="{title}"' if title else ""
-            note = f'<span class="fi-why">{title}</span>' if title else ""
-            out.append(f'<li><a class="fi-item" href="{href}"{tip}>{disc(fn, label, strike)}<span class="fi-label">{label}</span>{note}</a></li>')
+                href = f"{link_prefix}forms.html#{anchor}"
+            out.append(f'<li><a class="fi-item" href="{href}">{disc(fn, label)}<span class="fi-label">{label}</span></a></li>')
         out.append("</ul></section>")
     out.append(f'<section class="fi-row" style="{family_vars("teal")}"><h3 class="fi-name"><span class="fi-key"></span>The style files</h3><ul class="fi-items fi-hexes">')
     for fn, fam, glyph, use in TOOLS:
