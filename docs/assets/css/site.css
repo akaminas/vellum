@@ -597,3 +597,13 @@ dialog.lightbox .lb-links a:hover { color: var(--accent); }
 .mapfeature .selected { grid-template-columns: minmax(0, 600px); justify-content: center; }
 .mapfeature .sel-tile { aspect-ratio: 5 / 6; }
 .mapfeature .sel-tile img { padding: 0; object-fit: cover; }
+
+/* home: the introduction beside the map, which is the first thing on the page */
+.hero-split2 { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 56px; align-items: center; text-align: left; padding: 56px 0 96px; }
+.hero-split2 .lead { margin-left: 0; margin-right: 0; }
+.hero-split2 .cta-row { justify-content: flex-start; }
+.hero-split2 h1 { font-size: clamp(3.2rem, 2rem + 4vw, 5.4rem); }
+.hero-map .selected { grid-template-columns: minmax(0, 1fr); }
+.hero-map .sel-tile { aspect-ratio: 5 / 6; max-height: calc(100vh - 150px); margin-left: auto; }
+.hero-map .sel-tile img { padding: 0; object-fit: cover; }
+@media (max-width: 960px) { .hero-split2 { grid-template-columns: minmax(0, 1fr); } .hero-map .sel-tile { max-height: none; } }
