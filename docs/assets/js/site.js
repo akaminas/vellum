@@ -8,7 +8,7 @@ function store(key, value) {
   return null;
 }
 
-// ---- theme: light or dark twin, remembered per viewer, following the system until the viewer chooses
+// ---- theme: light or dark twin, remembered per viewer, light until the viewer chooses
 const toggle = document.querySelector(".theme-toggle");
 if (toggle) {
   const label = () => toggle.setAttribute("aria-label", root.dataset.theme === "dark" ? "Switch to the light twin" : "Switch to the dark twin");
@@ -18,8 +18,6 @@ if (toggle) {
     store("vellum-theme", root.dataset.theme);
     label();
   });
-  const mq = matchMedia("(prefers-color-scheme: dark)");
-  mq.addEventListener?.("change", (e) => { if (!store("vellum-theme")) { root.dataset.theme = e.matches ? "dark" : "light"; label(); } });
 }
 
 // ---- the current page in the nav
