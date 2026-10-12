@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-12T16:41:28.427109</dc:date>
+    <dc:date>2026-10-12T20:46:16.296180</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -224,7 +224,7 @@ z
      <g id="line2d_5">
       <path d="M 21.6 154.93 
 L 249.080315 154.93 
-" clip-path="url(#pbd0a87051b)" style="fill: none; stroke: #e6e0d4; stroke-width: 0.6; stroke-linecap: round"/>
+" clip-path="url(#p4abf284e36)" style="fill: none; stroke: #e6e0d4; stroke-width: 0.6; stroke-linecap: round"/>
      </g>
      <g id="line2d_6"/>
      <g id="text_5">
@@ -321,7 +321,7 @@ z
      <g id="line2d_7">
       <path d="M 21.6 115.606923 
 L 249.080315 115.606923 
-" clip-path="url(#pbd0a87051b)" style="fill: none; stroke: #e6e0d4; stroke-width: 0.6; stroke-linecap: round"/>
+" clip-path="url(#p4abf284e36)" style="fill: none; stroke: #e6e0d4; stroke-width: 0.6; stroke-linecap: round"/>
      </g>
      <g id="line2d_8"/>
      <g id="text_6">
@@ -348,7 +348,7 @@ z
      <g id="line2d_9">
       <path d="M 21.6 76.283846 
 L 249.080315 76.283846 
-" clip-path="url(#pbd0a87051b)" style="fill: none; stroke: #e6e0d4; stroke-width: 0.6; stroke-linecap: round"/>
+" clip-path="url(#p4abf284e36)" style="fill: none; stroke: #e6e0d4; stroke-width: 0.6; stroke-linecap: round"/>
      </g>
      <g id="line2d_10"/>
      <g id="text_7">
@@ -362,7 +362,7 @@ L 249.080315 76.283846
    </g>
    <g id="FillBetweenPolyCollection_1">
     <defs>
-     <path id="m1a2d0f260a" d="M 164.692456 -99.158939 
+     <path id="m52101116b7" d="M 164.692456 -99.158939 
 L 164.692456 -93.055925 
 L 166.526975 -93.709683 
 L 168.361494 -94.363228 
@@ -457,8 +457,8 @@ L 164.692456 -99.158939
 z
 "/>
     </defs>
-    <g clip-path="url(#pbd0a87051b)">
-     <use xlink:href="#m1a2d0f260a" x="0" y="188.65" style="fill: #dac9a6; fill-opacity: 0.55"/>
+    <g clip-path="url(#p4abf284e36)">
+     <use xlink:href="#m52101116b7" x="0" y="188.65" style="fill: #dac9a6; fill-opacity: 0.55"/>
     </g>
    </g>
    <g id="line2d_11">
@@ -482,7 +482,7 @@ L 142.678232 100.49923
 L 150.016307 97.84701 
 L 157.354382 95.194789 
 L 164.692456 92.542568 
-" clip-path="url(#pbd0a87051b)" style="fill: none; stroke: #806629; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#p4abf284e36)" style="fill: none; stroke: #806629; stroke-width: 0.7; stroke-linecap: round"/>
    </g>
    <g id="line2d_12">
     <path d="M 164.692456 92.542568 
@@ -530,7 +530,7 @@ L 239.907722 65.357303
 L 241.74224 64.694248 
 L 243.576759 64.031193 
 L 245.411278 63.368138 
-" clip-path="url(#pbd0a87051b)" style="fill: none; stroke-dasharray: 0.7,2.1; stroke-dashoffset: 0; stroke: #806629; stroke-width: 0.7"/>
+" clip-path="url(#p4abf284e36)" style="fill: none; stroke-dasharray: 0.7,2.1; stroke-dashoffset: 0; stroke: #806629; stroke-width: 0.7"/>
    </g>
    <g id="patch_3">
     <path d="M 21.6 154.93 
@@ -562,7 +562,7 @@ L 172.030531 100.533601
 L 179.368606 108.804031 
 L 186.70668 94.845911 
 L 194.044755 90.680811 
-" clip-path="url(#pbd0a87051b)" style="fill: none; stroke: #419ba0; stroke-width: 1.6; stroke-linecap: round"/>
+" clip-path="url(#p4abf284e36)" style="fill: none; stroke: #419ba0; stroke-width: 1.6; stroke-linecap: round"/>
    </g>
    <g id="text_8">
     <!-- world, 73.2 in 2023: -->
@@ -2427,11 +2427,11 @@ z
    <g id="line2d_14">
     <path d="M 194.044755 90.680811 
 L 194.044755 81.933684 
-" clip-path="url(#pbd0a87051b)" style="fill: none; stroke: #2a2825; stroke-width: 0.7"/>
+" clip-path="url(#p4abf284e36)" style="fill: none; stroke: #2a2825; stroke-width: 0.7"/>
    </g>
    <g id="PathCollection_1">
     <defs>
-     <path id="mb55e8cc9d7" d="M 0 2.645751 
+     <path id="m4b5daacf40" d="M 0 2.645751 
 C 0.701661 2.645751 1.374679 2.366978 1.870829 1.870829 
 C 2.366978 1.374679 2.645751 0.701661 2.645751 0 
 C 2.645751 -0.701661 2.366978 -1.374679 1.870829 -1.870829 
@@ -2443,8 +2443,8 @@ C -1.374679 2.366978 -0.701661 2.645751 0 2.645751
 z
 " style="stroke: #ffffff; stroke-width: 1.2"/>
     </defs>
-    <g clip-path="url(#pbd0a87051b)">
-     <use xlink:href="#mb55e8cc9d7" x="194.044755" y="90.680811" style="fill: #419ba0; stroke: #ffffff; stroke-width: 1.2"/>
+    <g clip-path="url(#p4abf284e36)">
+     <use xlink:href="#m4b5daacf40" x="194.044755" y="90.680811" style="fill: #419ba0; stroke: #ffffff; stroke-width: 1.2"/>
     </g>
    </g>
   </g>
@@ -3481,8 +3481,8 @@ z
    </g>
   </g>
   <g id="text_14">
-   <!-- Our World in Data (UN WPP 2024 and others), 2000–2023 · make_report.py · git 6c65dfc -->
-   <g style="fill: #8a857c" transform="translate(0 184.15) scale(0.065 -0.065)">
+   <!-- Our World in Data (UN WPP 2024 and others), 2000–2023 · make_report.py · git 4c16514 -->
+   <g style="fill: #8a857c" transform="translate(0 184.110391) scale(0.065 -0.065)">
     <defs>
      <path id="Corbel-12" d="M 3763 2088 
 Q 3763 2509 3653 2831 
@@ -3877,18 +3877,18 @@ z
     <use xlink:href="#Corbel-8b" transform="translate(3190.84375 0)"/>
     <use xlink:href="#Corbel-96" transform="translate(3214.03125 0)"/>
     <use xlink:href="#Corbel-3" transform="translate(3248.75 0)"/>
-    <use xlink:href="#Corbel-35e" transform="translate(3268.765625 0)"/>
-    <use xlink:href="#Corbel-85" transform="translate(3321.203125 0)"/>
-    <use xlink:href="#Corbel-35e" transform="translate(3365.046875 0)"/>
-    <use xlink:href="#Corbel-35d" transform="translate(3416.015625 0)"/>
-    <use xlink:href="#Corbel-86" transform="translate(3464.015625 0)"/>
-    <use xlink:href="#Corbel-88" transform="translate(3517.578125 0)"/>
-    <use xlink:href="#Corbel-85" transform="translate(3549.359375 0)"/>
+    <use xlink:href="#Corbel-35c" transform="translate(3268.765625 0)"/>
+    <use xlink:href="#Corbel-85" transform="translate(3320.421875 0)"/>
+    <use xlink:href="#Corbel-359" transform="translate(3364.265625 0)"/>
+    <use xlink:href="#Corbel-35e" transform="translate(3409.09375 0)"/>
+    <use xlink:href="#Corbel-35d" transform="translate(3460.0625 0)"/>
+    <use xlink:href="#Corbel-359" transform="translate(3508.0625 0)"/>
+    <use xlink:href="#Corbel-35c" transform="translate(3552.890625 0)"/>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pbd0a87051b">
+  <clipPath id="p4abf284e36">
    <rect x="21.6" y="52.69" width="227.480315" height="102.24"/>
   </clipPath>
  </defs>

@@ -1,25 +1,5 @@
 [
  {
-  "id": "square",
-  "group": "infographic",
-  "title": "World life expectancy fell 1.7 years in the pandemic, then rose to a record 73.2",
-  "subtitle": "Social square, 1080 × 1080 px: the world line inside the spread of all countries, three stat tiles, a mini map and the deepest falls",
-  "kind": "infographic",
-  "form": "social square",
-  "medium": "infographic",
-  "tool": "HTML + SVG",
-  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0. Natural Earth v5.1.2 (outlines, UN regions, population estimates), public domain",
-  "script": "examples/python/infographic/make_infographics.py",
-  "alt": "World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023.",
-  "words": 212,
-  "note": "One story, three formats: every number is computed from the data files by the script, nothing typed.",
-  "files": {
-   "light": "media/infographic/square.png",
-   "dark": "media/infographic/square_dark.png",
-   "html": "media/infographic/square.html"
-  }
- },
- {
   "id": "story",
   "group": "infographic",
   "title": "The pandemic brought world life expectancy its deepest fall since 1960",
@@ -37,6 +17,26 @@
    "light": "media/infographic/story.png",
    "dark": "media/infographic/story_dark.png",
    "html": "media/infographic/story.html"
+  }
+ },
+ {
+  "id": "square",
+  "group": "infographic",
+  "title": "World life expectancy fell 1.7 years in the pandemic, then rose to a record 73.2",
+  "subtitle": "Social square, 1080 × 1080 px: the world line inside the spread of all countries, three stat tiles, a mini map and the deepest falls",
+  "kind": "infographic",
+  "form": "social square",
+  "medium": "infographic",
+  "tool": "HTML + SVG",
+  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0. Natural Earth v5.1.2 (outlines, UN regions, population estimates), public domain",
+  "script": "examples/python/infographic/make_infographics.py",
+  "alt": "World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023.",
+  "words": 212,
+  "note": "One story, three formats: every number is computed from the data files by the script, nothing typed.",
+  "files": {
+   "light": "media/infographic/square.png",
+   "dark": "media/infographic/square_dark.png",
+   "html": "media/infographic/square.html"
   }
  },
  {
