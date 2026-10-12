@@ -1,0 +1,182 @@
+[
+ {
+  "id": "palette_explorer",
+  "group": "interactive",
+  "title": "Neighbouring tones stay 18.3 apart, and 11.4 under colour-vision deficiency",
+  "subtitle": "Every colour of the current twin from vellum.json, by job, with the palette checks computed live; click a swatch to copy its hex, hover or focus it for OKLCH and contrast",
+  "kind": "interactive",
+  "form": "palette explorer with computed checks",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "style/vellum.json, the Vellum palette (light and dark twins)",
+  "script": "docs/assets/js/interactive/palette_explorer.js",
+  "alt": "Swatches of the seven neutrals, the six hue families in tint, tone and deep steps, and four status colours, above tables of checks: the smallest colour distance between neighbouring tones is 18.3 (indigo and ochre, floor 15), 11.4 under deuteranopia (teal and terracotta, target 8), and the lowest tone contrast on white is 3.27:1 (teal, floor 3:1).",
+  "note": "Numbers are computed in the browser from vellum.json with the same formulas as generators/colorlab.py; in the dark twin they read 18.4, 11.3 and 5.03:1.",
+  "files": {
+   "light": "figures/interactive/palette_explorer_light.png",
+   "dark": "figures/interactive/palette_explorer_dark.png"
+  }
+ },
+ {
+  "id": "cvd_simulator",
+  "group": "interactive",
+  "title": "Under deuteranopia a default palette's closest pair falls to 3.9; Vellum's stays at 11.4",
+  "subtitle": "The same line and bar chart in Vellum tones and in matplotlib tab10, re-coloured for normal vision, protanopia, deuteranopia, tritanopia or greyscale, with the closest neighbouring pair computed under each",
+  "kind": "interactive",
+  "form": "colour-vision simulator, line and bar chart",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "Life expectancy: UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data",
+  "script": "docs/assets/js/interactive/cvd_simulator.js",
+  "alt": "Two copies of a chart of life expectancy in world regions, 1950 to 2023, simulated for deuteranopia: in matplotlib tab10 the green and red series are 3.9 apart and fail the target of 8; in Vellum tones the closest pair (teal and terracotta) is 11.4 apart and passes.",
+  "note": "Opens on deuteranopia, the claim; the control switches to normal vision, protanopia (default palette falls to 0.7, Vellum 12.3), tritanopia or greyscale (both palettes fall below 8 in the light twin: Vellum 6.5, default 4.0, which is why lines carry direct labels). Dark twin: Vellum 11.3 under deuteranopia.",
+  "files": {
+   "light": "figures/interactive/cvd_simulator_light.png",
+   "dark": "figures/interactive/cvd_simulator_dark.png"
+  }
+ },
+ {
+  "id": "gradient_explorer",
+  "group": "interactive",
+  "title": "Vellum's scales keep lightness in order; jet's climbs to 0.95, then falls to 0.38",
+  "subtitle": "Lagoon, ember, shore, the teal ramp and the diverging scale against jet and a straight teal-to-terracotta join: 256 steps, their greyscale, and OKLCH lightness and chroma along each, with a computed verdict",
+  "kind": "interactive",
+  "form": "gradient explorer: strip, greyscale strip, lightness and chroma profiles",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "style/vellum.json gradients, sequential and diverging stops (light and dark twins); jet as defined in matplotlib",
+  "script": "docs/assets/js/interactive/gradient_explorer.js",
+  "alt": "The lagoon gradient as a 256-step strip with its greyscale, above line charts of OKLCH lightness, falling steadily from 0.94 to 0.36, and chroma, a low bell peaking at 0.085; a grey comparison line shows jet, whose lightness climbs from 0.27 to 0.95 at t = 0.64 and falls back to 0.38.",
+  "note": "Verdicts computed in the browser: lagoon smallest lightness step between stops 0.070 (0.068 in the dark twin); teal straight to terracotta keeps lightness monotone but its chroma falls from 0.085 to 0.015 near the middle (t = 0.58 light, 0.55 dark).",
+  "files": {
+   "light": "figures/interactive/gradient_explorer_light.png",
+   "dark": "figures/interactive/gradient_explorer_dark.png"
+  }
+ },
+ {
+  "id": "surface3d",
+  "group": "interactive",
+  "title": "Two adaptive peaks, at w = 1.00 and 0.72, are joined by a saddle at w = 0.26",
+  "subtitle": "Illustrative landscape. Drag to turn it; the flat twin is where values are read.",
+  "kind": "interactive",
+  "form": "rotatable 3D surface with heat map twin",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "Illustrative: the analytic two-trait landscape w(z1, z2) of examples/python/_common.py (not data)",
+  "script": "docs/assets/js/interactive/surface3d.js",
+  "alt": "A rotatable 3D surface of fitness w over two traits z1 and z2 from -2 to 2, coloured by height on the lagoon gradient, beside a heat map twin with contour lines. The higher peak is 1.00 at z1 = 0.90, z2 = 0.70; the lower peak is 0.72 at z1 = -0.80, z2 = -0.90; the saddle between them is 0.26 at z1 = 0.05, z2 = -0.10.",
+  "note": "Illustrative landscape. Peaks and saddle are computed in the browser (grid search and Newton refinement). The surface draws at 30 x 30 quads while it turns and 60 x 60 at rest.",
+  "files": {
+   "light": "figures/interactive/surface3d_light.png",
+   "dark": "figures/interactive/surface3d_dark.png"
+  }
+ },
+ {
+  "id": "life_map",
+  "group": "interactive",
+  "title": "In 2023 life expectancy at birth ran from 54.5 years in Nigeria to 84.7 in Japan",
+  "subtitle": "A world choropleth in the Equal Earth projection, five classes of the teal ramp at the 2023 quintiles held fixed from 1950 to 2023, with a strip of countries by continent; move the year, hover or tap a country or a dot",
+  "kind": "interactive",
+  "form": "choropleth map with year slider and dot strip",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data. Outlines: Natural Earth v5.1.2",
+  "script": "docs/assets/js/interactive/life_map.js",
+  "alt": "World map of life expectancy at birth in 2023 in five teal classes with breaks at 66.2, 71.7, 76.0 and 79.7 years: lowest in sub-Saharan Africa (Nigeria 54.5), highest in Japan (84.7), Western Europe, Australia and Canada; three territories without a value are hatched. Below, one dot per country by continent.",
+  "note": "Outlines come from docs/data/world-110m.json, made by tools/make_world.py from data/ne_110m_admin_0_countries.geojson. In 1950 the same classes show 14.2 years (North Korea) to 71.6 (Norway), median 45.8; the median gain from 1950 to 2023 across the 173 countries is 24.8 years.",
+  "files": {
+   "light": "figures/interactive/life_map_light.png",
+   "dark": "figures/interactive/life_map_dark.png"
+  }
+ },
+ {
+  "id": "life_explorer",
+  "group": "interactive",
+  "title": "Since 1950, life expectancy rose 62 years in South Korea and 18 in Russia",
+  "subtitle": "Period life expectancy at birth, 1950–2023, for up to four countries against the world. Type a name to add a country, press its chip to remove it, point at the chart to read a year.",
+  "kind": "interactive",
+  "form": "line chart explorer (choose up to four countries)",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "Period life expectancy at birth: UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12 (CC BY 4.0)",
+  "script": "docs/assets/js/interactive/life_explorer.js",
+  "alt": "Line chart of life expectancy at birth from 1950 to 2023 for South Korea, China, Russia and Nigeria, with the world in grey. South Korea rises from 22.2 to 84.3 years, China from 43.8 to 78.0 with a fall to 33.4 in 1960, Russia from 55.5 to 73.2 after a stall and a dip in the 1990s, Nigeria from 35.5 to 54.5. The world rises from 46.4 to 73.2 and lost 1.7 years between 2019 and 2021.",
+  "note": "The title is recomputed from the countries the reader chooses; the thumbnail shows the default four.",
+  "files": {
+   "light": "figures/interactive/life_explorer_light.png",
+   "dark": "figures/interactive/life_explorer_dark.png"
+  }
+ },
+ {
+  "id": "network",
+  "group": "interactive",
+  "title": "Valjean shares a chapter with 36 of the other 76 characters, 14 more than anyone else",
+  "subtitle": "The co-occurrence network of Les Misérables, force-directed (seeded, run to rest), dots sized by degree and coloured by the six largest groups; hover, tap or search a character to light it and its neighbours in terracotta",
+  "kind": "interactive",
+  "form": "network, force-directed",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "Donald Knuth, The Stanford GraphBase (1993); via vega-datasets 2.8.0",
+  "script": "docs/assets/js/interactive/network.js",
+  "alt": "A network of 77 characters and 254 co-occurrence links, coloured by six groups; Valjean, at the centre, is linked to 36 others, followed by Gavroche (22), Marius (19), Javert (17) and Thenardier (16), the five labelled names.",
+  "note": "Groups are the group field of the data set; each is named after its most connected member (Valjean, Gavroche, Javert, Myriel, Fantine, Cosette), and nine characters in five small groups are grey as other.",
+  "files": {
+   "light": "figures/interactive/network_light.png",
+   "dark": "figures/interactive/network_dark.png"
+  }
+ },
+ {
+  "id": "reveal",
+  "group": "interactive",
+  "title": "The life expectancy gap between high- and low-income countries fell from 31 to 16 years",
+  "subtitle": "Life expectancy at birth by income group, 1950–2023. The full figure shows first; press 1, then Next or the arrow keys, to build it one series per step as a talk would. Step 5 highlights the group the claim is about.",
+  "kind": "interactive",
+  "form": "line chart, progressive reveal in steps",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "Period life expectancy at birth by income group: UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12 (CC BY 4.0)",
+  "script": "docs/assets/js/interactive/reveal.js",
+  "alt": "Line chart of life expectancy at birth for four income groups, 1950 to 2023. High income rises from 61.8 to 81.4 years, upper-middle income from 45.4 to 75.9 after a fall to 41.6 in 1960, lower-middle income from 40.8 to 69.6, low income from 31.2 to 64.9. The gap between high and low income falls from 30.6 to 16.5 years.",
+  "note": "Built as the web version of the progressive reveal of a talk (Vellum - presentations, 1329.04 and 1329.05): steps 1 to 4 add one series each, step 5 highlights low income in terracotta with the rest in rule grey. The thumbnail shows step 4, the full figure.",
+  "files": {
+   "light": "figures/interactive/reveal_light.png",
+   "dark": "figures/interactive/reveal_dark.png"
+  }
+ },
+ {
+  "id": "disasters_heat",
+  "group": "interactive",
+  "title": "Epidemics and droughts killed 510,000 a year in 1900–1929 and 6,700 in 2010–2017",
+  "subtitle": "Deaths per decade by type of disaster, colour on a log scale; the 2010s are 2010–2017. Point at or tab to a cell to read it, and sort the rows by total or by name.",
+  "kind": "interactive",
+  "form": "heat map (type by decade, log colour scale)",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "Global deaths from natural disasters by type and year, 1900–2017: EM-DAT, CRED / UCLouvain; processed by Our World in Data; via vega-datasets 2.8.0 (CC BY 4.0)",
+  "script": "docs/assets/js/interactive/disasters_heat.js",
+  "alt": "Heat map of deaths per decade for ten types of natural disaster, 1900s to 2010s, on the lagoon gradient with a log scale. Droughts and epidemics are darkest in the 1900s to 1920s, with up to 4.7 million drought deaths in the 1920s and about 3 million epidemic deaths in each of the first three decades; together they killed 510,000 people a year in 1900–1929 and 6,700 a year in 2010–2017. Hatched cells have no record.",
+  "note": "Decades are sums of yearly deaths; the 2010s cover 2010–2017 only. Hatched cells: no record for that type in that decade (not zero).",
+  "files": {
+   "light": "figures/interactive/disasters_heat_light.png",
+   "dark": "figures/interactive/disasters_heat_dark.png"
+  }
+ },
+ {
+  "id": "penguins_scatter",
+  "group": "interactive",
+  "title": "Beak depth rises with beak length within each species, yet pooled r is −0.24",
+  "subtitle": "Palmer Archipelago, 2007–2009, 342 birds. Choose the two measures, switch species on and off, point at a bird to read it; pointing at a species button highlights that species.",
+  "kind": "interactive",
+  "form": "scatter plot with per-species fits (choose the axes)",
+  "medium": "screen",
+  "tool": "JavaScript (vellum-web.js)",
+  "data": "Palmer penguins: Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via the palmerpenguins R package and vega-datasets 2.8.0 (CC0); 342 birds with all four measures",
+  "script": "docs/assets/js/interactive/penguins_scatter.js",
+  "alt": "Scatter of beak depth against beak length for 342 penguins in three species, each with its least-squares line. Within each species beak depth rises with beak length (r = 0.39 for Adelie, 0.65 for Chinstrap, 0.64 for Gentoo), but pooled over the three species the correlation is -0.24, shown as a dotted grey line: Simpson's paradox.",
+  "note": "The title, the correlations and the fits are recomputed for the axes and species the reader chooses; Simpson's paradox is flagged whenever the pooled correlation has the opposite sign of every within-species one (beak depth against beak length, flipper length or body mass). The static figure science/penguins_scatter shares this id in another group.",
+  "files": {
+   "light": "figures/interactive/penguins_scatter_light.png",
+   "dark": "figures/interactive/penguins_scatter_dark.png"
+  }
+ }
+]

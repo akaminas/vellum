@@ -1,0 +1,36 @@
+[
+ {
+  "id": "talk",
+  "group": "talk",
+  "title": "Where a population starts decides which peak it climbs",
+  "subtitle": "A conference talk in the dark twin: a stat tile, a progressive reveal in four steps, the surface at two fixed views, its heat-map twin and a TikZ diagram built step by step",
+  "kind": "slides",
+  "form": "beamer deck",
+  "medium": "slides",
+  "tool": "beamer",
+  "data": "illustrative simulation on the analytic landscape w(z1, z2) of examples/python/_common.py; not data",
+  "script": "examples/latex/talk/talk.tex",
+  "alt": "A dark 16:9 deck of 11 frames (14 pages with the diagram's build steps). In an illustrative simulation on a two-peak landscape, most random starts end on the lower peak at fitness 0.72, not on the higher one at 1.00; four populations are revealed one by one, the surface is shown at two fixed views and then as a heat map with the basin boundary.",
+  "note": "Illustrative simulation, labelled on every slide. Figures by examples/python/talk/make_talk_figures.py, built by examples/latex/talk/build.py. The page is the 160 x 90 mm frame enlarged by 1.764 so the 10 in slide figure and the 28/20/10 pt type sizes hold at 1:1.",
+  "files": {
+   "pdf": "media/talk/talk.pdf",
+   "pages": [
+    "media/talk/talk-01.png",
+    "media/talk/talk-02.png",
+    "media/talk/talk-03.png",
+    "media/talk/talk-04.png",
+    "media/talk/talk-05.png",
+    "media/talk/talk-06.png",
+    "media/talk/talk-07.png",
+    "media/talk/talk-08.png",
+    "media/talk/talk-09.png",
+    "media/talk/talk-10.png",
+    "media/talk/talk-11.png",
+    "media/talk/talk-12.png",
+    "media/talk/talk-13.png",
+    "media/talk/talk-14.png"
+   ],
+   "light": "media/talk/talk-01.png"
+  }
+ }
+]

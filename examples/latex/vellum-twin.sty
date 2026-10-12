@@ -1,0 +1,83 @@
+% vellum-twin.sty: what every LaTeX example shares. Fonts, packages, the switch between the light and the dark twin,
+% the anatomy sizes from vellum.json (via data/vellum_sizes.tex), Lato tick labels with a true minus, and the footer.
+% One .tex file makes both twins: `lualatex x.tex` draws the light twin, `lualatex -jobname=x_dark x.tex` the dark one.
+% In a figure, write every colour as <name>\vD (vInk\vD, vteal\vD): \vD is empty in the light twin and D in the dark twin,
+% so the dark twin uses the package's dark names (vInkD, vtealD) and nothing is recoloured by hand.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{vellum-twin}[Vellum examples: fonts and the twin switch]
+\RequirePackage{fontspec}
+\setmainfont{TeX Gyre Pagella}                       % the claim
+\setsansfont{Lato}                                   % everything else
+\IfFontExistsTF{Consolas}{\setmonofont{Consolas}[Scale=MatchLowercase]}{}   % file names, where a figure shows them
+\RequirePackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}                  % the document's maths font; variable names are italic maths
+\RequirePackage{tikz}
+\usetikzlibrary{positioning, calc}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\RequirePackage{vellum-colors}                       % after tikz and pgfplots, so its styles are defined
+\input{data/vellum_sizes.tex}                        % \vSizeTitle, \vLine, ... written from vellum.json by prepare_data.py
+
+% ---- the twin switch: a job name ending in _dark draws the dark twin
+\newif\ifvdark
+\ifnum\directlua{tex.print(string.find(tex.jobname, "_dark$") and 1 or 0)}=1 \vdarktrue\fi
+\ifvdark\def\vD{D}\else\def\vD{}\fi
+
+% ---- type sizes of the anatomy (vellum.json "sizes")
+\newcommand\vTitleFont{\rmfamily\fontsize{\vSizeTitle}{\vSkipTitle}\selectfont}       % the claim, in Pagella
+\newcommand\vSubtitleFont{\sffamily\fontsize{\vSizeSubtitle}{\vSkipSubtitle}\selectfont}
+\newcommand\vLabelFont{\sffamily\fontsize{\vSizeAxis}{\vSkipAxis}\selectfont}         % axis names, box text
+\newcommand\vTickFont{\sffamily\fontsize{\vSizeTick}{\vSkipTick}\selectfont}
+\newcommand\vUnitFont{\sffamily\fontsize{\vSizeUnit}{\vSkipUnit}\selectfont}          % unit line and notes
+\newcommand\vFooterFont{\sffamily\fontsize{\vSizeFooter}{\vSkipFooter}\selectfont}
+
+% Tick labels as text in Lato (pgfplots sets them in maths by default), with U+2212 for the minus sign.
+\newcommand\vellumtick{\pgfmathparse{\tick<0}\ifnum\pgfmathresult=1 \char"2212\fi
+  \pgfmathparse{abs(\tick)}\pgfmathprintnumber[assume math mode=true]{\pgfmathresult}}
+
+% ---- the axis styles. `vellum twin` is the package's `vellum` or `vellum dark`; `vellum 3d twin` is `vellum 3d`, which the
+% package defines in light colours only, re-coloured for the dark twin. Both add what vellum.json says and the package does
+% not: a 0.6 pt grid, the unit line in muted at 7.5 pt (the package sets the axis title in bold ink) and the sizes above.
+% `vellum 3d` inherits the 2D placement of the y label (top left, turned upright, for a unit line); in 3D the three axis
+% names go back to pgfplots' places beside their tick labels, and stay horizontal.
+% The package's cycle list is light only and draws 1.1 pt lines; this one takes the twin's tones at the 1.6 pt of vellum.json.
+\pgfplotscreateplotcyclelist{vellum twin}{{vteal\vD, line width=\vLine}, {vterracotta\vD, line width=\vLine},
+  {vindigo\vD, line width=\vLine}, {vochre\vD, line width=\vLine}, {vmauve\vD, line width=\vLine}, {vmoss\vD, line width=\vLine}}
+\pgfplotsset{
+  /pgf/number format/1000 sep={},
+  vellum anatomy/.style={cycle list name=vellum twin, xticklabel=\vellumtick, yticklabel=\vellumtick, zticklabel=\vellumtick,
+    ticklabel style={font=\vTickFont}, xlabel style={font=\vLabelFont}, ylabel style={font=\vLabelFont},
+    zlabel style={font=\vLabelFont}, grid style={line width=\vGridW},
+    every axis title/.style={at={(0,1)}, anchor=south west, inner sep=0pt, yshift=5pt, font=\vUnitFont, text=vMuted\vD}},
+  vellum 3d labels/.style={
+    every axis x label/.style={at={(ticklabel* cs:0.5,10pt)}, anchor=near ticklabel, font=\vLabelFont, text=vMuted\vD},
+    every axis y label/.style={at={(ticklabel* cs:0.5,10pt)}, anchor=near ticklabel, font=\vLabelFont, text=vMuted\vD},
+    every axis z label/.style={at={(ticklabel* cs:1)}, anchor=south, yshift=4pt, font=\vLabelFont, text=vMuted\vD}}}
+\ifvdark
+  \pgfplotsset{vellum twin/.style={vellum dark, vellum anatomy},
+    vellum 3d twin/.style={vellum 3d, vellum anatomy, vellum 3d labels, axis background/.style={fill=none},
+      axis line style={vRuleD}, grid style={vGridD}, ticklabel style={vMutedD}}}
+  % the package's TikZ styles are light only; the dark twin re-colours them with the D names
+  \tikzset{
+    vellum box/.append style={draw=vRuleD, fill=vCardD, text=vInkD},
+    vellum box tint/.append style={fill=v#1TintD, text=v#1DeepD},
+    vellum arrow/.append style={vSecondaryD},
+    vellum guide/.append style={vRuleD},
+    vellum label/.append style={vMutedD},
+    vellum claim/.append style={vInkD}}
+\else
+  \pgfplotsset{vellum twin/.style={vellum, vellum anatomy},
+    vellum 3d twin/.style={vellum 3d, vellum anatomy, vellum 3d labels, axis background/.style={fill=none}}}
+\fi
+\newcommand\vgradient[1]{vellum #1\ifvdark\space dark\fi}   % colormap name of a named gradient in this twin
+
+% ---- marks (vellum.json "marks"): a dot ringed in the surface colour, and the dotted reference line
+\tikzset{
+  vellum dot/.style={circle, inner sep=0pt, minimum size=\vMarker, fill=#1, draw=vSurface\vD, line width=\vRing},
+  vellum reference/.style={#1, line width=\vThin, dash pattern=on \vDotOn off \vDotOff}}
+
+% ---- the footer: source · script · git stamp. build.py passes the stamp on the command line as \def\vellumstamp{...}.
+\providecommand\vellumstamp{unstamped}
+\newcommand\vscript{\directlua{tex.sprint(-2, (tex.jobname:gsub("_dark$", "")) .. ".tex")}}
+\newcommand\vfooter[1]{#1 · \vscript\ · git \vellumstamp}
+\endinput

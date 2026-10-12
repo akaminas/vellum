@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vellum harness</title>
+<script>
+  // ?fig=<module name>&theme=light|dark&width=<px>: mounts one interactive figure alone, for development and thumbnails
+  (function () {
+    var q = new URLSearchParams(location.search);
+    document.documentElement.dataset.theme = q.get("theme") === "dark" ? "dark" : "light";
+  })();
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/vellum-tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+  body { padding: 32px 40px; }
+  #stage { max-width: var(--w, 1100px); }
+  .bar { position: fixed; top: 6px; right: 10px; font-size: 12px; color: var(--v-muted); }
+  .bar button { font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="bar"><button class="btn btn-ghost" id="flip" type="button">flip twin</button></div>
+<div id="stage"></div>
+<script type="module">
+  const q = new URLSearchParams(location.search);
+  const name = q.get("fig");
+  const stage = document.getElementById("stage");
+  if (q.get("width")) stage.style.setProperty("--w", q.get("width") + "px");
+  if (q.get("bare") !== null) document.querySelector(".bar").remove();
+  document.getElementById("flip")?.addEventListener("click", () => {
+    const r = document.documentElement; r.dataset.theme = r.dataset.theme === "dark" ? "light" : "dark";
+  });
+  if (name) {
+    const node = document.createElement("div");
+    node.className = "vfig"; node.id = name;
+    stage.appendChild(node);
+    const m = await import(`../assets/js/interactive/${name}.js`);
+    await m.mount(node);
+  } else {
+    stage.textContent = "Add ?fig=<module name> to the address.";
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+% pgfplots_co2.tex: the Mauna Loa CO2 record as a Vellum line chart in pgfplots, from data/co2_annual.dat
+% (annual means written by prepare_data.py from data/co2-concentration.csv). Every number in the text is a macro
+% from data/co2_macros.tex. Light twin: lualatex pgfplots_co2.tex; dark twin: lualatex -jobname=pgfplots_co2_dark pgfplots_co2.tex
+\documentclass[11pt, border=0pt]{standalone}
+\usepackage{vellum-twin}
+\input{data/co2_macros.tex}
+\begin{document}
+\sffamily
+\begin{tikzpicture}[x=1cm, y=1cm]
+  \def\W{18.288}\def\H{9.144}                                 % 7.2 x 3.6 in, drawn at the printed size
+  \fill[vSurface\vD] (0,0) rectangle (\W,\H);                 % the surface: white, or charcoal in the dark twin
+  \useasboundingbox (0,0) rectangle (\W,\H);
+  % title block: the claim in Pagella, the subtitle in muted
+  \node[anchor=north west, inner sep=0pt, text=vInk\vD, font=\vTitleFont] at (0.45,\H-0.4)
+    {Carbon dioxide at Mauna Loa rose every year from \coFirstYear\ to \coLastYear};
+  \node[anchor=north west, inner sep=0pt, text=vMuted\vD, font=\vSubtitleFont] at (0.45,\H-1.08)
+    {annual means of the seasonally adjusted monthly record · up \coRise\ ppm in all; the smallest yearly rise was \coSmallestRise\ ppm};
+  \begin{axis}[vellum twin, at={(1.15cm,1.15cm)}, anchor=south west, scale only axis, width=13.7cm, height=5.95cm,
+      xmin=1958, xmax=2020, ymin=300, ymax=420, xtick={1960,1980,2000,2020}, ytick={300,340,380,420},
+      title={CO\textsubscript{2}, parts per million · the axis starts at 300}]   % the axis title is the unit line
+    \addplot[vochre\vD, vellum reference] coordinates {(1958,350) (2020,350)}
+      node[pos=1, anchor=south east, inner sep=2pt, text=vMuted\vD, font=\vUnitFont] {350 ppm, first passed in \coPassed};
+    \addplot[vteal\vD, line width=\vLine] table[x=year, y=ppm] {data/co2_annual.dat};
+    \node[vellum dot=vteal\vD] at (axis cs:\coLastYear,\coLast) {};
+    \node[anchor=west, inner sep=0pt, xshift=6pt, text=vInk\vD, font=\vUnitFont] at (axis cs:\coLastYear,\coLast)
+      {\coLast\ ppm in \coLastYear};
+  \end{axis}
+  \node[anchor=south west, inner sep=0pt, text=vMuted\vD, font=\vFooterFont] at (0.45,0.25)
+    {\vfooter{NOAA Global Monitoring Laboratory and Scripps Institution of Oceanography; via vega-datasets 2.8.0}};
+\end{tikzpicture}
+\end{document}

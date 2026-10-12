@@ -1,0 +1,108 @@
+[
+ {
+  "id": "report",
+  "group": "report",
+  "title": "Recovered, but not back on track",
+  "kind": "report",
+  "form": "A4 report, 3 pages",
+  "medium": "report",
+  "tool": "HTML + matplotlib",
+  "subtitle": "Global life expectancy, 1950–2023, and the setback of the pandemic years: an example report, illustrative layout, real data",
+  "data": "Period life expectancy at birth, UN World Population Prospects (2024) and others, processed by Our World in Data, 1950–2023; country outlines and 2019 population estimates, Natural Earth v5.1.2",
+  "script": "examples/python/report/make_report.py",
+  "alt": "Page one of a three-page A4 report: a summary of five claims, three stat tiles and a line chart of world life expectancy, which rose from 46.4 years in 1950 to 73.2 in 2023.",
+  "note": "Illustrative layout, real data. Every number is computed by the script and written to media/report/numbers.json.",
+  "files": {
+   "html": "media/report/index.html",
+   "pdf": "media/report/report.pdf",
+   "light": "media/report/page-1.png",
+   "pages": [
+    "media/report/page-1.png",
+    "media/report/page-2.png",
+    "media/report/page-3.png"
+   ],
+   "thumbs": [
+    "media/report/thumbs/page-1.png",
+    "media/report/thumbs/page-2.png",
+    "media/report/thumbs/page-3.png"
+   ],
+   "numbers": "media/report/numbers.json"
+  }
+ },
+ {
+  "id": "report_world_line",
+  "group": "report",
+  "title": "World life expectancy rose 26.8 years since 1950; the pandemic took 1.7 back",
+  "subtitle": "Period life expectancy at birth, 1950–2023: the world, high-income countries and low-income countries",
+  "kind": "report",
+  "form": "line chart with callouts",
+  "medium": "report",
+  "tool": "matplotlib",
+  "data": "Period life expectancy at birth, UN World Population Prospects (2024) and others, processed by Our World in Data, 1950–2023",
+  "script": "examples/python/report/make_report.py",
+  "alt": "Line chart of life expectancy at birth, 1950 to 2023. The world rises from 46.4 to 73.2 years; high-income countries reach 81.4 and low-income countries 64.9. The world falls 1.7 years from 2019 to 2021 and gains 2.3 back by 2023.",
+  "note": "One of the four figures of the example report (media/report/index.html); drawn at its printed width.",
+  "files": {
+   "light": "figures/report/report_world_line_light.png",
+   "dark": "figures/report/report_world_line_dark.png",
+   "pdf": "figures/report/report_world_line_light.pdf"
+  }
+ },
+ {
+  "id": "report_projection",
+  "group": "report",
+  "title": "In 2023 the world was 1.1 years below its trend",
+  "subtitle": "World life expectancy at birth, 2000–2023, against the 2000–2019 trend",
+  "kind": "report",
+  "form": "line chart with a projection band",
+  "medium": "report",
+  "tool": "matplotlib",
+  "data": "Period life expectancy at birth, UN World Population Prospects (2024) and others, processed by Our World in Data, 2000–2023",
+  "script": "examples/python/report/make_report.py",
+  "alt": "Line chart of world life expectancy, 2000 to 2023, with the 2000–2019 trend extended as a dotted line in a band to 2030. In 2023 the world, at 73.2 years, is 1.1 years below the trend value of 74.3.",
+  "note": "One of the four figures of the example report (media/report/index.html); drawn at its printed width.",
+  "files": {
+   "light": "figures/report/report_projection_light.png",
+   "dark": "figures/report/report_projection_dark.png",
+   "pdf": "figures/report/report_projection_light.pdf"
+  }
+ },
+ {
+  "id": "report_choropleth",
+  "group": "report",
+  "title": "Of the 35 countries with the lowest life expectancy, 31 are in Africa",
+  "subtitle": "Period life expectancy at birth in 2023, 173 countries in five classes of equal count (quintiles)",
+  "kind": "report",
+  "form": "choropleth, Equal Earth projection",
+  "medium": "report",
+  "tool": "matplotlib",
+  "data": "Period life expectancy at birth, UN World Population Prospects (2024) and others, processed by Our World in Data, 2023; outlines Natural Earth v5.1.2",
+  "script": "examples/python/report/make_report.py",
+  "alt": "World map of life expectancy at birth in 2023 in five classes, from 54.5 years in Nigeria to 84.7 in Japan. 31 of the 35 countries in the lowest class are in Africa.",
+  "note": "One of the four figures of the example report (media/report/index.html); drawn at its printed width.",
+  "files": {
+   "light": "figures/report/report_choropleth_light.png",
+   "dark": "figures/report/report_choropleth_dark.png",
+   "pdf": "figures/report/report_choropleth_light.pdf"
+  }
+ },
+ {
+  "id": "report_dotplot",
+  "group": "report",
+  "title": "Mexico, Colombia and South Africa fell four years or more and were back by 2023",
+  "subtitle": "Life expectancy at birth in the 30 most populous countries, 2019 to 2023",
+  "kind": "report",
+  "form": "dot plot with range lines",
+  "medium": "report",
+  "tool": "matplotlib",
+  "data": "Period life expectancy at birth, UN World Population Prospects (2024) and others, processed by Our World in Data, 2019–2023; population Natural Earth v5.1.2 (2019)",
+  "script": "examples/python/report/make_report.py",
+  "alt": "Dot plot of life expectancy in 2023 in the 30 most populous countries, from 84.7 in Japan to 54.5 in Nigeria, with 2019 and the lowest year of 2020–2022. Mexico, Colombia and South Africa fell four years or more.",
+  "note": "One of the four figures of the example report (media/report/index.html); drawn at its printed width.",
+  "files": {
+   "light": "figures/report/report_dotplot_light.png",
+   "dark": "figures/report/report_dotplot_dark.png",
+   "pdf": "figures/report/report_dotplot_light.pdf"
+  }
+ }
+]

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<!--#head-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){var t=new URLSearchParams(location.search).get("theme");if(t!=="light"&&t!=="dark"){t=null;try{t=localStorage.getItem("vellum-theme")}catch(e){}}if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/vellum-tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="module" src="assets/js/site.js"></script>
+<!--/head-->
+<title>Tools · Vellum</title>
+<meta name="description" content="Vellum in matplotlib, ggplot2, pgfplots, TikZ and beamer, CSS and SVG, PowerPoint, Word, Excel, Canva, Google Slides and Excalidraw. One JSON file defines every colour; every other file is generated from it.">
+</head>
+<body>
+<!--#header-->
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <nav class="nav-half nav-left" aria-label="The style">
+      <a href="principles.html">Principles</a>
+      <a href="colour.html">Colour</a>
+      <a href="anatomy.html">Anatomy</a>
+      <a href="forms.html">Forms</a>
+    </nav>
+    <a class="brand" href="index.html" aria-label="Vellum, home" title="Vellum">
+      <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
+        <circle cx="15.87" cy="5.04" r="4.3" style="fill:var(--v-ochre)"/>
+        <circle cx="22.66" cy="8.57" r="4.3" style="fill:var(--v-terracotta)"/>
+        <circle cx="24.06" cy="19.23" r="4.3" style="fill:var(--v-mauve)"/>
+        <circle cx="14.13" cy="24.96" r="4.3" style="fill:var(--v-indigo)"/>
+        <circle cx="5.60" cy="18.42" r="4.3" style="fill:var(--v-teal)"/>
+        <circle cx="7.34" cy="8.57" r="4.3" style="fill:var(--v-moss)"/>
+      </svg>
+      <span class="brand-word">Vellum</span>
+    </a>
+    <nav class="nav-half nav-right" aria-label="The work">
+      <a href="gallery.html">Gallery</a>
+      <a href="interactive.html">Interactive</a>
+      <a href="media.html">Media</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+  </div>
+  <div class="header-tools">
+    <button class="icon-btn theme-toggle" type="button" aria-label="Switch twin">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+    </button>
+    <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
+      <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+    </a>
+  </div>
+</header>
+<!--/header-->
+
+<main id="main" class="wrap">
+
+<header class="page-head">
+  <span class="eyebrow">Tools</span>
+  <h1>One file defines every colour; the tools read it or are generated from it</h1>
+  <p class="lead">The style lives in <code>style/vellum.json</code>. The matplotlib module and the web module read it at run time. The R theme, the LaTeX package, the CSS variables and the Office colour list are generated from it. A change of colour is made in the generators and regenerated, never in a generated file.</p>
+  <ul class="toc">
+    <li><a href="#pipeline">How the files are made</a></li>
+    <li><a href="#downloads">Downloads</a></li>
+    <li><a href="#python">matplotlib</a></li>
+    <li><a href="#r">R</a></li>
+    <li><a href="#latex">LaTeX</a></li>
+    <li><a href="#web">The web</a></li>
+    <li><a href="#office">Office, Canva, Excalidraw</a></li>
+  </ul>
+</header>
+
+<h2 id="pipeline">How the files are made</h2>
+<!--#fig tools/tikz_pipeline wide-->
+<!--/fig-->
+<div class="split">
+  <div class="prose">
+    <p><code>build_palettes.py</code> searches, with a fixed seed, for the lightness of each tone that maximises the smallest colour distance between neighbouring series while keeping 3:1 contrast. <code>make_vellum_json.py</code> builds the tints, deeps, ramps, the diverging scale, the gradients and the dark twin from the result and writes <code>vellum.json</code>. <code>make_assets.py</code> writes the five tool files from it.</p>
+    <p>Run end to end, the pipeline reproduces the published files byte for byte. That is checked, not assumed: regenerate into an empty folder and compare.</p>
+  </div>
+  <div>
+<pre data-copy><code>cd generators
+python build_palettes.py palettes.json      # the seeded search (about 3 minutes)
+python make_vellum_json.py ../style/vellum.json
+python make_assets.py ../style/vellum.json ../style
+git diff --stat ../style                    # nothing: the files are reproduced exactly</code></pre>
+  </div>
+</div>
+
+<h2 id="downloads">Downloads</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>file</th><th>for</th><th>what it holds</th></tr></thead>
+    <tbody>
+      <tr><td><a href="downloads/vellum.json"><code>vellum.json</code></a></td><td>everything</td><td>every colour of both twins, the slot order, semantic slots, gradients, fonts, mark sizes and type sizes. The source of truth.</td></tr>
+      <tr><td><a href="downloads/vellum.py"><code>vellum.py</code></a></td><td>matplotlib</td><td><code>vellum.use("light")</code> sets the rcParams and returns the palette with the anatomy as helper functions</td></tr>
+      <tr><td><a href="downloads/vellum.mplstyle"><code>vellum.mplstyle</code></a></td><td>matplotlib</td><td>the light rcParams alone, for <code>plt.style.use</code></td></tr>
+      <tr><td><a href="downloads/vellum.R"><code>vellum.R</code></a></td><td>R, ggplot2</td><td><code>theme_vellum()</code>, colour and fill scales, gradients, a ringed point and end labels</td></tr>
+      <tr><td><a href="downloads/vellum-colors.sty"><code>vellum-colors.sty</code></a></td><td>LaTeX</td><td>134 xcolor names (both twins and the gradient stops), the pgfplots styles and colormaps, TikZ node styles, <code>\vellumbeamer</code> and <code>\vellumbeamerdark</code></td></tr>
+      <tr><td><a href="downloads/vellum.css"><code>vellum.css</code></a></td><td>web, Obsidian</td><td>the palette and gradients as <code>--v-*</code> CSS variables, light and dark</td></tr>
+      <tr><td><a href="downloads/vellum-office.tsv"><code>vellum-office.tsv</code></a></td><td>Office, Canva, Google</td><td>every colour as hex and RGB triplets, light and dark, with the gradient stops</td></tr>
+      <tr><td><a href="downloads/vellum-style.zip"><code>vellum-style.zip</code></a></td><td>all of the above</td><td>the seven files in one archive</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="python">matplotlib</h2>
+<div class="split">
+  <div>
+    <p>Import the module, call <code>use</code>, and draw with the helpers. <code>use</code> resets the rcParams and sets the fonts (Corbel, then Lato, Segoe UI, DejaVu Sans), the surface, the spines, the grid, the tick style, the colour cycle, the line width and the save options (300 dpi, fonts embedded as Type 42). The helpers are the anatomy as functions, so a figure made with them is in the style without further thought.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>helper</th><th>does</th></tr></thead>
+        <tbody>
+          <tr><td><code>V.tone(k)</code> <code>V.tint(k)</code> <code>V.deep(k)</code></td><td>colours by slot index or family name</td></tr>
+          <tr><td><code>V.title(fig, claim, subtitle, source)</code></td><td>the title block and the footer</td></tr>
+          <tr><td><code>V.panel(ax, "a", claim, unit=...)</code></td><td>panel letter and claim; the unit line in place of the y label</td></tr>
+          <tr><td><code>V.endlabels(ax, points, texts, gap)</code></td><td>end labels pushed apart, with leaders</td></tr>
+          <tr><td><code>V.dot</code> <code>V.reference</code> <code>V.identity</code> <code>V.note</code> <code>V.callout</code></td><td>ringed markers, dotted reference lines, y = x, quiet notes, callouts</td></tr>
+          <tr><td><code>V.heat_gaps</code> <code>V.gradient_bar</code> <code>V.cmap_gradient("lagoon")</code></td><td>heat maps with surface gaps and a legend bar on a named gradient</td></tr>
+          <tr><td><code>V.axes3d</code> <code>V.surface3d</code></td><td>orthographic 3D axes at elevation 24°, azimuth −58°, and a flat-shaded, rasterised surface with floor contours</td></tr>
+          <tr><td><code>V.size("double")</code> <code>vellum.stamp()</code></td><td>the named sizes; the git sha with <code>-dirty</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+<pre data-copy><code>import vellum
+V = vellum.use("light")            # "dark"; scale=2.2 slides, 2.6 posters
+
+# a paper figure: no title block, the claim goes in the caption
+plt.rcParams["lines.linewidth"] = 1.2
+fig, axes = plt.subplots(1, 3, figsize=V.size("double"))
+for ax, letter in zip(axes, "abc"):
+    V.panel(ax, letter, None, unit="beak depth, mm")
+
+# a heat map on a gradient
+im = ax.imshow(M, cmap=V.cmap_gradient("lagoon"), vmin=0, vmax=6)
+V.heat_gaps(ax, nx, ny)
+V.gradient_bar(fig, im, ax, "log10 of deaths", ticks=[0, 2, 4, 6])
+
+# a surface and its twin
+ax3 = V.axes3d(fig, rect=(0, 0.02, 0.55, 0.74), labels=("z1", "z2", "w"))
+V.surface3d(ax3, Z1, Z2, W, cmap=V.cmap_gradient("lagoon"))</code></pre>
+  </div>
+</div>
+<p class="prose">Every matplotlib figure in the <a href="gallery.html">gallery</a> is a script in <a href="https://github.com/akaminas/vellum/tree/main/examples/python"><code>examples/python/</code></a> that draws both twins from one function.</p>
+
+<h2 id="r">R and ggplot2</h2>
+<div class="split rev">
+  <div>
+    <!--#fig tools/ggplot_penguins-->
+<figure class="figure " id="fig-tools-ggplot_penguins"><div class="frame"><img class="zoom twin-light " src="figures/tools/ggplot_penguins_light.png" data-full="figures/tools/ggplot_penguins_light.png" data-caption="Within each species longer beaks are deeper; pooled, the trend reverses" alt="A scatter plot of beak depth against beak length for 342 penguins: within Adélie, Chinstrap and Gentoo the fitted slopes are +0.18, +0.22 and +0.20 mm per mm, while one line through all three species slopes at −0.09." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/ggplot_penguins_dark.png" data-full="figures/tools/ggplot_penguins_dark.png" data-caption="Within each species longer beaks are deeper; pooled, the trend reverses" alt="A scatter plot of beak depth against beak length for 342 penguins: within Adélie, Chinstrap and Gentoo the fitted slopes are +0.18, +0.22 and +0.20 mm per mm, while one line through all three species slopes at −0.09." loading="lazy" decoding="async"></div><figcaption>Palmer penguins, Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via vega-datasets 2.8.0 · Simpson&#x27;s paradox: the pooled trend reverses the trend inside every species.<p class="fig-links"><a href="figures/tools/ggplot_penguins_light.png">PNG</a> <a href="figures/tools/ggplot_penguins_dark.png">PNG, dark</a> <a href="figures/tools/ggplot_penguins_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/r/ggplot_penguins.R">Script</a></p></figcaption></figure>
+<!--/fig-->
+  </div>
+  <div>
+    <p>Source the file, add the theme and the scales, put the claim in <code>labs(title)</code> and the unit in <code>labs(subtitle)</code>. The theme removes the y title, the legend and the vertical grid, which is most of the anatomy.</p>
+    <ol class="small">
+      <li>Expand the x axis by about a third on the right so the end labels fit: <code>expansion(mult = c(0, 0.32))</code>.</li>
+      <li>A highlight: map the series to colour, then <code>values = c(rest = vellum$rule, focus = vellum$tone[2])</code>.</li>
+      <li>Error bars: <code>geom_errorbar(width = 0, colour = vellum$secondary, linewidth = vellum$thin)</code>.</li>
+      <li>A heat map: <code>geom_tile(colour = vellum$surface, linewidth = 0.4)</code> with <code>scale_fill_vellum_grad("lagoon")</code>.</li>
+      <li>ggplot2 has no 3D device: draw the twin in ggplot2 and the surface with base <code>persp</code>.</li>
+    </ol>
+  </div>
+</div>
+<!--#fig tools/persp_landscape wide-->
+<!--/fig-->
+
+<h2 id="latex">LaTeX: pgfplots, TikZ and beamer</h2>
+<div class="split">
+  <div>
+    <p>Load the package after TikZ and pgfplots and use the names. Tones are <code>vteal</code> … <code>vmoss</code>, tints <code>vtealTint</code>, deeps <code>vtealDeep</code>, neutrals <code>vSurface</code> … <code>vInk</code>; the dark twin adds a <code>D</code> (<code>vtealD</code>). Never mix two families with <code>!</code>: that makes a colour outside the palette.</p>
+    <p>The <code>vellum</code> axis style sets the bottom axis line only, a horizontal hairline grid, no tick marks, muted tick labels and a frameless legend; its axis <code>title</code> is the unit line, and the claim is set outside the axis in the serif. <code>vellum 3d</code> sets the view, the box and flat shading. Colormaps: <code>vellum lagoon</code>, <code>vellum ember</code>, <code>vellum shore</code> and the single families. TikZ diagrams use <code>vellum box</code>, <code>vellum box tint=&lt;family&gt;</code>, <code>vellum arrow</code>, <code>vellum guide</code>, <code>vellum label</code> and <code>vellum claim</code>.</p>
+<pre data-copy><code>\node[vellum box tint=indigo] (a) {source\\ the data};
+\node[vellum box tint=teal, right=1cm of a] (b) {script\\ draws the figure};
+\draw[vellum arrow] (a) -- node[vellum label, above] {reads} (b);</code></pre>
+  </div>
+  <div>
+    <!--#fig tools/pgfplots_co2-->
+<figure class="figure " id="fig-tools-pgfplots_co2"><div class="frame"><img class="zoom twin-light " src="figures/tools/pgfplots_co2_light.png" data-full="figures/tools/pgfplots_co2_light.png" data-caption="Carbon dioxide at Mauna Loa rose every year from 1959 to 2019" alt="A line chart of annual mean CO2 at Mauna Loa rising every year from 316.0 ppm in 1959 to 411.5 ppm in 2019, passing the dotted 350 ppm reference in 1988." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/tools/pgfplots_co2_dark.png" data-full="figures/tools/pgfplots_co2_dark.png" data-caption="Carbon dioxide at Mauna Loa rose every year from 1959 to 2019" alt="A line chart of annual mean CO2 at Mauna Loa rising every year from 316.0 ppm in 1959 to 411.5 ppm in 2019, passing the dotted 350 ppm reference in 1988." loading="lazy" decoding="async"></div><figcaption>Mauna Loa monthly CO2, NOAA Global Monitoring Laboratory and Scripps Institution of Oceanography, 1958-2020, via vega-datasets 2.8.0<p class="fig-links"><a href="figures/tools/pgfplots_co2_light.png">PNG</a> <a href="figures/tools/pgfplots_co2_dark.png">PNG, dark</a> <a href="figures/tools/pgfplots_co2_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/pgfplots_co2.tex">Script</a></p></figcaption></figure>
+<!--/fig-->
+  </div>
+</div>
+<!--#fig tools/pgfplots_landscape wide-->
+<!--/fig-->
+<p class="prose">Slides use <code>\vellumbeamer</code> or <code>\vellumbeamerdark</code>: canvas, text, structure in teal, alerts in terracotta, blocks on the card, serif frame titles, no navigation symbols. The <a href="media.html#talk">talk deck</a> and the <a href="media.html#poster">A0 poster</a> are both built with it.</p>
+
+<h2 id="web">The web</h2>
+<div class="split">
+  <div class="prose">
+    <p><code>vellum.css</code> is the token layer: every colour as a <code>--v-*</code> variable under <code>:root</code>, the dark values under <code>[data-theme="dark"]</code>, plus the fonts and the three gradients for legend bars. This site is built on it.</p>
+    <p>For charts, <a href="https://github.com/akaminas/vellum/blob/main/docs/assets/js/vellum-web.js"><code>vellum-web.js</code></a> reads <code>vellum.json</code> directly and gives the anatomy as SVG helpers: <code>axes</code> with a hairline grid and the unit line, ringed <code>dot</code>s, dotted <code>reference</code> lines, <code>endLabels</code> with leaders, a <code>tooltip</code> that leads with the value, and the colour science (OKLCH, colour-vision simulation, ΔE, contrast) that gives the same numbers as the Python generators. Every figure on the <a href="interactive.html">interactive page</a> is built with it, in plain JavaScript with no dependencies.</p>
+    <p>Interactive charts read the tokens at run time, so the dark twin follows the page theme. The static figure is made first; interaction is a layer on top.</p>
+  </div>
+<pre data-copy><code>import * as V from "./vellum-web.js";
+
+const node = document.querySelector("#co2");
+const plot = V.frame(node, { title: "Carbon dioxide rose every year since 1959",
+                             subtitle: "Mauna Loa, annual mean", footer: "NOAA GML · co2.js" });
+V.responsive(plot, (width, P) => {       // redraws on resize and when the twin flips
+  V.clear(plot);
+  const s = V.svg(plot, width, 320), g = V.el("g", { transform: "translate(44,28)" }, s);
+  const x = V.linear([1959, 2019], [0, width - 140]), y = V.linear([300, 420], [248, 0]);
+  V.axes(g, P, { x, y, xticks: [1960, 1990, 2019], yticks: [300, 350, 400],
+                 xfmt: V.year, unit: "parts per million", width: width - 140, height: 248 });
+  V.line(g, rows.map((r) => [x(r.year), y(r.ppm)]), P.tone[0]);
+  V.reference(g, P, { y: y(350), x1: 0, x2: width - 140, label: "350 ppm" });
+});</code></pre>
+</div>
+
+<h2 id="office">Office, Canva, Excalidraw and Google</h2>
+<div class="grid grid-2">
+  <div class="card">
+    <h3>PowerPoint and Word: a theme, once</h3>
+    <ol class="small secondary">
+      <li>Design → Variants → Colors → Customize. Dark 1 ink <code>2A2825</code>, Light 1 surface <code>FFFFFF</code>, Dark 2 secondary <code>5A5650</code>, Light 2 card <code>FAF6EE</code>.</li>
+      <li>Accents 1 to 6, the tones in slot order: <code>419BA0</code> <code>A1644F</code> <code>415688</code> <code>806629</code> <code>AD78A1</code> <code>567E4D</code>. Hyperlink: <code>415688</code>.</li>
+      <li>Fonts: headings Palatino Linotype, body Corbel. Save as <code>Vellum.thmx</code>; a dark theme from the dark rows of the TSV.</li>
+      <li>In each chart: gridlines <code>E6E0D4</code> at 0.5 pt, no border, no vertical gridlines, no legend for four series or fewer, text boxes at the line ends, the chart area set to no fill.</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>Canva: a brand kit</h3>
+    <ol class="small secondary">
+      <li>Brand Kit → Colors: the seven neutrals, six tones and six tints from <code>vellum-office.tsv</code>, named by family and step; the status colours in a group named "status, with an icon".</li>
+      <li>Fonts: Palatino Linotype for headings if the plan allows uploads, otherwise EB Garamond; Lato for the body.</li>
+      <li>One template per infographic format: headline, three tiles, a figure slot, on the white surface.</li>
+      <li>Figures are imported as PNGs drawn at the pixel size of the format, never redrawn with Canva's chart tool, which cannot do end labels or rings.</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>Excalidraw</h3>
+    <p class="small secondary">White background; boxes stroked in secondary <code>#5A5650</code> at 1 px, filled with the card or a family tint; text in ink at 16 px in the "normal" font, never the hand-drawn one; arrows in secondary, guides dotted in rule <code>#C7C3BD</code>, labels in muted. Highlight boxes take the terracotta tint with terracotta deep text. Roughness 0.</p>
+  </div>
+  <div class="card">
+    <h3>Google Docs and Slides, Excel</h3>
+    <p class="small secondary">The same colours typed from the TSV into the custom colour picker; Lato for the body and EB Garamond or Libre Baskerville for headings, since Google serves no Palatino. Excel tables: header in ink on card, alternate rows in card, lining figures. A chart for a report is drawn by <code>vellum.py</code> or <code>vellum.R</code> from the exported CSV.</p>
+  </div>
+</div>
+<div class="key">
+  <p><strong>Never in any tool:</strong> a gradient fill on a shape, slide or text (a gradient fill exists only for the legend bar of a data scale, from the nine stops in the TSV), and Office or Canva 3D charts. A 3D figure in a deck is a PNG exported from matplotlib or R at the size of its slot.</p>
+</div>
+
+</main>
+
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <ul class="footer-nav">
+        <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
+        <li><a href="forms.html">Forms</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="interactive.html">Interactive</a></li>
+        <li><a href="media.html">Media</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
+      </ul>
+      <p><span class="serif" style="font-size:1.1rem;color:var(--v-ink)">Vellum</span>, a visual language for figures, by <a href="https://akaminas.github.io/">Alexandros Kaminas</a>.</p>
+      <p>Code under the MIT licence; text and figures under CC BY 4.0. Every figure on this site is drawn by a script in <a href="https://github.com/akaminas/vellum">the repository</a> from the data listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">data/SOURCES.md</a>.</p>
+    </div>
+    <div>
+      <p>Built from <code>style/vellum.json</code> · git 99753b9</p>
+      <p><a href="downloads/vellum-style.zip">Download the style files</a></p>
+      <p>Site design after <a href="https://www.visualcinnamon.com/">Visual Cinnamon</a> and <a href="https://r-graph-gallery.com/">the R Graph Gallery</a>.</p>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+</body>
+</html>

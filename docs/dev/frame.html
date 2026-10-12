@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Phone frame</title>
+<style>html,body{margin:0;background:#888}iframe{border:0;display:block;background:#fff}</style></head>
+<body><script>
+  // ?src=<page relative to docs>&w=<css px>&h=<css px>: shows a page at a true phone width (headless browsers
+  // enforce a minimum window width, so a narrow window alone does not test a phone layout)
+  var q = new URLSearchParams(location.search), f = document.createElement("iframe");
+  f.src = "../" + (q.get("src") || "index.html"); f.width = q.get("w") || 375; f.height = q.get("h") || 2400;
+  document.body.appendChild(f);
+</script></body></html>

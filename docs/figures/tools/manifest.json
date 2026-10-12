@@ -1,0 +1,95 @@
+[
+ {
+  "id": "ggplot_penguins",
+  "group": "tools",
+  "title": "Within each species longer beaks are deeper; pooled, the trend reverses",
+  "subtitle": "342 penguins, Palmer Archipelago, 2007–2009 · least-squares fits with 95 % bands, labelled with their slope in mm per mm",
+  "kind": "tools",
+  "form": "scatter plot",
+  "medium": "paper",
+  "tool": "ggplot2",
+  "data": "Palmer penguins, Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via vega-datasets 2.8.0",
+  "script": "examples/r/ggplot_penguins.R",
+  "alt": "A scatter plot of beak depth against beak length for 342 penguins: within Adélie, Chinstrap and Gentoo the fitted slopes are +0.18, +0.22 and +0.20 mm per mm, while one line through all three species slopes at −0.09.",
+  "note": "Simpson's paradox: the pooled trend reverses the trend inside every species.",
+  "files": {
+   "light": "figures/tools/ggplot_penguins_light.png",
+   "dark": "figures/tools/ggplot_penguins_dark.png",
+   "pdf": "figures/tools/ggplot_penguins_light.pdf"
+  }
+ },
+ {
+  "id": "persp_landscape",
+  "group": "tools",
+  "title": "A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72",
+  "subtitle": "illustrative two-trait landscape in base R persp() · on the right the same values from above, to read them",
+  "kind": "tools",
+  "form": "3D surface with twin",
+  "medium": "paper",
+  "tool": "base R persp",
+  "data": "analytic two-trait landscape w(z1, z2) from examples/python/_common.py (illustrative)",
+  "script": "examples/r/persp_landscape.R",
+  "alt": "A lagoon-coloured surface drawn with R persp(): a peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90 and a saddle of 0.26 between them; beside it the same values from above as an image with seven contour lines and a colour bar.",
+  "note": "illustrative: an analytic function, not data. The same surface is drawn in matplotlib and pgfplots.",
+  "files": {
+   "light": "figures/tools/persp_landscape_light.png",
+   "dark": "figures/tools/persp_landscape_dark.png",
+   "pdf": "figures/tools/persp_landscape_light.pdf"
+  }
+ },
+ {
+  "id": "pgfplots_co2",
+  "group": "tools",
+  "kind": "tools",
+  "medium": "paper",
+  "script": "examples/latex/pgfplots_co2.tex",
+  "title": "Carbon dioxide at Mauna Loa rose every year from 1959 to 2019",
+  "subtitle": "annual means of the seasonally adjusted monthly record · up 95.5 ppm in all; the smallest yearly rise was 0.35 ppm",
+  "form": "line chart",
+  "tool": "pgfplots",
+  "data": "Mauna Loa monthly CO2, NOAA Global Monitoring Laboratory and Scripps Institution of Oceanography, 1958-2020, via vega-datasets 2.8.0",
+  "alt": "A line chart of annual mean CO2 at Mauna Loa rising every year from 316.0 ppm in 1959 to 411.5 ppm in 2019, passing the dotted 350 ppm reference in 1988.",
+  "files": {
+   "light": "figures/tools/pgfplots_co2_light.png",
+   "dark": "figures/tools/pgfplots_co2_dark.png",
+   "pdf": "figures/tools/pgfplots_co2_light.pdf"
+  }
+ },
+ {
+  "id": "pgfplots_landscape",
+  "group": "tools",
+  "kind": "tools",
+  "medium": "paper",
+  "script": "examples/latex/pgfplots_landscape.tex",
+  "title": "A saddle at w = 0.26 separates the peak of 1.00 from a lower peak of 0.72",
+  "subtitle": "illustrative two-trait landscape w(z₁, z₂) · the shape in 3D, and the same values from above to read them",
+  "form": "3D surface with twin",
+  "tool": "pgfplots",
+  "data": "analytic two-trait landscape w(z1, z2) from examples/python/_common.py (illustrative)",
+  "alt": "A lagoon-coloured surface with a high peak of 1.00 at z1 = 0.90, z2 = 0.70, a lower peak of 0.72 at z1 = -0.80, z2 = -0.90, and a saddle of 0.26 between them; beside it the same surface seen from above as a heat map with seven contour lines and a colour bar.",
+  "note": "illustrative: an analytic function, not data. The same surface is drawn in matplotlib and base R persp.",
+  "files": {
+   "light": "figures/tools/pgfplots_landscape_light.png",
+   "dark": "figures/tools/pgfplots_landscape_dark.png",
+   "pdf": "figures/tools/pgfplots_landscape_light.pdf"
+  }
+ },
+ {
+  "id": "tikz_pipeline",
+  "group": "tools",
+  "kind": "tools",
+  "medium": "screen",
+  "script": "examples/latex/tikz_pipeline.tex",
+  "title": "Every colour is defined once, in vellum.json, and every style file derives from it",
+  "subtitle": "how the files of Vellum are made · an arrow points from a file to what is made from it",
+  "form": "TikZ diagram",
+  "tool": "TikZ",
+  "data": "the repository's own generators/ and style/ folders",
+  "alt": "A left-to-right diagram: build_palettes.py searches OKLCH for the tone lightness and writes palettes.json; make_vellum_json.py turns it into vellum.json, the source of truth; make_assets.py generates vellum.mplstyle, vellum.R, vellum-colors.sty, vellum.css and vellum-office.tsv, and the hand-written vellum.py reads vellum.json at run time; the files feed matplotlib, ggplot2, pgfplots, TikZ and beamer, the web, and Office and Canva.",
+  "files": {
+   "light": "figures/tools/tikz_pipeline_light.png",
+   "dark": "figures/tools/tikz_pipeline_dark.png",
+   "pdf": "figures/tools/tikz_pipeline_light.pdf"
+  }
+ }
+]

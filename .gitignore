@@ -11,3 +11,8 @@ __pycache__/
 *.fdb_latexmk
 *.synctex.gz
 .Rhistory
+# intermediates that the example builds regenerate (kept out of git so a rebuild leaves the tree clean)
+examples/latex/data/
+examples/latex/*/fig/
+examples/latex/**/build/
+*.synctex*

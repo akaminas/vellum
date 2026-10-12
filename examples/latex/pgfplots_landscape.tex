@@ -1,0 +1,53 @@
+% pgfplots_landscape.tex: the shared two-trait landscape (examples/python/_common.py) as a Vellum surface in pgfplots,
+% with its 2D twin: the same values seen from above, with seven contour lines (contour lua, no gnuplot) and a colour bar.
+% The peaks, the saddle and the contour levels are macros from data/landscape_macros.tex, computed by prepare_data.py.
+% Light twin: lualatex pgfplots_landscape.tex; dark twin: lualatex -jobname=pgfplots_landscape_dark pgfplots_landscape.tex
+\documentclass[11pt, border=0pt]{standalone}
+\usepackage{vellum-twin}
+\input{data/landscape_macros.tex}
+% w(z1, z2): the formula of examples/python/_common.py, written once
+\newcommand\landscape{exp(-((x-0.9)^2 + (y-0.7)^2)/0.6) + 0.72*exp(-((x+0.8)^2 + (y+0.9)^2)/0.9)}
+% a point the claim names: a ringed dot and its value on a card, so no text stands on the gradient
+\newcommand\point[4]{\node[vellum dot=vInk\vD] (p) at (axis cs:#1,#2,1) {};
+  \node[#4=3pt, fill=vCard\vD, text=vInk\vD, font=\vUnitFont, inner sep=1.5pt, rounded corners=1pt] at (p) {#3};}
+\begin{document}
+\sffamily
+\begin{tikzpicture}[x=1cm, y=1cm]
+  \def\W{18.288}\def\H{9.6}                                   % 7.2 in wide, drawn at the printed size
+  \fill[vSurface\vD] (0,0) rectangle (\W,\H);
+  \useasboundingbox (0,0) rectangle (\W,\H);
+  \node[anchor=north west, inner sep=0pt, text=vInk\vD, font=\vTitleFont] at (0.45,\H-0.4)
+    {A saddle at $w = \lsSaddle$ separates the peak of \lsHigh\ from a lower peak of \lsLow};
+  \node[anchor=north west, inner sep=0pt, text=vMuted\vD, font=\vSubtitleFont] at (0.45,\H-1.08)
+    {illustrative two-trait landscape $w(z_1, z_2)$ · the shape in 3D, and the same values from above to read them};
+  \pgfplotsset{every axis/.append style={colormap name=\vgradient{lagoon}, point meta min=0, point meta max=\lsMax,
+    domain=-2:2, y domain=-2:2, xtick={-1,0,1}, ytick={-1,0,1}}}   % one gradient, one set of limits, for both panels
+
+  % a: the surface. Orthographic view {-58}{24} from `vellum 3d`, flat shading, colour repeats height, no mesh lines;
+  % the floor sits 6 per cent below the lowest value and carries the seven contours in rule grey (computed by
+  % prepare_data.py: contour lua cannot drop its lines to the floor, because its z filter acts before the contouring)
+  \begin{axis}[vellum 3d twin, at={(1.0cm,0.95cm)}, anchor=south west, width=9.7cm, plot box ratio=1 1 0.62,
+      zmin=\lsFloor, zmax=\lsMax, ztick={0,0.5,1}, xlabel={trait $z_1$}, ylabel={trait $z_2$}, zlabel={fitness $w$}]
+    \addplot3[draw=vRule\vD, line width=0.5pt, empty line=jump, z buffer=none]   % z buffer=sort would fill the lines
+      table[x=x, y=y, z expr=\lsFloor] {data/landscape_contours.dat};
+    \addplot3[surf, shader=flat, draw=none, samples=60] {\landscape};
+  \end{axis}
+
+  % b: the twin. The same function, gradient and limits seen from above, contours in the surface colour, values read here
+  \begin{axis}[vellum twin, at={(11.75cm,1.75cm)}, anchor=south west, scale only axis, width=4.6cm, height=4.6cm,
+      view={0}{90}, xmin=-2, xmax=2, ymin=-2, ymax=2, ymajorgrids=false, axis line style={draw=none},
+      xlabel={trait $z_1$}, title={trait $z_2$},
+      colorbar, colorbar style={vellum anatomy, width=0.2cm, xshift=-0.1cm, axis line style={draw=none}, ytick={0,0.5,1},
+        ticklabel style={text=vMuted\vD}, title={fitness $w$}}]
+    \addplot3[surf, shader=interp, samples=61] {\landscape};
+    \addplot3[contour lua={/pgfplots/contour/levels/.expand once=\lsLevels, labels=false, draw color=vSurface\vD}, line width=0.5pt,
+      samples=61] {\landscape};
+    % the three points the claim names, labelled on a card so no text stands on the gradient
+    \point{\lsHighX}{\lsHighY}{peak \lsHigh}{above}
+    \point{\lsLowX}{\lsLowY}{peak \lsLow}{below}
+    \point{\lsSaddleX}{\lsSaddleY}{saddle \lsSaddle}{right}
+  \end{axis}
+  \node[anchor=south west, inner sep=0pt, text=vMuted\vD, font=\vFooterFont] at (0.45,0.25)
+    {\vfooter{analytic landscape from examples/python/\_common.py, illustrative}};
+\end{tikzpicture}
+\end{document}

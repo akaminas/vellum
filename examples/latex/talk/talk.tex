@@ -1,0 +1,140 @@
+% talk.tex: an example conference talk in Vellum, dark twin (a hall with the lights down).
+% An illustrative simulation on the shared two-trait landscape; figures and numbers by
+% examples/python/talk/make_talk_figures.py (fig/*.pdf, fig/numbers.tex). Build: python examples/latex/talk/build.py
+% The page is the 16:9 frame of 160 x 90 mm enlarged by 1.764 (282.2 x 158.75 mm), so that a figure drawn at
+% V.size("slide"), 10 in wide, fills the text width at 1:1 inside 8 mm (frame units) margins and every type size of
+% "Vellum - presentations" holds as printed: title 28 pt, body 20 pt, footer 10 pt, nothing else under 16 pt.
+\documentclass[aspectratio=169]{beamer}
+\geometry{paperwidth=282.22mm, paperheight=158.75mm}
+\usefonttheme{professionalfonts}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Lato}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage{tikz}
+\usepackage{vellum-colors}
+\vellumbeamerdark
+\input{fig/numbers.tex}
+
+% ---- type scale of the medium note, at the size of the page
+% TikZ's align=left fixes word spaces at 1/3 em of the node's font; text set at another size inside a node takes
+% its own font's space again (no stretch, so a ragged line stays ragged)
+\newcommand\natspace{\spaceskip=\fontdimen2\font\relax\xspaceskip=0pt\relax}
+\renewcommand\normalsize{\fontsize{20pt}{26pt}\selectfont}
+\renewcommand\small{\fontsize{18pt}{23pt}\selectfont}
+\renewcommand\footnotesize{\fontsize{16pt}{20pt}\selectfont}
+\let\scriptsize\footnotesize \let\tiny\footnotesize            % no text under 16 pt
+\newcommand\claimsize{\fontsize{28pt}{34pt}\selectfont\natspace}
+\newcommand\statsize{\fontsize{66pt}{70pt}\selectfont\natspace}
+\setbeamerfont{frametitle}{family=\rmfamily, size=\fontsize{28pt}{34pt}}
+\setbeamerfont{footline}{size=\fontsize{10pt}{12pt}}
+\newlength\vmargin \setlength\vmargin{14.11mm}                % 8 mm of the 160 x 90 mm frame
+\setbeamersize{text margin left=\vmargin, text margin right=\vmargin}
+\newcommand\quiet[1]{{\color{vMutedD}#1}}
+% a figure at its drawn size on the left, up to four lines of text on the right, both hung from the same top line
+\newcommand\figtext[2]{\par\nointerlineskip\vskip 3mm\begin{minipage}[t]{128mm}\vspace{0pt}\includegraphics{#1}\end{minipage}\hfill
+  \begin{minipage}[t]{116mm}\vspace{0pt}\vskip 20mm\raggedright #2\end{minipage}}
+\newcommand\gap{\par\vskip 4mm}
+
+% ---- frame title: the claim, Pagella 28 pt in ink, one line, top left
+\setbeamertemplate{frametitle}{\nointerlineskip\vskip 8mm%
+  {\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle\par}\vskip 3mm}
+% ---- footer: short title, slide number and the git stamp, 10 pt muted
+\setbeamertemplate{footline}{\hbox to \paperwidth{\hskip\vmargin\usebeamerfont{footline}\usebeamercolor[fg]{footline}%
+  Which peak a population climbs\enspace·\enspace\insertframenumber\,/\,\inserttotalframenumber\enspace·\enspace
+  illustrative simulation\enspace·\enspace talk.tex\enspace·\enspace git \vStamp\hfil}\vskip 5mm}
+
+% ---- TikZ: the package's node styles take the light card and ink; on the dark deck they take the dark twin (1329.06)
+\tikzset{every node/.append style={execute at begin node=\natspace},
+  vellum box/.style={draw=vRuleD, fill=vCardD, line width=0.5pt, rounded corners=2pt, inner sep=9pt, text=vInkD, font=\normalsize, align=center},
+  vellum box tint/.style={draw=none, fill=v#1TintD, text=v#1DeepD, rounded corners=2pt, inner sep=9pt, font=\normalsize, align=center},
+  vellum arrow/.style={->, >=stealth, vSecondaryD, line width=1.2pt, shorten >=3pt, shorten <=3pt},
+  vellum label/.style={vMutedD, font=\footnotesize, align=left},
+  vellum claim/.style={vInkD, font=\normalsize\bfseries, align=left}}
+
+% a stat tile: one number in Pagella over a label in Lato muted, on the dark card
+\newcommand\stattile[3]{\begin{tikzpicture}
+  \node[fill=vCardD, rounded corners=2pt, text width=64mm, inner xsep=7mm, inner ysep=8mm, align=left] {%
+    {\rmfamily\statsize\color{#1}#2\par}\vskip 4mm{\color{vMutedD}#3\par}};\end{tikzpicture}}
+
+\begin{document}
+\sffamily\frenchspacing
+
+% 1. title
+\begin{frame}[t]
+  \vskip 34mm
+  {\rmfamily\fontsize{42pt}{50pt}\selectfont Where a population starts decides\\ which peak it climbs\par}
+  \vskip 10mm
+  A.\ Kaminas\par
+  \quiet{Vellum example talk · illustrative\par 12 October 2026\par}
+\end{frame}
+
+% 2. the number that matters
+\begin{frame}[t]{Most random starts end on the lower of the two peaks}
+  \vskip 14mm
+  \stattile{vterracottaD}{\vLowShare\,\%}{of \vNstarts\ random starts end on the lower peak}\hfill
+  \stattile{vInkD}{\vLowPeak}{mean fitness at the top of the lower peak}\hfill
+  \stattile{vInkD}{\vHighPeak}{mean fitness at the top of the higher peak}
+  \vskip 9mm
+  \quiet{Starts drawn evenly over the trait space, \vGens\ generations each.}
+\end{frame}
+
+% 3 to 6. progressive reveal: one population per step, earlier ones stay
+\begin{frame}[t]{A start near the higher peak climbs it in \vClimbA\ generations}
+  \includegraphics{fig/reveal_1.pdf}
+\end{frame}
+\begin{frame}[t]{A start near the lower peak stops there, at \vEndB}
+  \includegraphics{fig/reveal_2.pdf}
+\end{frame}
+\begin{frame}[t]{A start equidistant from both peaks ends on the lower one}
+  \includegraphics{fig/reveal_3.pdf}
+\end{frame}
+\begin{frame}[t]{A start on the saddle waits \vWaitD\ generations, then climbs}
+  \includegraphics{fig/reveal_4.pdf}
+\end{frame}
+
+% 7 and 8. the surface at two fixed views; 9. its twin
+\begin{frame}[t]{The landscape has two peaks with a saddle between them}
+  \figtext{fig/surface_a.pdf}{higher peak \vHighPeak\ at \vHighPeakAt\gap lower peak \vLowPeak\ at \vLowPeakAt\gap
+    saddle \vSaddle\ at \vSaddleAt\gap \quiet{elevation 24°, azimuth \vAzimA°}}
+\end{frame}
+\begin{frame}[t]{Turned by 90°, the higher peak stands \vPeakGap\ above the lower}
+  \figtext{fig/surface_b.pdf}{the lower peak now stands in front\gap the higher one rises behind it\gap
+    the saddle hides between them\gap \quiet{elevation 24°, azimuth \vAzimB°}}
+\end{frame}
+\begin{frame}[t]{Each population climbs the peak of the basin it starts in}
+  \figtext{fig/twin.pdf}{ringed dot: where a population starts\gap cross: a peak and its height\gap
+    dotted: the basin boundary\gap \quiet{lower basin: \vBasinShare\,\% of the map}}
+\end{frame}
+
+% 10. the method, built in reading order with a fixed layout
+\begin{frame}[t]{Each generation moves the mean traits up the local slope}
+  \vskip 18mm
+  \begin{tikzpicture}[x=1mm, y=1mm]
+    \useasboundingbox (0, -64) rectangle (254, 24);
+    \node[vellum box, minimum width=62mm, minimum height=22mm] (z) at (31, 0) {mean traits\\ $\bar z_t$};
+    \only<2->{\node[vellum box tint=teal, minimum width=70mm, minimum height=22mm] (s) at (126, 0) {local slope\\ $\nabla\ln\bar w(\bar z_t)$};
+      \draw[vellum arrow] (z) -- (s);}
+    \only<3->{\node[vellum box tint=teal, minimum width=62mm, minimum height=22mm] (n) at (223, 0) {step $G\,\nabla\ln\bar w$\\ plus drift};
+      \draw[vellum arrow] (s) -- (n);
+      \node[vellum label, anchor=south] at ([yshift=3mm]n.north) {$G = \vGstep$, drift sd \vDrift};}
+    \only<4->{\draw[vellum arrow] (n.south) -- ++(0, -21) -| (z.south);
+      \node[vellum label, anchor=south] at (126, -31) {next generation, \vGens\ in all};
+      \node[vellum claim, anchor=north west, text width=200mm, inner sep=0pt] at (0, -46) {Where the slope is flat, only drift moves the mean:\\ at a peak, or on the saddle.};}
+  \end{tikzpicture}
+\end{frame}
+
+% 11. the result in one sentence, and the contact
+\begin{frame}[t]{The basin a population starts in decides its peak}
+  \vskip 12mm
+  \begin{tikzpicture}
+    \node[fill=vCardD, rounded corners=2pt, text width=234mm, inner sep=10mm, align=left] {%
+      {\rmfamily\claimsize The lower peak's basin covers \vBasinShare\,\% of the trait space; \vLowShare\,\% of random starts end on that peak, at \vLowPeak, not on the higher one at \vHighPeak.\par}};
+  \end{tikzpicture}
+  \vskip 12mm
+  A.\ Kaminas\enspace·\enspace akaminas.github.io/vellum\par
+  \quiet{slides, figures and the simulation script are in the Vellum repository\par}
+\end{frame}
+
+\end{document}

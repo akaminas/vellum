@@ -1,0 +1,45 @@
+[
+ {
+  "id": "pitch",
+  "group": "pitch",
+  "title": "An open observatory of mortality data would show the next fall in life expectancy as it happens",
+  "subtitle": "Vellum example deck · illustrative proposal: ten slides in light mode, 1600 × 900 px",
+  "kind": "slides",
+  "form": "pitch deck, 10 slides",
+  "medium": "pitch deck",
+  "tool": "HTML + SVG",
+  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0",
+  "script": "examples/python/pitch/make_pitch.py",
+  "alt": "Ten-slide pitch deck. Evidence: world life expectancy fell 1.7 years in 2020–21, the deepest fall since 1960; regional falls ranged from 0.1 to 3.4 years; every region was back above its 2019 level by 2023. The ask, illustrative: €1.2 million over two years.",
+  "note": "Illustrative proposal: the pipeline, plan, budget and ask are invented; the evidence slides use real data.",
+  "files": {
+   "light": "media/pitch/slide-01.png",
+   "pages": [
+    "media/pitch/slide-01.png",
+    "media/pitch/slide-02.png",
+    "media/pitch/slide-03.png",
+    "media/pitch/slide-04.png",
+    "media/pitch/slide-05.png",
+    "media/pitch/slide-06.png",
+    "media/pitch/slide-07.png",
+    "media/pitch/slide-08.png",
+    "media/pitch/slide-09.png",
+    "media/pitch/slide-10.png"
+   ],
+   "thumbs": [
+    "media/pitch/thumb-01.png",
+    "media/pitch/thumb-02.png",
+    "media/pitch/thumb-03.png",
+    "media/pitch/thumb-04.png",
+    "media/pitch/thumb-05.png",
+    "media/pitch/thumb-06.png",
+    "media/pitch/thumb-07.png",
+    "media/pitch/thumb-08.png",
+    "media/pitch/thumb-09.png",
+    "media/pitch/thumb-10.png"
+   ],
+   "pdf": "media/pitch/pitch.pdf",
+   "html": "media/pitch/pitch.html"
+  }
+ }
+]

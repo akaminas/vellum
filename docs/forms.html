@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<!--#head-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){var t=new URLSearchParams(location.search).get("theme");if(t!=="light"&&t!=="dark"){t=null;try{t=localStorage.getItem("vellum-theme")}catch(e){}}if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/vellum-tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="module" src="assets/js/site.js"></script>
+<!--/head-->
+<title>Forms · Vellum</title>
+<meta name="description" content="Which chart form for which job of the data, and the Vellum rules for each: lines, areas, slopes, bars, dot plots, distributions, scatter plots, heat maps, part-of-whole forms, maps, trees, networks, flows, and when a third axis is allowed.">
+</head>
+<body>
+<!--#header-->
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <nav class="nav-half nav-left" aria-label="The style">
+      <a href="principles.html">Principles</a>
+      <a href="colour.html">Colour</a>
+      <a href="anatomy.html">Anatomy</a>
+      <a href="forms.html">Forms</a>
+    </nav>
+    <a class="brand" href="index.html" aria-label="Vellum, home" title="Vellum">
+      <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
+        <circle cx="15.87" cy="5.04" r="4.3" style="fill:var(--v-ochre)"/>
+        <circle cx="22.66" cy="8.57" r="4.3" style="fill:var(--v-terracotta)"/>
+        <circle cx="24.06" cy="19.23" r="4.3" style="fill:var(--v-mauve)"/>
+        <circle cx="14.13" cy="24.96" r="4.3" style="fill:var(--v-indigo)"/>
+        <circle cx="5.60" cy="18.42" r="4.3" style="fill:var(--v-teal)"/>
+        <circle cx="7.34" cy="8.57" r="4.3" style="fill:var(--v-moss)"/>
+      </svg>
+      <span class="brand-word">Vellum</span>
+    </a>
+    <nav class="nav-half nav-right" aria-label="The work">
+      <a href="gallery.html">Gallery</a>
+      <a href="interactive.html">Interactive</a>
+      <a href="media.html">Media</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+  </div>
+  <div class="header-tools">
+    <button class="icon-btn theme-toggle" type="button" aria-label="Switch twin">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+    </button>
+    <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
+      <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+    </a>
+  </div>
+</header>
+<!--/header-->
+
+<main id="main" class="wrap">
+
+<header class="page-head">
+  <span class="eyebrow">Forms</span>
+  <h1>Name the job of the data, then take the form</h1>
+  <p class="lead">Seven families of data job, after the R Graph Gallery's index, each with its form and its rules. Colour follows the job: identity takes the tones in order, magnitude takes one ramp, polarity takes the diverging pair, state takes status.</p>
+  <ul class="toc">
+    <li><a href="#zero">0 Is it a figure?</a></li>
+    <li><a href="#time">1 Change over time</a></li>
+    <li><a href="#compare">2 Comparison</a></li>
+    <li><a href="#distribution">3 Distribution</a></li>
+    <li><a href="#relation">4 Relation</a></li>
+    <li><a href="#whole">5 Part of a whole</a></li>
+    <li><a href="#maps">6 Maps</a></li>
+    <li><a href="#networks">7 Trees and networks</a></li>
+    <li><a href="#threed">The third axis</a></li>
+    <li><a href="#always">Across all forms</a></li>
+  </ul>
+</header>
+
+<h2 id="zero">0. Is it a figure at all?</h2>
+<div class="split">
+  <div class="prose">
+    <p>One number with a comparison is a sentence in the text or a stat tile on a slide, not a one-bar chart. A two-slice pie is a sentence. A table beats a chart when the reader will look values up rather than see a pattern.</p>
+  </div>
+  <div class="grid grid-2" style="gap:16px">
+    <div class="tile"><span class="value num">73.2</span><span class="label">years of life expected at birth, worldwide, 2023</span><span class="compare">against 46.4 in 1950</span></div>
+    <div class="tile"><span class="value num hl">−1.7</span><span class="label">years lost between 2019 and 2021</span><span class="compare">recovered by 2023</span></div>
+  </div>
+</div>
+
+<h2 id="time">1. Change over time</h2>
+<div class="split">
+  <div>
+    <h3 class="mt-0">Line chart, the default</h3>
+    <p>Tones in slot order at 1.6 pt, ringed end dots, end labels. Up to four series without a legend. Uncertainty as a tint band at 0.55 opacity with a quiet note saying what the band is. Member runs as 0.7 pt lines in the tone with the mean on top. Time on x, always. Counts start at zero; for a rate or an index, the unit line says where the axis starts. A log axis gets a note.</p>
+    <h3>Area and stacked area</h3>
+    <p>Tints with a 1.2 pt surface gap between layers, the slot order from the bottom, each layer labelled at its right end in its deep step. Stack only parts of a whole. A streamgraph is allowed on a poster or a slide for a whole that drifts in time, and says that its baseline is centred.</p>
+    <h3>Slope and bump charts</h3>
+    <p>Two moments: a slope chart, tones for the series the figure is about, rule grey for the rest, labels at both ends. Ranks over time: a bump chart with one series in terracotta and the others in rule grey.</p>
+  </div>
+  <div>
+    <!--#fig science/co2_keeling-->
+<figure class="figure " id="fig-science-co2_keeling"><div class="frame"><img class="zoom twin-light " src="figures/science/co2_keeling_light.png" data-full="figures/science/co2_keeling_light.png" data-caption="Carbon dioxide at Mauna Loa rose in every year from 1959 to 2019, by 96 ppm in all" alt="Line chart of monthly CO₂ at Mauna Loa from 1958 to 2020. The annual mean rises in every year, from 316.0 ppm in 1959 to 411.5 ppm in 2019, and passes the dotted 350 ppm line in 1988." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/co2_keeling_dark.png" data-full="figures/science/co2_keeling_dark.png" data-caption="Carbon dioxide at Mauna Loa rose in every year from 1959 to 2019, by 96 ppm in all" alt="Line chart of monthly CO₂ at Mauna Loa from 1958 to 2020. The annual mean rises in every year, from 316.0 ppm in 1959 to 411.5 ppm in 2019, and passes the dotted 350 ppm line in 1988." loading="lazy" decoding="async"></div><figcaption>Mauna Loa monthly CO₂, NOAA GML and Scripps, March 1958 to April 2020 (vega-datasets 2.8.0)<p class="fig-links"><a href="figures/science/co2_keeling_light.png">PNG</a> <a href="figures/science/co2_keeling_dark.png">PNG, dark</a> <a href="figures/science/co2_keeling_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/co2_keeling.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+  </div>
+</div>
+<div class="grid grid-2">
+  <!--#fig science/population_stacked-->
+<figure class="figure " id="fig-science-population_stacked"><div class="frame"><img class="zoom twin-light " src="figures/science/population_stacked_light.png" data-full="figures/science/population_stacked_light.png" data-caption="Americans aged 60 and over grew from 4 to 16 per cent of the population, 1850 to 2000" alt="Stacked area of the US population in four age groups from 1850 to 2000. The under-20s shrink from 51.9 to 28.5 per cent and those aged 60 and over grow from 4 to 16 per cent." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/population_stacked_dark.png" data-full="figures/science/population_stacked_dark.png" data-caption="Americans aged 60 and over grew from 4 to 16 per cent of the population, 1850 to 2000" alt="Stacked area of the US population in four age groups from 1850 to 2000. The under-20s shrink from 51.9 to 28.5 per cent and those aged 60 and over grow from 4 to 16 per cent." loading="lazy" decoding="async"></div><figcaption>United States census population by age and sex, IPUMS USA, 1850–2000 (vega-datasets) · The file has no 1890 census; the layers are drawn straight across the gap.<p class="fig-links"><a href="figures/science/population_stacked_light.png">PNG</a> <a href="figures/science/population_stacked_dark.png">PNG, dark</a> <a href="figures/science/population_stacked_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/population_stacked.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+  <!--#fig science/life_slope-->
+<figure class="figure " id="fig-science-life_slope"><div class="frame"><img class="zoom twin-light " src="figures/science/life_slope_light.png" data-full="figures/science/life_slope_light.png" data-caption="Egypt gained 38 years of life, the US 11" alt="Slope chart of life expectancy in 1950 and 2023 for twelve countries. All rise. Egypt rises most, from 34 to 72 years; United States least, from 68 to 79." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/life_slope_dark.png" data-full="figures/science/life_slope_dark.png" data-caption="Egypt gained 38 years of life, the US 11" alt="Slope chart of life expectancy in 1950 and 2023 for twelve countries. All rise. Egypt rises most, from 34 to 72 years; United States least, from 68 to 79." loading="lazy" decoding="async"></div><figcaption>Our World in Data, period life expectancy at birth (UN WPP 2024 and others), 1950 and 2023<p class="fig-links"><a href="figures/science/life_slope_light.png">PNG</a> <a href="figures/science/life_slope_dark.png">PNG, dark</a> <a href="figures/science/life_slope_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/life_slope.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+</div>
+
+<h2 id="compare">2. Comparison and ranking</h2>
+<div class="split">
+  <div>
+    <h3 class="mt-0">Bar chart</h3>
+    <p>Horizontal when the labels are words, vertical when the categories are ordered. One series takes one colour: the teal tint for the many, the terracotta tone for the one highlighted. The value at the bar end in ink when the figure is about the values. Sorted by value unless the order means something. Error bars in secondary, no caps. Never colour nominal bars by their value; never a bar chart of one bar.</p>
+    <h3>Dot plot, lollipop and dumbbell</h3>
+    <p>A dot plot replaces a bar chart with more than about twelve categories: a ringed dot at the value on a 0.7 pt rule-grey stem. Two values per category, before and after, are two dots joined by a stem: the dumbbell.</p>
+    <h3>Radar, circular bar, parallel coordinates</h3>
+    <p>Not used for comparison. A circular form only when the angle means something: a month, an hour, a compass bearing. Several variables per item go in a table or in small multiples of bars.</p>
+  </div>
+  <div>
+    <!--#fig report/report_dotplot-->
+<figure class="figure " id="fig-report-report_dotplot"><div class="frame"><img class="zoom twin-light " src="figures/report/report_dotplot_light.png" data-full="figures/report/report_dotplot_light.png" data-caption="Mexico, Colombia and South Africa fell four years or more and were back by 2023" alt="Dot plot of life expectancy in 2023 in the 30 most populous countries, from 84.7 in Japan to 54.5 in Nigeria, with 2019 and the lowest year of 2020–2022. Mexico, Colombia and South Africa fell four years or more." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/report/report_dotplot_dark.png" data-full="figures/report/report_dotplot_dark.png" data-caption="Mexico, Colombia and South Africa fell four years or more and were back by 2023" alt="Dot plot of life expectancy in 2023 in the 30 most populous countries, from 84.7 in Japan to 54.5 in Nigeria, with 2019 and the lowest year of 2020–2022. Mexico, Colombia and South Africa fell four years or more." loading="lazy" decoding="async"></div><figcaption>Period life expectancy at birth, UN World Population Prospects (2024) and others, processed by Our World in Data, 2019–2023; population Natural Earth v5.1.2 (2019) · One of the four figures of the example report (media/report/index.html); drawn at its printed width.<p class="fig-links"><a href="figures/report/report_dotplot_light.png">PNG</a> <a href="figures/report/report_dotplot_dark.png">PNG, dark</a> <a href="figures/report/report_dotplot_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/report/make_report.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+  </div>
+</div>
+
+<h2 id="distribution">3. Distribution</h2>
+<div class="split rev">
+  <div>
+    <!--#fig science/penguins_distributions-->
+<figure class="figure " id="fig-science-penguins_distributions"><div class="frame"><img class="zoom twin-light " src="figures/science/penguins_distributions_light.png" data-full="figures/science/penguins_distributions_light.png" data-caption="Gentoo penguins are the heaviest by 1,300 g, yet have the shallowest beaks by 3.4 mm" alt="Two panels. a: body-mass densities per species; Gentoo peak near 5,000 g, Adelie and Chinstrap near 3,700 g. b: box plots of beak depth; Gentoo median 15.0 mm against 18.4 and 18.4 mm for Adelie and Chinstrap." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/penguins_distributions_dark.png" data-full="figures/science/penguins_distributions_dark.png" data-caption="Gentoo penguins are the heaviest by 1,300 g, yet have the shallowest beaks by 3.4 mm" alt="Two panels. a: body-mass densities per species; Gentoo peak near 5,000 g, Adelie and Chinstrap near 3,700 g. b: box plots of beak depth; Gentoo median 15.0 mm against 18.4 and 18.4 mm for Adelie and Chinstrap." loading="lazy" decoding="async"></div><figcaption>Palmer penguins, Gorman, Williams and Fraser (2014), 342 birds with complete measurements<p class="fig-links"><a href="figures/science/penguins_distributions_light.png">PNG</a> <a href="figures/science/penguins_distributions_dark.png">PNG, dark</a> <a href="figures/science/penguins_distributions_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/penguins_distributions.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+  </div>
+  <div>
+    <h3 class="mt-0">Histogram and density</h3>
+    <p>A histogram in the tint with a 1.2 pt surface gap between bars, one series only. Two or more distributions as density curves in the tones with the area as the tint at 0.3 opacity, or as a ridgeline: one row per group, the tone line over the tint area, rows in slot order from the top. The subtitle says the bin width or bandwidth.</p>
+    <h3>Box, violin, beeswarm</h3>
+    <p>Fewer than about thirty points: show them, as a beeswarm of ringed dots. Thirty to a few hundred: a box plot in the tone with the box filled in the tint, whiskers 0.7 pt. Many: a violin in the tint with the tone outline. The unit line says what the box and the whiskers are.</p>
+  </div>
+</div>
+
+<h2 id="relation">4. Relation</h2>
+<div class="split">
+  <div>
+    <h3 class="mt-0">Scatter plot</h3>
+    <p>Ringed dots. Up to three families without labels, because the first three tones pass every pair, not only neighbours; more with direct labels. A predicted-against-observed scatter carries the identity line in rule grey with "y = x" written along it. A fit line in the tone at 1.6 pt with its band in the tint. Text labels on points only for the points the claim names.</p>
+    <h3>Heat map and 2D density</h3>
+    <p>One ramp, teal by default, or the lagoon gradient when the values span many decades or the lowest cells must stay visible. Cells separated by 1.2 pt surface lines, no spines, a legend bar without an outline. Values inside cells only where they change the reading. A failed or missing cell is hatched in the terracotta tone on the card colour. The axis ticks are the parameter values, not indices.</p>
+    <h3>Connected scatter and correlogram</h3>
+    <p>A connected scatter for a path in two variables over time: a 1.6 pt line with ringed dots and the years labelled every few steps. A correlogram as a half matrix on the diverging scale, the midpoint at zero.</p>
+  </div>
+  <div>
+    <!--#fig science/penguins_scatter-->
+<figure class="figure " id="fig-science-penguins_scatter"><div class="frame"><img class="zoom twin-light " src="figures/science/penguins_scatter_light.png" data-full="figures/science/penguins_scatter_light.png" data-caption="In every species, body mass rises by 33 to 55 g with each millimetre of flipper" alt="Scatter of body mass against flipper length for 342 penguins. Adelie and Chinstrap overlap at short flippers and low mass, Gentoo sit apart at long flippers and high mass. Fitted slopes are 33, 35 and 55 g per mm." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/penguins_scatter_dark.png" data-full="figures/science/penguins_scatter_dark.png" data-caption="In every species, body mass rises by 33 to 55 g with each millimetre of flipper" alt="Scatter of body mass against flipper length for 342 penguins. Adelie and Chinstrap overlap at short flippers and low mass, Gentoo sit apart at long flippers and high mass. Fitted slopes are 33, 35 and 55 g per mm." loading="lazy" decoding="async"></div><figcaption>Palmer penguins, Gorman, Williams and Fraser (2014), 342 birds with complete measurements<p class="fig-links"><a href="figures/science/penguins_scatter_light.png">PNG</a> <a href="figures/science/penguins_scatter_dark.png">PNG, dark</a> <a href="figures/science/penguins_scatter_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/penguins_scatter.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+  </div>
+</div>
+<div class="grid grid-2">
+  <!--#fig science/disasters_heat-->
+<figure class="figure " id="fig-science-disasters_heat"><div class="frame"><img class="zoom twin-light " src="figures/science/disasters_heat_light.png" data-full="figures/science/disasters_heat_light.png" data-caption="Droughts, epidemics and floods now kill 33 times fewer people a year than before 1970" alt="Heat map of deaths per decade for ten kinds of natural disaster from the 1900s to the 2010s. Droughts, epidemics and floods killed about 386 thousand people a year from 1900 to 1969 and about 11.5 thousand a year since 2000, 33 times fewer; earthquakes kill tens to hundreds of thousands in every decade." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/disasters_heat_dark.png" data-full="figures/science/disasters_heat_dark.png" data-caption="Droughts, epidemics and floods now kill 33 times fewer people a year than before 1970" alt="Heat map of deaths per decade for ten kinds of natural disaster from the 1900s to the 2010s. Droughts, epidemics and floods killed about 386 thousand people a year from 1900 to 1969 and about 11.5 thousand a year since 2000, 33 times fewer; earthquakes kill tens to hundreds of thousands in every decade." loading="lazy" decoding="async"></div><figcaption>EM-DAT deaths from natural disasters by type and year, 1900–2017, via Our World in Data · Gradient checks of &#x27;Vellum - colour gradients&#x27; 1338.18 applied: lagoon, legend bar with labelled ends, hatched card cells for no record.<p class="fig-links"><a href="figures/science/disasters_heat_light.png">PNG</a> <a href="figures/science/disasters_heat_dark.png">PNG, dark</a> <a href="figures/science/disasters_heat_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/disasters_heat.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+  <!--#fig science/cars_correlogram-->
+<figure class="figure " id="fig-science-cars_correlogram"><div class="frame"><img class="zoom twin-light " src="figures/science/cars_correlogram_light.png" data-full="figures/science/cars_correlogram_light.png" data-caption="Weight tracks fuel economy best, r = −0.83" alt="Lower-triangle correlation matrix of six car measures. Cylinders, displacement, horsepower and weight correlate at r = 0.84 or more; each correlates negatively with miles per gallon, most strongly weight at r = −0.83; acceleration correlates weakly with the rest." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/cars_correlogram_dark.png" data-full="figures/science/cars_correlogram_dark.png" data-caption="Weight tracks fuel economy best, r = −0.83" alt="Lower-triangle correlation matrix of six car measures. Cylinders, displacement, horsepower and weight correlate at r = 0.84 or more; each correlates negatively with miles per gallon, most strongly weight at r = −0.83; acceleration correlates weakly with the rest." loading="lazy" decoding="async"></div><figcaption>UCI Auto MPG (Quinlan 1993), 392 cars with complete records<p class="fig-links"><a href="figures/science/cars_correlogram_light.png">PNG</a> <a href="figures/science/cars_correlogram_dark.png">PNG, dark</a> <a href="figures/science/cars_correlogram_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/cars_correlogram.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+</div>
+<!--#fig science/driving_connected wide-->
+<figure class="figure wide" id="fig-science-driving_connected"><div class="frame"><img class="zoom twin-light " src="figures/science/driving_connected_light.png" data-full="figures/science/driving_connected_light.png" data-caption="Driving fell for one year in the 1973 oil shock, two in the 1979 shock and five from 2006" alt="Connected scatter of miles driven per person against petrol price, 1956 to 2010. Driving rises from 3,675 to a peak of 10,067 miles in 2005; it falls for one year in the 1973 shock, two in the 1979 shock and five years running from 2006, while the price reaches $3.31 in 2008." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/driving_connected_dark.png" data-full="figures/science/driving_connected_dark.png" data-caption="Driving fell for one year in the 1973 oil shock, two in the 1979 shock and five from 2006" alt="Connected scatter of miles driven per person against petrol price, 1956 to 2010. Driving rises from 3,675 to a peak of 10,067 miles in 2005; it falls for one year in the 1973 shock, two in the 1979 shock and five years running from 2006, while the price reaches $3.31 in 2008." loading="lazy" decoding="async"></div><figcaption>Miles driven per capita and petrol price in 2010 dollars, United States, 1956–2010 (Fairfield, NYT 2010; vega-datasets)<p class="fig-links"><a href="figures/science/driving_connected_light.png">PNG</a> <a href="figures/science/driving_connected_dark.png">PNG, dark</a> <a href="figures/science/driving_connected_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/driving_connected.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+
+<h2 id="whole">5. Part of a whole</h2>
+<div class="prose">
+  <p>A single part of a whole is a horizontal stacked bar of tints with surface gaps, the labels inside the segments in the deep step where they fit. A waffle, ten by ten, for a share the reader should count. A treemap only for a hierarchy; a Voronoi treemap is a poster and report form, never a paper form. A pie or doughnut only up to six segments, at a glance, with the shares written on them, and never for close values.</p>
+</div>
+
+<h2 id="maps">6. Position: maps</h2>
+<div class="split">
+  <div>
+    <p>Land in the card colour or the classes, borders in the grid colour at 0.4 pt, water as the surface. A choropleth takes one ramp with its classes stated in the legend (quantiles or equal steps), and countries without data hatched. A bubble map takes ringed dots sized by area, with three reference sizes in the legend. No basemap tiles, no relief, no labels except the places the claim names.</p>
+    <p>Small countries vanish on a world map, so a dot plot of the same values goes beside it. A 3D tilted map is a terrain figure, not a Vellum figure: draw the map flat and colour the value.</p>
+  </div>
+  <div>
+    <!--#fig report/report_choropleth-->
+<figure class="figure " id="fig-report-report_choropleth"><div class="frame"><img class="zoom twin-light " src="figures/report/report_choropleth_light.png" data-full="figures/report/report_choropleth_light.png" data-caption="Of the 35 countries with the lowest life expectancy, 31 are in Africa" alt="World map of life expectancy at birth in 2023 in five classes, from 54.5 years in Nigeria to 84.7 in Japan. 31 of the 35 countries in the lowest class are in Africa." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/report/report_choropleth_dark.png" data-full="figures/report/report_choropleth_dark.png" data-caption="Of the 35 countries with the lowest life expectancy, 31 are in Africa" alt="World map of life expectancy at birth in 2023 in five classes, from 54.5 years in Nigeria to 84.7 in Japan. 31 of the 35 countries in the lowest class are in Africa." loading="lazy" decoding="async"></div><figcaption>Period life expectancy at birth, UN World Population Prospects (2024) and others, processed by Our World in Data, 2023; outlines Natural Earth v5.1.2 · One of the four figures of the example report (media/report/index.html); drawn at its printed width.<p class="fig-links"><a href="figures/report/report_choropleth_light.png">PNG</a> <a href="figures/report/report_choropleth_dark.png">PNG, dark</a> <a href="figures/report/report_choropleth_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/report/make_report.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+  </div>
+</div>
+
+<h2 id="networks">7. Flow, trees and networks</h2>
+<div class="split rev">
+  <div>
+    <!--#fig science/primates_tree-->
+<figure class="figure " id="fig-science-primates_tree"><div class="frame"><img class="zoom twin-light " src="figures/science/primates_tree_light.png" data-full="figures/science/primates_tree_light.png" data-caption="Humans and chimpanzees split 6.5 million years ago, about a tenth of primate history" alt="A rectangular phylogeny of 12 primates with time running from 70 million years ago on the left to the present on the right. Great apes in teal, Old World monkeys in terracotta, New World monkeys in indigo. Humans and chimpanzees split 6.5 million years ago, 9% of the 70 million years since the first split of the primates." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/primates_tree_dark.png" data-full="figures/science/primates_tree_dark.png" data-caption="Humans and chimpanzees split 6.5 million years ago, about a tenth of primate history" alt="A rectangular phylogeny of 12 primates with time running from 70 million years ago on the left to the present on the right. Great apes in teal, Old World monkeys in terracotta, New World monkeys in indigo. Humans and chimpanzees split 6.5 million years ago, 9% of the 70 million years since the first split of the primates." loading="lazy" decoding="async"></div><figcaption>Approximate divergence times after TimeTree 5 (Kumar et al. 2022), rounded; illustrative · Illustrative: the topology is standard but the divergence times are rounded approximations after TimeTree, typed into the script. 6.5 / 70 = 0.093.<p class="fig-links"><a href="figures/science/primates_tree_light.png">PNG</a> <a href="figures/science/primates_tree_dark.png">PNG, dark</a> <a href="figures/science/primates_tree_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/primates_tree.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+  </div>
+  <div>
+    <h3 class="mt-0">Phylogeny and tree</h3>
+    <p>Branches 1.0 pt in secondary, tips as ringed dots, the clades the figure is about in the tones (first clade teal, second terracotta) and the rest in secondary. A time axis at the bottom in muted with the present at the right. No node circles, no support values unless the claim is about support.</p>
+    <h3>Network</h3>
+    <p>Edges 0.4 pt in rule grey at 0.6 opacity, nodes as ringed dots in the tones by community, up to six communities. A highlighted node and its neighbours in terracotta, the rest faded to the grid colour. The subtitle says how the layout was made.</p>
+    <h3>Sankey and chord</h3>
+    <p>Flows in tints at 0.6 opacity, nodes as bars in the tones, labels in ink on the nodes. A chord diagram only as small multiples when there are more than about eight groups.</p>
+  </div>
+</div>
+<!--#fig science/miserables_network wide-->
+<figure class="figure wide" id="fig-science-miserables_network"><div class="frame"><img class="zoom twin-light " src="figures/science/miserables_network_light.png" data-full="figures/science/miserables_network_light.png" data-caption="Jean Valjean shares a chapter with 36 of the other 76 characters, more than anyone" alt="Two network drawings of the 77 characters of Les Misérables. Left: nodes coloured by the six largest of 11 groups. Right: Jean Valjean and his 36 neighbours highlighted in terracotta; they span 7 of the 11 groups. The next best connected character, Gavroche, has 22 neighbours." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/miserables_network_dark.png" data-full="figures/science/miserables_network_dark.png" data-caption="Jean Valjean shares a chapter with 36 of the other 76 characters, more than anyone" alt="Two network drawings of the 77 characters of Les Misérables. Left: nodes coloured by the six largest of 11 groups. Right: Jean Valjean and his 36 neighbours highlighted in terracotta; they span 7 of the 11 groups. The next best connected character, Gavroche, has 22 neighbours." loading="lazy" decoding="async"></div><figcaption>Knuth, The Stanford GraphBase (1993), Les Misérables co-occurrences, via vega-datasets 2.8.0 · Layout: seeded Fruchterman–Reingold computed in numpy. The 5 smallest groups (9 characters) are folded into &#x27;other&#x27; in rule grey.<p class="fig-links"><a href="figures/science/miserables_network_light.png">PNG</a> <a href="figures/science/miserables_network_dark.png">PNG, dark</a> <a href="figures/science/miserables_network_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/miserables_network.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+
+<h2 id="threed">The third axis</h2>
+<div class="split">
+  <div class="prose">
+    <p>A 3D axis is used only when three measured quantities form one shape and the shape is the claim. Every other third dimension is a colour, a size, a panel or a contour line. Four questions, in order:</p>
+    <ol>
+      <li>Are x, y and z three quantities of equal standing, so that z = f(x, y)? If z is a category, a count per group or a time, it is not a third axis.</li>
+      <li>Is the shape the claim: a ridge, a trough, a saddle, the place of a peak, several optima?</li>
+      <li>Can the reader do the task from a heat map with contour lines? If yes, stop here and draw that.</li>
+      <li>If yes to 1 and 2 and no to 3, draw the 3D figure, and add its 2D twin.</li>
+    </ol>
+  </div>
+  <div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>setting</th><th>value, and why</th></tr></thead>
+        <tbody>
+          <tr><td>projection</td><td>orthographic: perspective makes the near edge look larger, which is false for data</td></tr>
+          <tr><td>view</td><td>elevation 24°, azimuth −58°: shows the shape and the floor, neither floor axis foreshortened</td></tr>
+          <tr><td>box aspect</td><td>1 : 1 : 0.62</td></tr>
+          <tr><td>panes</td><td>transparent, hairline edges and grid in the grid colour, three ticks per axis</td></tr>
+          <tr><td>colour</td><td>repeats z with a named gradient; flat shading, no light source, because a lit surface changes colour with its slope</td></tr>
+          <tr><td>mesh</td><td>none; faces about 1 % of the width (90 × 90); a wireframe only when the shape must be seen through</td></tr>
+          <tr><td>floor</td><td>6 % below the minimum, with seven contour lines in the rule colour</td></tr>
+          <tr><td>file</td><td>the surface rasterised at 200 dpi or more, the text vector</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--#fig threed/landscape_surface wide-->
+<figure class="figure wide" id="fig-threed-landscape_surface"><div class="frame"><img class="zoom twin-light " src="figures/threed/landscape_surface_light.png" data-full="figures/threed/landscape_surface_light.png" data-caption="Two adaptive peaks, 1.00 and 0.72, are joined by a saddle at w = 0.26" alt="A 3D surface of mean fitness w over two traits on [−2, 2]², with a heat-map twin. Two peaks: the high one w = 1.00 at (z₁, z₂) = (0.90, 0.70) and the low one w = 0.72 at (−0.80, −0.90), joined by a saddle at w = 0.26 at (0.05, −0.10)." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/threed/landscape_surface_dark.png" data-full="figures/threed/landscape_surface_dark.png" data-caption="Two adaptive peaks, 1.00 and 0.72, are joined by a saddle at w = 0.26" alt="A 3D surface of mean fitness w over two traits on [−2, 2]², with a heat-map twin. Two peaks: the high one w = 1.00 at (z₁, z₂) = (0.90, 0.70) and the low one w = 0.72 at (−0.80, −0.90), joined by a saddle at w = 0.26 at (0.05, −0.10)." loading="lazy" decoding="async"></div><figcaption>Analytic function landscape(z1, z2) in examples/python/_common.py (illustrative) · Illustrative analytic landscape. High peak w = 1.002 at (0.90, 0.70); low peak w = 0.720 at (−0.80, −0.90); saddle w = 0.262 at (0.05, −0.10) (grad w = 0, Hessian indefinite), on the path between the peaks. Surface 90 × 90, lagoon gradient from 0.000 to 1.001 in both panels.<p class="fig-links"><a href="figures/threed/landscape_surface_light.png">PNG</a> <a href="figures/threed/landscape_surface_dark.png">PNG, dark</a> <a href="figures/threed/landscape_surface_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/threed/landscape_3d.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+<div class="grid grid-2">
+  <div class="card">
+    <h4 class="mt-0">Every 3D figure has a 2D twin</h4>
+    <p class="secondary">A heat map with contour lines of the same data, the same gradient, the same limits, the same axes, as panel b or in the supplement. The twin is where a value is read; the 3D panel is where the shape is seen. On the web a rotatable version is allowed beside the static one: <a href="interactive.html#surface3d">try it</a>.</p>
+  </div>
+  <div class="card">
+    <h4 class="mt-0">Never 3D</h4>
+    <p class="secondary">3D bars, 3D pies, 3D areas, extruded or ribbon lines, a perspective tilt on a flat chart, a shadow, a bevel, a reflection. These add area and distortion that encode nothing and make the front bars look bigger than the back ones. In a pitch deck, a report or an infographic, no 3D at all: a reader who is not a specialist reads depth as decoration.</p>
+  </div>
+</div>
+<!--#fig threed/penguins_scatter3d wide-->
+<figure class="figure wide" id="fig-threed-penguins_scatter3d"><div class="frame"><img class="zoom twin-light " src="figures/threed/penguins_scatter3d_light.png" data-full="figures/threed/penguins_scatter3d_light.png" data-caption="Three measurements place 97 % of penguins nearest their own species" alt="A 3D scatter of beak length, beak depth and flipper length for 342 penguins of three species (Adelie teal, Chinstrap terracotta, Gentoo indigo), with two 2D projections. Assigned to the nearest species mean, 97 % of birds are placed correctly with all three measurements, 94 % with beak length and depth, 80 % with beak depth and flipper length, where Adelie and Chinstrap overlap." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/threed/penguins_scatter3d_dark.png" data-full="figures/threed/penguins_scatter3d_dark.png" data-caption="Three measurements place 97 % of penguins nearest their own species" alt="A 3D scatter of beak length, beak depth and flipper length for 342 penguins of three species (Adelie teal, Chinstrap terracotta, Gentoo indigo), with two 2D projections. Assigned to the nearest species mean, 97 % of birds are placed correctly with all three measurements, 94 % with beak length and depth, 80 % with beak depth and flipper length, where Adelie and Chinstrap overlap." loading="lazy" decoding="async"></div><figcaption>Palmer penguins, Gorman, Williams and Fraser (2014), Palmer Station LTER, via vega-datasets 2.8.0 (CC0) · Separation: nearest-centroid rule on z-scored measurements, resubstitution (no hold-out). 3D 0.971; beak length × depth 0.936; beak depth × flipper 0.795.<p class="fig-links"><a href="figures/threed/penguins_scatter3d_light.png">PNG</a> <a href="figures/threed/penguins_scatter3d_dark.png">PNG, dark</a> <a href="figures/threed/penguins_scatter3d_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/threed/penguins_3d.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+
+<h2 id="always">Across all forms</h2>
+<ol class="rules">
+  <li>Identity takes the tones in slot order; magnitude takes one ramp; polarity takes the diverging pair; state takes status.</li>
+  <li>Highlight one, grey the rest, when the claim is about one thing. Terracotta is the highlight; rule grey is the rest.</li>
+  <li>Facet into small multiples before adding a seventh colour or a second axis.</li>
+  <li>Every form has its direct labels and its quiet note saying what the marks are.</li>
+  <li>The claim decides the form. A form the reader cannot name needs a sentence in the subtitle that says how to read it.</li>
+</ol>
+
+</main>
+
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <ul class="footer-nav">
+        <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
+        <li><a href="forms.html">Forms</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="interactive.html">Interactive</a></li>
+        <li><a href="media.html">Media</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
+      </ul>
+      <p><span class="serif" style="font-size:1.1rem;color:var(--v-ink)">Vellum</span>, a visual language for figures, by <a href="https://akaminas.github.io/">Alexandros Kaminas</a>.</p>
+      <p>Code under the MIT licence; text and figures under CC BY 4.0. Every figure on this site is drawn by a script in <a href="https://github.com/akaminas/vellum">the repository</a> from the data listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">data/SOURCES.md</a>.</p>
+    </div>
+    <div>
+      <p>Built from <code>style/vellum.json</code> · git 99753b9</p>
+      <p><a href="downloads/vellum-style.zip">Download the style files</a></p>
+      <p>Site design after <a href="https://www.visualcinnamon.com/">Visual Cinnamon</a> and <a href="https://r-graph-gallery.com/">the R Graph Gallery</a>.</p>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+</body>
+</html>

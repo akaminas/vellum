@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<!--#head-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){var t=new URLSearchParams(location.search).get("theme");if(t!=="light"&&t!=="dark"){t=null;try{t=localStorage.getItem("vellum-theme")}catch(e){}}if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/vellum-tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="module" src="assets/js/site.js"></script>
+<!--/head-->
+<title>Principles · Vellum</title>
+<meta name="description" content="Why Vellum looks the way it does: the recipe for a figure, the lessons taken from Nadieh Bremer's Visual Cinnamon portfolio, the R Graph Gallery, Color Hunt and Canva, and where the style departs from them.">
+</head>
+<body>
+<!--#header-->
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <nav class="nav-half nav-left" aria-label="The style">
+      <a href="principles.html">Principles</a>
+      <a href="colour.html">Colour</a>
+      <a href="anatomy.html">Anatomy</a>
+      <a href="forms.html">Forms</a>
+    </nav>
+    <a class="brand" href="index.html" aria-label="Vellum, home" title="Vellum">
+      <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
+        <circle cx="15.87" cy="5.04" r="4.3" style="fill:var(--v-ochre)"/>
+        <circle cx="22.66" cy="8.57" r="4.3" style="fill:var(--v-terracotta)"/>
+        <circle cx="24.06" cy="19.23" r="4.3" style="fill:var(--v-mauve)"/>
+        <circle cx="14.13" cy="24.96" r="4.3" style="fill:var(--v-indigo)"/>
+        <circle cx="5.60" cy="18.42" r="4.3" style="fill:var(--v-teal)"/>
+        <circle cx="7.34" cy="8.57" r="4.3" style="fill:var(--v-moss)"/>
+      </svg>
+      <span class="brand-word">Vellum</span>
+    </a>
+    <nav class="nav-half nav-right" aria-label="The work">
+      <a href="gallery.html">Gallery</a>
+      <a href="interactive.html">Interactive</a>
+      <a href="media.html">Media</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+  </div>
+  <div class="header-tools">
+    <button class="icon-btn theme-toggle" type="button" aria-label="Switch twin">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+    </button>
+    <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
+      <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+    </a>
+  </div>
+</header>
+<!--/header-->
+
+<main id="main" class="wrap">
+
+<header class="page-head">
+  <span class="eyebrow">Principles</span>
+  <h1>The claim decides the form, and the form decides the colour</h1>
+  <p class="lead">Most bad figures start with a colour. A Vellum figure starts with one sentence, the claim, and the colour comes last. This page gives the recipe, the reasons, and where each rule came from.</p>
+  <ul class="toc">
+    <li><a href="#recipe">The recipe</a></li>
+    <li><a href="#removal">The removal test</a></li>
+    <li><a href="#bremer">Lessons from Visual Cinnamon</a></li>
+    <li><a href="#galleries">Lessons from the galleries</a></li>
+    <li><a href="#departures">Where Vellum departs</a></li>
+    <li><a href="#never">Never</a></li>
+    <li><a href="#scope">Scope</a></li>
+  </ul>
+</header>
+
+<h2 id="recipe">The recipe</h2>
+<p class="prose">Seven steps, in this order. A person or an agent following them produces a Vellum figure without guessing.</p>
+<ol class="rules">
+  <li><strong>Write the claim in one sentence.</strong> That sentence is the title. If it needs two sentences, make two figures.</li>
+  <li><strong>Pick the form by the job of the data:</strong> change over time, comparison, distribution, relation, part of a whole, position on a map, a tree or a network. <a href="forms.html">Chart rules by form</a>.</li>
+  <li><strong>Pick the medium and take its sizes:</strong> width, type sizes, and whether the dark twin applies. <a href="media.html">Media</a>.</li>
+  <li><strong>Load the palette through the tool's module</strong> and assign tones to the series in the fixed order. Never cycle past six: fold the rest into "other" or facet into small multiples.</li>
+  <li><strong>Build the anatomy:</strong> claim title, unit line, direct end labels, ringed dots, hairline grid, footer with the source and the git stamp. <a href="anatomy.html">Anatomy of a figure</a>.</li>
+  <li><strong>Run the checklist.</strong> Render the figure and look at it: the validator checks colour, not collisions. <a href="checklist.html">The checklist</a>.</li>
+  <li><strong>Save as PDF for print and PNG at 300 dpi for screens,</strong> with the git stamp in the footer or the file name.</li>
+</ol>
+
+<div class="key">
+  <p><strong>One number is a sentence, not a chart.</strong> "Life expectancy at birth was 73.2 years in 2023, against 46.4 in 1950" belongs in the text or on a stat tile. A two-slice pie is a sentence. A table beats a chart when the reader will look values up.</p>
+</div>
+
+<h2 id="removal">The removal test</h2>
+<div class="split">
+  <div class="prose">
+    <p>Every decorative choice in Vellum is settled by one test. <strong>Remove the element and replace it with nothing, or with one flat colour. If the figure now carries less information, the element was data. If it carries the same information, delete it.</strong></p>
+    <p>The test removes gradients that encode nothing, 3D tilts on flat data, drop shadows, bevels, outlines around bars and dots, boxes around plots, and legend boxes that repeat what end labels already say. It keeps a gradient that is a heat map's scale, a third axis that is the shape of a surface, and a hatch that marks a missing value.</p>
+  </div>
+  <div>
+    <ul class="never">
+      <li>a gradient as a page, card or slide background</li>
+      <li>a 3D effect on 2D data</li>
+      <li>a glow, shadow, bevel or reflection</li>
+      <li>an outline around a bar or a dot</li>
+      <li>a box around the plot</li>
+      <li>a legend box for four series or fewer</li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="bremer">Lessons from Visual Cinnamon</h2>
+<p class="prose">Nadieh Bremer's portfolio at <a href="https://www.visualcinnamon.com/">visualcinnamon.com</a> was read piece by piece: seventeen commissions for the New York Times, Scientific American, UNESCO, Google Trends, the EU Publications Office and others. Each one taught something specific. The palette register, muted and warm with the ink dark and the accents earthy, comes from <em>Searching for Birds</em>. Her pieces are commissions with weeks of design time; Vellum keeps the habits that survive a one-hour figure.</p>
+
+<div class="table-wrap">
+<table>
+  <caption>Ten rules Vellum adopted, and the pieces that taught them</caption>
+  <thead><tr><th>Rule in Vellum</th><th>Learned from</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>White in print with warm greys and cream cards; warm charcoal on screen; never a cold grey</td><td>Searching for Birds; all seventeen</td><td>Warmth comes from the paper colour and a muted palette, not from saturation</td></tr>
+    <tr><td>Muted palette with contrast from lightness; one warm highlight when the figure is about one thing</td><td>Searching for Birds; all seventeen</td><td>The eye finds the one warm mark first</td></tr>
+    <tr><td>Annotations as sentences beside the data; legend demoted or absent</td><td>All seventeen</td><td>The reader does not travel to a legend and back</td></tr>
+    <tr><td>One figure per claim; a moment and a change are two figures</td><td>Highly hazardous pesticides; Swayable polling</td><td>Five or six concepts were sketched and two kept, one for a moment and one for change</td></tr>
+    <tr><td>The static version first, a version per width, interaction as a layer</td><td>Gravitational waves; the NYT trackers</td><td>Interaction adds; it does not rescue a figure that fails static</td></tr>
+    <tr><td>A set of figures shares one language, fixed in files</td><td>UNESCO intangible heritage; EU data stories</td><td>A style guide written for the first story made five topics read as one series</td></tr>
+    <tr><td>Figures regenerate from data by code</td><td>Adyen shareholder report</td><td>Ninety per cent of the work was done a month early; the final numbers dropped in days before print</td></tr>
+    <tr><td>Put the finding where the reading ends: bottom right, the last panel</td><td>Satellite surge</td><td>The one thing to see sits where the eye leaves the page</td></tr>
+    <tr><td>A faint but real pattern gets a derived layer, not a louder colour</td><td>The Radius Gap</td><td>Density contours revealed a gap that was statistically real and visually faint</td></tr>
+    <tr><td>One memorable form per piece, plain forms for the rest</td><td>EU data stories</td><td>Straightforward charts carry the content; one unusual form gives the piece a face</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Four more lessons worth keeping</h3>
+<div class="grid grid-2">
+  <div class="card"><h4 class="mt-0">A figure must read with the highlight off</h4><p class="secondary">The ORCA commit timeline works without anyone assigned. Highlight is a layer, not the structure.</p></div>
+  <div class="card"><h4 class="mt-0">Pick the form that shows the mechanism</h4><p class="secondary">Reach needs a network. Choose the form that shows how the claim works, not the form that shows the most data.</p></div>
+  <div class="card"><h4 class="mt-0">Say when position carries nothing</h4><p class="secondary">The EPFL city rings are placed for balance, not geography, and say so. Use meaningless position for legibility and write that down.</p></div>
+  <div class="card"><h4 class="mt-0">Draw the guide by hand, place the data by code</h4><p class="secondary">The NYT tracker swirl was drawn by hand because a programmed curve never looks natural; the data were placed along it by code.</p></div>
+</div>
+
+<h2 id="galleries">Lessons from the galleries</h2>
+<div class="split">
+  <div class="prose">
+    <h3 class="mt-0">The R Graph Gallery</h3>
+    <p>The <a href="https://r-graph-gallery.com/">R Graph Gallery</a> indexes about fifty chart types in seven families by the job of the data: distribution, correlation, ranking, part of a whole, evolution, maps, flow. Vellum's <a href="forms.html">chart rules</a> use the same seven families. Its featured examples share ten habits, which are the same ten found independently in Bremer's work: labels at line ends, inline labels instead of a legend, repelled labels, small multiples, insets, one group highlighted and the rest grey, one palette through a piece, a publication template as a model, whitespace, and a caption that carries the source.</p>
+    <h3>Color Hunt</h3>
+    <p>Forty palettes under the "pastel" tag on <a href="https://colorhunt.co/palettes/pastel">Color Hunt</a> show what the public means by pastel. Three regularities: a pastel palette always has a cream rather than a white, it has one dark anchor so the light colours have something to sit against, and its pastels are tints, high in lightness and low in chroma, of hues spread around the wheel. Vellum's card is that cream, its ink is that anchor, and its tints are exactly that register (OKLCH lightness 0.84, chroma 0.05).</p>
+    <h3>Canva's colour combinations</h3>
+    <p>Canva's guide supplies the vocabulary Vellum uses: monochromatic, complementary, analogous, triadic and tetradic schemes; a tint is a hue plus white, a shade a hue plus black, a tone a hue plus grey; warm and cool are the two halves of the wheel. It says to experiment with "how much or how little of each colour". Vellum answers with a fixed proportion.</p>
+  </div>
+  <div>
+    <div class="card">
+      <h4 class="mt-0">The proportion is the style</h4>
+      <p class="secondary">Most of the picture is surface. Then ink and muted text. Then tints as area, tones as line, and the deep step rarely. The hues matter less than how much of each is used.</p>
+      <svg viewBox="0 0 300 60" role="img" aria-label="A proportion bar: mostly surface, then text, tint, tone and a sliver of deep" style="width:100%;margin-top:8px">
+        <rect x="0" y="10" width="168" height="26" style="fill:var(--v-surface);stroke:var(--v-grid)"/>
+        <rect x="170" y="10" width="44" height="26" style="fill:var(--v-ink)"/>
+        <rect x="216" y="10" width="40" height="26" style="fill:var(--v-teal-tint)"/>
+        <rect x="258" y="10" width="28" height="26" style="fill:var(--v-teal)"/>
+        <rect x="288" y="10" width="12" height="26" style="fill:var(--v-teal-deep)"/>
+        <g style="fill:var(--v-muted);font-size:10px;font-family:var(--v-font-body)"><text x="0" y="52">surface</text><text x="170" y="52">text</text><text x="216" y="52">tint</text><text x="258" y="52">tone</text><text x="300" y="52" text-anchor="end">deep</text></g>
+      </svg>
+    </div>
+    <div class="card mt-2">
+      <h4 class="mt-0">Why four colours is not a chart palette</h4>
+      <p class="secondary">A Color Hunt palette is a mood for a web page: background, two mid tones, one dark. A chart needs a surface, text at three strengths, a grid, six distinguishable series, a sequential ramp, a diverging pair and a status set. <code>vellum.json</code> holds about ninety values for that reason, all derived from six hue angles and two neutrals.</p>
+    </div>
+  </div>
+</div>
+
+<h2 id="departures">Where Vellum departs from its sources</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Source</th><th>What it does</th><th>What Vellum does instead, and why</th></tr></thead>
+  <tbody>
+    <tr><td>Visual Cinnamon</td><td>Cream paper for print, never pure white</td><td>The page is white and the cream is a card. A figure on white needs no second version for a journal, and the cream still carries the warmth where it is used.</td></tr>
+    <tr><td>Visual Cinnamon</td><td>Organic forms (rings, swirls, eggs) wherever data are units</td><td>Plain forms by default; one memorable form per piece at most, with a sentence teaching how to read it.</td></tr>
+    <tr><td>R Graph Gallery</td><td>Saturated palettes (viridis, the Tableau and Economist defaults)</td><td>Keeps the structure and the white page; replaces every colour with the muted families.</td></tr>
+    <tr><td>R Graph Gallery</td><td>Radar and circular bar charts for comparison</td><td>A circular form only when the angle means something: a season, an hour, a compass bearing.</td></tr>
+    <tr><td>Color Hunt</td><td>Pastels used for everything, lines included</td><td>Pastel is for area, muted is for line. A pastel line on white cannot be read, so each hue gets a tone step for lines and dots.</td></tr>
+    <tr><td>Canva</td><td>Colour mixed by eye, proportions left to taste</td><td>Tint, tone and shade computed per hue in OKLCH; the proportions fixed.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="never">The things that are never in a Vellum figure</h2>
+<div class="grid grid-2">
+  <ul class="never">
+    <li>a second y axis: two measures are two panels, or an index to a common base</li>
+    <li>a box around the plot</li>
+    <li>a dashed gridline</li>
+    <li>a rainbow colour scale</li>
+    <li>a pie with more than six slices</li>
+    <li>a drop shadow</li>
+  </ul>
+  <ul class="never">
+    <li>an outline around a bar or a dot</li>
+    <li>a title that is a noun phrase</li>
+    <li>a decorative gradient: a gradient is a data scale or it is absent</li>
+    <li>a 3D effect on 2D data: 3D axes only for a surface or a 3D scatter, with a 2D twin</li>
+    <li>text in a series colour (identity comes from the mark beside the text)</li>
+    <li>a seventh series colour (fold, facet or grey out instead)</li>
+  </ul>
+</div>
+
+<h2 id="scope">Scope</h2>
+<div class="prose">
+  <p>Everything: thesis figures and TikZ diagrams, modelling work, reports and policy briefs, posters, slides, pitch decks, infographics and the drawings in a notebook. The medium changes the sizes and the density. It never changes the palette, the fonts or the anatomy.</p>
+  <p>That constancy is the point. A set of figures made months apart, in four different tools, by different people, should still read as one body of work. The rules are written down and the colours are fixed in files so that this does not depend on anyone's memory or taste.</p>
+</div>
+
+</main>
+
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <ul class="footer-nav">
+        <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
+        <li><a href="forms.html">Forms</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="interactive.html">Interactive</a></li>
+        <li><a href="media.html">Media</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
+      </ul>
+      <p><span class="serif" style="font-size:1.1rem;color:var(--v-ink)">Vellum</span>, a visual language for figures, by <a href="https://akaminas.github.io/">Alexandros Kaminas</a>.</p>
+      <p>Code under the MIT licence; text and figures under CC BY 4.0. Every figure on this site is drawn by a script in <a href="https://github.com/akaminas/vellum">the repository</a> from the data listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">data/SOURCES.md</a>.</p>
+    </div>
+    <div>
+      <p>Built from <code>style/vellum.json</code> · git 99753b9</p>
+      <p><a href="downloads/vellum-style.zip">Download the style files</a></p>
+      <p>Site design after <a href="https://www.visualcinnamon.com/">Visual Cinnamon</a> and <a href="https://r-graph-gallery.com/">the R Graph Gallery</a>.</p>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+</body>
+</html>

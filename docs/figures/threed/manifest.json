@@ -1,0 +1,40 @@
+[
+ {
+  "id": "landscape_surface",
+  "group": "threed",
+  "title": "Two adaptive peaks, 1.00 and 0.72, are joined by a saddle at w = 0.26",
+  "subtitle": "An illustrative two-trait adaptive landscape as a 3D surface with its heat-map twin",
+  "kind": "3d",
+  "form": "3D surface with twin",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Analytic function landscape(z1, z2) in examples/python/_common.py (illustrative)",
+  "script": "examples/python/threed/landscape_3d.py",
+  "alt": "A 3D surface of mean fitness w over two traits on [−2, 2]², with a heat-map twin. Two peaks: the high one w = 1.00 at (z₁, z₂) = (0.90, 0.70) and the low one w = 0.72 at (−0.80, −0.90), joined by a saddle at w = 0.26 at (0.05, −0.10).",
+  "note": "Illustrative analytic landscape. High peak w = 1.002 at (0.90, 0.70); low peak w = 0.720 at (−0.80, −0.90); saddle w = 0.262 at (0.05, −0.10) (grad w = 0, Hessian indefinite), on the path between the peaks. Surface 90 × 90, lagoon gradient from 0.000 to 1.001 in both panels.",
+  "files": {
+   "light": "figures/threed/landscape_surface_light.png",
+   "dark": "figures/threed/landscape_surface_dark.png",
+   "pdf": "figures/threed/landscape_surface_light.pdf"
+  }
+ },
+ {
+  "id": "penguins_scatter3d",
+  "group": "threed",
+  "title": "Three measurements place 97 % of penguins nearest their own species",
+  "subtitle": "Beak length, beak depth and flipper length of 342 Palmer penguins as a 3D scatter, with two 2D projections",
+  "kind": "3d",
+  "form": "3D scatter with 2D twins",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Palmer penguins, Gorman, Williams and Fraser (2014), Palmer Station LTER, via vega-datasets 2.8.0 (CC0)",
+  "script": "examples/python/threed/penguins_3d.py",
+  "alt": "A 3D scatter of beak length, beak depth and flipper length for 342 penguins of three species (Adelie teal, Chinstrap terracotta, Gentoo indigo), with two 2D projections. Assigned to the nearest species mean, 97 % of birds are placed correctly with all three measurements, 94 % with beak length and depth, 80 % with beak depth and flipper length, where Adelie and Chinstrap overlap.",
+  "note": "Separation: nearest-centroid rule on z-scored measurements, resubstitution (no hold-out). 3D 0.971; beak length × depth 0.936; beak depth × flipper 0.795.",
+  "files": {
+   "light": "figures/threed/penguins_scatter3d_light.png",
+   "dark": "figures/threed/penguins_scatter3d_dark.png",
+   "pdf": "figures/threed/penguins_scatter3d_light.pdf"
+  }
+ }
+]

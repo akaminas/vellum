@@ -1,0 +1,40 @@
+[
+ {
+  "id": "square",
+  "group": "infographic",
+  "title": "The pandemic brought world life expectancy its deepest fall since 1960",
+  "subtitle": "Social square, 1080 × 1080 px: number, headline, three stat tiles, one figure",
+  "kind": "infographic",
+  "form": "social square",
+  "medium": "infographic",
+  "tool": "HTML + SVG",
+  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0",
+  "script": "examples/python/infographic/make_infographics.py",
+  "alt": "World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years.",
+  "words": 78,
+  "note": "One master, several formats: the same numbers and line chart as the story and the A4 report, all computed from the data file.",
+  "files": {
+   "light": "media/infographic/square.png",
+   "html": "media/infographic/square.html"
+  }
+ },
+ {
+  "id": "story",
+  "group": "infographic",
+  "title": "The pandemic brought world life expectancy its deepest fall since 1960",
+  "subtitle": "Portrait story, 1080 × 1920 px: a stack of cards, line chart, waffle and dot timeline",
+  "kind": "infographic",
+  "form": "portrait story",
+  "medium": "infographic",
+  "tool": "HTML + SVG",
+  "data": "UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0",
+  "script": "examples/python/infographic/make_infographics.py",
+  "alt": "World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023.",
+  "words": 174,
+  "note": "One master, several formats: the same numbers and line chart as the story and the A4 report, all computed from the data file.",
+  "files": {
+   "light": "media/infographic/story.png",
+   "html": "media/infographic/story.html"
+  }
+ }
+]

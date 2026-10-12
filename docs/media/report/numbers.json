@@ -1,0 +1,384 @@
+{
+ "source": "examples/python/report/make_report.py",
+ "stamp": "99753b9-dirty",
+ "numbers": {
+  "w1950": 46.3944,
+  "w2019": 72.6093,
+  "w2023": 73.1694,
+  "gain": 26.775,
+  "w_trough": 70.865,
+  "trough_year": 2021,
+  "dip": 1.7443,
+  "prev_fall_year": 1960,
+  "prev_fall": 3.7953,
+  "back_year": 2022,
+  "above2019": 0.5601,
+  "regained": 2.3044,
+  "china1958": 48.8336,
+  "china1960": 33.419,
+  "high2023": 81.4353,
+  "high1950": 61.8331,
+  "high_dip": 1.1545,
+  "umi2023": 75.8812,
+  "umi1950": 45.4322,
+  "umi_dip": 1.4849,
+  "lmi2023": 69.5854,
+  "lmi1950": 40.7796,
+  "lmi_dip": 2.3395,
+  "low2023": 64.9377,
+  "low1950": 31.21,
+  "low_dip": 0.2595,
+  "inc_gap2023": 16.4976,
+  "inc_gap1950": 30.6231,
+  "gap_over_dip": 9.458,
+  "trend": {
+   "intercept": -607.9441,
+   "slope": 0.3372,
+   "s": 0.1696,
+   "t": 2.1009,
+   "xbar": 2009.5,
+   "sxx": 665.0,
+   "n": 20
+  },
+  "trend2023": 74.2816,
+  "pi2023": 0.41,
+  "trend_gap": 1.1122,
+  "below_band": true,
+  "trend_slope_decade": 3.3723,
+  "map_n": 173,
+  "breaks": [
+   66.2156,
+   71.6683,
+   75.9555,
+   79.7412
+  ],
+  "low_n": 35,
+  "low_africa": 31,
+  "map_min": 54.4623,
+  "map_min_name": "Nigeria",
+  "map_max": 84.7123,
+  "map_max_name": "Japan",
+  "missing": [
+   "French Southern and Antarctic Lands",
+   "Northern Cyprus",
+   "Somaliland"
+  ],
+  "missing_short": [
+   "Fr. S. Antarctic Lands",
+   "N. Cyprus",
+   "Somaliland"
+  ],
+  "pop_n": 30,
+  "pop_share": 0.7764,
+  "rows": [
+   {
+    "name": "Nigeria",
+    "v19": 53.0086,
+    "v23": 54.4623,
+    "trough": 53.0086,
+    "trough_year": 2019,
+    "fall": 0.0
+   },
+   {
+    "name": "Dem. Rep. Congo",
+    "v19": 60.2425,
+    "v23": 61.895,
+    "trough": 60.0444,
+    "trough_year": 2021,
+    "fall": 0.1981
+   },
+   {
+    "name": "Kenya",
+    "v19": 62.9391,
+    "v23": 63.6459,
+    "trough": 61.2253,
+    "trough_year": 2021,
+    "fall": 1.7138
+   },
+   {
+    "name": "South Africa",
+    "v19": 66.0711,
+    "v23": 66.1387,
+    "trough": 62.0099,
+    "trough_year": 2021,
+    "fall": 4.0612
+   },
+   {
+    "name": "Myanmar",
+    "v19": 66.4567,
+    "v23": 66.889,
+    "trough": 65.5535,
+    "trough_year": 2021,
+    "fall": 0.9032
+   },
+   {
+    "name": "Tanzania",
+    "v19": 66.0068,
+    "v23": 66.9953,
+    "trough": 66.0068,
+    "trough_year": 2019,
+    "fall": 0.0
+   },
+   {
+    "name": "Ethiopia",
+    "v19": 65.7413,
+    "v23": 67.315,
+    "trough": 65.3299,
+    "trough_year": 2021,
+    "fall": 0.4114
+   },
+   {
+    "name": "Pakistan",
+    "v19": 66.7288,
+    "v23": 67.649,
+    "trough": 65.7015,
+    "trough_year": 2020,
+    "fall": 1.0273
+   },
+   {
+    "name": "Philippines",
+    "v19": 69.6804,
+    "v23": 69.8327,
+    "trough": 66.6755,
+    "trough_year": 2021,
+    "fall": 3.0049
+   },
+   {
+    "name": "Indonesia",
+    "v19": 70.3491,
+    "v23": 71.1457,
+    "trough": 67.4516,
+    "trough_year": 2021,
+    "fall": 2.8975
+   },
+   {
+    "name": "Egypt",
+    "v19": 71.2128,
+    "v23": 71.6335,
+    "trough": 68.9759,
+    "trough_year": 2021,
+    "fall": 2.2369
+   },
+   {
+    "name": "India",
+    "v19": 70.7463,
+    "v23": 72.0026,
+    "trough": 67.2823,
+    "trough_year": 2021,
+    "fall": 3.464
+   },
+   {
+    "name": "Russia",
+    "v19": 73.0658,
+    "v23": 73.1541,
+    "trough": 69.8066,
+    "trough_year": 2021,
+    "fall": 3.2592
+   },
+   {
+    "name": "Vietnam",
+    "v19": 74.2113,
+    "v23": 74.5883,
+    "trough": 74.1448,
+    "trough_year": 2021,
+    "fall": 0.0665
+   },
+   {
+    "name": "Bangladesh",
+    "v19": 72.6254,
+    "v23": 74.6723,
+    "trough": 71.1035,
+    "trough_year": 2021,
+    "fall": 1.5219
+   },
+   {
+    "name": "Mexico",
+    "v19": 74.5302,
+    "v23": 75.069,
+    "trough": 69.7499,
+    "trough_year": 2021,
+    "fall": 4.7803
+   },
+   {
+    "name": "Brazil",
+    "v19": 75.8093,
+    "v23": 75.8482,
+    "trough": 73.0377,
+    "trough_year": 2021,
+    "fall": 2.7716
+   },
+   {
+    "name": "Thailand",
+    "v19": 77.1967,
+    "v23": 76.4115,
+    "trough": 75.2913,
+    "trough_year": 2022,
+    "fall": 1.9054
+   },
+   {
+    "name": "Turkey",
+    "v19": 77.737,
+    "v23": 77.1557,
+    "trough": 75.7222,
+    "trough_year": 2021,
+    "fall": 2.0148
+   },
+   {
+    "name": "Iran",
+    "v19": 76.8549,
+    "v23": 77.6545,
+    "trough": 73.7521,
+    "trough_year": 2021,
+    "fall": 3.1028
+   },
+   {
+    "name": "Colombia",
+    "v19": 76.7927,
+    "v23": 77.7246,
+    "trough": 72.6983,
+    "trough_year": 2021,
+    "fall": 4.0944
+   },
+   {
+    "name": "China",
+    "v19": 77.9396,
+    "v23": 77.9529,
+    "trough": 77.9396,
+    "trough_year": 2019,
+    "fall": 0.0
+   },
+   {
+    "name": "United States",
+    "v19": 78.916,
+    "v23": 79.3043,
+    "trough": 76.3836,
+    "trough_year": 2021,
+    "fall": 2.5324
+   },
+   {
+    "name": "United Kingdom",
+    "v19": 81.4426,
+    "v23": 81.3015,
+    "trough": 80.3854,
+    "trough_year": 2020,
+    "fall": 1.0572
+   },
+   {
+    "name": "Germany",
+    "v19": 81.1893,
+    "v23": 81.3777,
+    "trough": 80.5796,
+    "trough_year": 2022,
+    "fall": 0.6097
+   },
+   {
+    "name": "France",
+    "v19": 82.7304,
+    "v23": 83.3253,
+    "trough": 82.1993,
+    "trough_year": 2020,
+    "fall": 0.5311
+   },
+   {
+    "name": "Spain",
+    "v19": 83.4794,
+    "v23": 83.6703,
+    "trough": 82.2413,
+    "trough_year": 2020,
+    "fall": 1.2381
+   },
+   {
+    "name": "Italy",
+    "v19": 83.3423,
+    "v23": 83.7157,
+    "trough": 82.052,
+    "trough_year": 2022,
+    "fall": 1.2903
+   },
+   {
+    "name": "South Korea",
+    "v19": 83.6846,
+    "v23": 84.3288,
+    "trough": 82.727,
+    "trough_year": 2022,
+    "fall": 0.9576
+   },
+   {
+    "name": "Japan",
+    "v19": 84.4177,
+    "v23": 84.7123,
+    "trough": 84.0541,
+    "trough_year": 2022,
+    "fall": 0.3636
+   }
+  ],
+  "focal": [
+   "Mexico",
+   "Colombia",
+   "South Africa"
+  ],
+  "focal_back": true,
+  "focal_max": 4.7803,
+  "focal_max_name": "Mexico",
+  "n_below2019": 3,
+  "n_nofall": 3
+ },
+ "text": {
+  "w1950": "46.4",
+  "w2019": "72.6",
+  "w2023": "73.2",
+  "gain": "26.8",
+  "gain_per_year": "0.37",
+  "dip": "1.7",
+  "dip_neg": "−1.7",
+  "trough_year": 2021,
+  "prev_fall_year": 1960,
+  "back_year": 2022,
+  "above2019": "0.6",
+  "above2019_signed": "+0.6",
+  "regained": "2.3",
+  "china1958": "48.8",
+  "china1960": "33.4",
+  "high2023": "81.4",
+  "low2023": "64.9",
+  "inc_gap2023": "16.5",
+  "inc_gap1950": "30.6",
+  "high_dip": "1.2",
+  "umi_dip": "1.5",
+  "lmi_dip": "2.3",
+  "low_dip": "0.3",
+  "gap_over_dip": "more than nine",
+  "trend_decade": "3.4",
+  "slope": "0.34",
+  "trend2023": "74.3",
+  "trend_gap": "1.1",
+  "pi2023": "0.4",
+  "band_where": "outside",
+  "map_n": 173,
+  "map_min": "54.5",
+  "map_min_name": "Nigeria",
+  "map_max": "84.7",
+  "map_max_name": "Japan",
+  "map_spread": "30.2",
+  "low_n": 35,
+  "low_africa": 31,
+  "b1": "66.2",
+  "b2": "71.7",
+  "b3": "76.0",
+  "b4": "79.7",
+  "missing": "French Southern and Antarctic Lands, Northern Cyprus and Somaliland",
+  "pop_n": 30,
+  "pop_share": "78",
+  "focal_max_neg": "−4.8",
+  "focal_max_name": "Mexico",
+  "focal_max_year": 2021,
+  "focal_max_back": "0.5",
+  "n_nofall_word": "Three",
+  "n_below_word": "three",
+  "claim_world": "World life expectancy rose 26.8 years since 1950; the pandemic took 1.7 back",
+  "claim_projection": "In 2023 the world was 1.1 years below its trend",
+  "claim_map": "Of the 35 countries with the lowest life expectancy, 31 are in Africa",
+  "claim_dots": "Mexico, Colombia and South Africa fell four years or more and were back by 2023",
+  "stamp": "99753b9-dirty"
+ }
+}

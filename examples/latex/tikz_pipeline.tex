@@ -1,0 +1,64 @@
+% tikz_pipeline.tex: how the files of Vellum are made, as a TikZ diagram in the package's node and edge styles
+% (vellum box, vellum box tint, vellum arrow, vellum guide, vellum label, vellum claim). No data: the boxes are the
+% repository's own files. Light twin: lualatex tikz_pipeline.tex; dark twin: lualatex -jobname=tikz_pipeline_dark tikz_pipeline.tex
+\documentclass[11pt, border=0pt]{standalone}
+\usepackage{vellum-twin}
+\newcommand\fname[1]{{\ttfamily #1}\\[1pt]}                    % a file name, then
+\newcommand\what[1]{{\vUnitFont\color{vMuted\vD}#1}}          % what the file does, in muted, one line per call (one line per call)
+\begin{document}
+\sffamily
+\begin{tikzpicture}[x=1cm, y=1cm,
+    stage/.style={vellum box, align=left, text width=#1, inner sep=4pt, font=\vTickFont}, stage/.default=3.12cm,
+    file/.style={vellum box, font=\vTickFont\ttfamily, minimum height=0.62cm, minimum width=2.9cm, inner sep=4pt},
+    tool/.style={vellum box tint=teal, font=\vTickFont, minimum height=0.62cm, minimum width=3.1cm, inner sep=4pt}]
+  \def\W{18.288}\def\H{9.6}                                   % 7.2 in wide, drawn at the printed size
+  \fill[vSurface\vD] (0,0) rectangle (\W,\H);
+  \useasboundingbox (0,0) rectangle (\W,\H);
+  \node[anchor=north west, inner sep=0pt, text=vInk\vD, font=\vTitleFont] at (0.45,\H-0.4)
+    {Every colour is defined once, in vellum.json, and every style file derives from it};
+  \node[anchor=north west, inner sep=0pt, text=vMuted\vD, font=\vSubtitleFont] at (0.45,\H-1.08)
+    {how the files of Vellum are made · an arrow points from a file to what is made from it};
+
+  % the five stages, left to right, each headed by a claim and its folder
+  \foreach \x/\head/\dir in {0.45/Compute/{generators/}, 4.45/Define/{style/}, 7.65/Generate/{generators/}, 11.25/Style files/{style/}, 14.75/Tools/{}}
+    \node[vellum claim, anchor=base west, inner sep=0pt] at (\x,7.55) {\head\quad\what{\mdseries\ttfamily\dir}};
+
+  % 1 compute: a seeded search in OKLCH, its candidates, and the script that writes the source of truth
+  \node[stage, anchor=north west] (search) at (0.45,7.15) {\fname{build\_palettes.py}\what{seeded search in OKLCH}\\\what{for the tone lightness}};
+  \node[stage, below=0.55cm of search] (cands) {\fname{palettes.json}\what{three candidate palettes}};
+  \node[stage, below=0.55cm of cands] (json) {\fname{make\_vellum\_json.py}\what{adds the dark twin,}\\\what{ramps, gradients, sizes}};
+  \draw[vellum arrow] (search) -- (cands);
+  \draw[vellum arrow] (cands) -- (json);
+
+  % 2 define: the one file every colour comes from, the highlight of the figure
+  \node[vellum box tint=terracotta, align=left, anchor=west, text width=2.18cm, minimum height=4.1cm, inner sep=6pt,
+        font=\vTickFont] (truth) at (4.45,4.55)
+    {{\vLabelFont\ttfamily vellum.json}\\[6pt]every colour,\\light and dark\\[3pt]the slot order\\[3pt]ramps and\\gradients\\[3pt]fonts, marks\\and type sizes};
+  \draw[vellum arrow] (json.east) -- (json.east -| truth.west);
+
+  % 3 generate: one script writes every tool's file; vellum.py reads the JSON itself
+  \node[stage=2.32cm, anchor=west] (assets) at (7.65,0 |- json) {\fname{make\_assets.py}\what{writes five files}};
+  \draw[vellum arrow] (assets.west -| truth.east) -- (assets.west);
+
+  % 4 the style files: five generated, one written by hand
+  \foreach \f/\y/\name in {mpl/5.08/vellum.mplstyle, R/4.26/vellum.R, sty/3.44/vellum-colors.sty, css/2.62/vellum.css, tsv/1.80/vellum-office.tsv}
+    \node[file, anchor=west] (\f) at (11.25,\y) {\name};
+  \node[stage=2.62cm, anchor=west] (py) at (11.25,6.45) {\fname{vellum.py}\what{written by hand}};
+  \foreach \f in {mpl, R, sty, css, tsv}
+    \draw[vellum arrow] (assets.east) -- ++(0.5,0) |- (\f.west);
+  \draw[vellum arrow] (py.west -| truth.east) -- node[vellum label, above=1pt] {read at run time} (py.west);
+  \draw[vellum guide, rounded corners=3pt] ($(mpl.north west)+(-0.12,0.14)$) rectangle ($(tsv.south east)+(0.12,-0.14)$);
+  \node[vellum label, anchor=north west, inner sep=0pt] at ($(tsv.south west)+(-0.12,-0.26)$) {generated, never edited by hand};
+
+  % 5 the tools: each reads its own file
+  \node[tool, anchor=west] (t-mpl) at (14.75,5.77) {matplotlib};
+  \foreach \f/\name in {R/ggplot2, sty/{pgfplots, TikZ, beamer}, css/the web, tsv/{Office, Canva}}
+    \node[tool, anchor=west] (t-\f) at (14.75,0 |- \f) {\name};
+  \draw[vellum arrow] (py.east) -- (t-mpl.west);
+  \draw[vellum arrow] (mpl.east) -- (t-mpl.west);
+  \foreach \f in {R, sty, css, tsv} \draw[vellum arrow] (\f.east) -- (t-\f.west);
+
+  \node[anchor=south west, inner sep=0pt, text=vMuted\vD, font=\vFooterFont] at (0.45,0.25)
+    {\vfooter{the repository's generators/ and style/ folders}};
+\end{tikzpicture}
+\end{document}

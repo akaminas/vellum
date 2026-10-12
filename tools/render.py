@@ -2,6 +2,9 @@
 
     python tools/render.py png  docs/media/infographic/square.html docs/media/infographic/square.png 1080 1080 [scale]
     python tools/render.py pdf  docs/media/report/index.html       docs/media/report/report.pdf
+    python tools/render.py png  "http://localhost:8765/dev/harness.html?fig=surface3d&theme=dark" out.png 1200 800
+
+A page that loads ES modules or fetches data must be given as an http URL (serve docs/ with `python -m http.server`).
 
 PNG: the window is width x height CSS pixels; scale (default 1) is the device pixel ratio, so 2 gives a 2x image.
 PDF: the page's own @page size and margins apply (use `@page { size: A4; margin: 0 }` in the page CSS).
@@ -19,6 +22,7 @@ def browser():
 
 
 def url(path):
+    if path.startswith(("http://", "https://")): return path     # pages with ES modules must be served over http
     return "file:///" + os.path.abspath(path).replace("\\", "/")
 
 

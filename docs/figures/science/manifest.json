@@ -1,0 +1,223 @@
+[
+ {
+  "id": "co2_keeling",
+  "group": "science",
+  "title": "Carbon dioxide at Mauna Loa rose in every year from 1959 to 2019, by 96 ppm in all",
+  "subtitle": "Monthly mean CO₂, March 1958 to April 2020 · the yearly rise grew from 0.9 ppm in the 1960s to 2.4 ppm in the 2010s",
+  "kind": "scientific",
+  "form": "line chart (members and mean)",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Mauna Loa monthly CO₂, NOAA GML and Scripps, March 1958 to April 2020 (vega-datasets 2.8.0)",
+  "script": "examples/python/science/co2_keeling.py",
+  "alt": "Line chart of monthly CO₂ at Mauna Loa from 1958 to 2020. The annual mean rises in every year, from 316.0 ppm in 1959 to 411.5 ppm in 2019, and passes the dotted 350 ppm line in 1988.",
+  "files": {
+   "light": "figures/science/co2_keeling_light.png",
+   "dark": "figures/science/co2_keeling_dark.png",
+   "pdf": "figures/science/co2_keeling_light.pdf"
+  }
+ },
+ {
+  "id": "miserables_network",
+  "group": "science",
+  "title": "Jean Valjean shares a chapter with 36 of the other 76 characters, more than anyone",
+  "subtitle": "Co-occurrence network of Les Misérables, 77 characters and 254 links, force layout",
+  "kind": "scientific",
+  "form": "network (two panels)",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Knuth, The Stanford GraphBase (1993), Les Misérables co-occurrences, via vega-datasets 2.8.0",
+  "script": "examples/python/science/miserables_network.py",
+  "alt": "Two network drawings of the 77 characters of Les Misérables. Left: nodes coloured by the six largest of 11 groups. Right: Jean Valjean and his 36 neighbours highlighted in terracotta; they span 7 of the 11 groups. The next best connected character, Gavroche, has 22 neighbours.",
+  "note": "Layout: seeded Fruchterman–Reingold computed in numpy. The 5 smallest groups (9 characters) are folded into 'other' in rule grey.",
+  "files": {
+   "light": "figures/science/miserables_network_light.png",
+   "dark": "figures/science/miserables_network_dark.png",
+   "pdf": "figures/science/miserables_network_light.pdf"
+  }
+ },
+ {
+  "id": "primates_tree",
+  "group": "science",
+  "title": "Humans and chimpanzees split 6.5 million years ago, about a tenth of primate history",
+  "subtitle": "Time-scaled phylogeny of 12 primates; approximate divergence times, illustrative; after TimeTree (Kumar et al. 2022)",
+  "kind": "scientific",
+  "form": "phylogeny (rectangular, time-scaled)",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Approximate divergence times after TimeTree 5 (Kumar et al. 2022), rounded; illustrative",
+  "script": "examples/python/science/primates_tree.py",
+  "alt": "A rectangular phylogeny of 12 primates with time running from 70 million years ago on the left to the present on the right. Great apes in teal, Old World monkeys in terracotta, New World monkeys in indigo. Humans and chimpanzees split 6.5 million years ago, 9% of the 70 million years since the first split of the primates.",
+  "note": "Illustrative: the topology is standard but the divergence times are rounded approximations after TimeTree, typed into the script. 6.5 / 70 = 0.093.",
+  "files": {
+   "light": "figures/science/primates_tree_light.png",
+   "dark": "figures/science/primates_tree_dark.png",
+   "pdf": "figures/science/primates_tree_light.pdf"
+  }
+ },
+ {
+  "id": "disasters_heat",
+  "group": "science",
+  "title": "Droughts, epidemics and floods now kill 33 times fewer people a year than before 1970",
+  "subtitle": "Deaths by type and decade, 1900–2017 (the 2010s cover 2010–2017), rows by total · 386,000 a year before 1970, 11,500 since 2000",
+  "kind": "scientific",
+  "form": "heat map on a named gradient (lagoon, log scale)",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "EM-DAT deaths from natural disasters by type and year, 1900–2017, via Our World in Data",
+  "script": "examples/python/science/disasters_heat.py",
+  "note": "Gradient checks of 'Vellum - colour gradients' 1338.18 applied: lagoon, legend bar with labelled ends, hatched card cells for no record.",
+  "alt": "Heat map of deaths per decade for ten kinds of natural disaster from the 1900s to the 2010s. Droughts, epidemics and floods killed about 386 thousand people a year from 1900 to 1969 and about 11.5 thousand a year since 2000, 33 times fewer; earthquakes kill tens to hundreds of thousands in every decade.",
+  "files": {
+   "light": "figures/science/disasters_heat_light.png",
+   "dark": "figures/science/disasters_heat_dark.png",
+   "pdf": "figures/science/disasters_heat_light.pdf"
+  }
+ },
+ {
+  "id": "cars_correlogram",
+  "group": "science",
+  "title": "Weight tracks fuel economy best, r = −0.83",
+  "subtitle": "Pearson r between six measures of 392 cars, 1970–1982; 14 cars with a missing value left out",
+  "kind": "scientific",
+  "form": "correlogram (lower-triangle, diverging scale)",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "UCI Auto MPG (Quinlan 1993), 392 cars with complete records",
+  "script": "examples/python/science/cars_correlogram.py",
+  "alt": "Lower-triangle correlation matrix of six car measures. Cylinders, displacement, horsepower and weight correlate at r = 0.84 or more; each correlates negatively with miles per gallon, most strongly weight at r = −0.83; acceleration correlates weakly with the rest.",
+  "files": {
+   "light": "figures/science/cars_correlogram_light.png",
+   "dark": "figures/science/cars_correlogram_dark.png",
+   "pdf": "figures/science/cars_correlogram_light.pdf"
+  }
+ },
+ {
+  "id": "population_stacked",
+  "group": "science",
+  "title": "Americans aged 60 and over grew from 4 to 16 per cent of the population, 1850 to 2000",
+  "subtitle": "Share of the population by age group at each census · the under-20s fell from 51.9 to 28.5 per cent",
+  "kind": "scientific",
+  "form": "stacked area (part of a whole over time)",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "United States census population by age and sex, IPUMS USA, 1850–2000 (vega-datasets)",
+  "script": "examples/python/science/population_stacked.py",
+  "note": "The file has no 1890 census; the layers are drawn straight across the gap.",
+  "alt": "Stacked area of the US population in four age groups from 1850 to 2000. The under-20s shrink from 51.9 to 28.5 per cent and those aged 60 and over grow from 4 to 16 per cent.",
+  "files": {
+   "light": "figures/science/population_stacked_light.png",
+   "dark": "figures/science/population_stacked_dark.png",
+   "pdf": "figures/science/population_stacked_light.pdf"
+  }
+ },
+ {
+  "id": "driving_connected",
+  "group": "science",
+  "title": "Driving fell for one year in the 1973 oil shock, two in the 1979 shock and five from 2006",
+  "subtitle": "Miles driven per person and the price of a gallon of petrol in 2010 dollars, United States, 1956–2010 · one dot per year, joined in time order",
+  "kind": "scientific",
+  "form": "connected scatter plot",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Miles driven per capita and petrol price in 2010 dollars, United States, 1956–2010 (Fairfield, NYT 2010; vega-datasets)",
+  "script": "examples/python/science/driving_connected.py",
+  "alt": "Connected scatter of miles driven per person against petrol price, 1956 to 2010. Driving rises from 3,675 to a peak of 10,067 miles in 2005; it falls for one year in the 1973 shock, two in the 1979 shock and five years running from 2006, while the price reaches $3.31 in 2008.",
+  "files": {
+   "light": "figures/science/driving_connected_light.png",
+   "dark": "figures/science/driving_connected_dark.png",
+   "pdf": "figures/science/driving_connected_light.pdf"
+  }
+ },
+ {
+  "id": "life_slope",
+  "group": "science",
+  "title": "Egypt gained 38 years of life, the US 11",
+  "subtitle": "Life expectancy at birth in years, 1950 and 2023, twelve countries",
+  "kind": "scientific",
+  "form": "slope chart",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Our World in Data, period life expectancy at birth (UN WPP 2024 and others), 1950 and 2023",
+  "script": "examples/python/science/life_slope.py",
+  "alt": "Slope chart of life expectancy in 1950 and 2023 for twelve countries. All rise. Egypt rises most, from 34 to 72 years; United States least, from 68 to 79.",
+  "files": {
+   "light": "figures/science/life_slope_light.png",
+   "dark": "figures/science/life_slope_dark.png",
+   "pdf": "figures/science/life_slope_light.pdf"
+  }
+ },
+ {
+  "id": "life_small_multiples",
+  "group": "science",
+  "title": "Life expectancy rose in all 236 countries since 1950, but the trend hides collapses",
+  "subtitle": "Life expectancy at birth · one country per panel, the other 235 countries and territories in grey · each loss from the year before the crisis",
+  "kind": "scientific",
+  "form": "small multiples of line charts",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Our World in Data, period life expectancy at birth (UN WPP 2024 and others), 1950–2023, countries only",
+  "script": "examples/python/science/life_small_multiples.py",
+  "alt": "Six small line charts of life expectancy from 1950 to 2023 over all other countries in grey: Japan gained 25 years, steadily (1950: 59 years · no fall above 0.5 in a year); China lost 15 years to famine (1960: 33 years); Lebanon lost 30 years to civil war (1976: 36 years); Rwanda lost 31 years to genocide (1994: 12 years); Eswatini lost 18 years to HIV (2004: 44 years, peak 62 in 1988); Bolivia lost 6 years to covid-19 (2021: 61 years).",
+  "files": {
+   "light": "figures/science/life_small_multiples_light.png",
+   "dark": "figures/science/life_small_multiples_dark.png",
+   "pdf": "figures/science/life_small_multiples_light.pdf"
+  }
+ },
+ {
+  "id": "penguins_scatter",
+  "group": "science",
+  "title": "In every species, body mass rises by 33 to 55 g with each millimetre of flipper",
+  "subtitle": "342 penguins of the Palmer Archipelago, 2007–2009 · one least-squares line per species · r = 0.47, 0.64 and 0.70",
+  "kind": "scientific",
+  "form": "scatter plot with fit lines and confidence bands",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Palmer penguins, Gorman, Williams and Fraser (2014), 342 birds with complete measurements",
+  "script": "examples/python/science/penguins_scatter.py",
+  "alt": "Scatter of body mass against flipper length for 342 penguins. Adelie and Chinstrap overlap at short flippers and low mass, Gentoo sit apart at long flippers and high mass. Fitted slopes are 33, 35 and 55 g per mm.",
+  "files": {
+   "light": "figures/science/penguins_scatter_light.png",
+   "dark": "figures/science/penguins_scatter_dark.png",
+   "pdf": "figures/science/penguins_scatter_light.pdf"
+  }
+ },
+ {
+  "id": "penguins_distributions",
+  "group": "science",
+  "title": "Gentoo penguins are the heaviest by 1,300 g, yet have the shallowest beaks by 3.4 mm",
+  "subtitle": "342 penguins of the Palmer Archipelago, 2007–2009 · a: Gaussian kernel density, bandwidth 150 g · b: one dot per bird",
+  "kind": "scientific",
+  "form": "ridgeline and box plots with a beeswarm",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Palmer penguins, Gorman, Williams and Fraser (2014), 342 birds with complete measurements",
+  "script": "examples/python/science/penguins_distributions.py",
+  "alt": "Two panels. a: body-mass densities per species; Gentoo peak near 5,000 g, Adelie and Chinstrap near 3,700 g. b: box plots of beak depth; Gentoo median 15.0 mm against 18.4 and 18.4 mm for Adelie and Chinstrap.",
+  "files": {
+   "light": "figures/science/penguins_distributions_light.png",
+   "dark": "figures/science/penguins_distributions_dark.png",
+   "pdf": "figures/science/penguins_distributions_light.pdf"
+  }
+ },
+ {
+  "id": "journal_penguins",
+  "group": "science",
+  "title": "Beak depth falls with beak length across all penguins but rises within every species",
+  "subtitle": "Paper-mode figure: no title block or footer; the claim is the caption's first sentence",
+  "kind": "scientific",
+  "form": "three-panel figure: scatter with fits, dot plot with means, interval plot",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Palmer penguins, Gorman, Williams and Fraser (2014), 342 birds with complete measurements",
+  "script": "examples/python/science/journal_penguins.py",
+  "caption": "Beak depth falls with beak length across all penguins but rises within every species. a, Beak length against beak depth for 342 penguins; the grey line is the least-squares fit to all birds (r = −0.24), the coloured lines are fits within each species (r = 0.39, 0.65 and 0.64 for Adelie, Chinstrap and Gentoo). b, Beak depth by species and sex; small dots are birds, ringed dots are means. Gentoo beaks are 3.4 to 3.5 mm shallower than those of the other species of the same sex, and males are deeper than females by 1.5 to 1.7 mm in every species, so the differences between species, not the relation within them, make the pooled slope negative. c, Pearson r between beak length and depth with 95 % intervals from Fisher's z: the sign turns positive once species is taken into account (r = 0.53) and stays positive within species and sex (r = 0.19). n = 342 birds with complete measurements, 333 with recorded sex (b and the last row of c). Data: Palmer penguins, Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via the palmerpenguins R package and vega-datasets 2.8.0; figure drawn by examples/python/science/journal_penguins.py at git 99753b9-dirty.",
+  "alt": "Three panels. a: beak depth against beak length; the pooled fit slopes down (r = −0.24) while each species' fit slopes up. b: Gentoo beaks are about 3.4 mm shallower than Adelie and Chinstrap in both sexes. c: correlations with intervals, negative pooled and positive within species (0.53).",
+  "files": {
+   "light": "figures/science/journal_penguins_light.png",
+   "dark": "figures/science/journal_penguins_dark.png",
+   "pdf": "figures/science/journal_penguins_light.pdf"
+  }
+ }
+]

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<!--#head-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){var t=new URLSearchParams(location.search).get("theme");if(t!=="light"&&t!=="dark"){t=null;try{t=localStorage.getItem("vellum-theme")}catch(e){}}if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/vellum-tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="module" src="assets/js/site.js"></script>
+<!--/head-->
+<title>Type and anatomy · Vellum</title>
+<meta name="description" content="The two typefaces of Vellum, its four-level type scale, the rules for writing inside a figure, and the anatomy every Vellum figure shares: title block, unit line, marks, spacers, direct labels, footer and named sizes.">
+</head>
+<body>
+<!--#header-->
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <nav class="nav-half nav-left" aria-label="The style">
+      <a href="principles.html">Principles</a>
+      <a href="colour.html">Colour</a>
+      <a href="anatomy.html">Anatomy</a>
+      <a href="forms.html">Forms</a>
+    </nav>
+    <a class="brand" href="index.html" aria-label="Vellum, home" title="Vellum">
+      <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
+        <circle cx="15.87" cy="5.04" r="4.3" style="fill:var(--v-ochre)"/>
+        <circle cx="22.66" cy="8.57" r="4.3" style="fill:var(--v-terracotta)"/>
+        <circle cx="24.06" cy="19.23" r="4.3" style="fill:var(--v-mauve)"/>
+        <circle cx="14.13" cy="24.96" r="4.3" style="fill:var(--v-indigo)"/>
+        <circle cx="5.60" cy="18.42" r="4.3" style="fill:var(--v-teal)"/>
+        <circle cx="7.34" cy="8.57" r="4.3" style="fill:var(--v-moss)"/>
+      </svg>
+      <span class="brand-word">Vellum</span>
+    </a>
+    <nav class="nav-half nav-right" aria-label="The work">
+      <a href="gallery.html">Gallery</a>
+      <a href="interactive.html">Interactive</a>
+      <a href="media.html">Media</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+  </div>
+  <div class="header-tools">
+    <button class="icon-btn theme-toggle" type="button" aria-label="Switch twin">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+    </button>
+    <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
+      <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+    </a>
+  </div>
+</header>
+<!--/header-->
+
+<main id="main" class="wrap">
+
+<header class="page-head">
+  <span class="eyebrow">Type and anatomy</span>
+  <h1>Every figure is built from the same parts, in the same places</h1>
+  <p class="lead">A reader who has seen one Vellum figure knows where to look in the next: the claim at the top left, the unit above the axis, the labels at the ends of the lines, the source at the bottom. This page specifies those parts, their sizes, and the two typefaces that set them.</p>
+  <ul class="toc">
+    <li><a href="#faces">The two faces</a></li>
+    <li><a href="#scale">The type scale</a></li>
+    <li><a href="#writing">Writing in a figure</a></li>
+    <li><a href="#specimen">The specimen</a></li>
+    <li><a href="#marks">Marks</a></li>
+    <li><a href="#spacers">Spacers</a></li>
+    <li><a href="#labels">Labels</a></li>
+    <li><a href="#sizes">Sizes</a></li>
+    <li><a href="#panels">Panels</a></li>
+  </ul>
+</header>
+
+<h2 id="faces">Two faces, one for the claim and one for everything else</h2>
+<div class="grid grid-2">
+  <div class="card">
+    <span class="eyebrow">Title face</span>
+    <p class="serif" style="font-size:2.4rem;line-height:1.1;margin:0 0 12px">Palatino</p>
+    <p class="serif" style="font-size:1.25rem;line-height:1.35;color:var(--v-ink)">A claim in Palatino reads at arm’s length and from two metres away</p>
+    <p class="secondary small">An old-style serif with open counters that stays legible at 9 pt on a poster seen from two metres and at 13 pt on a page. It carries only the figure title, which is the claim, and slide or poster headings. Never axis text or labels.</p>
+    <p class="small muted mb-0">Windows: Palatino Linotype · LaTeX: TeX Gyre Pagella · web: <code>'Palatino Linotype', 'TeX Gyre Pagella', Palatino, serif</code></p>
+  </div>
+  <div class="card">
+    <span class="eyebrow">Body face</span>
+    <p style="font-size:2.4rem;line-height:1.1;margin:0 0 12px">Corbel</p>
+    <p style="font-size:1.1rem;line-height:1.45;color:var(--v-ink)">parts per million · 1958 · 2020 · γ = 0.5 · −3 °C · 12,045 deaths</p>
+    <p class="secondary small">A humanist sans with old-style numerals, so a tick label reads like text rather than like a counter. It has Greek, subscript digits and a true minus sign, which Gill Sans lacks. It carries labels, ticks, the unit line, annotations, legends, the footer and the body of a report.</p>
+    <p class="small muted mb-0">Windows: Corbel · LaTeX and the web: Lato · fallback: Segoe UI, then DejaVu Sans</p>
+  </div>
+</div>
+<div class="grid grid-2 mt-2">
+  <div class="key mt-0"><p><strong>Restraint is the other half.</strong> One weight of each face. No italics in a figure, except for variable names in mathematics. Words are upright; a variable is italic maths (<em>V</em><sub>A</sub>).</p></div>
+  <div class="key mt-0"><p><strong>Old-style numerals do not align in a column.</strong> In a table of numbers switch to lining figures: <code>font-variant-numeric: lining-nums tabular-nums</code> on the web, <code>\usepackage[lining]{lato}</code> in LaTeX.</p></div>
+</div>
+
+<h2 id="scale">Four levels of text, not eight</h2>
+<div class="split">
+  <div class="prose">
+    <p>The scale has four levels: the claim, the body, the secondary (unit, annotation, ticks) and the footer. Two sizes that differ by less than 1.5 pt should be the same size.</p>
+    <p>A figure is drawn at the size it will be printed and never scaled afterwards, so these are the sizes on the page. On a slide, multiply by 2.2; on a poster, by 2.6. The poster is the only medium where a figure is scaled, and only by that fixed factor, so the whole scale moves together.</p>
+    <p>Text never wears a series colour. Titles, labels and values are in ink; secondary text is muted. Identity comes from the mark beside the text. The one exception is a label set inside a tint, which takes the family's deep step.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <caption>Sizes in points at column width, from <code>vellum.json</code></caption>
+      <thead><tr><th>element</th><th>face</th><th class="r">print</th><th class="r">slide ×2.2</th><th class="r">poster ×2.6</th><th>colour</th></tr></thead>
+      <tbody>
+        <tr><td>title (the claim)</td><td>Palatino</td><td class="r">13</td><td class="r">28.6</td><td class="r">33.8</td><td>ink</td></tr>
+        <tr><td>subtitle</td><td>Corbel</td><td class="r">9</td><td class="r">19.8</td><td class="r">23.4</td><td>muted</td></tr>
+        <tr><td>panel title</td><td>Corbel bold</td><td class="r">9</td><td class="r">19.8</td><td class="r">23.4</td><td>ink</td></tr>
+        <tr><td>axis label</td><td>Corbel</td><td class="r">9</td><td class="r">19.8</td><td class="r">23.4</td><td>muted</td></tr>
+        <tr><td>ticks</td><td>Corbel</td><td class="r">8</td><td class="r">17.6</td><td class="r">20.8</td><td>muted</td></tr>
+        <tr><td>unit line</td><td>Corbel</td><td class="r">7.5</td><td class="r">16.5</td><td class="r">19.5</td><td>muted</td></tr>
+        <tr><td>annotation, end label</td><td>Corbel</td><td class="r">7.5</td><td class="r">16.5</td><td class="r">19.5</td><td>ink or muted</td></tr>
+        <tr><td>footer</td><td>Corbel</td><td class="r">6.5</td><td class="r">14.3</td><td class="r">16.9</td><td>muted</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2 id="writing">Writing inside a figure</h2>
+<div class="split">
+  <ol class="rules">
+    <li>Sentence case everywhere. No full stop at the end of a title or a label. A note that is a sentence ends with a stop.</li>
+    <li>The title is a claim with a verb.</li>
+    <li>The unit line is a noun phrase: "parts per million", "years of life expected at birth", "share of GDP, per cent".</li>
+    <li>A true minus sign (U+2212), not a hyphen. Units after a space: 10 km, 5 %.</li>
+    <li>Greek letters as letters (γ, α), not spelled out, with thin spaces around "=" in labels.</li>
+    <li>No abbreviation a reader outside the project would not know. "Generations", not "gens".</li>
+    <li>The footer names the source, the script and the stamp: "NOAA GML, 1958–2020 · co2_keeling.py · git 99753b9".</li>
+  </ol>
+  <div>
+    <div class="table-wrap">
+      <table>
+        <caption>Titles: a noun phrase names the axes; a claim says what the figure shows</caption>
+        <thead><tr><th>not this</th><th>this</th></tr></thead>
+        <tbody>
+          <tr><td class="muted">CO₂ concentration over time</td><td class="serif" style="font-size:1.05rem">Carbon dioxide at Mauna Loa rose in every year from 1959 to 2019, by 96 ppm in all</td></tr>
+          <tr><td class="muted">Life expectancy by country</td><td class="serif" style="font-size:1.05rem">Life expectancy rose in all 236 countries since 1950, but the trend hides collapses</td></tr>
+          <tr><td class="muted">Penguin measurements</td><td class="serif" style="font-size:1.05rem">Gentoo penguins are the heaviest by 1,300 g, yet have the shallowest beaks by 3.4 mm</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="key"><p><strong>The three-second test.</strong> Cover the title. If a colleague cannot say in three seconds what the figure claims, the figure has too much in it. Remove a series or split a panel.</p></div>
+  </div>
+</div>
+
+<h2 id="specimen">The parts, top to bottom</h2>
+<p class="prose">The specimen below is a real Vellum figure with its parts numbered. The key beside it gives each part's rule.</p>
+<!--#fig colour/anatomy wide-->
+<figure class="figure wide" id="fig-colour-anatomy"><div class="frame"><img class="zoom twin-light " src="figures/colour/anatomy_light.png" data-full="figures/colour/anatomy_light.png" data-caption="A Vellum figure is built from eleven parts, each with one rule" alt="A line chart of life expectancy in Asia, Africa, the Americas and Europe since 1950, with eleven numbered callouts in the margin pointing at the claim title, subtitle, unit line, grid, bottom spine, an end dot, an end label, the band, the dotted reference line, the quiet note and the footer. Asia gained 33 years, Africa 27, the Americas 21 and Europe 17." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/colour/anatomy_dark.png" data-full="figures/colour/anatomy_dark.png" data-caption="A Vellum figure is built from eleven parts, each with one rule" alt="A line chart of life expectancy in Asia, Africa, the Americas and Europe since 1950, with eleven numbered callouts in the margin pointing at the claim title, subtitle, unit line, grid, bottom spine, an end dot, an end label, the band, the dotted reference line, the quiet note and the footer. Asia gained 33 years, Africa 27, the Americas 21 and Europe 17." loading="lazy" decoding="async"></div><figcaption>Period life expectancy, UN WPP (2024) and others, processed by Our World in Data (CC BY 4.0); continents of countries from Natural Earth v5.1.2 · Specimen claim computed from the data: gains 1950–2023 of Asia 32.6, Africa 26.6, Americas 20.8, Europe 17.1 years. Reference line: the world in 1950, 46.4 years. Band: 25th to 75th percentile of the 46 countries Natural Earth places in Asia, per year.<p class="fig-links"><a href="figures/colour/anatomy_light.png">PNG</a> <a href="figures/colour/anatomy_dark.png">PNG, dark</a> <a href="figures/colour/anatomy_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/colour/anatomy_specimen.py">Script</a></p></figcaption><ol class="parts small"><li>1 · claim title · a sentence with a verb, Palatino 13 pt in ink, top left</li><li>2 · subtitle · what, where, when, Corbel 9 pt in muted, one title height below the claim</li><li>3 · unit line · the quantity and unit above the y axis, 7.5 pt muted, never a rotated label</li><li>4 · hairline grid · horizontal only, 0.6 pt in the grid colour, behind the data</li><li>5 · bottom spine · 0.8 pt in the grid colour; no top, left or right spine and no tick marks</li><li>6 · ringed end dot · 28 pt² in the tone with a 1.2 pt ring in the surface colour</li><li>7 · direct end label · 7.5 pt in ink beside the dot; pushed apart with a 0.5 pt muted leader when labels collide</li><li>8 · band · the tint at 0.55 opacity, no edge, explained by a quiet note</li><li>9 · reference line · 0.7 pt dotted (1 on 3 off) in ochre, labelled at its right end in muted</li><li>10 · quiet note · 7.5 pt muted, inside the plot where the data are not</li><li>11 · footer · source, script and git stamp, 6.5 pt muted, bottom left</li></ol></figure>
+<!--/fig-->
+
+<div class="grid grid-2">
+  <div>
+    <h3 class="mt-0">Title block</h3>
+    <p>Top left, flush with the left edge of the plot area. Line one: the claim, 13 pt Palatino, ink. Line two: the subtitle, 9 pt, muted: the data set, the sample, the key settings. The subtitle sits one title height below the title, whatever the height of the figure. In a journal the claim moves to the caption and the title block is dropped.</p>
+    <h3>Panel title and unit line</h3>
+    <p>A multi-panel figure gives each panel a bold letter and a claim at 9 pt in ink. Under it, the unit line at 7.5 pt in muted, left aligned above the y axis: the quantity and its unit. There is no rotated y label. The x label stays under the axis, in muted.</p>
+  </div>
+  <div>
+    <h3 class="mt-0">Plot area</h3>
+    <p>No frame. The bottom spine in the grid colour at 0.8 pt; no left, top or right spine. Horizontal gridlines only, hairline at 0.6 pt, solid, in the grid colour, behind the data. No tick marks, only labels, in muted at 8 pt. Three to five ticks per axis, at round numbers.</p>
+    <h3>Footer</h3>
+    <p>Bottom left, 6.5 pt, muted: the source, the script that drew it, and the git stamp with <code>-dirty</code> when the tree was not clean. A figure without a footer cannot be traced and is not finished. In a journal the footer's content moves to the caption or the data statement.</p>
+  </div>
+</div>
+
+<h2 id="marks">Marks</h2>
+<div class="split">
+  <div class="prose">
+    <p>Thin marks and a quiet grid make the data the loudest thing on the page. The ring on a marker keeps it legible where it crosses a line. A stroke around a bar is never used: the gap between bars does the separating.</p>
+    <p>In a paper the page is denser than a slide, so lines drop to 1.2 pt, member lines to 0.6 pt and markers to 20 pt² with a 1.0 pt ring.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <caption>Mark specifications, from <code>vellum.json</code></caption>
+      <thead><tr><th>mark</th><th>specification</th></tr></thead>
+      <tbody>
+        <tr><td>line</td><td>1.6 pt, round cap and join, in the tone</td></tr>
+        <tr><td>member line (seeds, runs, context)</td><td>0.7 pt in the tone; the mean on top at 1.6 pt</td></tr>
+        <tr><td>reference line</td><td>0.7 pt, dotted 1 on 3 off, ochre; label at the right end, muted</td></tr>
+        <tr><td>marker</td><td>28 pt² (about 6 px across), ringed 1.2 pt in the surface colour</td></tr>
+        <tr><td>bar</td><td>0.6 of the slot wide, no edge, the gap does the separating</td></tr>
+        <tr><td>band, area</td><td>the tint at 0.55 opacity, no edge line</td></tr>
+        <tr><td>nested bands</td><td>50, 80 and 95 per cent at 0.55, 0.30 and 0.15 opacity</td></tr>
+        <tr><td>error bar</td><td>0.7 pt in secondary, no caps</td></tr>
+        <tr><td>grid</td><td>0.6 pt, solid, horizontal only, grid colour</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2 id="spacers">The two spacers</h2>
+<div class="grid grid-2">
+  <div class="card">
+    <svg viewBox="0 0 300 110" role="img" aria-label="Stacked segments and heat map cells separated by gaps in the surface colour" style="width:100%">
+      <rect x="0" y="0" width="300" height="110" style="fill:var(--v-surface)"/>
+      <rect x="10" y="20" width="110" height="26" style="fill:var(--v-teal-tint)"/><rect x="122" y="20" width="70" height="26" style="fill:var(--v-terracotta-tint)"/><rect x="194" y="20" width="44" height="26" style="fill:var(--v-indigo-tint)"/><rect x="240" y="20" width="50" height="26" style="fill:var(--v-ochre-tint)"/>
+      <g><rect x="10" y="60" width="38" height="18" style="fill:#A5D5D7"/><rect x="50" y="60" width="38" height="18" style="fill:#73B9BC"/><rect x="90" y="60" width="38" height="18" style="fill:#429CA0"/><rect x="130" y="60" width="38" height="18" style="fill:#1B7D82"/>
+      <rect x="10" y="80" width="38" height="18" style="fill:#73B9BC"/><rect x="50" y="80" width="38" height="18" style="fill:#1B7D82"/><rect x="90" y="80" width="38" height="18" style="fill:#066166"/><rect x="130" y="80" width="38" height="18" style="fill:#034649"/></g>
+    </svg>
+    <h4>A gap of surface colour separates touching fills</h4>
+    <p class="secondary small mb-0">The segments of a stacked bar, the layers of a stacked area and the cells of a heat map (1.2 pt), and adjacent bars (the 0.4 of the slot left empty). Nothing is outlined.</p>
+  </div>
+  <div class="card">
+    <svg viewBox="0 0 300 110" role="img" aria-label="Overlapping dots separated by rings in the surface colour" style="width:100%">
+      <rect x="0" y="0" width="300" height="110" style="fill:var(--v-surface)"/>
+      <path d="M10 90 C 80 80, 160 40, 290 24" style="fill:none;stroke:var(--v-indigo);stroke-width:2.2"/>
+      <g style="stroke:var(--v-surface);stroke-width:2.2"><circle cx="70" cy="70" r="8" style="fill:var(--v-teal)"/><circle cx="82" cy="64" r="8" style="fill:var(--v-teal)"/><circle cx="92" cy="74" r="8" style="fill:var(--v-terracotta)"/><circle cx="150" cy="50" r="8" style="fill:var(--v-teal)"/><circle cx="160" cy="44" r="8" style="fill:var(--v-terracotta)"/><circle cx="210" cy="36" r="8" style="fill:var(--v-terracotta)"/></g>
+    </svg>
+    <h4>A ring of surface colour separates overlapping dots</h4>
+    <p class="secondary small mb-0">The ring is what keeps a dot legible where it crosses a line or another dot. It is part of the marker, not an outline.</p>
+  </div>
+</div>
+
+<h2 id="labels">Direct labels first</h2>
+<ol class="rules">
+  <li>A line is labelled at its end, in ink, 7.5 pt, six points to the right of the end dot. When ends collide, labels are pushed apart in order and joined to their line by a 0.5 pt leader in muted. <code>vellum.py</code> does this with <code>endlabels</code>; <code>vellum-web.js</code> with <code>endLabels</code>; both use the same <code>spread</code> algorithm.</li>
+  <li>A point of interest is labelled with a callout: ink text, a thin muted leader, no arrowhead.</li>
+  <li>A reference line is labelled at its right end, muted, above the line.</li>
+  <li>A quiet note (what the band is, how many seeds) goes in muted at 7.5 pt inside the plot, where the data are not.</li>
+  <li>Numbers on marks only when the number is the point: values on a short bar chart, never a value on every point of a line.</li>
+  <li>A legend box only for five or six series, flush top left inside the plot, without a frame; the end labels stay.</li>
+</ol>
+
+<h2 id="sizes">Named sizes</h2>
+<div class="split">
+  <div class="prose">
+    <p>A figure is drawn at the size it will be printed. <code>V.size("double")</code> in Python returns the size in inches; the other tools use the same table.</p>
+    <p>A thesis at 125 mm text width draws at 4.92 in wide. A paper uses the journal's own widths when they differ (88 or 180 mm for the Nature family). An infographic is drawn at its pixel size with <code>dpi=100</code>, so a 1080 px square is a 10.8 in figure.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>name</th><th class="r">width × height, in</th><th>for</th></tr></thead>
+      <tbody>
+        <tr><td><code>single</code></td><td class="r">3.5 × 2.5</td><td>one journal column</td></tr>
+        <tr><td><code>single_tall</code></td><td class="r">3.5 × 3.2</td><td>one column, a taller panel</td></tr>
+        <tr><td><code>square</code></td><td class="r">3.5 × 3.5</td><td>a matrix, a correlogram</td></tr>
+        <tr><td><code>double</code></td><td class="r">7.2 × 2.8</td><td>two columns</td></tr>
+        <tr><td><code>double_tall</code></td><td class="r">7.2 × 4.6</td><td>two columns, two rows of panels</td></tr>
+        <tr><td><code>slide</code></td><td class="r">10 × 5.2</td><td>a 16:9 frame below its title</td></tr>
+        <tr><td><code>slide_half</code></td><td class="r">4.9 × 5.2</td><td>beside four lines of text</td></tr>
+        <tr><td><code>poster</code></td><td class="r">12 × 7</td><td>the central figure of a poster, scaled ×2.6</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2 id="panels">Multi-panel figures</h2>
+<div class="prose">
+  <p>Letters a, b, c in bold before the panel claim. Panels in reading order, with the finding last: the eye leaves a page at the bottom right, so that is where the result goes. Shared axes share ticks, and the unit line appears once per row. Gaps between panels are 0.42 of a panel width horizontally and 0.55 of a panel height vertically when each panel has a title block.</p>
+  <p>Small multiples take the same axes everywhere, one family per panel, and the other members in rule grey behind, so each panel shows its member against the whole.</p>
+</div>
+<!--#fig science/life_small_multiples wide-->
+<figure class="figure wide" id="fig-science-life_small_multiples"><div class="frame"><img class="zoom twin-light " src="figures/science/life_small_multiples_light.png" data-full="figures/science/life_small_multiples_light.png" data-caption="Life expectancy rose in all 236 countries since 1950, but the trend hides collapses" alt="Six small line charts of life expectancy from 1950 to 2023 over all other countries in grey: Japan gained 25 years, steadily (1950: 59 years · no fall above 0.5 in a year); China lost 15 years to famine (1960: 33 years); Lebanon lost 30 years to civil war (1976: 36 years); Rwanda lost 31 years to genocide (1994: 12 years); Eswatini lost 18 years to HIV (2004: 44 years, peak 62 in 1988); Bolivia lost 6 years to covid-19 (2021: 61 years)." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/life_small_multiples_dark.png" data-full="figures/science/life_small_multiples_dark.png" data-caption="Life expectancy rose in all 236 countries since 1950, but the trend hides collapses" alt="Six small line charts of life expectancy from 1950 to 2023 over all other countries in grey: Japan gained 25 years, steadily (1950: 59 years · no fall above 0.5 in a year); China lost 15 years to famine (1960: 33 years); Lebanon lost 30 years to civil war (1976: 36 years); Rwanda lost 31 years to genocide (1994: 12 years); Eswatini lost 18 years to HIV (2004: 44 years, peak 62 in 1988); Bolivia lost 6 years to covid-19 (2021: 61 years)." loading="lazy" decoding="async"></div><figcaption>Our World in Data, period life expectancy at birth (UN WPP 2024 and others), 1950–2023, countries only<p class="fig-links"><a href="figures/science/life_small_multiples_light.png">PNG</a> <a href="figures/science/life_small_multiples_dark.png">PNG, dark</a> <a href="figures/science/life_small_multiples_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/life_small_multiples.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+
+</main>
+
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <ul class="footer-nav">
+        <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
+        <li><a href="forms.html">Forms</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="interactive.html">Interactive</a></li>
+        <li><a href="media.html">Media</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
+      </ul>
+      <p><span class="serif" style="font-size:1.1rem;color:var(--v-ink)">Vellum</span>, a visual language for figures, by <a href="https://akaminas.github.io/">Alexandros Kaminas</a>.</p>
+      <p>Code under the MIT licence; text and figures under CC BY 4.0. Every figure on this site is drawn by a script in <a href="https://github.com/akaminas/vellum">the repository</a> from the data listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">data/SOURCES.md</a>.</p>
+    </div>
+    <div>
+      <p>Built from <code>style/vellum.json</code> · git 99753b9</p>
+      <p><a href="downloads/vellum-style.zip">Download the style files</a></p>
+      <p>Site design after <a href="https://www.visualcinnamon.com/">Visual Cinnamon</a> and <a href="https://r-graph-gallery.com/">the R Graph Gallery</a>.</p>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+</body>
+</html>

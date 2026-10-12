@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<!--#head-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){var t=new URLSearchParams(location.search).get("theme");if(t!=="light"&&t!=="dark"){t=null;try{t=localStorage.getItem("vellum-theme")}catch(e){}}if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/vellum-tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="module" src="assets/js/site.js"></script>
+<!--/head-->
+<title>Media · Vellum</title>
+<meta name="description" content="Vellum in each medium: journal papers, a dissertation, an A0 conference poster, a talk in the dark twin, a pitch deck, an A4 report and social infographics. The medium changes the sizes and the density, never the palette, the fonts or the anatomy.">
+</head>
+<body>
+<!--#header-->
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <nav class="nav-half nav-left" aria-label="The style">
+      <a href="principles.html">Principles</a>
+      <a href="colour.html">Colour</a>
+      <a href="anatomy.html">Anatomy</a>
+      <a href="forms.html">Forms</a>
+    </nav>
+    <a class="brand" href="index.html" aria-label="Vellum, home" title="Vellum">
+      <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true">
+        <circle cx="15.87" cy="5.04" r="4.3" style="fill:var(--v-ochre)"/>
+        <circle cx="22.66" cy="8.57" r="4.3" style="fill:var(--v-terracotta)"/>
+        <circle cx="24.06" cy="19.23" r="4.3" style="fill:var(--v-mauve)"/>
+        <circle cx="14.13" cy="24.96" r="4.3" style="fill:var(--v-indigo)"/>
+        <circle cx="5.60" cy="18.42" r="4.3" style="fill:var(--v-teal)"/>
+        <circle cx="7.34" cy="8.57" r="4.3" style="fill:var(--v-moss)"/>
+      </svg>
+      <span class="brand-word">Vellum</span>
+    </a>
+    <nav class="nav-half nav-right" aria-label="The work">
+      <a href="gallery.html">Gallery</a>
+      <a href="interactive.html">Interactive</a>
+      <a href="media.html">Media</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+  </div>
+  <div class="header-tools">
+    <button class="icon-btn theme-toggle" type="button" aria-label="Switch twin">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+    </button>
+    <a class="icon-btn" href="https://github.com/akaminas/vellum" aria-label="The repository on GitHub">
+      <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+    </a>
+  </div>
+</header>
+<!--/header-->
+
+<main id="main" class="wrap">
+
+<header class="page-head">
+  <span class="eyebrow">Media</span>
+  <h1>The medium changes the sizes and the density, never the palette</h1>
+  <p class="lead">A journal column, a thesis, an A0 poster, a talk in a dark hall, a pitch deck read without a speaker, an A4 report and a phone-sized infographic. Each medium has its own sizes, density and reader, and each one keeps the same palette, fonts and anatomy. Three of the examples below tell one story, life expectancy since 1950, in three formats.</p>
+  <ul class="toc">
+    <li><a href="#paper">Papers</a></li>
+    <li><a href="#thesis">Dissertation</a></li>
+    <li><a href="#poster">Posters</a></li>
+    <li><a href="#talk">Talks</a></li>
+    <li><a href="#pitch">Pitch decks</a></li>
+    <li><a href="#report">Reports</a></li>
+    <li><a href="#infographic">Infographics</a></li>
+  </ul>
+</header>
+
+<section class="project-hero bleed" id="paper" style="--pos:50% 50%">
+  <img class="twin-light" src="figures/science/journal_penguins_light.png" alt="" loading="lazy">
+  <img class="twin-dark" src="figures/science/journal_penguins_dark.png" alt="" loading="lazy">
+  <div class="title-card"><span class="mono-label">Papers · 89 or 183 mm · matplotlib</span><h2>Papers: the title moves to the caption</h2></div>
+</section>
+<div class="split">
+  <div class="prose">
+    <p>A paper figure is Vellum with the title block removed. Everything else stays, which is how a paper is still recognisable as yours. The claim becomes the first sentence of the caption; the subtitle's content becomes the caption's next sentences; panel letters stay in the figure and panel claims become the caption's lettered sentences. The footer's content goes in the data and code availability statement, and the file name carries the stamp.</p>
+    <p>Single column 3.5 in (89 mm), double 7.2 in (183 mm), drawn at the final width and never scaled into a column. Lines 1.2 pt instead of 1.6, markers 20 pt². Four series per panel at most. The figure must survive greyscale printing, which the alternating lightness of the tones guarantees. A journal's own requirements take precedence: if it names a font, use it and keep every other rule.</p>
+  </div>
+  <div class="card">
+    <h4 class="mt-0">Files for a journal</h4>
+    <p class="small secondary">Vector PDF with the fonts embedded (<code>pdf.fonttype 42</code>), one file per figure, named <code>fig2_claim_&lt;sha&gt;.pdf</code>. TIFF or EPS converted from the PDF at 600 dpi for line art, never redrawn. Composite figures are composed in the plotting script, not in a drawing program, so they regenerate. A heat map takes one family or lagoon with a legend bar; a 3D figure is allowed once, with its 2D twin as panel b.</p>
+  </div>
+</div>
+<!--#fig science/journal_penguins wide-->
+<figure class="figure wide" id="fig-science-journal_penguins"><div class="frame"><img class="zoom twin-light " src="figures/science/journal_penguins_light.png" data-full="figures/science/journal_penguins_light.png" data-caption="Beak depth falls with beak length across all penguins but rises within every species" alt="Three panels. a: beak depth against beak length; the pooled fit slopes down (r = −0.24) while each species&#x27; fit slopes up. b: Gentoo beaks are about 3.4 mm shallower than Adelie and Chinstrap in both sexes. c: correlations with intervals, negative pooled and positive within species (0.53)." loading="lazy" decoding="async"><img class="zoom twin-dark " src="figures/science/journal_penguins_dark.png" data-full="figures/science/journal_penguins_dark.png" data-caption="Beak depth falls with beak length across all penguins but rises within every species" alt="Three panels. a: beak depth against beak length; the pooled fit slopes down (r = −0.24) while each species&#x27; fit slopes up. b: Gentoo beaks are about 3.4 mm shallower than Adelie and Chinstrap in both sexes. c: correlations with intervals, negative pooled and positive within species (0.53)." loading="lazy" decoding="async"></div><figcaption>Beak depth falls with beak length across all penguins but rises within every species. a, Beak length against beak depth for 342 penguins; the grey line is the least-squares fit to all birds (r = −0.24), the coloured lines are fits within each species (r = 0.39, 0.65 and 0.64 for Adelie, Chinstrap and Gentoo). b, Beak depth by species and sex; small dots are birds, ringed dots are means. Gentoo beaks are 3.4 to 3.5 mm shallower than those of the other species of the same sex, and males are deeper than females by 1.5 to 1.7 mm in every species, so the differences between species, not the relation within them, make the pooled slope negative. c, Pearson r between beak length and depth with 95 % intervals from Fisher&#x27;s z: the sign turns positive once species is taken into account (r = 0.53) and stays positive within species and sex (r = 0.19). n = 342 birds with complete measurements, 333 with recorded sex (b and the last row of c). Data: Palmer penguins, Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via the palmerpenguins R package and vega-datasets 2.8.0; figure drawn by examples/python/science/journal_penguins.py at git 99753b9-dirty.<br>Palmer penguins, Gorman, Williams and Fraser (2014), 342 birds with complete measurements<p class="fig-links"><a href="figures/science/journal_penguins_light.png">PNG</a> <a href="figures/science/journal_penguins_dark.png">PNG, dark</a> <a href="figures/science/journal_penguins_light.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/science/journal_penguins.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+
+<section class="project-hero bleed" id="thesis" style="--pos:50% 45%">
+  <img class="twin-light" src="figures/colour/anatomy_light.png" alt="" loading="lazy">
+  <img class="twin-dark" src="figures/colour/anatomy_dark.png" alt="" loading="lazy">
+  <div class="title-card"><span class="mono-label">Dissertation · 125 mm text width</span><h2>Dissertation: the whole style, without exception</h2></div>
+</section>
+<div class="split">
+  <div class="prose">
+    <p>A thesis is read from the figures first. Every figure is a card a reader can take out of the chapter and understand alone, so unlike a paper the thesis figure keeps its claim title and subtitle inside the figure, and the caption below repeats the claim in one sentence and adds how to read it.</p>
+    <p>Body in TeX Gyre Pagella 11 pt on a 125 mm text width; Lato for captions, tables, margin notes and figure text; chapter numbers in the teal tone; links in the indigo tone without boxes. Figures are drawn 4.92 in wide. Tables in Lato with lining figures, no vertical rules, a 0.5 pt ink rule above and below the header and at the foot, alternate rows in the card colour.</p>
+  </div>
+  <div class="key">
+    <p><strong>One language across chapters.</strong> The semantic slots hold for the whole thesis: the model is teal, data and the highlighted thing terracotta, bounds ochre and dotted. A reader who learned the colours in chapter 2 reads chapter 5 without a legend. One gradient per variable for the whole thesis.</p>
+    <p class="secondary">Before the final build, print one chapter in greyscale on the department printer. A figure that fails gets a label, not a louder colour.</p>
+  </div>
+</div>
+
+<section class="project-hero bleed" id="poster" style="--pos:50% 42%">
+  <img src="media/poster/poster.png" alt="" loading="lazy">
+  <div class="title-card"><span class="mono-label">Conference poster · A0 portrait · beamerposter</span><h2>Posters: one figure with a title, not a paper on a wall</h2></div>
+</section>
+<div class="split">
+  <div>
+    <p>A0 portrait, read from two metres, one claim. A white sheet with cream column cards, one large central figure, three short columns of text, and a Palatino headline at 90 pt that states the claim. Body 28 pt, figure body 23 pt, nothing under 18 pt, under 300 words in all.</p>
+    <p>One accent, the teal tone, for headings and the highlighted series; terracotta for the single most important number, set as a stat tile. A poster that uses all six families outside its figure looks like a flyer. It may carry the one unusual form Vellum allows per piece, here a 3D scatter with its 2D twin beside it, because a reader standing in front of it has time to learn it.</p>
+    <p class="small muted">Built with beamerposter and <code>vellum-colors.sty</code>; the central figure is drawn by <code>vellum.py</code> at the poster size, the one medium where a figure is scaled, by exactly 2.6.</p>
+  </div>
+  <div>
+    <!--#fig poster/poster-->
+<figure class="figure " id="fig-poster-poster"><div class="frame"><img class="zoom " src="media/poster/poster.png" data-full="media/poster/poster.png" data-caption="Beak shape, not body size, tells penguin species apart" alt="An A0 portrait poster on white with cream cards. Headline: beak shape, not body size, tells penguin species apart. The central figure is a 3D scatter of beak depth, beak length and flipper length for 342 penguins of three species, with its beak-length against beak-depth twin beside it. Stat tile: 94 % of birds are placed in their own species by beak length and depth (leave-one-out nearest species mean), against 63 % by body mass alone." loading="lazy" decoding="async"></div><figcaption>Palmer penguins: Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via the palmerpenguins R package and vega-datasets 2.8.0 (CC0) · Figure and every number by examples/python/poster/make_poster_figures.py (light, scale 2.6 on 2.6 x V.size(&#x27;poster&#x27;), placed at 1:1); built by examples/latex/poster/build.py. QR code to https://akaminas.github.io/vellum/ by the qrcode package.<p class="fig-links"><a href="media/poster/poster.png">PNG</a> <a href="media/poster/poster.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/poster/poster.tex">Script</a></p></figcaption></figure>
+<!--/fig-->
+  </div>
+</div>
+
+<section class="project-hero bleed" id="talk" style="--pos:50% 50%">
+  <img src="media/talk/talk-08.png" alt="" loading="lazy">
+  <div class="title-card"><span class="mono-label">Talk · 16:9 · beamer, dark twin</span><h2>Talks: a figure with a sentence</h2></div>
+</section>
+<div class="split">
+  <div class="prose">
+    <p>A slide is a figure with a sentence. The sentence is the frame title and it is the claim; the figure's own title block is dropped. The dark twin for a projector in a dark hall, where it hides the projector's weakness and the light tones glow; the light twin for a meeting room with daylight or a deck that will be read later. Decide once per deck.</p>
+    <p>A figure with four series is shown in four steps, each adding a series in its slot colour while the earlier ones stay. A surface is shown at two or three fixed views on consecutive slides, never spinning, and its flat twin follows. No bullet list longer than four, no logo on every slide, no text under 16 pt.</p>
+  </div>
+  <div class="card">
+    <h4 class="mt-0">Sizes on a 16:9 frame</h4>
+    <p class="small secondary">Title 28 pt Palatino, body 20 pt Lato at most four lines, figure text at the print scale times 2.2, footer 10 pt muted with the short title, slide number and stamp. Margins 8 mm. Figures drawn at <code>V.size("slide")</code>, 10 × 5.2 in, with <code>vellum.use("dark", scale=2.2)</code>.</p>
+  </div>
+</div>
+<!--#viewer talk/talk-->
+<div class="viewer" data-pages="[&quot;media/talk/talk-01.png&quot;, &quot;media/talk/talk-02.png&quot;, &quot;media/talk/talk-03.png&quot;, &quot;media/talk/talk-04.png&quot;, &quot;media/talk/talk-05.png&quot;, &quot;media/talk/talk-06.png&quot;, &quot;media/talk/talk-07.png&quot;, &quot;media/talk/talk-08.png&quot;, &quot;media/talk/talk-09.png&quot;, &quot;media/talk/talk-10.png&quot;, &quot;media/talk/talk-11.png&quot;, &quot;media/talk/talk-12.png&quot;, &quot;media/talk/talk-13.png&quot;, &quot;media/talk/talk-14.png&quot;]" data-alt="beamer deck" aria-label="A dark 16:9 deck of 11 frames (14 pages with the diagram&#x27;s build steps). In an illustrative simulation on a two-peak landscape, most random starts end on the lower peak at fitness 0.72, not on the higher one at 1.00; four populations are revealed one by one, the surface is shown at two fixed views and then as a heat map with the basin boundary."><div class="viewer-stage" style="aspect-ratio:1600/900"><img alt=""></div><div class="viewer-bar"><button class="btn prev" type="button">Previous</button><span class="viewer-count"></span><button class="btn next" type="button">Next</button></div><div class="viewer-strip"></div></div><div class="fig-meta">illustrative simulation on the analytic landscape w(z1, z2) of examples/python/_common.py; not data · Illustrative simulation, labelled on every slide. Figures by examples/python/talk/make_talk_figures.py, built by examples/latex/talk/build.py. The page is the 160 x 90 mm frame enlarged by 1.764 so the 10 in slide figure and the 28/20/10 pt type sizes hold at 1:1.<p class="fig-links"><a href="media/talk/talk-01.png">PNG</a> <a href="media/talk/talk.pdf">PDF</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/latex/talk/talk.tex">Script</a></p></div>
+<!--/viewer-->
+
+<section class="project-hero bleed" id="pitch" style="--pos:50% 50%">
+  <img src="media/pitch/slide-05.png" alt="" loading="lazy">
+  <div class="title-card"><span class="mono-label">Pitch deck · ten slides · HTML</span><h2>Pitch decks: larger numbers, fewer figures</h2></div>
+</section>
+<div class="split">
+  <div class="prose">
+    <p>A deck for a funder, a partner or a committee: ten to fifteen slides, read without a speaker as often as with one. Light mode. The reader is not an expert, so every figure is a plain form, every number is a stat tile, and the terracotta highlight is used once per slide for the thing to remember.</p>
+    <p>Teal for structure, terracotta for the one thing that matters, everything else in ink, secondary, muted and card. A deck that uses mauve or ochre outside a chart has lost its discipline. Every slide stands alone: its title is the claim, a line under the figure says where the number comes from, and the footer carries the source and date.</p>
+  </div>
+  <div class="card">
+    <h4 class="mt-0">The arc, in ten slides</h4>
+    <ol class="small secondary mb-0">
+      <li>The one-sentence claim.</li><li>The problem, as one stat tile.</li><li>What exists and why it is not enough.</li><li>The approach, as at most five boxes.</li><li>Evidence: one figure, one highlighted series.</li><li>Evidence: small multiples.</li><li>What it delivers: three stat tiles.</li><li>The plan: a timeline of milestones.</li><li>The ask: one number in terracotta.</li><li>Contact and the stamp.</li>
+    </ol>
+  </div>
+</div>
+<!--#viewer pitch/pitch-->
+<div class="viewer" data-pages="[&quot;media/pitch/slide-01.png&quot;, &quot;media/pitch/slide-02.png&quot;, &quot;media/pitch/slide-03.png&quot;, &quot;media/pitch/slide-04.png&quot;, &quot;media/pitch/slide-05.png&quot;, &quot;media/pitch/slide-06.png&quot;, &quot;media/pitch/slide-07.png&quot;, &quot;media/pitch/slide-08.png&quot;, &quot;media/pitch/slide-09.png&quot;, &quot;media/pitch/slide-10.png&quot;]" data-alt="pitch deck, 10 slides" aria-label="Ten-slide pitch deck. Evidence: world life expectancy fell 1.7 years in 2020–21, the deepest fall since 1960; regional falls ranged from 0.1 to 3.4 years; every region was back above its 2019 level by 2023. The ask, illustrative: €1.2 million over two years."><div class="viewer-stage" style="aspect-ratio:3200/1800"><img alt=""></div><div class="viewer-bar"><button class="btn prev" type="button">Previous</button><span class="viewer-count"></span><button class="btn next" type="button">Next</button></div><div class="viewer-strip"></div></div><div class="fig-meta">UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0 · Illustrative proposal: the pipeline, plan, budget and ask are invented; the evidence slides use real data.<p class="fig-links"><a href="media/pitch/slide-01.png">PNG</a> <a href="media/pitch/pitch.pdf">PDF</a> <a href="media/pitch/pitch.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/pitch/make_pitch.py">Script</a></p></div>
+<!--/viewer-->
+
+<section class="project-hero bleed" id="report" style="--pos:50% 28%">
+  <img src="media/report/page-2.png" alt="" loading="lazy">
+  <div class="title-card"><span class="mono-label">Report · A4 · HTML and matplotlib</span><h2>Reports: an argument with figures at its joints</h2></div>
+</section>
+<div class="split">
+  <div class="prose">
+    <p>Define the order of the argument before drawing anything: the situation, the trend, the gap, the options, the ask. Each section has one figure that carries its claim; the executive summary repeats the claims as the figure titles. Every title is a claim a minister could repeat. Units in words, years as years, projections as tint bands with the line dotted after the last observed year, sources under every figure with the year of the data.</p>
+    <p>A4, 20 mm margins, a twelve-column grid with 4 mm gutters, body 10.5 pt, headings in Palatino. Key messages in cream boxes with a 2 pt teal rule on the left and no other border. Plain forms throughout and one memorable form per report. Country comparisons are dot plots sorted by value with the focal countries in terracotta, never a bar chart of forty bars in six colours.</p>
+  </div>
+  <div class="key">
+    <p><strong>Living beside a host brand.</strong> The host's logo, cover and heading colour are the host's. Inside the figures, Vellum's rules stand. The host's primary colour may take slot one if it passes the same checks (ΔE 15 from terracotta, 3:1 on white); otherwise it stays outside the figures.</p>
+    <p class="secondary">The seventeen SDG colours are a brand, not a palette: they fail every distance check beside each other. Use them only as a small icon beside a goal's name.</p>
+  </div>
+</div>
+<!--#viewer report/report-->
+<div class="viewer" data-pages="[&quot;media/report/page-1.png&quot;, &quot;media/report/page-2.png&quot;, &quot;media/report/page-3.png&quot;]" data-alt="A4 report, 3 pages" aria-label="Page one of a three-page A4 report: a summary of five claims, three stat tiles and a line chart of world life expectancy, which rose from 46.4 years in 1950 to 73.2 in 2023."><div class="viewer-stage" style="aspect-ratio:1588/2246;max-width:620px;margin:0 auto"><img alt=""></div><div class="viewer-bar"><button class="btn prev" type="button">Previous</button><span class="viewer-count"></span><button class="btn next" type="button">Next</button></div><div class="viewer-strip"></div></div><div class="fig-meta">Period life expectancy at birth, UN World Population Prospects (2024) and others, processed by Our World in Data, 1950–2023; country outlines and 2019 population estimates, Natural Earth v5.1.2 · Illustrative layout, real data. Every number is computed by the script and written to media/report/numbers.json.<p class="fig-links"><a href="media/report/page-1.png">PNG</a> <a href="media/report/report.pdf">PDF</a> <a href="media/report/index.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/report/make_report.py">Script</a></p></div>
+<!--/viewer-->
+
+<section class="project-hero bleed" id="infographic" style="--pos:50% 22%">
+  <img src="media/infographic/story.png" alt="" loading="lazy">
+  <div class="title-card"><span class="mono-label">Infographic · 1080 × 1920 px · HTML and SVG</span><h2>Infographics: the number first, then the headline</h2></div>
+</section>
+<div class="split">
+  <div class="prose">
+    <p>A one-page explainer read in under a minute by someone who did not ask for it. Three to five stat tiles and one figure on a white sheet with cream tiles and a Palatino headline. The reader meets the number, then the headline, then the sentence, then the source, and there are no other text sizes. It is the one medium where tints may be used as large blocks.</p>
+    <p>At 1080 px: a 64 px margin, twelve columns with 24 px gutters, an 8 px base unit, at least 30 per cent empty, at most 80 words. Areas proportional to values, bars from zero, the base of every comparison in its label. Two families and one terracotta highlight outside the figure. Never a gradient, never a photograph behind text, never 3D.</p>
+  </div>
+  <div class="card">
+    <h4 class="mt-0">One master, several formats</h4>
+    <p class="small secondary">Design the portrait story (1080 × 1920) first, as a stack of cards; the square is its first three cards. Every format is rendered from the same script with its own size, and every number is printed by the script from the data, not typed. A change in the data regenerates every format.</p>
+  </div>
+</div>
+<div class="grid grid-2">
+  <!--#fig infographic/square-->
+<figure class="figure " id="fig-infographic-square"><div class="frame"><img class="zoom " src="media/infographic/square.png" data-full="media/infographic/square.png" data-caption="The pandemic brought world life expectancy its deepest fall since 1960" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years." loading="lazy" decoding="async"></div><figcaption>UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0 · One master, several formats: the same numbers and line chart as the story and the A4 report, all computed from the data file.<p class="fig-links"><a href="media/infographic/square.png">PNG</a> <a href="media/infographic/square.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/infographic/make_infographics.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+  <!--#fig infographic/story-->
+<figure class="figure " id="fig-infographic-story"><div class="frame"><img class="zoom " src="media/infographic/story.png" data-full="media/infographic/story.png" data-caption="The pandemic brought world life expectancy its deepest fall since 1960" alt="World life expectancy fell 1.7 years in 2020–21, from 72.6 to 70.9 years, the deepest fall since 1960; by 2023 it reached a record 73.2 years. 90 % of 236 countries and territories were at or above their 2019 level in 2023." loading="lazy" decoding="async"></div><figcaption>UN World Population Prospects (2024), Human Mortality Database (2024), Zijdeman and Ribeira da Silva (2015), Riley (2005); processed by Our World in Data, downloaded 2026-10-12; CC BY 4.0 · One master, several formats: the same numbers and line chart as the story and the A4 report, all computed from the data file.<p class="fig-links"><a href="media/infographic/story.png">PNG</a> <a href="media/infographic/story.html">Open the page</a> <a href="https://github.com/akaminas/vellum/blob/main/examples/python/infographic/make_infographics.py">Script</a></p></figcaption></figure>
+<!--/fig-->
+</div>
+
+</main>
+
+<!--#footer-->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <ul class="footer-nav">
+        <li><a href="principles.html">Principles</a></li><li><a href="colour.html">Colour</a></li><li><a href="anatomy.html">Anatomy</a></li>
+        <li><a href="forms.html">Forms</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="interactive.html">Interactive</a></li>
+        <li><a href="media.html">Media</a></li><li><a href="tools.html">Tools</a></li><li><a href="checklist.html">Checklist</a></li>
+      </ul>
+      <p><span class="serif" style="font-size:1.1rem;color:var(--v-ink)">Vellum</span>, a visual language for figures, by <a href="https://akaminas.github.io/">Alexandros Kaminas</a>.</p>
+      <p>Code under the MIT licence; text and figures under CC BY 4.0. Every figure on this site is drawn by a script in <a href="https://github.com/akaminas/vellum">the repository</a> from the data listed in <a href="https://github.com/akaminas/vellum/blob/main/data/SOURCES.md">data/SOURCES.md</a>.</p>
+    </div>
+    <div>
+      <p>Built from <code>style/vellum.json</code> · git 99753b9</p>
+      <p><a href="downloads/vellum-style.zip">Download the style files</a></p>
+      <p>Site design after <a href="https://www.visualcinnamon.com/">Visual Cinnamon</a> and <a href="https://r-graph-gallery.com/">the R Graph Gallery</a>.</p>
+    </div>
+  </div>
+</footer>
+<!--/footer-->
+</body>
+</html>

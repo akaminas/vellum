@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use Vellum in your figures, please cite it as below."
+title: "Vellum: a visual language for figures"
+type: software
+authors:
+  - family-names: Kaminas
+    given-names: Alexandros
+repository-code: "https://github.com/akaminas/vellum"
+url: "https://akaminas.github.io/vellum/"
+license: MIT
+version: "1.0"
+date-released: "2026-10-12"
+keywords: [data visualization, colour palette, OKLCH, matplotlib, ggplot2, pgfplots, scientific figures]

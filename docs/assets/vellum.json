@@ -1,0 +1,473 @@
+{
+ "name": "Vellum",
+ "version": "1.0",
+ "description": "White page with warm cream cards, six earth-pigment hue families, each in three steps of one hue angle (tint, tone, deep). Chroma held in the muted band (OKLCH C about 0.085 for tones, 0.05 for tints). Dark twin on warm charcoal.",
+ "families": [
+  {
+   "name": "teal",
+   "hue": 200,
+   "light": {
+    "tint": "#A5D5D7",
+    "tone": "#419BA0",
+    "deep": "#004C50"
+   },
+   "dark": {
+    "tint": "#3F6C6E",
+    "tone": "#8AE2E7",
+    "deep": "#BFEFF2"
+   }
+  },
+  {
+   "name": "terracotta",
+   "hue": 40,
+   "light": {
+    "tint": "#E8C0B2",
+    "tone": "#A1644F",
+    "deep": "#613425"
+   },
+   "dark": {
+    "tint": "#7D5A4E",
+    "tone": "#E8A68F",
+    "deep": "#FFDCD0"
+   }
+  },
+  {
+   "name": "indigo",
+   "hue": 265,
+   "light": {
+    "tint": "#BBCBEC",
+    "tone": "#415688",
+    "deep": "#304168"
+   },
+   "dark": {
+    "tint": "#556380",
+    "tone": "#8099CF",
+    "deep": "#D8E5FF"
+   }
+  },
+  {
+   "name": "ochre",
+   "hue": 85,
+   "light": {
+    "tint": "#DAC9A6",
+    "tone": "#806629",
+    "deep": "#533F0D"
+   },
+   "dark": {
+    "tint": "#706142",
+    "tone": "#E1C487",
+    "deep": "#F4E3BF"
+   }
+  },
+  {
+   "name": "mauve",
+   "hue": 335,
+   "light": {
+    "tint": "#E0BFD8",
+    "tone": "#AD78A1",
+    "deep": "#593351"
+   },
+   "dark": {
+    "tint": "#76596F",
+    "tone": "#B984AD",
+    "deep": "#FBD9F2"
+   }
+  },
+  {
+   "name": "moss",
+   "hue": 140,
+   "light": {
+    "tint": "#BAD3B4",
+    "tone": "#567E4D",
+    "deep": "#2D4B27"
+   },
+   "dark": {
+    "tint": "#546B4F",
+    "tone": "#93BD89",
+    "deep": "#D4EDCE"
+   }
+  }
+ ],
+ "order": [
+  "teal",
+  "terracotta",
+  "indigo",
+  "ochre",
+  "mauve",
+  "moss"
+ ],
+ "slots": {
+  "primary": "teal",
+  "secondary": "terracotta",
+  "tertiary": "indigo",
+  "quaternary": "ochre",
+  "quinary": "mauve",
+  "senary": "moss",
+  "highlight": "terracotta",
+  "baseline": "indigo",
+  "reference": "ochre",
+  "model": "teal",
+  "data": "terracotta",
+  "mainland": "indigo",
+  "island": "teal"
+ },
+ "light": {
+  "neutrals": {
+   "surface": "#FFFFFF",
+   "card": "#FAF6EE",
+   "grid": "#E6E0D4",
+   "rule": "#C7C3BD",
+   "muted": "#8A857C",
+   "secondary": "#5A5650",
+   "ink": "#2A2825"
+  },
+  "tone": [
+   "#419BA0",
+   "#A1644F",
+   "#415688",
+   "#806629",
+   "#AD78A1",
+   "#567E4D"
+  ],
+  "tint": [
+   "#A5D5D7",
+   "#E8C0B2",
+   "#BBCBEC",
+   "#DAC9A6",
+   "#E0BFD8",
+   "#BAD3B4"
+  ],
+  "deep": [
+   "#004C50",
+   "#613425",
+   "#304168",
+   "#533F0D",
+   "#593351",
+   "#2D4B27"
+  ],
+  "sequential": {
+   "teal": [
+    "#D2EEF0",
+    "#A5D5D7",
+    "#73B9BC",
+    "#429CA0",
+    "#1B7D82",
+    "#066166",
+    "#034649"
+   ],
+   "terracotta": [
+    "#FBE2D9",
+    "#E8C0B2",
+    "#D29C8A",
+    "#B97A65",
+    "#995D48",
+    "#784634",
+    "#583224"
+   ],
+   "indigo": [
+    "#DEE8FD",
+    "#BBCBEC",
+    "#95ABD8",
+    "#738BC0",
+    "#566DA0",
+    "#41547F",
+    "#2E3C5D"
+   ],
+   "ochre": [
+    "#F1E7D2",
+    "#DAC9A6",
+    "#BFA878",
+    "#A4884D",
+    "#856B2F",
+    "#68521E",
+    "#4C3A13"
+   ],
+   "mauve": [
+    "#F5E1F0",
+    "#E0BFD8",
+    "#C79BBD",
+    "#AD78A1",
+    "#8D5B82",
+    "#6F4566",
+    "#50314A"
+   ],
+   "moss": [
+    "#DEEDDA",
+    "#BAD3B4",
+    "#94B68C",
+    "#709967",
+    "#537B4B",
+    "#3E5F37",
+    "#2C4526"
+   ]
+  },
+  "diverging": [
+   "#784634",
+   "#995D48",
+   "#B97A65",
+   "#D29C8A",
+   "#E8C0B2",
+   "#E1DDD8",
+   "#A5D5D7",
+   "#73B9BC",
+   "#429CA0",
+   "#1B7D82",
+   "#066166"
+  ],
+  "status": {
+   "good": "#007835",
+   "warning": "#DAB327",
+   "serious": "#CA6719",
+   "critical": "#B02A2D"
+  },
+  "checks": {
+   "min_nv": 18.3,
+   "min_cvd": 11.4,
+   "min_contrast": 3.03
+  }
+ },
+ "dark": {
+  "neutrals": {
+   "surface": "#2A2520",
+   "card": "#342F2A",
+   "grid": "#413C36",
+   "rule": "#5A544D",
+   "muted": "#A29E96",
+   "secondary": "#C9C4BB",
+   "ink": "#ECE7DF"
+  },
+  "tone": [
+   "#8AE2E7",
+   "#E8A68F",
+   "#8099CF",
+   "#E1C487",
+   "#B984AD",
+   "#93BD89"
+  ],
+  "tint": [
+   "#3F6C6E",
+   "#7D5A4E",
+   "#556380",
+   "#706142",
+   "#76596F",
+   "#546B4F"
+  ],
+  "deep": [
+   "#BFEFF2",
+   "#FFDCD0",
+   "#D8E5FF",
+   "#F4E3BF",
+   "#FBD9F2",
+   "#D4EDCE"
+  ],
+  "sequential": {
+   "teal": [
+    "#034649",
+    "#066166",
+    "#1B7D82",
+    "#429CA0",
+    "#73B9BC",
+    "#A5D5D7",
+    "#D2EEF0"
+   ],
+   "terracotta": [
+    "#583224",
+    "#784634",
+    "#995D48",
+    "#B97A65",
+    "#D29C8A",
+    "#E8C0B2",
+    "#FBE2D9"
+   ],
+   "indigo": [
+    "#2E3C5D",
+    "#41547F",
+    "#566DA0",
+    "#738BC0",
+    "#95ABD8",
+    "#BBCBEC",
+    "#DEE8FD"
+   ],
+   "ochre": [
+    "#4C3A13",
+    "#68521E",
+    "#856B2F",
+    "#A4884D",
+    "#BFA878",
+    "#DAC9A6",
+    "#F1E7D2"
+   ],
+   "mauve": [
+    "#50314A",
+    "#6F4566",
+    "#8D5B82",
+    "#AD78A1",
+    "#C79BBD",
+    "#E0BFD8",
+    "#F5E1F0"
+   ],
+   "moss": [
+    "#2C4526",
+    "#3E5F37",
+    "#537B4B",
+    "#709967",
+    "#94B68C",
+    "#BAD3B4",
+    "#DEEDDA"
+   ]
+  },
+  "diverging": [
+   "#E8C0B2",
+   "#D29C8A",
+   "#B97A65",
+   "#995D48",
+   "#784634",
+   "#585550",
+   "#066166",
+   "#1B7D82",
+   "#429CA0",
+   "#73B9BC",
+   "#A5D5D7"
+  ],
+  "status": {
+   "good": "#5FC27A",
+   "warning": "#DAB327",
+   "serious": "#F08A3C",
+   "critical": "#F06B6B"
+  },
+  "checks": {
+   "min_nv": 18.4,
+   "min_cvd": 11.3,
+   "min_contrast": 5.03
+  }
+ },
+ "gradients": {
+  "lagoon": {
+   "hues": [
+    140,
+    200,
+    265
+   ],
+   "use": "general magnitude with more range than one family: moss to teal to indigo",
+   "light": [
+    "#E4EFE2",
+    "#BADEC5",
+    "#8FCBB5",
+    "#66B6AC",
+    "#459FA4",
+    "#378598",
+    "#386C86",
+    "#3A536B",
+    "#383D48"
+   ],
+   "dark": [
+    "#333B31",
+    "#34533E",
+    "#2F6A58",
+    "#2D8178",
+    "#3B969A",
+    "#5BA8BC",
+    "#84B9D6",
+    "#AFCBE7",
+    "#D7DEEC"
+   ]
+  },
+  "ember": {
+   "hues": [
+    85,
+    40,
+    -25
+   ],
+   "use": "warm magnitude, a heat or a risk: ochre to terracotta to mauve",
+   "light": [
+    "#F1EADC",
+    "#E8CFB0",
+    "#DDB38E",
+    "#CF9777",
+    "#BC7D67",
+    "#A46662",
+    "#87545D",
+    "#664554",
+    "#443941"
+   ],
+   "dark": [
+    "#3D372C",
+    "#5B462B",
+    "#7A5533",
+    "#976344",
+    "#B2745F",
+    "#C98883",
+    "#D99FA9",
+    "#E2BBCB",
+    "#E7D9E3"
+   ]
+  },
+  "shore": {
+   "hues": [
+    85,
+    140,
+    200
+   ],
+   "use": "neutral-warm to cool magnitude: ochre to moss to teal",
+   "light": [
+    "#F1EADC",
+    "#DBD5AF",
+    "#BCC18E",
+    "#98AF77",
+    "#739C6A",
+    "#508864",
+    "#37725F",
+    "#2D5A54",
+    "#314041"
+   ],
+   "dark": [
+    "#3D372C",
+    "#514B2A",
+    "#5E6232",
+    "#657A45",
+    "#6A9362",
+    "#72AB85",
+    "#84C0AA",
+    "#A3D2CB",
+    "#D0E2E3"
+   ]
+  }
+ },
+ "typography": {
+  "title": "Palatino Linotype",
+  "body": "Corbel",
+  "mono": "Consolas",
+  "latex": {
+   "title": "TeX Gyre Pagella (tgpagella)",
+   "body": "Lato (lato)",
+   "engine": "any; lualatex or xelatex for fontspec"
+  },
+  "web": {
+   "title": "'Palatino Linotype', 'TeX Gyre Pagella', Palatino, serif",
+   "body": "Corbel, Lato, 'Segoe UI', sans-serif"
+  }
+ },
+ "marks": {
+  "line_pt": 1.6,
+  "thin_line_pt": 0.7,
+  "ring_pt": 1.2,
+  "marker_pt2": 28,
+  "bar_gap_px": 2,
+  "band_alpha": 0.55,
+  "grid_pt": 0.6,
+  "dotted": [
+   1,
+   3
+  ]
+ },
+ "sizes": {
+  "title": 13,
+  "subtitle": 9,
+  "panel_title": 9,
+  "unit_line": 7.5,
+  "axis_label": 9,
+  "tick": 8,
+  "annotation": 7.5,
+  "footer": 6.5
+ }
+}

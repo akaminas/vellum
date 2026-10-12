@@ -1,0 +1,21 @@
+[
+ {
+  "id": "poster",
+  "group": "poster",
+  "title": "Beak shape, not body size, tells penguin species apart",
+  "subtitle": "An A0 conference poster: one 3D scatter with its 2D twin as the central figure, three short columns and one stat tile",
+  "kind": "conference",
+  "form": "A0 poster",
+  "medium": "poster",
+  "tool": "beamerposter",
+  "data": "Palmer penguins: Gorman, Williams and Fraser (2014), PLoS ONE 9(3): e90081; Palmer Station LTER; via the palmerpenguins R package and vega-datasets 2.8.0 (CC0)",
+  "script": "examples/latex/poster/poster.tex",
+  "alt": "An A0 portrait poster on white with cream cards. Headline: beak shape, not body size, tells penguin species apart. The central figure is a 3D scatter of beak depth, beak length and flipper length for 342 penguins of three species, with its beak-length against beak-depth twin beside it. Stat tile: 94 % of birds are placed in their own species by beak length and depth (leave-one-out nearest species mean), against 63 % by body mass alone.",
+  "note": "Figure and every number by examples/python/poster/make_poster_figures.py (light, scale 2.6 on 2.6 x V.size('poster'), placed at 1:1); built by examples/latex/poster/build.py. QR code to https://akaminas.github.io/vellum/ by the qrcode package.",
+  "files": {
+   "pdf": "media/poster/poster.pdf",
+   "light": "media/poster/poster.png",
+   "thumb": "media/poster/poster-thumb.png"
+  }
+ }
+]
