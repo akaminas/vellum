@@ -223,7 +223,7 @@
   "checks": {
    "min_nv": 18.3,
    "min_cvd": 11.4,
-   "min_contrast": 3.03
+   "min_contrast": 3.27
   }
  },
  "dark": {

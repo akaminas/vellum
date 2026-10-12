@@ -70,26 +70,34 @@ class Vellum:
         return ListedColormap(self.sequential[family][:n])
 
     # ---- rcParams
+    def fonts(self):
+        """The body font and its fallbacks, keeping only the faces installed here, so matplotlib does not log a warning
+        for every text it draws with a missing face."""
+        from matplotlib import font_manager
+        have = {f.name for f in font_manager.fontManager.ttflist}
+        return [f for f in (self.body_font, "Lato", "Segoe UI") if f in have] + ["DejaVu Sans"]
+
     def rc(self):
         plt.rcdefaults()
+        s = self.scale
         plt.rcParams.update({
-            "font.family": [self.body_font, "Lato", "Segoe UI", "DejaVu Sans"], "font.size": self.sz["axis_label"],
+            "font.family": self.fonts(), "font.size": self.sz["axis_label"],
             "mathtext.fontset": "stixsans",
             "figure.facecolor": self.surface, "axes.facecolor": self.surface, "savefig.facecolor": self.surface,
-            "axes.edgecolor": self.grid, "axes.linewidth": 0.8,
+            "axes.edgecolor": self.grid, "axes.linewidth": 0.8 * s,
             "axes.spines.top": False, "axes.spines.right": False, "axes.spines.left": False,
-            "axes.grid": True, "axes.grid.axis": "y", "grid.color": self.grid, "grid.linewidth": SPEC["marks"]["grid_pt"], "grid.linestyle": "-",
+            "axes.grid": True, "axes.grid.axis": "y", "grid.color": self.grid, "grid.linewidth": SPEC["marks"]["grid_pt"] * s, "grid.linestyle": "-",
             "axes.axisbelow": True,
             "xtick.color": self.muted, "ytick.color": self.muted, "xtick.labelcolor": self.muted, "ytick.labelcolor": self.muted,
             "xtick.labelsize": self.sz["tick"], "ytick.labelsize": self.sz["tick"],
             "xtick.major.size": 0, "ytick.major.size": 0, "xtick.minor.size": 0, "ytick.minor.size": 0,
-            "xtick.major.pad": 4, "ytick.major.pad": 2,
+            "xtick.major.pad": 4 * s, "ytick.major.pad": 2 * s, "axes.labelpad": 4 * s,
             "axes.labelcolor": self.muted, "axes.labelsize": self.sz["axis_label"], "text.color": self.ink,
-            "axes.titlelocation": "left", "axes.titlesize": self.sz["panel_title"], "axes.titleweight": "bold", "axes.titlepad": 16,
+            "axes.titlelocation": "left", "axes.titlesize": self.sz["panel_title"], "axes.titleweight": "bold", "axes.titlepad": 16 * s,
             "axes.prop_cycle": matplotlib.cycler(color=self._tone),
             "lines.linewidth": self.lw, "lines.solid_capstyle": "round", "lines.solid_joinstyle": "round",
             "legend.frameon": False, "legend.fontsize": self.sz["annotation"],
-            "figure.dpi": 150, "savefig.dpi": 300, "savefig.bbox": "tight", "savefig.pad_inches": 0.08,
+            "figure.dpi": 150, "savefig.dpi": 300, "savefig.bbox": "tight", "savefig.pad_inches": 0.08 * s,
             "pdf.fonttype": 42, "ps.fonttype": 42, "svg.fonttype": "none",
         })
         return self
@@ -108,26 +116,30 @@ class Vellum:
         if source: fig.text(x, 0.01, source, fontsize=self.sz["footer"], color=self.muted, va="bottom", ha="left")
 
     def panel(self, ax, letter=None, claim=None, unit=None):
-        """Panel title (bold letter and claim) and a unit line above the axis in place of a rotated y label."""
-        if claim is not None:
-            ax.set_title((f"{letter}  " if letter else "") + claim, color=self.ink, pad=16 if unit else 8)
+        """Panel title (bold letter and claim) and a unit line above the axis in place of a rotated y label.
+        With a letter and no claim (a paper figure, whose claims move to the caption) the letter is drawn alone."""
+        head = "  ".join(t for t in (letter, claim) if t)
+        if head:
+            ax.set_title(head, color=self.ink, pad=(16 if unit else 8) * self.scale)
         if unit:
             ax.set_ylabel("")
             ax.text(0, 1.03, unit, transform=ax.transAxes, fontsize=self.sz["unit_line"], color=self.muted, va="bottom", ha="left")
 
     def endlabel(self, ax, x, y, text, color=None, dx=6):
         """Direct label at the end of a line, in ink, with a surface halo."""
-        ax.annotate(text, (x, y), xytext=(dx, 0), textcoords="offset points", va="center", ha="left",
+        ax.annotate(text, (x, y), xytext=(dx * self.scale, 0), textcoords="offset points", va="center", ha="left",
                     fontsize=self.sz["annotation"], color=self.ink, annotation_clip=False,
-                    path_effects=[pe.withStroke(linewidth=2.5, foreground=self.surface)])
+                    path_effects=[pe.withStroke(linewidth=2.5 * self.scale, foreground=self.surface)])
 
     def endlabels(self, ax, points, texts, gap, x_text=None):
-        """Several end labels pushed apart by `gap` (data units) with thin leader lines. points: list of (x, y)."""
+        """Several end labels pushed apart by `gap` (data units) with thin leader lines. points: list of (x, y).
+        Each leader runs from the left edge of its label (relpos 0, 0.5) to the line end, never under the text."""
         ys = spread([p[1] for p in points], gap)
         for (x0, y0), y, t in zip(points, ys, texts):
             ax.annotate(t, (x0, y0), xytext=(x_text if x_text is not None else x0, y), textcoords="data", va="center", ha="left",
                         fontsize=self.sz["annotation"], color=self.ink, annotation_clip=False,
-                        arrowprops=dict(arrowstyle="-", color=self.muted, lw=0.5, shrinkA=0, shrinkB=3))
+                        arrowprops=dict(arrowstyle="-", color=self.muted, lw=0.5 * self.scale, shrinkA=2 * self.scale,
+                                        shrinkB=3 * self.scale, relpos=(0, 0.5)))
 
     def note(self, ax, x, y, text, ha="left", va="top", **kw):
         """A quiet annotation in muted text, in data coordinates."""
@@ -136,36 +148,38 @@ class Vellum:
     def callout(self, ax, xy, text, xytext, **kw):
         """An annotation in ink with a thin leader."""
         ax.annotate(text, xy, xytext=xytext, textcoords="offset points", fontsize=self.sz["annotation"], color=self.ink,
-                    arrowprops=dict(arrowstyle="-", color=self.muted, lw=0.6, shrinkB=4), **kw)
+                    arrowprops=dict(arrowstyle="-", color=self.muted, lw=0.6 * self.scale, shrinkB=4 * self.scale), **kw)
 
-    def dot(self, ax, x, y, color=None, s=None, z=4):
-        """Marker ringed in the surface colour so it stays legible where it crosses a line."""
+    def dot(self, ax, x, y, color=None, s=None, z=4, ring=None):
+        """Marker ringed in the surface colour so it stays legible where it crosses a line.
+        s: area in pt² (default marker_pt2, scaled); ring: ring width in pt (default ring_pt, scaled), e.g. 1.0 for a paper figure."""
         ax.scatter(x, y, s=s or SPEC["marks"]["marker_pt2"] * self.scale ** 2, color=color or self.tone(0), edgecolor=self.surface,
-                   linewidth=SPEC["marks"]["ring_pt"] * self.scale, zorder=z)
+                   linewidth=ring if ring is not None else SPEC["marks"]["ring_pt"] * self.scale, zorder=z)
 
     def reference(self, ax, y=None, x=None, text=None, color=None):
         """A reference line (a bound, a prediction) as a thin dotted line with its label at the right end."""
         c = color or self.tone("ochre")
+        d = 4 * self.scale
         if y is not None:
             ax.axhline(y, color=c, lw=self.thin, ls=self.dotted)
-            if text: ax.annotate(text, (1, y), xycoords=("axes fraction", "data"), xytext=(-4, 4), textcoords="offset points",
+            if text: ax.annotate(text, (1, y), xycoords=("axes fraction", "data"), xytext=(-d, d), textcoords="offset points",
                                  ha="right", va="bottom", fontsize=self.sz["annotation"], color=self.muted)
         if x is not None:
             ax.axvline(x, color=c, lw=self.thin, ls=self.dotted)
-            if text: ax.annotate(text, (x, 1), xycoords=("data", "axes fraction"), xytext=(4, -4), textcoords="offset points",
+            if text: ax.annotate(text, (x, 1), xycoords=("data", "axes fraction"), xytext=(d, -d), textcoords="offset points",
                                  ha="left", va="top", fontsize=self.sz["annotation"], color=self.muted, rotation=90)
 
     def identity(self, ax, lim, text="y = x"):
-        ax.plot(lim, lim, color=self.rule, lw=0.9, zorder=1)
+        ax.plot(lim, lim, color=self.rule, lw=0.9 * self.scale, zorder=1)
         # the label sits on the diagonal of the axes box, which is the line when both axes have the same limits and scale
         # below the line, where the data points (which lie on it) are not
-        ax.annotate(text, xy=(0.70, 0.70), xycoords="axes fraction", xytext=(0, -12), textcoords="offset points", color=self.muted,
+        ax.annotate(text, xy=(0.70, 0.70), xycoords="axes fraction", xytext=(0, -12 * self.scale), textcoords="offset points", color=self.muted,
                     fontsize=self.sz["annotation"], rotation=45, rotation_mode="anchor", ha="center", va="top")
 
     def heat_gaps(self, ax, nx, ny):
         """Surface-coloured gaps between the cells of a heat map."""
-        for j in range(nx + 1): ax.axvline(j - 0.5, color=self.surface, lw=1.2)
-        for i in range(ny + 1): ax.axhline(i - 0.5, color=self.surface, lw=1.2)
+        for j in range(nx + 1): ax.axvline(j - 0.5, color=self.surface, lw=1.2 * self.scale)
+        for i in range(ny + 1): ax.axhline(i - 0.5, color=self.surface, lw=1.2 * self.scale)
         ax.grid(False)
         for s in ax.spines.values(): s.set_visible(False)
 
@@ -202,18 +216,21 @@ class Vellum:
     def axes3d(self, fig, rect=(0.04, 0.08, 0.92, 0.72), elev=24, azim=-58, aspect=(1, 1, 0.62), labels=("x", "y", "z"), nticks=3):
         """Orthographic 3D axes with transparent panes, hairline grid, three ticks per axis and muted labels."""
         from matplotlib.ticker import MaxNLocator
+        s = self.scale
         ax = fig.add_axes(rect, projection="3d")
         ax.set_proj_type("ortho"); ax.view_init(elev=elev, azim=azim); ax.set_box_aspect(aspect)
         for axis in (ax.xaxis, ax.yaxis, ax.zaxis):
-            axis.set_pane_color((1, 1, 1, 0)); axis.pane.set_edgecolor(self.grid); axis.pane.set_linewidth(0.5)
-            axis._axinfo["grid"].update(color=self.grid, linewidth=0.5, linestyle="-")
-            axis._axinfo["axisline"].update(color=self.rule, linewidth=0.8)
+            axis.set_pane_color((1, 1, 1, 0)); axis.pane.set_edgecolor(self.grid); axis.pane.set_linewidth(0.5 * s)
+            axis._axinfo["grid"].update(color=self.grid, linewidth=0.5 * s, linestyle="-")
+            axis._axinfo["axisline"].update(color=self.rule, linewidth=0.8 * s)
             axis._axinfo["tick"].update(inward_factor=0.0, outward_factor=0.0)
             axis.set_major_locator(MaxNLocator(nticks)); axis.line.set_color(self.rule)
             axis.label.set_color(self.muted)
-        ax.set_xlabel(labels[0], labelpad=-2); ax.set_ylabel(labels[1], labelpad=-2); ax.set_zlabel(labels[2], labelpad=-4)
-        ax.tick_params(axis="both", which="major", pad=-3, labelsize=self.sz["tick"], labelcolor=self.muted)
-        ax.tick_params(axis="z", pad=-1)
+        # the pads are in points: negative at print size, where the default leaves a gap; they grow with the scale
+        ax.set_xlabel(labels[0], labelpad=-2 + 4 * (s - 1)); ax.set_ylabel(labels[1], labelpad=-2 + 4 * (s - 1))
+        ax.set_zlabel(labels[2], labelpad=-4 + 4 * (s - 1))
+        ax.tick_params(axis="both", which="major", pad=-3 + 2 * (s - 1), labelsize=self.sz["tick"], labelcolor=self.muted)
+        ax.tick_params(axis="z", pad=-1 + 2 * (s - 1))
         ax.set_facecolor((1, 1, 1, 0))
         return ax
 
@@ -224,7 +241,7 @@ class Vellum:
         surf = ax.plot_surface(X, Y, Z, cmap=cm, linewidth=0, antialiased=False, shade=False, rstride=1, cstride=1, rasterized=True, **kw)
         if floor:
             zmin = float(np.min(Z)) - 0.06 * float(np.ptp(Z))
-            ax.contour(X, Y, Z, zdir="z", offset=zmin, levels=levels, colors=self.rule, linewidths=0.5)
+            ax.contour(X, Y, Z, zdir="z", offset=zmin, levels=levels, colors=self.rule, linewidths=0.5 * self.scale)
             ax.set_zlim(zmin, float(np.max(Z)))
         return surf
 

@@ -1,6 +1,8 @@
 % vellum-colors.sty: the Vellum palette for LaTeX (xcolor), with TikZ, pgfplots and beamer styles.
 % Generated from vellum.json; the hex values are not to be edited here.
-% Usage: \usepackage{vellum-colors}  then  \usetikzlibrary{...}  and  \pgfplotsset{vellum}  or  \usetheme-free beamer via \vellumbeamer
+% Usage: load tikz and pgfplots first, then \usepackage{vellum-colors}: its TikZ and pgfplots styles are defined only for
+% the packages already loaded. Axes: [vellum], [vellum dark], [vellum 3d], [vellum 3d dark]. Diagrams: vellum box, vellum
+% arrow, ...; \vellumtikzdark for the dark twin. Beamer: \vellumbeamer or \vellumbeamerdark in the preamble.
 % Light mode names: vteal, vterracotta, vindigo, vochre, vmauve, vmoss (tones); vtealTint ... (tints); vtealDeep ... (deeps);
 % neutrals vSurface, vCard, vGrid, vRule, vMuted, vSecondary, vInk; status vStatusGood ... ; diverging vDiv0 ... vDiv10.
 % Dark mode: the same names with the suffix D (vtealD, vSurfaceD, ...).
@@ -87,50 +89,62 @@
 \definecolor{vDiv8D}{HTML}{429CA0}
 \definecolor{vDiv9D}{HTML}{73B9BC}
 \definecolor{vDiv10D}{HTML}{A5D5D7}
-% the categorical order, as a pgfplots cycle list
+% the categorical order, as pgfplots cycle lists, at the line width of vellum.json (marks.line_pt)
 \@ifpackageloaded{pgfplots}{%
-\pgfplotscreateplotcyclelist{vellum}{%
-  {vteal, line width=1.1pt},
-  {vterracotta, line width=1.1pt},
-  {vindigo, line width=1.1pt},
-  {vochre, line width=1.1pt},
-  {vmauve, line width=1.1pt},
-  {vmoss, line width=1.1pt}}
+\pgfplotscreateplotcyclelist{vellum}{{vteal, line width=1.6pt}, {vterracotta, line width=1.6pt}, {vindigo, line width=1.6pt},
+  {vochre, line width=1.6pt}, {vmauve, line width=1.6pt}, {vmoss, line width=1.6pt}}
+\pgfplotscreateplotcyclelist{vellum dark}{{vtealD, line width=1.6pt}, {vterracottaD, line width=1.6pt}, {vindigoD, line width=1.6pt},
+  {vochreD, line width=1.6pt}, {vmauveD, line width=1.6pt}, {vmossD, line width=1.6pt}}
+% tick labels as text in the body face (pgfplots sets them in maths by default), with a true minus sign.
+% With symbolic coordinates, give the axis xticklabel=\axisdefaultticklabel (or y, z) to print the symbols again.
+\def\vellumticklabel{\pgfmathparse{\tick<0}\ifnum\pgfmathresult=1 \textminus\fi%
+  \pgfmathparse{abs(\tick)}\pgfmathprintnumber[assume math mode=true]{\pgfmathresult}}
+% `vellum`: the axis title is the unit line (muted, small, just above the top left corner); the claim is a node outside the
+% axis in \rmfamily. A y label, if one is given, is set upright in the same place.
 \pgfplotsset{vellum/.style={
   cycle list name=vellum,
   axis background/.style={fill=vSurface},
-  axis line style={vGrid, line width=0.5pt},
+  axis line style={vGrid, line width=0.8pt},
   axis x line*=bottom, axis y line*=left, y axis line style={draw=none},
-  ymajorgrids, grid style={vGrid, line width=0.4pt},
-  tick style={draw=none}, ticklabel style={vMuted, font=\scriptsize},
-  xlabel style={vMuted, font=\footnotesize}, ylabel style={vMuted, font=\footnotesize, at={(0,1)}, anchor=south west, rotate=-90, yshift=4pt},
-  title style={vInk, font=\footnotesize\bfseries, at={(0,1)}, anchor=south west, xshift=-2pt, yshift=10pt},
-  legend style={draw=none, fill=none, font=\scriptsize, text=vInk},
+  ymajorgrids, grid style={vGrid, line width=0.6pt},
+  tick style={draw=none},
+  xticklabel=\vellumticklabel, yticklabel=\vellumticklabel, zticklabel=\vellumticklabel,
+  ticklabel style={vMuted, font=\sffamily\scriptsize},
+  xlabel style={vMuted, font=\sffamily\footnotesize},
+  ylabel style={vMuted, font=\sffamily\scriptsize, at={(0,1)}, anchor=south west, rotate=-90, yshift=4pt},
+  title style={vMuted, font=\sffamily\scriptsize, at={(0,1)}, anchor=south west, inner sep=0pt, yshift=5pt},
+  legend style={draw=none, fill=none, font=\sffamily\scriptsize, text=vInk},
   every axis plot/.append style={line cap=round, line join=round},
   clip=false
 },
-  vellum dark/.style={vellum,
+  vellum dark/.style={vellum, cycle list name=vellum dark,
   axis background/.style={fill=vSurfaceD}, axis line style={vGridD}, grid style={vGridD},
-  ticklabel style={vMutedD}, xlabel style={vMutedD}, ylabel style={vMutedD}, title style={vInkD}, legend style={text=vInkD}
+  ticklabel style={vMutedD}, xlabel style={vMutedD}, ylabel style={vMutedD}, title style={vMutedD}, legend style={text=vInkD}
 }}
-% sequential colormaps, one per family
+% sequential colormaps, one per family, from the surface to the deep step; the dark ones run from the dark surface up
 \pgfplotsset{
   colormap={vellum teal}{color=(vSurface) color=(vtealTint) color=(vteal) color=(vtealDeep)},
   colormap={vellum terracotta}{color=(vSurface) color=(vterracottaTint) color=(vterracotta) color=(vterracottaDeep)},
   colormap={vellum indigo}{color=(vSurface) color=(vindigoTint) color=(vindigo) color=(vindigoDeep)},
-  colormap={vellum diverging}{color=(vDiv0) color=(vDiv2) color=(vDiv4) color=(vDiv5) color=(vDiv6) color=(vDiv8) color=(vDiv10)}
+  colormap={vellum teal dark}{color=(vSurfaceD) color=(vtealTintD) color=(vtealD) color=(vtealDeepD)},
+  colormap={vellum terracotta dark}{color=(vSurfaceD) color=(vterracottaTintD) color=(vterracottaD) color=(vterracottaDeepD)},
+  colormap={vellum indigo dark}{color=(vSurfaceD) color=(vindigoTintD) color=(vindigoD) color=(vindigoDeepD)},
+  colormap={vellum diverging}{color=(vDiv0) color=(vDiv2) color=(vDiv4) color=(vDiv5) color=(vDiv6) color=(vDiv8) color=(vDiv10)},
+  colormap={vellum diverging dark}{color=(vDiv0D) color=(vDiv2D) color=(vDiv4D) color=(vDiv5D) color=(vDiv6D) color=(vDiv8D) color=(vDiv10D)}
 }
 }{}
-% TikZ styles for diagrams in the same language
+% TikZ styles for diagrams in the same language; \vellumtikzdark switches them to the dark twin (for the rest of the group)
 \@ifpackageloaded{tikz}{%
-\tikzset{
-  vellum box/.style={draw=vRule, fill=vCard, line width=0.5pt, rounded corners=2pt, inner sep=5pt, text=vInk, font=\footnotesize},
-  vellum box tint/.style={draw=none, fill=v#1Tint, text=v#1Deep, rounded corners=2pt, inner sep=5pt, font=\footnotesize, align=center},
-  vellum arrow/.style={->, >=stealth, vSecondary, line width=0.6pt, shorten >=2pt, shorten <=2pt},
-  vellum guide/.style={vRule, line width=0.4pt, dash pattern=on 1pt off 2pt},
-  vellum label/.style={vMuted, font=\scriptsize, align=left},
-  vellum claim/.style={vInk, font=\footnotesize\bfseries, align=left}
-}}{}
+\def\vellum@tikz#1{\tikzset{
+  vellum box/.style={draw=vRule#1, fill=vCard#1, line width=0.5pt, rounded corners=2pt, inner sep=5pt, text=vInk#1, font=\footnotesize},
+  vellum box tint/.style={draw=none, fill=v##1Tint#1, text=v##1Deep#1, rounded corners=2pt, inner sep=5pt, font=\footnotesize, align=center},
+  vellum arrow/.style={->, >=stealth, vSecondary#1, line width=0.6pt, shorten >=2pt, shorten <=2pt},
+  vellum guide/.style={vRule#1, line width=0.4pt, dash pattern=on 1pt off 2pt},
+  vellum label/.style={vMuted#1, font=\scriptsize, align=left},
+  vellum claim/.style={vInk#1, font=\footnotesize\bfseries, align=left}}}
+\vellum@tikz{}
+\def\vellumtikzdark{\vellum@tikz{D}}
+}{}
 % beamer: call \vellumbeamer in the preamble after \usepackage{vellum-colors}
 \providecommand{\vellumbeamer}{%
   \setbeamercolor{background canvas}{bg=vSurface}
@@ -226,9 +240,17 @@
   colormap={vellum shore}{color=(vgradshore0) color=(vgradshore1) color=(vgradshore2) color=(vgradshore3) color=(vgradshore4) color=(vgradshore5) color=(vgradshore6) color=(vgradshore7) color=(vgradshore8)},
   colormap={vellum shore dark}{color=(vgradshoreD0) color=(vgradshoreD1) color=(vgradshoreD2) color=(vgradshoreD3) color=(vgradshoreD4) color=(vgradshoreD5) color=(vgradshoreD6) color=(vgradshoreD7) color=(vgradshoreD8)}
 }}{}
-% three-dimensional axes: view {azimuth}{elevation}, flat shading, height as colour, hairline grid, three ticks, muted labels
-\@ifpackageloaded{pgfplots}{\pgfplotsset{vellum 3d/.style={vellum, view={-58}{24}, axis lines=box, axis line style={vRule, line width=0.5pt},
-  grid=major, grid style={vGrid, line width=0.4pt}, z buffer=sort, shader=flat, tick style={draw=none},
-  ticklabel style={vMuted, font=\scriptsize}, xlabel style={vMuted, font=\footnotesize}, ylabel style={vMuted, font=\footnotesize},
-  zlabel style={vMuted, font=\footnotesize}, title style={vInk, font=\footnotesize\bfseries}, clip=false}}}{}
+% three-dimensional axes: view {azimuth}{elevation}, flat shading, height as colour, hairline grid, three ticks, muted labels.
+% The axis names sit beside their tick labels and stay horizontal, the z name above its axis as a unit line. The axis has no
+% background, so it sits on either twin. Give z buffer=sort to the \addplot3 of a surface, never to a line plot (it fills it).
+\@ifpackageloaded{pgfplots}{\pgfplotsset{
+  vellum 3d/.style={vellum, view={-58}{24}, axis lines=box, axis line style={vRule, line width=0.5pt}, axis background/.style={fill=none},
+  grid=major, grid style={vGrid, line width=0.4pt}, shader=flat, tick style={draw=none},
+  every axis x label/.style={at={(ticklabel* cs:0.5,10pt)}, anchor=near ticklabel, font=\sffamily\footnotesize, text=vMuted},
+  every axis y label/.style={at={(ticklabel* cs:0.5,10pt)}, anchor=near ticklabel, font=\sffamily\footnotesize, text=vMuted},
+  every axis z label/.style={at={(ticklabel* cs:1)}, anchor=south, yshift=4pt, font=\sffamily\scriptsize, text=vMuted},
+  clip=false},
+  vellum 3d dark/.style={vellum 3d, cycle list name=vellum dark, axis line style={vRuleD}, grid style={vGridD}, ticklabel style={vMutedD},
+  every axis x label/.append style={text=vMutedD}, every axis y label/.append style={text=vMutedD},
+  every axis z label/.append style={text=vMutedD}, title style={vMutedD}, legend style={text=vInkD}}}}{}
 \endinput
