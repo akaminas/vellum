@@ -326,11 +326,11 @@ ggplot(d, aes(year, ppm, colour = series)) +
   theme_vellum()                            # theme_vellum(V = vellum_dark) for the twin</code></pre></div>
   <div role="tabpanel"><pre data-copy><code>\usepackage{tikz}
 \usepackage{pgfplots}\pgfplotsset{compat=1.18}
-\usepackage{vellum-colors}                  % names, the pgfplots style, TikZ node styles, beamer themes
+\usepackage{vellum-colors}                  % after tikz and pgfplots: names, axis styles, TikZ node styles, beamer
 
 \begin{tikzpicture}
   \begin{axis}[vellum, width=8.4cm, height=5cm, xlabel={year}, title={parts per million}]
-    \addplot[vteal, line width=1.1pt] table {co2.dat};
+    \addplot table {co2.dat};                      % the cycle list: teal, 1.6 pt
     \addplot[vochre, line width=0.6pt, dash pattern=on 1pt off 2pt] coordinates {(1958,350) (2020,350)};
   \end{axis}
 \end{tikzpicture}

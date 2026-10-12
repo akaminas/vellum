@@ -31,43 +31,19 @@
 \newcommand\vUnitFont{\sffamily\fontsize{\vSizeUnit}{\vSkipUnit}\selectfont}          % unit line and notes
 \newcommand\vFooterFont{\sffamily\fontsize{\vSizeFooter}{\vSkipFooter}\selectfont}
 
-% Tick labels as text in Lato (pgfplots sets them in maths by default), with U+2212 for the minus sign.
-\newcommand\vellumtick{\pgfmathparse{\tick<0}\ifnum\pgfmathresult=1 \char"2212\fi
-  \pgfmathparse{abs(\tick)}\pgfmathprintnumber[assume math mode=true]{\pgfmathresult}}
-
-% ---- the axis styles. `vellum twin` is the package's `vellum` or `vellum dark`; `vellum 3d twin` is `vellum 3d`, which the
-% package defines in light colours only, re-coloured for the dark twin. Both add what vellum.json says and the package does
-% not: a 0.6 pt grid, the unit line in muted at 7.5 pt (the package sets the axis title in bold ink) and the sizes above.
-% `vellum 3d` inherits the 2D placement of the y label (top left, turned upright, for a unit line); in 3D the three axis
-% names go back to pgfplots' places beside their tick labels, and stay horizontal.
-% The package's cycle list is light only and draws 1.1 pt lines; this one takes the twin's tones at the 1.6 pt of vellum.json.
-\pgfplotscreateplotcyclelist{vellum twin}{{vteal\vD, line width=\vLine}, {vterracotta\vD, line width=\vLine},
-  {vindigo\vD, line width=\vLine}, {vochre\vD, line width=\vLine}, {vmauve\vD, line width=\vLine}, {vmoss\vD, line width=\vLine}}
+% ---- the axis styles. `vellum twin` is the package's `vellum` or `vellum dark`, `vellum 3d twin` its `vellum 3d` or
+% `vellum 3d dark`; the package gives the colours, the text tick labels, the cycle list and the 3D label places. `vellum
+% anatomy` adds the exact type sizes of vellum.json (the package uses \scriptsize and \footnotesize) and no thousands
+% separator, because every number on these axes is a year or a small quantity.
 \pgfplotsset{
   /pgf/number format/1000 sep={},
-  vellum anatomy/.style={cycle list name=vellum twin, xticklabel=\vellumtick, yticklabel=\vellumtick, zticklabel=\vellumtick,
-    ticklabel style={font=\vTickFont}, xlabel style={font=\vLabelFont}, ylabel style={font=\vLabelFont},
-    zlabel style={font=\vLabelFont}, grid style={line width=\vGridW},
-    every axis title/.style={at={(0,1)}, anchor=south west, inner sep=0pt, yshift=5pt, font=\vUnitFont, text=vMuted\vD}},
-  vellum 3d labels/.style={
-    every axis x label/.style={at={(ticklabel* cs:0.5,10pt)}, anchor=near ticklabel, font=\vLabelFont, text=vMuted\vD},
-    every axis y label/.style={at={(ticklabel* cs:0.5,10pt)}, anchor=near ticklabel, font=\vLabelFont, text=vMuted\vD},
-    every axis z label/.style={at={(ticklabel* cs:1)}, anchor=south, yshift=4pt, font=\vLabelFont, text=vMuted\vD}}}
+  vellum anatomy/.style={ticklabel style={font=\vTickFont}, xlabel style={font=\vLabelFont}, ylabel style={font=\vLabelFont},
+    zlabel style={font=\vLabelFont}, title style={font=\vUnitFont}}}
 \ifvdark
-  \pgfplotsset{vellum twin/.style={vellum dark, vellum anatomy},
-    vellum 3d twin/.style={vellum 3d, vellum anatomy, vellum 3d labels, axis background/.style={fill=none},
-      axis line style={vRuleD}, grid style={vGridD}, ticklabel style={vMutedD}}}
-  % the package's TikZ styles are light only; the dark twin re-colours them with the D names
-  \tikzset{
-    vellum box/.append style={draw=vRuleD, fill=vCardD, text=vInkD},
-    vellum box tint/.append style={fill=v#1TintD, text=v#1DeepD},
-    vellum arrow/.append style={vSecondaryD},
-    vellum guide/.append style={vRuleD},
-    vellum label/.append style={vMutedD},
-    vellum claim/.append style={vInkD}}
+  \pgfplotsset{vellum twin/.style={vellum dark, vellum anatomy}, vellum 3d twin/.style={vellum 3d dark, vellum anatomy}}
+  \vellumtikzdark                                    % the package's TikZ styles, in the dark twin's names
 \else
-  \pgfplotsset{vellum twin/.style={vellum, vellum anatomy},
-    vellum 3d twin/.style={vellum 3d, vellum anatomy, vellum 3d labels, axis background/.style={fill=none}}}
+  \pgfplotsset{vellum twin/.style={vellum, vellum anatomy}, vellum 3d twin/.style={vellum 3d, vellum anatomy}}
 \fi
 \newcommand\vgradient[1]{vellum #1\ifvdark\space dark\fi}   % colormap name of a named gradient in this twin
 

@@ -30,7 +30,7 @@
       zmin=\lsFloor, zmax=\lsMax, ztick={0,0.5,1}, xlabel={trait $z_1$}, ylabel={trait $z_2$}, zlabel={fitness $w$}]
     \addplot3[draw=vRule\vD, line width=0.5pt, empty line=jump, z buffer=none]   % z buffer=sort would fill the lines
       table[x=x, y=y, z expr=\lsFloor] {data/landscape_contours.dat};
-    \addplot3[surf, shader=flat, draw=none, samples=60] {\landscape};
+    \addplot3[surf, z buffer=sort, shader=flat, draw=none, samples=60] {\landscape};
   \end{axis}
 
   % b: the twin. The same function, gradient and limits seen from above, contours in the surface colour, values read here

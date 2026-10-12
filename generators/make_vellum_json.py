@@ -29,7 +29,11 @@ for _ in range(4000):
     if sc2[0] > sc[0]: sc, pal, Ls = sc2, pal2, L2
 tone_d = pal; tint_d = [mk(0.50, 0.05, H) for H in hues]; deep_d = [mk(0.92, 0.05, H) for H in hues]
 checks_d = dict(min_nv=round(sc[1], 1), min_cvd=round(sc[2], 1), min_contrast=round(sc[3], 2))
-checks_l = A["checks"]
+# the light tones were searched on the cream card (palettes.json "surface"), but the light page is white: the distances do not
+# depend on the surface, the contrast does, so it is measured again on the page (it is 3.03:1 on the card)
+_, nv_l, cvd_l, con_l = score(tone_l, light["surface"])
+checks_l = dict(min_nv=round(nv_l, 1), min_cvd=round(cvd_l, 1), min_contrast=round(con_l, 2))
+assert (checks_l["min_nv"], checks_l["min_cvd"]) == (A["checks"]["min_nv"], A["checks"]["min_cvd"])
 
 
 def ramp(H, dark_mode):

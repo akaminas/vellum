@@ -64,7 +64,7 @@ ggplot(d, aes(year, ppm)) + geom_line(colour = vellum$tone[1], linewidth = vellu
 ```latex
 \usepackage{tikz}\usepackage{pgfplots}\pgfplotsset{compat=1.18}
 \usepackage{vellum-colors}
-\begin{axis}[vellum, xlabel={year}, title={parts per million}] \addplot[vteal, line width=1.1pt] table {co2.dat}; \end{axis}
+\begin{axis}[vellum, xlabel={year}, title={parts per million}] \addplot table {co2.dat}; \end{axis}
 ```
 
 Fonts: Palatino Linotype and Corbel on Windows; TeX Gyre Pagella and Lato in LaTeX and on the web.

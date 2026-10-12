@@ -1,5 +1,13 @@
-% three-dimensional axes: view {azimuth}{elevation}, flat shading, height as colour, hairline grid, three ticks, muted labels
-\@ifpackageloaded{pgfplots}{\pgfplotsset{vellum 3d/.style={vellum, view={-58}{24}, axis lines=box, axis line style={vRule, line width=0.5pt},
-  grid=major, grid style={vGrid, line width=0.4pt}, z buffer=sort, shader=flat, tick style={draw=none},
-  ticklabel style={vMuted, font=\scriptsize}, xlabel style={vMuted, font=\footnotesize}, ylabel style={vMuted, font=\footnotesize},
-  zlabel style={vMuted, font=\footnotesize}, title style={vInk, font=\footnotesize\bfseries}, clip=false}}}{}
+% three-dimensional axes: view {azimuth}{elevation}, flat shading, height as colour, hairline grid, three ticks, muted labels.
+% The axis names sit beside their tick labels and stay horizontal, the z name above its axis as a unit line. The axis has no
+% background, so it sits on either twin. Give z buffer=sort to the \addplot3 of a surface, never to a line plot (it fills it).
+\@ifpackageloaded{pgfplots}{\pgfplotsset{
+  vellum 3d/.style={vellum, view={-58}{24}, axis lines=box, axis line style={vRule, line width=0.5pt}, axis background/.style={fill=none},
+  grid=major, grid style={vGrid, line width=0.4pt}, shader=flat, tick style={draw=none},
+  every axis x label/.style={at={(ticklabel* cs:0.5,10pt)}, anchor=near ticklabel, font=\sffamily\footnotesize, text=vMuted},
+  every axis y label/.style={at={(ticklabel* cs:0.5,10pt)}, anchor=near ticklabel, font=\sffamily\footnotesize, text=vMuted},
+  every axis z label/.style={at={(ticklabel* cs:1)}, anchor=south, yshift=4pt, font=\sffamily\scriptsize, text=vMuted},
+  clip=false},
+  vellum 3d dark/.style={vellum 3d, cycle list name=vellum dark, axis line style={vRuleD}, grid style={vGridD}, ticklabel style={vMutedD},
+  every axis x label/.append style={text=vMutedD}, every axis y label/.append style={text=vMutedD},
+  every axis z label/.append style={text=vMutedD}, title style={vMutedD}, legend style={text=vInkD}}}}{}
