@@ -1,0 +1,234 @@
+% vellum-colors.sty: the Vellum palette for LaTeX (xcolor), with TikZ, pgfplots and beamer styles.
+% Generated from vellum.json; the hex values are not to be edited here.
+% Usage: \usepackage{vellum-colors}  then  \usetikzlibrary{...}  and  \pgfplotsset{vellum}  or  \usetheme-free beamer via \vellumbeamer
+% Light mode names: vteal, vterracotta, vindigo, vochre, vmauve, vmoss (tones); vtealTint ... (tints); vtealDeep ... (deeps);
+% neutrals vSurface, vCard, vGrid, vRule, vMuted, vSecondary, vInk; status vStatusGood ... ; diverging vDiv0 ... vDiv10.
+% Dark mode: the same names with the suffix D (vtealD, vSurfaceD, ...).
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{vellum-colors}[Vellum palette]
+\RequirePackage{xcolor}
+\definecolor{vteal}{HTML}{419BA0}
+\definecolor{vtealTint}{HTML}{A5D5D7}
+\definecolor{vtealDeep}{HTML}{004C50}
+\definecolor{vterracotta}{HTML}{A1644F}
+\definecolor{vterracottaTint}{HTML}{E8C0B2}
+\definecolor{vterracottaDeep}{HTML}{613425}
+\definecolor{vindigo}{HTML}{415688}
+\definecolor{vindigoTint}{HTML}{BBCBEC}
+\definecolor{vindigoDeep}{HTML}{304168}
+\definecolor{vochre}{HTML}{806629}
+\definecolor{vochreTint}{HTML}{DAC9A6}
+\definecolor{vochreDeep}{HTML}{533F0D}
+\definecolor{vmauve}{HTML}{AD78A1}
+\definecolor{vmauveTint}{HTML}{E0BFD8}
+\definecolor{vmauveDeep}{HTML}{593351}
+\definecolor{vmoss}{HTML}{567E4D}
+\definecolor{vmossTint}{HTML}{BAD3B4}
+\definecolor{vmossDeep}{HTML}{2D4B27}
+\definecolor{vSurface}{HTML}{FFFFFF}
+\definecolor{vCard}{HTML}{FAF6EE}
+\definecolor{vGrid}{HTML}{E6E0D4}
+\definecolor{vRule}{HTML}{C7C3BD}
+\definecolor{vMuted}{HTML}{8A857C}
+\definecolor{vSecondary}{HTML}{5A5650}
+\definecolor{vInk}{HTML}{2A2825}
+\definecolor{vStatusGood}{HTML}{007835}
+\definecolor{vStatusWarning}{HTML}{DAB327}
+\definecolor{vStatusSerious}{HTML}{CA6719}
+\definecolor{vStatusCritical}{HTML}{B02A2D}
+\definecolor{vDiv0}{HTML}{784634}
+\definecolor{vDiv1}{HTML}{995D48}
+\definecolor{vDiv2}{HTML}{B97A65}
+\definecolor{vDiv3}{HTML}{D29C8A}
+\definecolor{vDiv4}{HTML}{E8C0B2}
+\definecolor{vDiv5}{HTML}{E1DDD8}
+\definecolor{vDiv6}{HTML}{A5D5D7}
+\definecolor{vDiv7}{HTML}{73B9BC}
+\definecolor{vDiv8}{HTML}{429CA0}
+\definecolor{vDiv9}{HTML}{1B7D82}
+\definecolor{vDiv10}{HTML}{066166}
+\definecolor{vtealD}{HTML}{8AE2E7}
+\definecolor{vtealTintD}{HTML}{3F6C6E}
+\definecolor{vtealDeepD}{HTML}{BFEFF2}
+\definecolor{vterracottaD}{HTML}{E8A68F}
+\definecolor{vterracottaTintD}{HTML}{7D5A4E}
+\definecolor{vterracottaDeepD}{HTML}{FFDCD0}
+\definecolor{vindigoD}{HTML}{8099CF}
+\definecolor{vindigoTintD}{HTML}{556380}
+\definecolor{vindigoDeepD}{HTML}{D8E5FF}
+\definecolor{vochreD}{HTML}{E1C487}
+\definecolor{vochreTintD}{HTML}{706142}
+\definecolor{vochreDeepD}{HTML}{F4E3BF}
+\definecolor{vmauveD}{HTML}{B984AD}
+\definecolor{vmauveTintD}{HTML}{76596F}
+\definecolor{vmauveDeepD}{HTML}{FBD9F2}
+\definecolor{vmossD}{HTML}{93BD89}
+\definecolor{vmossTintD}{HTML}{546B4F}
+\definecolor{vmossDeepD}{HTML}{D4EDCE}
+\definecolor{vSurfaceD}{HTML}{2A2520}
+\definecolor{vCardD}{HTML}{342F2A}
+\definecolor{vGridD}{HTML}{413C36}
+\definecolor{vRuleD}{HTML}{5A544D}
+\definecolor{vMutedD}{HTML}{A29E96}
+\definecolor{vSecondaryD}{HTML}{C9C4BB}
+\definecolor{vInkD}{HTML}{ECE7DF}
+\definecolor{vStatusGoodD}{HTML}{5FC27A}
+\definecolor{vStatusWarningD}{HTML}{DAB327}
+\definecolor{vStatusSeriousD}{HTML}{F08A3C}
+\definecolor{vStatusCriticalD}{HTML}{F06B6B}
+\definecolor{vDiv0D}{HTML}{E8C0B2}
+\definecolor{vDiv1D}{HTML}{D29C8A}
+\definecolor{vDiv2D}{HTML}{B97A65}
+\definecolor{vDiv3D}{HTML}{995D48}
+\definecolor{vDiv4D}{HTML}{784634}
+\definecolor{vDiv5D}{HTML}{585550}
+\definecolor{vDiv6D}{HTML}{066166}
+\definecolor{vDiv7D}{HTML}{1B7D82}
+\definecolor{vDiv8D}{HTML}{429CA0}
+\definecolor{vDiv9D}{HTML}{73B9BC}
+\definecolor{vDiv10D}{HTML}{A5D5D7}
+% the categorical order, as a pgfplots cycle list
+\@ifpackageloaded{pgfplots}{%
+\pgfplotscreateplotcyclelist{vellum}{%
+  {vteal, line width=1.1pt},
+  {vterracotta, line width=1.1pt},
+  {vindigo, line width=1.1pt},
+  {vochre, line width=1.1pt},
+  {vmauve, line width=1.1pt},
+  {vmoss, line width=1.1pt}}
+\pgfplotsset{vellum/.style={
+  cycle list name=vellum,
+  axis background/.style={fill=vSurface},
+  axis line style={vGrid, line width=0.5pt},
+  axis x line*=bottom, axis y line*=left, y axis line style={draw=none},
+  ymajorgrids, grid style={vGrid, line width=0.4pt},
+  tick style={draw=none}, ticklabel style={vMuted, font=\scriptsize},
+  xlabel style={vMuted, font=\footnotesize}, ylabel style={vMuted, font=\footnotesize, at={(0,1)}, anchor=south west, rotate=-90, yshift=4pt},
+  title style={vInk, font=\footnotesize\bfseries, at={(0,1)}, anchor=south west, xshift=-2pt, yshift=10pt},
+  legend style={draw=none, fill=none, font=\scriptsize, text=vInk},
+  every axis plot/.append style={line cap=round, line join=round},
+  clip=false
+},
+  vellum dark/.style={vellum,
+  axis background/.style={fill=vSurfaceD}, axis line style={vGridD}, grid style={vGridD},
+  ticklabel style={vMutedD}, xlabel style={vMutedD}, ylabel style={vMutedD}, title style={vInkD}, legend style={text=vInkD}
+}}
+% sequential colormaps, one per family
+\pgfplotsset{
+  colormap={vellum teal}{color=(vSurface) color=(vtealTint) color=(vteal) color=(vtealDeep)},
+  colormap={vellum terracotta}{color=(vSurface) color=(vterracottaTint) color=(vterracotta) color=(vterracottaDeep)},
+  colormap={vellum indigo}{color=(vSurface) color=(vindigoTint) color=(vindigo) color=(vindigoDeep)},
+  colormap={vellum diverging}{color=(vDiv0) color=(vDiv2) color=(vDiv4) color=(vDiv5) color=(vDiv6) color=(vDiv8) color=(vDiv10)}
+}
+}{}
+% TikZ styles for diagrams in the same language
+\@ifpackageloaded{tikz}{%
+\tikzset{
+  vellum box/.style={draw=vRule, fill=vCard, line width=0.5pt, rounded corners=2pt, inner sep=5pt, text=vInk, font=\footnotesize},
+  vellum box tint/.style={draw=none, fill=v#1Tint, text=v#1Deep, rounded corners=2pt, inner sep=5pt, font=\footnotesize, align=center},
+  vellum arrow/.style={->, >=stealth, vSecondary, line width=0.6pt, shorten >=2pt, shorten <=2pt},
+  vellum guide/.style={vRule, line width=0.4pt, dash pattern=on 1pt off 2pt},
+  vellum label/.style={vMuted, font=\scriptsize, align=left},
+  vellum claim/.style={vInk, font=\footnotesize\bfseries, align=left}
+}}{}
+% beamer: call \vellumbeamer in the preamble after \usepackage{vellum-colors}
+\providecommand{\vellumbeamer}{%
+  \setbeamercolor{background canvas}{bg=vSurface}
+  \setbeamercolor{normal text}{fg=vInk, bg=vSurface}
+  \setbeamercolor{structure}{fg=vteal}
+  \setbeamercolor{frametitle}{fg=vInk, bg=vSurface}
+  \setbeamercolor{title}{fg=vInk}
+  \setbeamercolor{alerted text}{fg=vterracotta}
+  \setbeamercolor{example text}{fg=vmoss}
+  \setbeamercolor{block title}{fg=vInk, bg=vCard}
+  \setbeamercolor{block body}{fg=vInk, bg=vCard}
+  \setbeamercolor{footline}{fg=vMuted}
+  \setbeamerfont{frametitle}{family=\rmfamily, size=\Large}
+  \setbeamerfont{title}{family=\rmfamily, size=\huge}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{itemize items}{\textcolor{vteal}{\tiny$\bullet$}}
+}
+\providecommand{\vellumbeamerdark}{%
+  \setbeamercolor{background canvas}{bg=vSurfaceD}
+  \setbeamercolor{normal text}{fg=vInkD, bg=vSurfaceD}
+  \setbeamercolor{structure}{fg=vtealD}
+  \setbeamercolor{frametitle}{fg=vInkD, bg=vSurfaceD}
+  \setbeamercolor{title}{fg=vInkD}
+  \setbeamercolor{alerted text}{fg=vterracottaD}
+  \setbeamercolor{example text}{fg=vmossD}
+  \setbeamercolor{block title}{fg=vInkD, bg=vCardD}
+  \setbeamercolor{block body}{fg=vInkD, bg=vCardD}
+  \setbeamercolor{footline}{fg=vMutedD}
+  \setbeamerfont{frametitle}{family=\rmfamily, size=\Large}
+  \setbeamerfont{title}{family=\rmfamily, size=\huge}
+  \setbeamertemplate{navigation symbols}{}
+}
+% gradients: nine stops each, light and dark (suffix D); pgfplots colormaps 'vellum lagoon', 'vellum ember', 'vellum shore', and '... dark'
+\definecolor{vgradlagoon0}{HTML}{E4EFE2}
+\definecolor{vgradlagoon1}{HTML}{BADEC5}
+\definecolor{vgradlagoon2}{HTML}{8FCBB5}
+\definecolor{vgradlagoon3}{HTML}{66B6AC}
+\definecolor{vgradlagoon4}{HTML}{459FA4}
+\definecolor{vgradlagoon5}{HTML}{378598}
+\definecolor{vgradlagoon6}{HTML}{386C86}
+\definecolor{vgradlagoon7}{HTML}{3A536B}
+\definecolor{vgradlagoon8}{HTML}{383D48}
+\definecolor{vgradlagoonD0}{HTML}{333B31}
+\definecolor{vgradlagoonD1}{HTML}{34533E}
+\definecolor{vgradlagoonD2}{HTML}{2F6A58}
+\definecolor{vgradlagoonD3}{HTML}{2D8178}
+\definecolor{vgradlagoonD4}{HTML}{3B969A}
+\definecolor{vgradlagoonD5}{HTML}{5BA8BC}
+\definecolor{vgradlagoonD6}{HTML}{84B9D6}
+\definecolor{vgradlagoonD7}{HTML}{AFCBE7}
+\definecolor{vgradlagoonD8}{HTML}{D7DEEC}
+\definecolor{vgradember0}{HTML}{F1EADC}
+\definecolor{vgradember1}{HTML}{E8CFB0}
+\definecolor{vgradember2}{HTML}{DDB38E}
+\definecolor{vgradember3}{HTML}{CF9777}
+\definecolor{vgradember4}{HTML}{BC7D67}
+\definecolor{vgradember5}{HTML}{A46662}
+\definecolor{vgradember6}{HTML}{87545D}
+\definecolor{vgradember7}{HTML}{664554}
+\definecolor{vgradember8}{HTML}{443941}
+\definecolor{vgrademberD0}{HTML}{3D372C}
+\definecolor{vgrademberD1}{HTML}{5B462B}
+\definecolor{vgrademberD2}{HTML}{7A5533}
+\definecolor{vgrademberD3}{HTML}{976344}
+\definecolor{vgrademberD4}{HTML}{B2745F}
+\definecolor{vgrademberD5}{HTML}{C98883}
+\definecolor{vgrademberD6}{HTML}{D99FA9}
+\definecolor{vgrademberD7}{HTML}{E2BBCB}
+\definecolor{vgrademberD8}{HTML}{E7D9E3}
+\definecolor{vgradshore0}{HTML}{F1EADC}
+\definecolor{vgradshore1}{HTML}{DBD5AF}
+\definecolor{vgradshore2}{HTML}{BCC18E}
+\definecolor{vgradshore3}{HTML}{98AF77}
+\definecolor{vgradshore4}{HTML}{739C6A}
+\definecolor{vgradshore5}{HTML}{508864}
+\definecolor{vgradshore6}{HTML}{37725F}
+\definecolor{vgradshore7}{HTML}{2D5A54}
+\definecolor{vgradshore8}{HTML}{314041}
+\definecolor{vgradshoreD0}{HTML}{3D372C}
+\definecolor{vgradshoreD1}{HTML}{514B2A}
+\definecolor{vgradshoreD2}{HTML}{5E6232}
+\definecolor{vgradshoreD3}{HTML}{657A45}
+\definecolor{vgradshoreD4}{HTML}{6A9362}
+\definecolor{vgradshoreD5}{HTML}{72AB85}
+\definecolor{vgradshoreD6}{HTML}{84C0AA}
+\definecolor{vgradshoreD7}{HTML}{A3D2CB}
+\definecolor{vgradshoreD8}{HTML}{D0E2E3}
+\@ifpackageloaded{pgfplots}{\pgfplotsset{
+  colormap={vellum lagoon}{color=(vgradlagoon0) color=(vgradlagoon1) color=(vgradlagoon2) color=(vgradlagoon3) color=(vgradlagoon4) color=(vgradlagoon5) color=(vgradlagoon6) color=(vgradlagoon7) color=(vgradlagoon8)},
+  colormap={vellum lagoon dark}{color=(vgradlagoonD0) color=(vgradlagoonD1) color=(vgradlagoonD2) color=(vgradlagoonD3) color=(vgradlagoonD4) color=(vgradlagoonD5) color=(vgradlagoonD6) color=(vgradlagoonD7) color=(vgradlagoonD8)},
+  colormap={vellum ember}{color=(vgradember0) color=(vgradember1) color=(vgradember2) color=(vgradember3) color=(vgradember4) color=(vgradember5) color=(vgradember6) color=(vgradember7) color=(vgradember8)},
+  colormap={vellum ember dark}{color=(vgrademberD0) color=(vgrademberD1) color=(vgrademberD2) color=(vgrademberD3) color=(vgrademberD4) color=(vgrademberD5) color=(vgrademberD6) color=(vgrademberD7) color=(vgrademberD8)},
+  colormap={vellum shore}{color=(vgradshore0) color=(vgradshore1) color=(vgradshore2) color=(vgradshore3) color=(vgradshore4) color=(vgradshore5) color=(vgradshore6) color=(vgradshore7) color=(vgradshore8)},
+  colormap={vellum shore dark}{color=(vgradshoreD0) color=(vgradshoreD1) color=(vgradshoreD2) color=(vgradshoreD3) color=(vgradshoreD4) color=(vgradshoreD5) color=(vgradshoreD6) color=(vgradshoreD7) color=(vgradshoreD8)}
+}}{}
+% three-dimensional axes: view {azimuth}{elevation}, flat shading, height as colour, hairline grid, three ticks, muted labels
+\@ifpackageloaded{pgfplots}{\pgfplotsset{vellum 3d/.style={vellum, view={-58}{24}, axis lines=box, axis line style={vRule, line width=0.5pt},
+  grid=major, grid style={vGrid, line width=0.4pt}, z buffer=sort, shader=flat, tick style={draw=none},
+  ticklabel style={vMuted, font=\scriptsize}, xlabel style={vMuted, font=\footnotesize}, ylabel style={vMuted, font=\footnotesize},
+  zlabel style={vMuted, font=\footnotesize}, title style={vInk, font=\footnotesize\bfseries}, clip=false}}}{}
+\endinput

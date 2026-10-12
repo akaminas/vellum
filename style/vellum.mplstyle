@@ -1,0 +1,38 @@
+# Vellum, light mode, as plain rcParams. Generated from vellum.json. Prefer vellum.py for the helpers.
+font.family: Corbel, Lato, Segoe UI, DejaVu Sans
+font.size: 9
+mathtext.fontset: stixsans
+figure.facecolor: #FFFFFF
+axes.facecolor: #FFFFFF
+savefig.facecolor: #FFFFFF
+axes.edgecolor: #E6E0D4
+axes.linewidth: 0.8
+axes.spines.top: False
+axes.spines.right: False
+axes.spines.left: False
+axes.grid: True
+axes.grid.axis: y
+grid.color: #E6E0D4
+grid.linewidth: 0.6
+grid.linestyle: -
+axes.axisbelow: True
+xtick.color: #8A857C
+ytick.color: #8A857C
+xtick.labelcolor: #8A857C
+ytick.labelcolor: #8A857C
+xtick.major.size: 0
+ytick.major.size: 0
+axes.labelcolor: #8A857C
+text.color: #2A2825
+axes.titlelocation: left
+axes.titlesize: 9
+axes.titleweight: bold
+axes.prop_cycle: cycler('color', ['#419BA0', '#A1644F', '#415688', '#806629', '#AD78A1', '#567E4D'])
+lines.linewidth: 1.6
+lines.solid_capstyle: round
+legend.frameon: False
+figure.dpi: 150
+savefig.dpi: 300
+savefig.bbox: tight
+pdf.fonttype: 42
+svg.fonttype: none

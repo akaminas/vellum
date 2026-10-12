@@ -1,0 +1,158 @@
+{
+ "A_paper": {
+  "surface": "#FAF6EE",
+  "ink": "#2A2825",
+  "muted": "#8A857C",
+  "grid": "#E6E0D4",
+  "names": [
+   "teal",
+   "terracotta",
+   "indigo",
+   "ochre",
+   "mauve",
+   "moss"
+  ],
+  "hues": [
+   200,
+   40,
+   265,
+   85,
+   335,
+   140
+  ],
+  "dark": false,
+  "tone": [
+   "#419BA0",
+   "#A1644F",
+   "#415688",
+   "#806629",
+   "#AD78A1",
+   "#567E4D"
+  ],
+  "tint": [
+   "#A5D5D7",
+   "#E8C0B2",
+   "#BBCBEC",
+   "#DAC9A6",
+   "#E0BFD8",
+   "#BAD3B4"
+  ],
+  "deep": [
+   "#004C50",
+   "#613425",
+   "#304168",
+   "#533F0D",
+   "#593351",
+   "#2D4B27"
+  ],
+  "checks": {
+   "min_nv": 18.3,
+   "min_cvd": 11.4,
+   "min_contrast": 3.03
+  }
+ },
+ "B_slate": {
+  "surface": "#23272F",
+  "ink": "#ECE8DF",
+  "muted": "#9A9AA3",
+  "grid": "#343945",
+  "names": [
+   "mint",
+   "peach",
+   "lavender",
+   "butter",
+   "sky",
+   "rose"
+  ],
+  "hues": [
+   170,
+   45,
+   285,
+   95,
+   230,
+   355
+  ],
+  "dark": true,
+  "tone": [
+   "#97E4C8",
+   "#CB8E72",
+   "#B1B0EC",
+   "#C7B676",
+   "#63A9C9",
+   "#FEBAD3"
+  ],
+  "tint": [
+   "#567E70",
+   "#8E6C5C",
+   "#717191",
+   "#7D7553",
+   "#567A8C",
+   "#8D6976"
+  ],
+  "deep": [
+   "#B6F4DD",
+   "#FFDCCD",
+   "#E1E1FF",
+   "#F3E5B0",
+   "#C5EBFF",
+   "#FFD9E6"
+  ],
+  "checks": {
+   "min_nv": 16.6,
+   "min_cvd": 10.4,
+   "min_contrast": 5.45
+  }
+ },
+ "C_stone": {
+  "surface": "#F4F5F7",
+  "ink": "#23262B",
+  "muted": "#80858E",
+  "grid": "#E1E4E9",
+  "names": [
+   "blue",
+   "coral",
+   "sage",
+   "plum",
+   "sand",
+   "sea"
+  ],
+  "hues": [
+   250,
+   30,
+   145,
+   310,
+   80,
+   190
+  ],
+  "dark": false,
+  "tone": [
+   "#4E7DAD",
+   "#BD776B",
+   "#356638",
+   "#795A90",
+   "#A17F41",
+   "#00736E"
+  ],
+  "tint": [
+   "#B9D4F1",
+   "#F0C6BE",
+   "#BDDABD",
+   "#DBC8EA",
+   "#E3CEAD",
+   "#ACDCD8"
+  ],
+  "deep": [
+   "#234566",
+   "#62332C",
+   "#294C2A",
+   "#4E375E",
+   "#563E0E",
+   "#004D4A"
+  ],
+  "checks": {
+   "min_nv": 18.2,
+   "min_cvd": 11.2,
+   "min_contrast": 3.2
+  }
+ }
+}

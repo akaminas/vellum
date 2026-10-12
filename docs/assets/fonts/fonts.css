@@ -1,0 +1,7 @@
+/* Title face fallback for systems without Palatino: TeX Gyre Pagella (GUST Font License, see GUST-FONT-LICENSE.txt).
+   Body face fallback: Lato from Google Fonts, linked in each page head. */
+@font-face {
+  font-family: "TeX Gyre Pagella";
+  src: url("texgyrepagella-regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}

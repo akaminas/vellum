@@ -1,0 +1,115 @@
+role	name	hex	R	G	B
+neutral	surface	#FFFFFF	255	255	255
+neutral	card	#FAF6EE	250	246	238
+neutral	grid	#E6E0D4	230	224	212
+neutral	rule	#C7C3BD	199	195	189
+neutral	muted	#8A857C	138	133	124
+neutral	secondary	#5A5650	90	86	80
+neutral	ink	#2A2825	42	40	37
+tone	teal	#419BA0	65	155	160
+tint	teal	#A5D5D7	165	213	215
+deep	teal	#004C50	0	76	80
+tone	terracotta	#A1644F	161	100	79
+tint	terracotta	#E8C0B2	232	192	178
+deep	terracotta	#613425	97	52	37
+tone	indigo	#415688	65	86	136
+tint	indigo	#BBCBEC	187	203	236
+deep	indigo	#304168	48	65	104
+tone	ochre	#806629	128	102	41
+tint	ochre	#DAC9A6	218	201	166
+deep	ochre	#533F0D	83	63	13
+tone	mauve	#AD78A1	173	120	161
+tint	mauve	#E0BFD8	224	191	216
+deep	mauve	#593351	89	51	81
+tone	moss	#567E4D	86	126	77
+tint	moss	#BAD3B4	186	211	180
+deep	moss	#2D4B27	45	75	39
+status	good	#007835	0	120	53
+status	warning	#DAB327	218	179	39
+status	serious	#CA6719	202	103	25
+status	critical	#B02A2D	176	42	45
+
+dark mode
+neutral	surface	#2A2520	42	37	32
+neutral	card	#342F2A	52	47	42
+neutral	grid	#413C36	65	60	54
+neutral	rule	#5A544D	90	84	77
+neutral	muted	#A29E96	162	158	150
+neutral	secondary	#C9C4BB	201	196	187
+neutral	ink	#ECE7DF	236	231	223
+tone	teal	#8AE2E7	138	226	231
+tint	teal	#3F6C6E	63	108	110
+deep	teal	#BFEFF2	191	239	242
+tone	terracotta	#E8A68F	232	166	143
+tint	terracotta	#7D5A4E	125	90	78
+deep	terracotta	#FFDCD0	255	220	208
+tone	indigo	#8099CF	128	153	207
+tint	indigo	#556380	85	99	128
+deep	indigo	#D8E5FF	216	229	255
+tone	ochre	#E1C487	225	196	135
+tint	ochre	#706142	112	97	66
+deep	ochre	#F4E3BF	244	227	191
+tone	mauve	#B984AD	185	132	173
+tint	mauve	#76596F	118	89	111
+deep	mauve	#FBD9F2	251	217	242
+tone	moss	#93BD89	147	189	137
+tint	moss	#546B4F	84	107	79
+deep	moss	#D4EDCE	212	237	206
+
+gradients, light mode, nine stops from the low end to the high end
+gradient	lagoon 1	#E4EFE2	228	239	226
+gradient	lagoon 2	#BADEC5	186	222	197
+gradient	lagoon 3	#8FCBB5	143	203	181
+gradient	lagoon 4	#66B6AC	102	182	172
+gradient	lagoon 5	#459FA4	69	159	164
+gradient	lagoon 6	#378598	55	133	152
+gradient	lagoon 7	#386C86	56	108	134
+gradient	lagoon 8	#3A536B	58	83	107
+gradient	lagoon 9	#383D48	56	61	72
+gradient	ember 1	#F1EADC	241	234	220
+gradient	ember 2	#E8CFB0	232	207	176
+gradient	ember 3	#DDB38E	221	179	142
+gradient	ember 4	#CF9777	207	151	119
+gradient	ember 5	#BC7D67	188	125	103
+gradient	ember 6	#A46662	164	102	98
+gradient	ember 7	#87545D	135	84	93
+gradient	ember 8	#664554	102	69	84
+gradient	ember 9	#443941	68	57	65
+gradient	shore 1	#F1EADC	241	234	220
+gradient	shore 2	#DBD5AF	219	213	175
+gradient	shore 3	#BCC18E	188	193	142
+gradient	shore 4	#98AF77	152	175	119
+gradient	shore 5	#739C6A	115	156	106
+gradient	shore 6	#508864	80	136	100
+gradient	shore 7	#37725F	55	114	95
+gradient	shore 8	#2D5A54	45	90	84
+gradient	shore 9	#314041	49	64	65
+
+gradients, dark mode, nine stops from the low end to the high end
+gradient	lagoon 1	#333B31	51	59	49
+gradient	lagoon 2	#34533E	52	83	62
+gradient	lagoon 3	#2F6A58	47	106	88
+gradient	lagoon 4	#2D8178	45	129	120
+gradient	lagoon 5	#3B969A	59	150	154
+gradient	lagoon 6	#5BA8BC	91	168	188
+gradient	lagoon 7	#84B9D6	132	185	214
+gradient	lagoon 8	#AFCBE7	175	203	231
+gradient	lagoon 9	#D7DEEC	215	222	236
+gradient	ember 1	#3D372C	61	55	44
+gradient	ember 2	#5B462B	91	70	43
+gradient	ember 3	#7A5533	122	85	51
+gradient	ember 4	#976344	151	99	68
+gradient	ember 5	#B2745F	178	116	95
+gradient	ember 6	#C98883	201	136	131
+gradient	ember 7	#D99FA9	217	159	169
+gradient	ember 8	#E2BBCB	226	187	203
+gradient	ember 9	#E7D9E3	231	217	227
+gradient	shore 1	#3D372C	61	55	44
+gradient	shore 2	#514B2A	81	75	42
+gradient	shore 3	#5E6232	94	98	50
+gradient	shore 4	#657A45	101	122	69
+gradient	shore 5	#6A9362	106	147	98
+gradient	shore 6	#72AB85	114	171	133
+gradient	shore 7	#84C0AA	132	192	170
+gradient	shore 8	#A3D2CB	163	210	203
+gradient	shore 9	#D0E2E3	208	226	227

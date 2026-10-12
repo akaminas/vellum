@@ -1,0 +1,5 @@
+% three-dimensional axes: view {azimuth}{elevation}, flat shading, height as colour, hairline grid, three ticks, muted labels
+\@ifpackageloaded{pgfplots}{\pgfplotsset{vellum 3d/.style={vellum, view={-58}{24}, axis lines=box, axis line style={vRule, line width=0.5pt},
+  grid=major, grid style={vGrid, line width=0.4pt}, z buffer=sort, shader=flat, tick style={draw=none},
+  ticklabel style={vMuted, font=\scriptsize}, xlabel style={vMuted, font=\footnotesize}, ylabel style={vMuted, font=\footnotesize},
+  zlabel style={vMuted, font=\footnotesize}, title style={vInk, font=\footnotesize\bfseries}, clip=false}}}{}
