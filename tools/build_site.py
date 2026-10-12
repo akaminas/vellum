@@ -263,7 +263,8 @@ def pair(keys, by_id):
     it = by_id.get(keys[0])
     if not it: return ""
     tiles = [f'<div class="sel-tile">{tile_imgs(it, True, only=mode, full=True, width=1400)}</div>' for mode in ("light", "dark")]
-    return '<div class="pair">' + "".join(tiles) + "</div>"
+    # on the first screen: load at once, not lazily
+    return '<div class="pair">' + "".join(tiles).replace('loading="lazy"', 'loading="eager" fetchpriority="high"') + "</div>"
 
 
 def strip(keys, by_id):
