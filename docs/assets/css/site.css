@@ -491,3 +491,86 @@ dialog.lightbox .lb-links { display: flex; gap: 14px; }
 .title-card { position: static; background: none; border: 0; padding: 0; max-width: none; }
 .title-card h2 { font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.4rem); }
 .page-head .eyebrow { display: none; }
+
+/* ================================================================ sleek layer
+   The page takes the figures' own surface, so a figure sits on the page without a frame. Panels are a faint tone of
+   the page with no borders; navigation and section labels are small spaced capitals; work is shown image first. */
+:root { --bg: #FFFFFF; --panel: #F7F6F3; --soft: #F3F1EC; --line: #ECE9E3; }
+:root[data-theme="dark"] { --bg: #2A2520; --panel: #302B26; --soft: #34302A; --line: #3A352F; }
+
+.site-header { background: color-mix(in srgb, var(--bg) 92%, transparent); border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+.header-in { height: 76px; }
+.brand-mark { width: 34px; height: 34px; }
+.brand-word { font-size: 1.45rem; }
+.nav a { font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--v-ink); padding: 10px 13px; border-radius: 0; }
+.nav a:hover { background: none; color: var(--accent); }
+.nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--accent); color: var(--v-ink); }
+
+/* panels and figures without borders */
+.card, .tile, .pillar, .viewer, .key, pre { border: 0 !important; background: var(--panel); }
+.key { border-left: 2px solid var(--accent) !important; }
+.figure .frame { border: 0; padding: 0; border-radius: 0; background: none; }
+.figure.card-frame .frame { background: var(--v-card); padding: 16px; }
+.toc a { border: 0; background: var(--panel); }
+.btn, .chip, select, input[type="text"], input[type="search"] { border-color: transparent; background: var(--panel); }
+.work-tile, .g-thumb { border: 0 !important; border-radius: 0; }
+main h2 { border-bottom: 0; padding-bottom: 0; }
+
+/* page heads: centred, a short accent rule under the title */
+.page-head { text-align: center; padding: 96px 0 40px; }
+.page-head h1 { margin: 0 auto; font-size: clamp(2.6rem, 1.8rem + 2.6vw, 3.8rem); }
+.page-head h1::after { content: ""; display: block; width: 56px; height: 2px; background: var(--accent); margin: 28px auto 0; }
+.page-head .lead { margin: 24px auto 0; text-align: center; }
+.page-head .toc { justify-content: center; }
+.works-head { text-align: center; }
+.works-head .lead { margin-left: auto; margin-right: auto; }
+.filter-row.center { justify-content: center; }
+
+/* home: a band of work across the top, then a centred introduction */
+.strip { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; }
+.strip a { display: block; aspect-ratio: 1 / 1; overflow: hidden; background: var(--v-surface); }
+.strip img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s, opacity 0.3s; }
+.strip a:hover img { transform: scale(1.05); }
+@media (max-width: 900px) { .strip { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.intro { display: block; text-align: center; padding: 88px 0 72px; }
+.intro h1 { font-size: clamp(3.4rem, 2rem + 5vw, 6rem); letter-spacing: -0.02em; margin: 0 0 18px; }
+.intro .lead { margin: 0 auto 32px; max-width: 46ch; font-size: 1.22rem; }
+.intro .cta-row { justify-content: center; }
+.btn-solid, .btn-outline { border-radius: 0; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 14px 22px; }
+.btn-outline { background: transparent; border: 1px solid var(--v-ink); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.facts { border: 0; margin: 0 auto 112px; max-width: 920px; }
+.facts div, .facts div + div { border: 0; text-align: center; padding: 0 12px; }
+.facts b { font-size: 2.8rem; }
+.facts span { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; }
+
+/* section heads: small spaced capitals with a rule, the link at the right */
+.sec-head { border-bottom: 1px solid var(--v-ink); padding-bottom: 10px; margin-bottom: 28px; }
+.sec-head h2 { font-family: var(--v-font-body); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.2em; text-transform: uppercase; }
+.sec-head a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--v-ink); }
+.sec-head a:hover { color: var(--accent); }
+.section { margin-bottom: 128px; }
+
+/* selected work: image tiles, the title on hover */
+.selected { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.sel-tile { position: relative; display: block; aspect-ratio: 3 / 2; overflow: hidden; background: var(--v-surface); }
+.sel-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.sel-tile:hover img, .sel-tile:focus-visible img { transform: scale(1.05); }
+.sel-tile::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px var(--line); pointer-events: none; }
+.tile-cap { border-top: 0; background: color-mix(in srgb, var(--bg) 94%, transparent); padding: 16px 20px; }
+.tile-cap small { font-family: var(--v-font-body); letter-spacing: 0.16em; font-size: 0.68rem; }
+
+.pillar { padding: 28px; }
+.pillar .figure-mini { margin: -28px -28px 22px; border: 0; border-radius: 0; }
+.pillar h3 { font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; }
+.pillar a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--v-ink); }
+.pillar a:hover { color: var(--accent); }
+.about li { border-bottom-color: var(--line); }
+.fi-name { font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; border-bottom-color: var(--line); }
+.site-footer { border-top: 1px solid var(--line); }
+.hero-fig { margin: 72px auto 0; max-width: 1080px; }
+.hero-fig img { width: 100%; }
+.sel-tile img { object-fit: contain; padding: 14px; }
+.sel-tile::after { box-shadow: inset 0 0 0 1px var(--line); }
+.facts code { display: none; }

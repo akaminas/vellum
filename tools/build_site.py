@@ -245,16 +245,25 @@ def gallery(items):
 
 
 def mosaic(keys, by_id):
-    """A grid of selected works, each tile in the twin that matches the theme, its title and tools below it."""
+    """The selected works: image-led tiles in the twin that matches the theme, the title shown on hover."""
     tiles = []
     for key in keys:
         it = by_id.get(key)
         if not it: continue
         href = target_of(it) or f'gallery.html#g-{it["group"]}-{it["id"]}'
-        kind = " · ".join(t for t in (it.get("form"), it.get("tool")) if t)
-        tiles.append(f'<a class="work-card" href="{href}"><span class="work-img">{tile_imgs(it, False, full=True)}</span>'
-                     f'<span class="work-title">{e(it.get("title", ""))}</span><span class="work-kind">{e(kind)}</span></a>')
+        tiles.append(f'<a class="sel-tile" href="{href}" aria-label="{e(it.get("title", ""), quote=True)}">{tile_imgs(it, False, full=True)}{caption(it)}</a>')
     return '<div class="selected">' + "".join(tiles) + "</div>"
+
+
+def strip(keys, by_id):
+    """A full-width band of detail crops for the top of the home page, no captions."""
+    tiles = []
+    for key in keys:
+        it = by_id.get(key)
+        if not it: continue
+        href = target_of(it) or f'gallery.html#g-{it["group"]}-{it["id"]}'
+        tiles.append(f'<a href="{href}" tabindex="-1" aria-hidden="true">{tile_imgs(it, False)}</a>')
+    return '<div class="strip bleed">' + "".join(tiles) + "</div>"
 
 
 # ---------------------------------------------------------------- 4. pages
@@ -274,6 +283,8 @@ def pages(items):
         p = os.path.join(DOCS, fn); t = open(p, encoding="utf-8").read()
         for n in ("head", "header", "footer"): t = fill(t, n, part[n])
         if "<!--#gallery-->" in t: t = fill(t, "gallery", gallery(items))
+        t = re.sub(r"<!--#strip ([^>]+?)-->.*?<!--/strip-->",
+                   lambda m: f"<!--#strip {m.group(1)}-->\n{strip(m.group(1).split(), by_id)}\n<!--/strip-->", t, flags=re.S)
         t = re.sub(r"<!--#mosaic ([^>]+?)-->.*?<!--/mosaic-->",
                    lambda m: f"<!--#mosaic {m.group(1)}-->\n{mosaic(m.group(1).split(), by_id)}\n<!--/mosaic-->", t, flags=re.S)
         if "<!--#formsindex-->" in t: t = fill(t, "formsindex", icons.index(by_id))
