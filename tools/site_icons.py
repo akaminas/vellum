@@ -234,6 +234,11 @@ def stackedarea():
     return out
 
 
+def shrunk(fn, k=0.91):
+    # the filled areas reach the rim of the disc; scale them about its centre
+    return lambda: f'<g transform="translate({50 * (1 - k):.1f} {50 * (1 - k):.1f}) scale({k})">{fn()}</g>'
+
+
 def stream():
     out = ""; mid = [50 + 6 * math.sin(x / 10) for x in XS]
     widths = (lambda x: 6 + 6 * gauss(x, 40, 12), lambda x: 5 + 8 * gauss(x, 62, 10), lambda x: 4 + 5 * gauss(x, 30, 9))
@@ -390,17 +395,17 @@ ROWS = [
         ("Dumbbell", dumbbell, "report/report_dotplot"), ("Slope", slope, "science/life_slope"), ("Bump", bump, None),
         ("Word cloud", wordcloud, "science/miserables_wordcloud")]),
     ("Part of a whole", "terracotta", "whole", [("Stacked bar", stackedbar, None), ("Waffle", waffle, "infographic/story"),
-        ("Treemap", treemap, None), ("Pie, six slices at most", pie, None), ("Doughnut", doughnut, None)]),
+        ("Treemap", treemap, None), ("Pie", pie, None), ("Doughnut", doughnut, None)]),
     ("Change over time", "indigo", "time", [("Line", lines, "science/co2_keeling"), ("Line with a band", band, "report/report_projection"),
-        ("Area", area, None), ("Stacked area", stackedarea, "science/population_stacked"), ("Streamgraph", stream, None),
+        ("Area", shrunk(area), None), ("Stacked area", shrunk(stackedarea), "science/population_stacked"), ("Streamgraph", stream, None),
         ("Small multiples", multiples, "science/life_small_multiples"),
         ("Second y axis", dualaxis, "science/driving_dual_axis")]),
     ("Maps", "mauve", "maps", [("Choropleth", choropleth, "report/report_choropleth"), ("Bubble map", bubblemap, None),
         ("Tile map", tilemap, None)]),
     ("Flow, trees and networks", "teal", "networks", [("Tree", tree, "science/primates_tree"), ("Network", network, "science/miserables_network"),
         ("Sankey", sankey, None), ("Chord", chord, None)]),
-    ("The third axis, with its twin", "lagoon", "threed", [("Surface", surface, "threed/landscape_surface"), ("3D scatter", scatter3d, "threed/penguins_scatter3d"),
-        ("The flat twin", twin, "threed/landscape_surface")]),
+    ("3D plotting", "lagoon", "threed", [("Surface", surface, "threed/landscape_surface"), ("3D scatter", scatter3d, "threed/penguins_scatter3d"),
+        ("Pseudo-3D", twin, "threed/landscape_surface")]),
 ]
 
 
