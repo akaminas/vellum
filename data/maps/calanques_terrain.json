@@ -1,0 +1,17 @@
+{
+ "crs": "EPSG:2154",
+ "x0": 884000,
+ "x1": 910000,
+ "y0": 6228000,
+ "y1": 6250000,
+ "step": 25,
+ "nx": 1040,
+ "ny": 880,
+ "scale": 10.0,
+ "offset": 1000.0,
+ "rows": "north to south",
+ "decode": "metres = value / scale - offset",
+ "land_cells": 389827,
+ "min": -750.1678466796875,
+ "max": 643.867431640625
+}

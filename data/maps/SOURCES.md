@@ -20,3 +20,18 @@ The share below sea level counts AHN4 ground samples on a 100 m grid over Dutch 
 border, minus lakes and wide rivers). AHN4 has no ground value under buildings and water, so those samples are left
 out; each 100 m cell is one hectare, so counts are areas. NAP (Normaal Amsterdams Peil) is the Dutch vertical datum,
 close to mean sea level.
+
+## The Calanques of Marseille
+
+Built by `examples/python/maps/fetch_calanques.py` (downloads cached outside the repository) and drawn by
+`examples/python/maps/calanques.py`. Downloaded on 2026-10-14.
+
+| file | what it is | source | licence |
+|---|---|---|---|
+| `calanques_terrain.png` | Ground and sea-floor height from the south of Marseille to Cassis on a Lambert-93 grid (EPSG:2154), 25 m cells, x 884 000–910 000, y 6 228 000–6 250 000, rows from the north; 16-bit: metres = value / 10 − 1000. Above the sea, IGN RGE ALTI; elsewhere EMODnet, bilinearly resampled from its 1/16 arc-minute grid, and kept at least 0.5 m below the surface where EMODnet's coarser coast puts sea cells on land | IGN RGE ALTI, via the Géoplateforme raster WMS (`data.geopf.fr/wms-r`, layer `ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES`, 32-bit BIL); EMODnet Bathymetry DTM, via its WCS (`ows.emodnet-bathymetry.eu`, coverage `emodnet:mean`) | IGN: Licence Ouverte 2.0 (Etalab). EMODnet: CC BY 4.0 |
+| `calanques_terrain.json` | The grid of `calanques_terrain.png`: extent, cell size, decoding | written by `fetch_calanques.py` | as above |
+| `med_slips_vacchi2021.csv` | 401 sea-level index points of the central and western Mediterranean (site, region, latitude, longitude, lab code, relative sea level and its 1-sigma range in m, age in years CE and its error, material, reference), as published | Vacchi, Joyse, Kopp, Marriner, Kaniewski and Rovere (2021), supplement to *Climate pacing of millennial sea-level change variability in the central and western Mediterranean*, Nature Communications 12, 4013; Zenodo, doi:10.5281/zenodo.4737120 | CC BY 4.0 |
+
+EMODnet depths refer to lowest astronomical tide; at Marseille the tide is about 0.2 m, so the difference from mean
+sea level is left as it is. The figure uses the index points of regions 9–14 (the French mainland coast, Languedoc to
+Cap Ferrat); the file is kept whole, as published.
