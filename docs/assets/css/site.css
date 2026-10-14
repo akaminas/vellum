@@ -619,3 +619,129 @@ dialog.lightbox .lb-links a:hover { color: var(--accent); }
 .intro h1 { font-size: clamp(3rem, 2rem + 3vw, 4.6rem); margin-bottom: 12px; }
 .intro .lead { margin-bottom: 22px; }
 .hero-pair { margin-top: 0; }
+
+/* ================================================================ start: the Start tab, the guide, the about page
+   The tab is a <details> first in the nav row. Its terracotta dot marks it as the one thing claimed in the header:
+   where a newcomer begins. */
+.start { position: relative; flex: none; margin-left: auto; }
+.start + .nav { margin-left: -12px; }
+.start > summary {
+  display: flex; align-items: center; gap: 8px; list-style: none; cursor: pointer; user-select: none; white-space: nowrap;
+  font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--v-ink); padding: 10px 13px;
+}
+.start > summary::-webkit-details-marker { display: none; }
+.start > summary:hover, .start[open] > summary { color: var(--accent); }
+.start:has(.start-item[aria-current="page"]) > summary { box-shadow: inset 0 -2px 0 var(--accent); }
+.start-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--v-terracotta); box-shadow: 0 0 0 2px var(--bg); }
+.start-chev { flex: none; width: 10px; height: 10px; margin-left: -2px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s; }
+.start[open] .start-chev { transform: rotate(180deg); }
+.start-panel {
+  position: absolute; top: calc(100% + 14px); left: 0; z-index: 30; width: 250px; padding: 18px 10px 10px;
+  background: var(--bg); border: 1px solid var(--frame); border-radius: 12px; box-shadow: 0 28px 56px -30px rgba(30, 26, 22, 0.5);
+}
+.start[open] .start-panel { animation: start-in 0.18s ease-out; }
+@keyframes start-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.start-panel .mono-label { margin: 0 12px 6px; }
+.start-item { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 14px; align-items: center; padding: 12px; border-radius: 8px; text-decoration: none; color: inherit; }
+.start-item:hover, .start-item:focus-visible, .start-item[aria-current="page"] { background: var(--panel); }
+.start-ic { display: block; width: 48px; height: 48px; }
+.start-text b { display: block; font-family: var(--v-font-title); font-weight: 400; font-size: 1.18rem; line-height: 1.2; color: var(--v-ink); }
+.start-item:hover b { color: var(--accent); }
+@media (max-width: 900px) {
+  .start { position: static; }
+  .start ~ .header-tools { margin-left: 0; }
+  .start-panel { left: auto; right: var(--gutter); top: 56px; }
+}
+@media (prefers-reduced-motion: reduce) { .start[open] .start-panel { animation: none; } }
+
+/* the guide: the route, a line with a ringed dot per step, ending in terracotta at the figure */
+.route { list-style: none; padding: 0; margin: 48px auto 0; max-width: 1040px; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); position: relative; text-align: center; }
+.route::before { content: ""; position: absolute; left: 6.25%; right: 6.25%; top: 42px; height: 2px; border-radius: 1px; background: var(--v-teal); }
+.route li { margin: 0; }
+.route a { display: flex; flex-direction: column; align-items: center; padding: 0 4px; text-decoration: none; color: var(--v-secondary); }
+.route-n { height: 28px; font-family: var(--v-font-title); font-size: 1.35rem; line-height: 1; color: var(--accent); }
+.route-dot { position: relative; z-index: 1; width: 14px; height: 14px; margin: 8px 0 12px; border-radius: 50%; background: var(--v-teal); box-shadow: 0 0 0 3px var(--bg); transition: transform 0.2s; }
+.route-end .route-dot { width: 18px; height: 18px; margin: 6px 0 10px; background: var(--v-terracotta); }
+.route-end .route-label { color: var(--v-ink); }
+.route-label { font-size: 0.86rem; line-height: 1.35; }
+.route a:hover .route-dot { transform: scale(1.3); }
+.route a:hover .route-label { color: var(--v-ink); }
+@media (max-width: 760px) {
+  .route { grid-template-columns: minmax(0, 1fr); max-width: 300px; margin-top: 36px; text-align: left; }
+  .route::before { left: 46px; right: auto; top: 20px; bottom: 20px; width: 2px; height: auto; }
+  .route a { flex-direction: row; gap: 14px; padding: 6px 0; }
+  .route-n { width: 26px; height: auto; text-align: right; font-size: 1.1rem; }
+  .route-dot, .route-end .route-dot { margin: 0; flex: none; }
+  .route-end .route-dot { margin: 0 -2px; }
+}
+
+.step-head { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 20px; align-items: start; margin: 112px 0 28px; }
+.step-n { font-family: var(--v-font-title); font-size: 3.8rem; line-height: 0.85; color: var(--accent); text-align: right; font-variant-numeric: lining-nums; }
+.step-n.step-end { justify-self: end; width: 22px; height: 22px; margin-top: 10px; border-radius: 50%; background: var(--v-terracotta); }
+.step-head .mono-label { margin: 4px 0 8px; }
+.step-head h2 { margin: 0; text-wrap: balance; }
+.step .tabs { margin-top: 0; }
+@media (max-width: 620px) { .step-head { grid-template-columns: 44px minmax(0, 1fr); gap: 14px; margin-top: 80px; } .step-n { font-size: 2.6rem; } }
+pre.tree { line-height: 1.6; }
+
+/* the claim, taken apart: each part on its tint, its text in the deep step */
+.claim-build { display: flex; flex-wrap: wrap; gap: 16px 6px; align-items: flex-start; margin: 12px 0 36px; max-width: none; }
+.cb { display: inline-flex; flex-direction: column; gap: 6px; }
+.cb > span { font-family: var(--v-font-title); font-size: clamp(1.15rem, 0.95rem + 0.9vw, 1.6rem); line-height: 1.3; padding: 4px 10px; border-radius: 4px; background: var(--t); color: var(--d); }
+.cb > small { padding-left: 10px; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--v-muted); }
+
+table.verbs td.serif { font-size: 1.05rem; }
+.verbs .fi-key { display: inline-block; margin-right: 10px; }
+
+/* four layers of the repository, keyed by the colours of the code beside them */
+.layers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gutter); margin-top: 8px; }
+.layer { background: var(--panel); border-radius: var(--radius); padding: 22px 22px 20px; box-shadow: inset 0 3px 0 var(--k); }
+.layer h3 { margin: 0 0 8px; font-size: 1rem; }
+.layer h3 code { white-space: normal; }
+.layer p { margin: 0; font-size: 0.92rem; color: var(--v-secondary); }
+@media (max-width: 960px) { .layers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .layers { grid-template-columns: minmax(0, 1fr); } }
+.who-key { list-style: none; padding: 0; margin: 0 0 8px; font-size: 0.9rem; color: var(--v-secondary); }
+.who-key li { display: flex; align-items: center; gap: 10px; margin: 2px 0; }
+.who-key span { flex: none; width: 3px; height: 16px; border-radius: 1px; background: var(--k); }
+pre.who { font-size: 0.82rem; line-height: 1.65; }
+pre.who .ln { display: block; margin-left: -20px; padding-left: 17px; border-left: 3px solid transparent; }
+pre.who .vl { border-left-color: var(--v-teal); }
+pre.who .yo { border-left-color: var(--v-terracotta); }
+pre.who .cp { border-left-color: var(--v-rule); }
+
+/* the about page: one paragraph, its opening question in ink, then the maker */
+.about-note { max-width: 64ch; margin: 8px auto 0; text-align: center; }
+.about-note p { max-width: none; font-size: clamp(1.15rem, 1rem + 0.5vw, 1.32rem); line-height: 1.65; color: var(--v-secondary); margin: 0 0 32px; text-wrap: pretty; }
+.about-hook { color: var(--v-ink); }
+.about-note .cta-row { justify-content: center; }
+
+/* the maker: a cream card, an arrow drawn in the claim colour, and a white tab rising from the card's lower edge */
+.creator { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 0 32px; align-items: end; background: var(--v-card); border-radius: 16px; padding: 56px 56px 0; margin: 96px 0 0; overflow: hidden; }
+.creator-text { padding-bottom: 56px; }
+.creator h2 { margin: 0 0 14px; font-size: clamp(1.8rem, 1.3rem + 1.6vw, 2.6rem); line-height: 1.12; text-wrap: balance; }
+.creator p { color: var(--v-secondary); font-size: 1.08rem; margin: 0; }
+.creator-go { display: flex; flex-direction: column; align-items: flex-end; }
+.drawn-arrow { display: block; overflow: visible; }
+.arrow-wide { width: 100%; max-width: 420px; margin: 0 0 -6px auto; }
+.arrow-tall { display: none; width: 190px; margin: 0 auto -4px 8px; }
+.arrow-line, .arrow-head { fill: none; stroke: var(--v-terracotta); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.arrow-dot { fill: var(--v-terracotta); stroke: var(--v-card); stroke-width: 2.5; }
+.drawn-arrow.will-draw .arrow-line { stroke-dasharray: 1 1; stroke-dashoffset: 1; }
+.drawn-arrow.will-draw .arrow-head { opacity: 0; }
+.drawn-arrow.will-draw.drawn .arrow-line { stroke-dashoffset: 0; transition: stroke-dashoffset 1.3s cubic-bezier(0.55, 0.1, 0.3, 1); }
+.drawn-arrow.will-draw.drawn .arrow-head { opacity: 1; transition: opacity 0.2s 1.2s; }
+.creator-tab {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 240px; padding: 18px 28px 20px; border-radius: 12px 12px 0 0; background: var(--bg);
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--v-ink); text-decoration: none;
+  box-shadow: inset 0 3px 0 var(--v-terracotta); transition: padding 0.2s, color 0.2s;
+}
+.creator-tab svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s; }
+.creator-tab:hover, .creator-tab:focus-visible { color: var(--accent); padding-bottom: 26px; }
+.creator-tab:hover svg, .creator-tab:focus-visible svg { transform: translate(2px, -2px); }
+@media (max-width: 900px) {
+  .creator { grid-template-columns: minmax(0, 1fr); padding: 40px 28px 0; }
+  .creator-text { padding-bottom: 8px; }
+  .arrow-wide { display: none; }
+  .arrow-tall { display: block; }
+}

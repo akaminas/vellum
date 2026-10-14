@@ -22,8 +22,32 @@ if (toggle) {
 
 // ---- the current page in the nav
 const here = location.pathname.split("/").pop() || "index.html";
-for (const a of document.querySelectorAll(".nav a, .footer-nav a")) {
+for (const a of document.querySelectorAll(".nav a, .footer-nav a, .start-item")) {
   if (a.getAttribute("href") === here) a.setAttribute("aria-current", "page");
+}
+
+// ---- the Start tab: a <details> in the header that unfolds into the guide and the about page. It works without
+// scripts; this closes it on a click elsewhere, on Escape, and when the keyboard leaves it
+const start = document.querySelector(".start");
+if (start) {
+  const summary = start.querySelector("summary");
+  document.addEventListener("click", (e) => { if (start.open && !start.contains(e.target)) start.open = false; });
+  start.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && start.open) { start.open = false; summary.focus(); }
+  });
+  start.addEventListener("focusout", (e) => {
+    if (start.open && e.relatedTarget && !start.contains(e.relatedTarget)) start.open = false;
+  });
+}
+
+// ---- drawn arrows: an arrow draws its line once it scrolls into view, then its head. Without scripts, or with
+// reduced motion, it is simply there
+const arrows = document.querySelectorAll(".drawn-arrow");
+if (arrows.length && "IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const io = new IntersectionObserver((entries) => {
+    for (const en of entries) if (en.isIntersecting) { en.target.classList.add("drawn"); io.unobserve(en.target); }
+  }, { threshold: 0.5 });
+  for (const a of arrows) { a.classList.add("will-draw"); io.observe(a); }
 }
 
 // ---- lightbox for zoomable figures: shows the twin that matches the theme

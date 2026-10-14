@@ -9,6 +9,8 @@ one figure knows where to look in the next.
 
 **The site, with the rules, the reasoning and every worked example: https://akaminas.github.io/vellum/**
 
+New here? Start with the guide, from a claim to a finished figure in seven steps: https://akaminas.github.io/vellum/guide.html
+
 ## The style in one paragraph
 
 Each of six hue families (teal, terracotta, indigo, ochre, mauve, moss) has three steps of one hue angle: a pastel
