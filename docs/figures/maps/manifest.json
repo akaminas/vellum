@@ -17,5 +17,27 @@
    "dark": "figures/maps/netherlands_rivers_dark.png",
    "pdf": "figures/maps/netherlands_rivers_light.pdf"
   }
+ },
+ {
+  "id": "calanques",
+  "group": "maps",
+  "title": "The sea rose 39 m in 11,000 years, 31 m of it in the first 3,500, and turned the valleys of the Calanques into inlets",
+  "subtitle": "Marseille to Cassis · relative sea level from 66 index points on the French Mediterranean coast (Vacchi et al. 2021) · ground from IGN RGE ALTI, sea floor from EMODnet",
+  "kind": "composite",
+  "also": [
+   "map"
+  ],
+  "form": "four-panel composite: relief map, index points with Gaussian-process fit, terrain section, three block diagrams",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "IGN RGE ALTI and EMODnet Bathymetry DTM for the Calanques coast; 66 sea-level index points from the Languedoc to Nice, Vacchi et al. (2021)",
+  "script": "examples/python/maps/calanques.py",
+  "alt": "Four panels on the Calanques coast near Marseille. a: a map from Marseille to Cassis with ground height and sea depth; the shore of 11,000 years ago follows the -39 m isobath a few hundred metres off today's cliffs. b: relative sea level from 66 index points on the French Mediterranean coast: -39 m 11,000 years ago, -8 m 7,500 years ago, then a slow rise to today; the sea reached the depth of the Cosquer cave entrance, 37 m, about 10,805 years ago. c: a section through Cap Morgiou: cliffs plunge from the slopes of Mont Puget to a sea floor 90 to 100 m down. d: three block diagrams of the same coast at sea levels of -39 m, -8 m and 0: a strip of land below the cliffs, then the sea against the cliffs, then the valleys flooded as inlets.",
+  "note": "Index points of regions 9–14 of Vacchi et al. (2021): Languedoc, Rhône delta, Marseille, La Ciotat–Hyères, Fréjus and Cap Ferrat; the 7 older than 7,600 years are all from the Rhône delta, where compaction may lower them. Fit: a Gaussian process, squared-exponential kernel, amplitude 40 m and length scale 5 thousand years by maximum likelihood, age errors as extra height variance. The blocks keep today's ground: no sediment is removed or added, so they show where the sea stood, not the coast's full history. The Cosquer cave is placed on the −37 m contour nearest its published position; its entrance depth is from Clottes, Courtin and Vanrell (2005). Sea floor depths are referred to lowest astronomical tide, about 0.2 m below mean sea level at Marseille.",
+  "files": {
+   "light": "figures/maps/calanques_light.png",
+   "dark": "figures/maps/calanques_dark.png",
+   "pdf": "figures/maps/calanques_light.pdf"
+  }
  }
 ]
