@@ -256,5 +256,43 @@
    "dark": "figures/science/primates_tree_dark.png",
    "pdf": "figures/science/primates_tree_light.pdf"
   }
+ },
+ {
+  "id": "petroleum_sankey",
+  "group": "science",
+  "title": "Two thirds of US petroleum moves vehicles, and exports now exceed imports",
+  "subtitle": "Petroleum in 2025, million barrels a day: sources, products and the sectors that use them · 13.9 of 20.7 (67 %) to transportation",
+  "kind": "scientific",
+  "form": "Sankey diagram, three stages",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "EIA Monthly Energy Review, petroleum supply and consumption by product and sector, 2025",
+  "script": "examples/python/science/petroleum_sankey.py",
+  "alt": "Sankey diagram of US petroleum in 2025, million barrels a day. Supply of 31.7: crude oil from US fields 13.7, natural gas liquids 7.5, imports 7.9, biofuels 1.4, processing gain 1.0. Exports take 10.8; 20.7 is supplied: motor gasoline 8.9, jet fuel 1.7, distillate 3.9, residual fuel 0.3, gas liquids 3.9, other products 1.9. Transportation uses 13.9 (67 %), industry 5.7, homes 0.59, commerce 0.48, power plants 0.09.",
+  "note": "Products supplied is EIA's measure of consumption. Gas liquids include the ethane and other feedstocks the petrochemical industry uses; outside industry they are propane. Motor gasoline includes the ethanol blended into it, which is why biofuels enter on the supply side.",
+  "files": {
+   "light": "figures/science/petroleum_sankey_light.png",
+   "dark": "figures/science/petroleum_sankey_dark.png",
+   "pdf": "figures/science/petroleum_sankey_light.pdf"
+  }
+ },
+ {
+  "id": "canid_history",
+  "group": "science",
+  "title": "Dogs and wolves split 14,900 years ago; the first dogs numbered about 2,000",
+  "subtitle": "Tube width: effective population size, from a coalescent model of seven canid genomes · arrows: gene flow",
+  "kind": "scientific",
+  "form": "population tree with tube widths (demographic history)",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Freedman et al. (2014), PLOS Genetics, G-PhoCS estimates, Table S12",
+  "script": "examples/python/science/canid_history.py",
+  "alt": "Population tree of dogs, wolves and the golden jackal, tube widths proportional to effective population size. The golden jackal splits from the ancestor of dogs and wolves 398,000 years ago. That ancestor, 44,993 strong, splits into dogs and wolves 14,874 years ago. The first dogs number about 1,999; the Dingo splits off 12,795 years ago and Boxer and Basenji 12,102 years ago. Wolves split about 13,455 years ago into lineages of 5,426 (Chinese), 26,092 (Israeli) and 11,427 (Croatian). Gene flow: Israeli wolf to Basenji 18 %, Basenji to Israeli wolf 7 %, between Chinese wolf and Dingo 3–4 %, from the dog-wolf ancestor into the golden jackal 99 %.",
+  "note": "Calibrated with μ = 1 × 10⁻⁸ per site per generation and three-year generations, as in the paper; the mutation rate is the main source of uncertainty in the dates. Total migration rates are probabilities over the whole band and can exceed 100 %; the arrows are placed at an arbitrary time within the band. The two wolf splits, 13,455 and 13,389 years ago, are within each other's intervals.",
+  "files": {
+   "light": "figures/science/canid_history_light.png",
+   "dark": "figures/science/canid_history_dark.png",
+   "pdf": "figures/science/canid_history_light.pdf"
+  }
  }
 ]

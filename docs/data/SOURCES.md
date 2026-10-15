@@ -14,6 +14,8 @@ Every example figure is drawn from one of these files. Where a figure uses inven
 | `miserables.json` | Co-occurrence of 77 characters in the chapters of *Les Misérables* | Donald Knuth, *The Stanford GraphBase* (1993); via vega-datasets 2.8.0 | public domain |
 | `population.json` | United States population by age group and sex, every ten years, 1850–2000 | IPUMS USA, Minnesota Population Center; via vega-datasets 2.8.0 | as published by vega-datasets (BSD-3-Clause package) |
 | `ne_110m_admin_0_countries.geojson` | Country outlines at 1:110 million | Natural Earth v5.1.2 | public domain |
+| `eia_petroleum.csv` | Annual US petroleum supply, products supplied and consumption by sector and product, 1949–2025, thousand barrels a day; every annual row of tables 3.1, 3.5 and 3.7a–c, written long by `examples/python/science/fetch_eia_petroleum.py`, downloaded 2026-10-15 | U.S. Energy Information Administration, *Monthly Energy Review*, via the MER data browser | public domain (US Government work) |
+| `canids_freedman2014.csv` | Effective population sizes, split times and total migration rates of dogs, wolves and the golden jackal from the main G-PhoCS model, raw (×10⁴) and calibrated (μ = 1 × 10⁻⁸ per generation, three-year generations), with 95 % intervals; transcribed from Table S12 | Freedman, Gronau, Schweizer et al. (2014), *Genome sequencing highlights the dynamic early history of dogs*, *PLOS Genetics* 10(1): e1004016, Table S12, doi:10.1371/journal.pgen.1004016.s018 | CC0 |
 
 The two-trait adaptive landscape used by every 3D example is not data. It is the analytic function `landscape(z1, z2)` in `examples/python/_common.py`, illustrative by construction.
 

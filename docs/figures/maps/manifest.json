@@ -21,8 +21,8 @@
  {
   "id": "calanques",
   "group": "maps",
-  "title": "The sea rose 39 m in 11,000 years, 31 m of it in the first 3,500, and turned the valleys of the Calanques into inlets",
-  "subtitle": "Marseille to Cassis · relative sea level from 66 index points on the French Mediterranean coast (Vacchi et al. 2021) · ground from IGN RGE ALTI, sea floor from EMODnet",
+  "title": "The sea rose 39 m in 11,000 years and turned the valleys of the Calanques into inlets",
+  "subtitle": "Marseille to Cassis · sea level from 66 index points on the French Mediterranean coast · 31 m of the rise came in its first 3,500 years",
   "kind": "composite",
   "also": [
    "map"

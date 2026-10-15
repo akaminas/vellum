@@ -37,25 +37,6 @@
   }
  },
  {
-  "id": "doubs_fish",
-  "group": "ecology",
-  "title": "Doubs fish fall from 22 species to 3 at a polluted stretch 304 km from the source, and recover below it",
-  "subtitle": "Fish of the Doubs, 30 sites over 453 km, 27 species · terracotta: sites 23–25, where ammonium peaks at 1.8 mg/L and oxygen falls to 4.1 mg/L",
-  "kind": "composite",
-  "form": "six-panel composite: river map, profiles, community table, beta-diversity partition, RDA triplot, Euler diagram",
-  "medium": "paper",
-  "tool": "matplotlib",
-  "data": "Doubs river fish, Verneaux (1973), 30 sites × 27 species, via R ade4::doubs",
-  "script": "examples/python/ecology/doubs_fish.py",
-  "alt": "Six panels on the fish of the Doubs river. a: the river from source to mouth with dots sized by species per site. b: species per site against distance from the source; richness falls from 22 at site 22 to 3 at site 23 (304 km), where oxygen is lowest and ammonium highest, and recovers to 21 at site 26. c: the 27-species community table in river order shows trout-zone species upstream, cyprinids downstream, and empty columns at sites 23–25. d: Sørensen dissimilarity between neighbouring sites peaks at 0.76 entering the stretch, 100 % of it nestedness. e: RDA on distance from source, oxygen and oxygen demand explains 54 % (adjusted). f: environment and space share 43 % of the variation.",
-  "note": "Abundance classes 0–5 as recorded. Site 8 has no fish and is left out of the RDA and the partition. tb-RDA on Hellinger-transformed abundances with standardised environment; forward selection (ordiR2step, double stopping) kept dfs, oxy, bdo; adjusted R² 0.537 (all 11 variables 0.558), p = 0.001. Variation partitioning against 6 forward-selected PCNM eigenfunctions of the site coordinates: environment alone 0.106 (p = 0.001), shared 0.431, space alone 0.134 (p = 0.001), residual 0.330. Beta diversity: Baselga (2010) partition of Sørensen into Simpson turnover and nestedness-resultant dissimilarity, presence–absence, computed in the script. Units: dfs in the data is tenths of a km, oxygen tenths of mg/L, ammonium hundredths of mg/L.",
-  "files": {
-   "light": "figures/ecology/doubs_fish_light.png",
-   "dark": "figures/ecology/doubs_fish_dark.png",
-   "pdf": "figures/ecology/doubs_fish_light.pdf"
-  }
- },
- {
   "id": "lynx_cycle",
   "group": "ecology",
   "title": "Canadian lynx peaked every 9.7 years for a century, a rhythm a two-year memory reproduces",
@@ -91,6 +72,25 @@
    "light": "figures/ecology/mite_metacommunity_light.png",
    "dark": "figures/ecology/mite_metacommunity_dark.png",
    "pdf": "figures/ecology/mite_metacommunity_light.pdf"
+  }
+ },
+ {
+  "id": "doubs_fish",
+  "group": "ecology",
+  "title": "Doubs fish fall from 22 species to 3 at a polluted stretch, and recover below it",
+  "subtitle": "30 sites over 453 km, 27 species · terracotta: sites 23–25, ammonium up to 1.8 mg/L, oxygen down to 4.1 mg/L",
+  "kind": "composite",
+  "form": "six-panel composite: river map, profiles, community table, beta-diversity partition, RDA triplot, Euler diagram",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Doubs river fish, Verneaux (1973), 30 sites × 27 species, via R ade4::doubs",
+  "script": "examples/python/ecology/doubs_fish.py",
+  "alt": "Six panels on the fish of the Doubs river. a: the river from source to mouth with dots sized by species per site. b: species per site against distance from the source; richness falls from 22 at site 22 to 3 at site 23 (304 km), where oxygen is lowest and ammonium highest, and recovers to 21 at site 26. c: the 27-species community table in river order shows trout-zone species upstream, cyprinids downstream, and empty columns at sites 23–25. d: Sørensen dissimilarity between neighbouring sites peaks at 0.76 entering the stretch, 100 % of it nestedness. e: RDA on distance from source, oxygen and oxygen demand explains 54 % (adjusted). f: environment and space share 43 % of the variation.",
+  "note": "Abundance classes 0–5 as recorded. Site 8 has no fish and is left out of the RDA and the partition. tb-RDA on Hellinger-transformed abundances with standardised environment; forward selection (ordiR2step, double stopping) kept dfs, oxy, bdo; adjusted R² 0.537 (all 11 variables 0.558), p = 0.001. Variation partitioning against 6 forward-selected PCNM eigenfunctions of the site coordinates: environment alone 0.106 (p = 0.001), shared 0.431, space alone 0.134 (p = 0.001), residual 0.330. Beta diversity: Baselga (2010) partition of Sørensen into Simpson turnover and nestedness-resultant dissimilarity, presence–absence, computed in the script. Units: dfs in the data is tenths of a km, oxygen tenths of mg/L, ammonium hundredths of mg/L.",
+  "files": {
+   "light": "figures/ecology/doubs_fish_light.png",
+   "dark": "figures/ecology/doubs_fish_dark.png",
+   "pdf": "figures/ecology/doubs_fish_light.pdf"
   }
  }
 ]

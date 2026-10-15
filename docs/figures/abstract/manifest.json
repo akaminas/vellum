@@ -1,0 +1,24 @@
+[
+ {
+  "id": "membrane",
+  "group": "abstract",
+  "title": "Proteins drift in a film of lipids under 5 nm thick, and sugars coat its outer face",
+  "subtitle": "The plasma membrane as a fluid mosaic, drawn to molecular scale · a 34 × 20 nm patch, cut to show the bilayer",
+  "kind": "conference",
+  "also": [
+   "infographic"
+  ],
+  "form": "graphical abstract: pseudo-3D block, to scale",
+  "medium": "graphical abstract",
+  "tool": "matplotlib",
+  "data": "schematic; sizes after Nagle and Tristram-Nagle (2000)",
+  "script": "examples/python/abstract/membrane.py",
+  "alt": "A graphical abstract: a 34 by 20 nanometre patch of cell membrane seen from above at an angle and cut open on two faces. The bilayer is 4.7 nm thick: two rows of phospholipid heads with fatty-acid tails between them and cholesterol rods tucked under the heads. A receptor of seven helices, cut open at the front, spans the bilayer, with a peripheral protein held under it on the inner side. A channel protein with a central pore and a glycoprotein rise from the outer face; short branched sugar chains sit on the glycoprotein and on glycolipids. A 5 nm scale bar.",
+  "note": "Drawn in the Vellum 3D view with flat colour and one family per part. Heads 0.84 nm across and 0.82 nm apart, 3.9 nm between the head planes, helices 1 nm across, a channel 4.8 nm across; the receptor is cut so that four of its seven helices show in section.",
+  "files": {
+   "light": "figures/abstract/membrane_light.png",
+   "dark": "figures/abstract/membrane_dark.png",
+   "pdf": "figures/abstract/membrane_light.pdf"
+  }
+ }
+]
