@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _eco import *
 from matplotlib.patches import Circle, Rectangle
 
-SOURCE = "Data: Doubs river fish, France and Switzerland (Verneaux 1973), via R ade4::doubs; analyses as in Borcard, Gillet and Legendre (2018)"
+SOURCE = "Data: Doubs river fish (Verneaux 1973), via R ade4::doubs; analyses after Borcard, Gillet and Legendre (2018)"
 F = table("doubs_fish.csv"); E = table("doubs_env.csv"); SPT = table("doubs_species.csv")
 RS = table("doubs_rda_sites.csv"); RSP = table("doubs_rda_species.csv"); RA = table("doubs_rda_arrows.csv"); RFIT = table("doubs_rda_fit.csv")
 VP = table("doubs_varpart.csv")
@@ -55,10 +55,10 @@ B_IN = BETA[21, 0]; B_OUT = BETA[24, 0]                                         
 NEST_IN = BETA[21, 2] / BETA[21, 0]
 assert B_IN == np.nanmax(BETA[9:, 0]) or B_IN > 0.6
 
-TITLE = (f"Doubs fish fall from {RICH[up][0]} species to {RICH[low][0]} at a polluted stretch "
-         f"{KM[low][0]:.0f} km from the source, and recover below it")
-SUB = (f"Fish of the Doubs, {NS} sites over {KM[-1]:.0f} km, {len(CODES)} species · terracotta: sites 23–25, "
-       f"where ammonium peaks at {AMM.max():.1f} mg/L and oxygen falls to {OXY.min():.1f} mg/L")
+TITLE = (f"Doubs fish fall from {RICH[up][0]} species to {RICH[low][0]} at a polluted stretch, "
+         f"and recover below it")
+SUB = (f"{NS} sites over {KM[-1]:.0f} km, {len(CODES)} species · terracotta: sites 23–25, "
+       f"ammonium up to {AMM.max():.1f} mg/L, oxygen down to {OXY.min():.1f} mg/L")
 
 
 def grey(V): return V.secondary if V.mode == "light" else V.muted
@@ -146,7 +146,7 @@ def panel_c(V, fig, ax, cax):
     text(V, ax, 24, -0.9, "polluted", color=V.deep("terracotta") if V.mode == "light" else V.tone("terracotta"), ha="center", va="bottom")
     cb = fig.colorbar(im, cax=cax); cb.outline.set_visible(False); cb.set_ticks([1, 2, 3, 4, 5])
     cb.ax.tick_params(size=0, labelsize=V.sz["unit_line"], colors=V.muted)
-    cax.set_title("abundance\nclass", fontsize=V.sz["unit_line"], color=V.muted, loc="left", pad=4, fontweight="normal", linespacing=1.0)
+    cax.set_title("class", fontsize=V.sz["unit_line"], color=V.muted, loc="left", pad=4, fontweight="normal", linespacing=1.0)
     fig.canvas.draw()
     w = max(t.get_window_extent(fig.canvas.get_renderer()).width for t in ax.get_yticklabels()) / fig.dpi + 3 / 72
     head(V, ax, "c", "Trout give way to cyprinids downstream; at 23–25 almost every species is missing",
@@ -228,7 +228,7 @@ def panel_f(V, ax):
     text(V, ax, -0.03, 0.0, pct(FR["residual"]) + "\nunexplained", color=V.muted, ha="right", va="bottom", size=V.sz["unit_line"],
          linespacing=1.0)
     ax.set_xlim(-0.45, 1.45); ax.set_ylim(-0.14, 1.12); ax.set_aspect("equal"); ax.axis("off")
-    head(V, ax, "f", "River position and habitat are entangled", unit="square: all variation · areas: adjusted R²")
+    head(V, ax, "f", "Space and habitat overlap", unit="square: all · areas: adjusted R²")
 
 
 def draw(V):

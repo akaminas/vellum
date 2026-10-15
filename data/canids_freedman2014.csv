@@ -1,0 +1,27 @@
+parameter,kind,population,raw_x1e4,raw_lo,raw_hi,calibrated,cal_lo,cal_hi
+NBSJ,size,Basenji,1.1,0.9,1.2,2639,2322,2942
+NDNG,size,Dingo,0.8,0.7,0.8,1914,1760,2080
+NISW,size,Israeli wolf,10.4,8.6,12.3,26092,21611,30732
+NCRW,size,Croatian wolf,4.6,3.9,5.2,11427,9835,12968
+NCHW,size,Chinese wolf,2.2,1.9,2.4,5426,4733,6087
+NGLJ,size,Golden jackal,7.8,7.5,8.1,19446,18746,20139
+NancDOG1,size,ancestor of Boxer and Basenji,0.3,0.0,0.8,793,66,1990
+NancDOG,size,ancestor of dogs,0.8,0.3,1.3,1999,701,3200
+NancWLF1,size,ancestor of Chinese and Israeli wolves,0.6,0.0,1.3,1393,44,3327
+NancWLF,size,ancestor of wolves,5.1,0.4,10.0,12627,981,24991
+NancDW,size,ancestor of dogs and wolves,18,17.7,18.3,44993,44205,45812
+Nroot,size,ancestor of dogs and wolves and the golden jackal,7.3,6.5,8.0,18169,16311,19990
+TancDOG1,split,Boxer from Basenji,0.40,0.36,0.44,12102,10932,13074
+TancDOG,split,Dingo from the other dogs,0.43,0.39,0.46,12795,11736,13701
+TancWLF1,split,Chinese wolf from Israeli wolf,0.45,0.39,0.50,13389,11688,14982
+TancWLF,split,Croatian wolf from the other wolves,0.45,0.39,0.50,13455,11766,15060
+TancDW,split,dogs from wolves,0.50,0.46,0.53,14874,13875,15900
+Troot,split,golden jackal from dogs and wolves,13.3,12.7,13.8,398262,381927,415086
+mISW->BSJ,migration,Israeli wolf to Basenji,0.18,0.12,0.24,,,
+mBSJ->ISW,migration,Basenji to Israeli wolf,0.07,0.06,0.09,,,
+mCHW->DNG,migration,Chinese wolf to Dingo,0.03,0.00,0.06,,,
+mDNG->CHW,migration,Dingo to Chinese wolf,0.04,0.02,0.06,,,
+mGLJ->ISW,migration,golden jackal to Israeli wolf,0.00,0.00,0.00,,,
+mISW->GLJ,migration,Israeli wolf to golden jackal,0.05,0.04,0.06,,,
+mGLJ->ancDW,migration,golden jackal to the ancestor of dogs and wolves,0.02,0.01,0.03,,,
+mancDW->GLJ,migration,ancestor of dogs and wolves to golden jackal,0.99,0.89,1.10,,,

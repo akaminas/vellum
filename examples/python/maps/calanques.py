@@ -28,8 +28,7 @@ import logging
 logging.getLogger("matplotlib.font_manager").setLevel(logging.ERROR)
 
 MAPS = os.path.join(DATA, "maps")
-SOURCE = ("Data: IGN RGE ALTI (Licence Ouverte 2.0); EMODnet Bathymetry DTM (CC BY 4.0); sea-level index points, "
-          "Vacchi et al. (2021), Zenodo (CC BY 4.0); Natural Earth. Lambert-93")
+SOURCE = "IGN RGE ALTI (Licence Ouverte); EMODnet Bathymetry (CC BY); Vacchi et al. 2021 (CC BY); Natural Earth"
 
 # ---------------------------------------------------------------- the terrain
 META_T = json.load(open(os.path.join(MAPS, "calanques_terrain.json"), encoding="utf-8"))
@@ -141,10 +140,9 @@ SHELF = shelf_point(LEVEL[11.0])
 assert LEVEL[11.0] < CAVE_DEPTH < LEVEL[7.5], "the story: the entrance is dry 11,000 years ago and under water 7,500 years ago"
 assert RISE_EARLY > 3 * RISE_LATE
 
-TITLE = (f"The sea rose {-LEVEL[11.0]:.0f} m in 11,000 years, {RISE_EARLY:.0f} m of it in the first 3,500, "
-         f"and turned the valleys of the Calanques into inlets")
-SUB = (f"Marseille to Cassis · relative sea level from {N_PTS} index points on the French Mediterranean coast "
-       f"(Vacchi et al. 2021) · ground from IGN RGE ALTI, sea floor from EMODnet")
+TITLE = f"The sea rose {-LEVEL[11.0]:.0f} m in 11,000 years and turned the valleys of the Calanques into inlets"
+SUB = (f"Marseille to Cassis · sea level from {N_PTS} index points on the French Mediterranean coast · "
+       f"{RISE_EARLY:.0f} m of the rise came in its first 3,500 years")
 
 
 # ---------------------------------------------------------------- shared helpers
@@ -457,9 +455,7 @@ def draw(V):
     c1 = axes_in(fig, 0.45, 4.10, 1.0, 0.05); c2 = axes_in(fig, 1.75, 4.10, 1.0, 0.05)
     b = axes_in(fig, 4.25, 1.30, 2.80, 2.42)
     c = axes_in(fig, 0.45, 5.00, 6.60, 1.30)
-    d = [axes_in(fig, 0.0 + k * 2.32, 7.08, 2.32, 2.05) for k in range(3)]
-    for k in (1, 2):
-        p = d[k].get_position(); d[k].set_position([p.x0 + 0.22 / 7.2 * k, p.y0, p.width, p.height])
+    d = [axes_in(fig, 0.0 + k * 2.42, 7.08, 2.24, 2.0) for k in range(3)]
     panel_a(V, a, c1, c2); locator(V, loc); panel_b(V, b); panel_c(V, c); panel_d(V, fig, d, 7.08)
     V.panel(a, "a", "The coast from Marseille to Cassis", unit="ground height and sea depth")
     fig.text(0.05 / 7.2, 1 - 6.84 / H, "d  The sea climbed the cliffs, then filled the valleys", fontsize=V.sz["panel_title"], fontweight="bold",

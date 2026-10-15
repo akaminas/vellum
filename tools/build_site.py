@@ -233,8 +233,14 @@ def kinds_of(it):
     return out
 
 
+# figures shown on other pages but left out of the works grid: the R and pgfplots versions of the adaptive landscape
+# repeat threed/landscape_surface, so the grid shows it once; the tools page keeps all three
+NOT_IN_GALLERY = {"tools/persp_landscape", "tools/pgfplots_landscape"}
+
+
 def gallery(items):
-    counts = {k: sum(1 for it in items if k in kinds_of(it)) for k, _ in KINDS}
+    items = [it for it in items if f'{it["group"]}/{it["id"]}' not in NOT_IN_GALLERY]
+    counts ={k: sum(1 for it in items if k in kinds_of(it)) for k, _ in KINDS}
     chips = ['<button class="chip" type="button" data-filter="all" aria-pressed="true">All <span class="muted">' + str(len(items)) + "</span></button>"]
     for k, label in KINDS:
         if counts[k]:
