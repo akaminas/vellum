@@ -294,5 +294,23 @@
    "dark": "figures/science/canid_history_dark.png",
    "pdf": "figures/science/canid_history_light.pdf"
   }
+ },
+ {
+  "id": "cypriniform_tree",
+  "group": "science",
+  "title": "91 % of carps, minnows and loaches belong to families that arose after the dinosaurs",
+  "subtitle": "Cypriniformes, 1,703 species, one per genus (371) drawn · crown: age of a family's last common ancestor",
+  "kind": "scientific",
+  "form": "time-calibrated phylogeny with family panels",
+  "medium": "paper",
+  "tool": "matplotlib",
+  "data": "Fish Tree of Life timetree, Rabosky et al. (2018), Cypriniformes, 1,703 species, with the fossil calibrations inside the order",
+  "script": "examples/python/science/cypriniform_tree.py",
+  "alt": "Time tree of the carps, minnows and loaches (Cypriniformes), one species per genus, with 20 families numbered and coloured. The common ancestor of the order lived about 100 million years ago; 91 % of species belong to families whose common ancestor lived after the end of the Cretaceous 66 million years ago.",
+  "files": {
+   "light": "figures/science/cypriniform_tree_light.png",
+   "dark": "figures/science/cypriniform_tree_dark.png",
+   "pdf": "figures/science/cypriniform_tree_light.pdf"
+  }
  }
 ]

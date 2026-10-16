@@ -1,0 +1,350 @@
+[
+ {
+  "id": "area",
+  "group": "forms",
+  "title": "US petroleum use peaked in 2005 and has not passed 20.8 million barrels a day since",
+  "subtitle": "Petroleum products supplied in the United States, 1949–2025, million barrels a day · 20.7 in 2025",
+  "kind": "scientific",
+  "form": "area chart",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "EIA Monthly Energy Review, total petroleum products supplied, 1949–2025",
+  "script": "examples/python/forms/area.py",
+  "alt": "Area chart of US petroleum products supplied, 1949–2025. Use rose from 5.8 to a peak of 20.8 million barrels a day in 2005 and was 20.7 in 2025.",
+  "files": {
+   "light": "figures/forms/area_light.png",
+   "dark": "figures/forms/area_dark.png",
+   "pdf": "figures/forms/area_light.pdf"
+  }
+ },
+ {
+  "id": "bar",
+  "group": "forms",
+  "title": "Drought and epidemic caused 65 % of all natural-disaster deaths since 1900",
+  "subtitle": "Deaths worldwide by type of disaster, 1900–2017, 33 million in all · bars sorted by length",
+  "kind": "scientific",
+  "form": "bar chart",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "EM-DAT disaster deaths by type, 1900–2017, via Our World in Data",
+  "script": "examples/python/forms/bar.py",
+  "alt": "Horizontal bars of deaths by type of natural disaster, 1900–2017. Drought (11.7 million) and epidemic (9.6 million) are 65 % of the 33 million.",
+  "files": {
+   "light": "figures/forms/bar_light.png",
+   "dark": "figures/forms/bar_dark.png",
+   "pdf": "figures/forms/bar_light.pdf"
+  }
+ },
+ {
+  "id": "beeswarm",
+  "group": "forms",
+  "title": "The median Japanese car did 32 miles to the gallon, the median American car 18",
+  "subtitle": "Fuel economy of 398 cars sold 1970–1982, one dot per car, by origin of the maker · bar: median",
+  "kind": "scientific",
+  "form": "beeswarm",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Auto MPG, Quinlan (1993), 398 cars with a recorded fuel economy, 1970–1982",
+  "script": "examples/python/forms/beeswarm.py",
+  "alt": "Beeswarm of fuel economy by origin. Medians: American 18, European 26 and Japanese 32 miles per gallon.",
+  "files": {
+   "light": "figures/forms/beeswarm_light.png",
+   "dark": "figures/forms/beeswarm_dark.png",
+   "pdf": "figures/forms/beeswarm_light.pdf"
+  }
+ },
+ {
+  "id": "boxplot",
+  "group": "forms",
+  "title": "Fish richness climbs from 5 species per site near the source to 22 near the mouth",
+  "subtitle": "Species per site in 30 sites of the Doubs, in three stretches of ten · box: quartiles · line: median · whiskers: range",
+  "kind": "scientific",
+  "form": "box plot",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Doubs river fish, Verneaux (1973), 30 sites × 27 species",
+  "script": "examples/python/forms/boxplot.py",
+  "alt": "Box plots of species per site in three stretches of the Doubs. Medians 5, 14 and 22 from source to mouth.",
+  "files": {
+   "light": "figures/forms/boxplot_light.png",
+   "dark": "figures/forms/boxplot_dark.png",
+   "pdf": "figures/forms/boxplot_light.pdf"
+  }
+ },
+ {
+  "id": "bubble",
+  "group": "forms",
+  "title": "Fertility falls as people live longer; China and India are 48 % of those shown",
+  "subtitle": "Fertility against life expectancy in 63 countries, 2005 · bubble area: population · r = −0.86",
+  "kind": "scientific",
+  "form": "bubble chart",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Gapminder, 63 countries, 2005",
+  "script": "examples/python/forms/bubble.py",
+  "alt": "Bubble chart of fertility against life expectancy in 2005, bubble area is population. Longer-lived countries have fewer children (r = -0.86); China and India are the two largest bubbles, 48 % of the people.",
+  "files": {
+   "light": "figures/forms/bubble_light.png",
+   "dark": "figures/forms/bubble_dark.png",
+   "pdf": "figures/forms/bubble_light.pdf"
+  }
+ },
+ {
+  "id": "bubblemap",
+  "group": "forms",
+  "title": "China, the United States and India emit 54 % of the world's fossil CO₂",
+  "subtitle": "Fossil CO₂ from burning fuels and making cement, 2022, 37 billion tonnes · bubble area: tonnes emitted",
+  "kind": "scientific",
+  "also": [
+   "map"
+  ],
+  "form": "bubble map",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Fossil CO2 by country, 2022, Global Carbon Project via Our World in Data; Natural Earth 110m",
+  "script": "examples/python/forms/bubblemap.py",
+  "alt": "Equal Earth world map with a bubble per country sized by fossil CO2 emitted in 2022. China, the United States and India, in terracotta, are 54 % of the world total of 37 billion tonnes.",
+  "files": {
+   "light": "figures/forms/bubblemap_light.png",
+   "dark": "figures/forms/bubblemap_dark.png",
+   "pdf": "figures/forms/bubblemap_light.pdf"
+  }
+ },
+ {
+  "id": "bump",
+  "group": "forms",
+  "title": "India rose from 6th to 3rd among the eight largest emitters since 1990",
+  "subtitle": "Rank of today's eight largest emitters of fossil CO₂ among themselves, 1990–2022, by total annual emissions",
+  "kind": "scientific",
+  "form": "bump chart",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Fossil CO2 by country, Global Carbon Project via Our World in Data, 1990–2022",
+  "script": "examples/python/forms/bump.py",
+  "alt": "Bump chart of the ranks of the eight largest CO2 emitters, 1990–2022. India moved from 6th to 3rd.",
+  "files": {
+   "light": "figures/forms/bump_light.png",
+   "dark": "figures/forms/bump_dark.png",
+   "pdf": "figures/forms/bump_light.pdf"
+  }
+ },
+ {
+  "id": "chord",
+  "group": "forms",
+  "title": "Only Adelie penguins live on all three islands; Gentoo and Chinstrap keep to one",
+  "subtitle": "Penguins of the Palmer Archipelago by species and island, 344 birds · ribbon width: number of birds",
+  "kind": "scientific",
+  "form": "chord diagram",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Palmer penguins, Gorman, Williams and Fraser (2014), 344 birds",
+  "script": "examples/python/forms/chord.py",
+  "alt": "Chord diagram joining three penguin species to three islands. Adelie ribbons reach Biscoe, Dream and Torgersen; Gentoo reaches only Biscoe and Chinstrap only Dream.",
+  "files": {
+   "light": "figures/forms/chord_light.png",
+   "dark": "figures/forms/chord_dark.png",
+   "pdf": "figures/forms/chord_light.pdf"
+  }
+ },
+ {
+  "id": "density",
+  "group": "forms",
+  "title": "The commonest American car weighed 3,389 lb, the commonest Japanese car 2,042 lb",
+  "subtitle": "Weight of 406 cars sold 1970–1982 by origin of the maker · density curves, equal areas",
+  "kind": "scientific",
+  "form": "density plot",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Auto MPG, Quinlan (1993), 406 cars, 1970–1982",
+  "script": "examples/python/forms/density.py",
+  "alt": "Overlaid density curves of car weight. American cars peak at 3,389 lb, European at 2,116 lb and Japanese at 2,042 lb.",
+  "files": {
+   "light": "figures/forms/density_light.png",
+   "dark": "figures/forms/density_dark.png",
+   "pdf": "figures/forms/density_light.pdf"
+  }
+ },
+ {
+  "id": "doughnut",
+  "group": "forms",
+  "title": "Adelie penguins are 44 % of the 344 birds counted, Chinstraps only 20 %",
+  "subtitle": "Penguins measured at Palmer Station, Antarctica, 2007–2009, by species · arc length: share of birds",
+  "kind": "scientific",
+  "form": "doughnut chart",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Palmer penguins, Gorman, Williams and Fraser (2014), 344 birds",
+  "script": "examples/python/forms/doughnut.py",
+  "alt": "Doughnut of 344 penguins by species: Adelie 152, Gentoo 124, Chinstrap 68.",
+  "files": {
+   "light": "figures/forms/doughnut_light.png",
+   "dark": "figures/forms/doughnut_dark.png",
+   "pdf": "figures/forms/doughnut_light.pdf"
+  }
+ },
+ {
+  "id": "hexbin",
+  "group": "forms",
+  "title": "Typical life expectancy rose 22 years since 1950, and the spread fell 33 %",
+  "subtitle": "Life expectancy at birth of 236 countries, 1950–2023 · 17,464 country-years · line: median",
+  "kind": "scientific",
+  "form": "2D density (hexagonal bins)",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Life expectancy by country, UN WPP 2024 via Our World in Data, 1950–2023",
+  "script": "examples/python/forms/hexbin.py",
+  "alt": "Hexagonal-bin density of life expectancy by year, 1950–2023. The median rose from 53 in the 1950s to 74 in 2014–2023, and the standard deviation across countries fell from 12 to 8 years.",
+  "files": {
+   "light": "figures/forms/hexbin_light.png",
+   "dark": "figures/forms/hexbin_dark.png",
+   "pdf": "figures/forms/hexbin_light.pdf"
+  }
+ },
+ {
+  "id": "histogram",
+  "group": "forms",
+  "title": "In 61 of 114 years fewer than 1,000 lynx were trapped; only 8 years passed 4,000",
+  "subtitle": "Annual lynx pelts, Mackenzie River, 1821–1934 · median 771 · years per bin of 500 pelts",
+  "kind": "scientific",
+  "form": "histogram",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Canadian lynx returns, Elton and Nicholson (1942), 114 years",
+  "script": "examples/python/forms/histogram.py",
+  "alt": "Histogram of annual lynx catches. 61 years under 1,000, 8 years of 4,000 or more, median 771.",
+  "files": {
+   "light": "figures/forms/histogram_light.png",
+   "dark": "figures/forms/histogram_dark.png",
+   "pdf": "figures/forms/histogram_light.pdf"
+  }
+ },
+ {
+  "id": "lollipop",
+  "group": "forms",
+  "title": "Stone loach, minnow and roach are the commonest fish of the Doubs",
+  "subtitle": "Total abundance (classes 0–5 summed over 30 sites) of the twelve commonest of 27 species · the three are 20 % of the total",
+  "kind": "scientific",
+  "form": "lollipop chart",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Doubs river fish, Verneaux (1973), 30 sites × 27 species",
+  "script": "examples/python/forms/lollipop.py",
+  "alt": "Lollipop chart of the twelve commonest fish of the Doubs by total abundance. Stone loach leads with 73; the top three are 20 % of all abundance.",
+  "files": {
+   "light": "figures/forms/lollipop_light.png",
+   "dark": "figures/forms/lollipop_dark.png",
+   "pdf": "figures/forms/lollipop_light.pdf"
+  }
+ },
+ {
+  "id": "pie",
+  "group": "forms",
+  "title": "Transportation burns 67 % of US petroleum; power plants burn 0.4 %",
+  "subtitle": "Petroleum consumed by end-use sector, 2025, 20.7 million barrels a day · slices clockwise from the top",
+  "kind": "scientific",
+  "form": "pie chart",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "EIA Monthly Energy Review, petroleum consumption by sector, 2025",
+  "script": "examples/python/forms/pie.py",
+  "alt": "Pie chart of US petroleum use by sector in 2025: transportation 67 %, industrial 28 %, residential 3 %, commercial 2 %, electric power 0.4 %.",
+  "files": {
+   "light": "figures/forms/pie_light.png",
+   "dark": "figures/forms/pie_dark.png",
+   "pdf": "figures/forms/pie_light.pdf"
+  }
+ },
+ {
+  "id": "stackedbar",
+  "group": "forms",
+  "title": "Coal makes 75 % of India's electricity; water makes 89 % of Norway's",
+  "subtitle": "Share of electricity generation by source, 2023, ten countries sorted by fossil share · warm: fossil, cool: low-carbon",
+  "kind": "scientific",
+  "form": "stacked bar chart (100 %)",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Electricity generation by source, Ember and Energy Institute via Our World in Data, 2023",
+  "script": "examples/python/forms/stackedbar.py",
+  "alt": "Stacked bars of electricity by source in ten countries, 2023. Coal is 75 % of India's electricity; hydro is 89 % of Norway's.",
+  "files": {
+   "light": "figures/forms/stackedbar_light.png",
+   "dark": "figures/forms/stackedbar_dark.png",
+   "pdf": "figures/forms/stackedbar_light.pdf"
+  }
+ },
+ {
+  "id": "streamgraph",
+  "group": "forms",
+  "title": "Wind and sun grew to 40 % of German electricity as coal and nuclear shrank",
+  "subtitle": "Electricity generation by source, Germany, 1990–2023, TWh · stream width: generation, centred on the middle",
+  "kind": "scientific",
+  "form": "streamgraph",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Electricity generation by source, Germany, 1990–2023, Ember and Energy Institute via Our World in Data",
+  "script": "examples/python/forms/streamgraph.py",
+  "alt": "Streamgraph of German electricity by source, 1990–2023. Wind and solar grew from 0 % to 40 % of generation; coal fell from 310 to 125 TWh and nuclear from 152 to 7.",
+  "files": {
+   "light": "figures/forms/streamgraph_light.png",
+   "dark": "figures/forms/streamgraph_dark.png",
+   "pdf": "figures/forms/streamgraph_light.pdf"
+  }
+ },
+ {
+  "id": "tilemap",
+  "group": "forms",
+  "title": "Europeans live 13 years longer in Switzerland than in Moldova",
+  "subtitle": "Life expectancy at birth in 37 European countries, 2023 · one tile per country, placed as on the map",
+  "kind": "scientific",
+  "also": [
+   "map"
+  ],
+  "form": "tile map",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Life expectancy by country, UN WPP 2024 via Our World in Data, 2023",
+  "script": "examples/python/forms/tilemap.py",
+  "alt": "Tile map of life expectancy in 37 European countries in 2023. Switzerland is highest at 84.0 years and Moldova lowest at 71.2; the countries in the east average 76.4, those in the west 82.5.",
+  "files": {
+   "light": "figures/forms/tilemap_light.png",
+   "dark": "figures/forms/tilemap_dark.png",
+   "pdf": "figures/forms/tilemap_light.pdf"
+  }
+ },
+ {
+  "id": "treemap",
+  "group": "forms",
+  "title": "Gasoline is 43 % of the petroleum the United States burns",
+  "subtitle": "Petroleum products supplied in 2025, 20.7 million barrels a day · area: barrels a day",
+  "kind": "scientific",
+  "form": "treemap",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "EIA Monthly Energy Review, petroleum products supplied, 2025",
+  "script": "examples/python/forms/treemap.py",
+  "alt": "Treemap of US petroleum products supplied in 2025. Motor gasoline is 8.9 of 20.7 million barrels a day, 43 %; distillate and hydrocarbon gas liquids follow.",
+  "files": {
+   "light": "figures/forms/treemap_light.png",
+   "dark": "figures/forms/treemap_dark.png",
+   "pdf": "figures/forms/treemap_light.pdf"
+  }
+ },
+ {
+  "id": "violin",
+  "group": "forms",
+  "title": "The median Gentoo penguin weighs 1,300 g more than the other two species",
+  "subtitle": "Body mass of 342 penguins of the Palmer Archipelago, 2007–2009 · violin: density · bar: quartiles · dot: median",
+  "kind": "scientific",
+  "form": "violin plot",
+  "medium": "screen",
+  "tool": "matplotlib",
+  "data": "Palmer penguins, Gorman, Williams and Fraser (2014), 342 birds with complete measurements",
+  "script": "examples/python/forms/violin.py",
+  "alt": "Violins of body mass for three penguin species. Medians: Adelie 3,700 g, Chinstrap 3,700 g, Gentoo 5,000 g. Gentoo is 1,300 g above the next species.",
+  "files": {
+   "light": "figures/forms/violin_light.png",
+   "dark": "figures/forms/violin_dark.png",
+   "pdf": "figures/forms/violin_light.pdf"
+  }
+ }
+]
