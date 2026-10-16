@@ -296,21 +296,24 @@
   }
  },
  {
-  "id": "cypriniform_tree",
+  "id": "butterfly_tree",
   "group": "science",
-  "title": "91 % of carps, minnows and loaches belong to families that arose after the dinosaurs",
-  "subtitle": "Cypriniformes, 1,703 species, one per genus (371) drawn · crown: age of a family's last common ancestor",
+  "title": "Every butterfly family had split off over 20 million years before the asteroid hit",
+  "subtitle": "Papilionoidea, 994 genera, 444 drawn · grey bars: 95 % interval of a node's age · crown: age of a group's last common ancestor",
   "kind": "scientific",
-  "form": "time-calibrated phylogeny with family panels",
+  "also": [
+   "infographic"
+  ],
+  "form": "time-calibrated phylogeny with group panels and pencil drawings",
   "medium": "paper",
   "tool": "matplotlib",
-  "data": "Fish Tree of Life timetree, Rabosky et al. (2018), Cypriniformes, 1,703 species, with the fossil calibrations inside the order",
-  "script": "examples/python/science/cypriniform_tree.py",
-  "alt": "Time tree of the carps, minnows and loaches (Cypriniformes), one species per genus, with 20 families numbered and coloured. The common ancestor of the order lived about 100 million years ago; 91 % of species belong to families whose common ancestor lived after the end of the Cretaceous 66 million years ago.",
+  "data": "Dated tree of 994 butterfly genera, Chazot et al. (2019), core analysis, median ages with 95 % intervals",
+  "script": "examples/python/science/butterfly_tree.py",
+  "alt": "Time tree of the butterflies, 444 of 994 genera drawn, in 18 coloured and numbered groups with pencil drawings. The tree's root is 108 million years old; every family had split from its sister lineage by 88 million years ago, more than 20 million years before the asteroid at 66 million years.",
   "files": {
-   "light": "figures/science/cypriniform_tree_light.png",
-   "dark": "figures/science/cypriniform_tree_dark.png",
-   "pdf": "figures/science/cypriniform_tree_light.pdf"
+   "light": "figures/science/butterfly_tree_light.png",
+   "dark": "figures/science/butterfly_tree_dark.png",
+   "pdf": "figures/science/butterfly_tree_light.pdf"
   }
  }
 ]
